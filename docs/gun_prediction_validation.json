@@ -1,0 +1,158 @@
+{
+  "kind": "scripted gun-ray collision diagnostic; not damage or placement",
+  "baseline_ref": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+  "candidate": "AEGIS v6",
+  "groups": {
+    "grounded": {
+      "cases": 24,
+      "baseline_hits": 24,
+      "candidate_hits": 24,
+      "baseline_valid_aims": 24,
+      "candidate_valid_aims": 24
+    },
+    "rising": {
+      "cases": 144,
+      "baseline_hits": 144,
+      "candidate_hits": 144,
+      "baseline_valid_aims": 144,
+      "candidate_valid_aims": 144
+    },
+    "falling": {
+      "cases": 288,
+      "baseline_hits": 216,
+      "candidate_hits": 288,
+      "baseline_valid_aims": 288,
+      "candidate_valid_aims": 288
+    },
+    "roof_landing": {
+      "cases": 216,
+      "baseline_hits": 180,
+      "candidate_hits": 216,
+      "baseline_valid_aims": 207,
+      "candidate_valid_aims": 216
+    },
+    "jet_braking": {
+      "cases": 144,
+      "baseline_hits": 144,
+      "candidate_hits": 144,
+      "baseline_valid_aims": 144,
+      "candidate_valid_aims": 144
+    }
+  },
+  "non_falling_solutions_unchanged": true,
+  "example_corrected_shots": [
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 0.0,
+      "cubes": 0,
+      "feet": 12.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 11.0,
+      "candidate_aim_height": 4.68
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 0.0,
+      "cubes": 0,
+      "feet": 24.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 23.0,
+      "candidate_aim_height": 16.272
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 0.0,
+      "cubes": 0,
+      "feet": 40.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 39.0,
+      "candidate_aim_height": 31.921
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 11.7,
+      "cubes": 0,
+      "feet": 12.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 11.0,
+      "candidate_aim_height": 4.68
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 11.7,
+      "cubes": 0,
+      "feet": 24.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 23.0,
+      "candidate_aim_height": 16.255
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 11.7,
+      "cubes": 0,
+      "feet": 40.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 39.0,
+      "candidate_aim_height": 31.904
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 19.5,
+      "cubes": 0,
+      "feet": 12.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 11.0,
+      "candidate_aim_height": 4.68
+    },
+    {
+      "group": "falling",
+      "distance": 100.0,
+      "vy": 19.5,
+      "cubes": 0,
+      "feet": 24.0,
+      "vz": -24.0,
+      "floor": 0.0,
+      "acceleration": -22.0,
+      "baseline_hit": false,
+      "candidate_hit": true,
+      "baseline_aim_height": 23.0,
+      "candidate_aim_height": 16.225
+    }
+  ],
+  "example_regressions": []
+}

@@ -1,7 +1,7 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v5**, based on the best scored version, v2.
-See [the reload cover experiment](docs/V5.md). V3 and v4 scored lower;
+Current candidate: **AEGIS v6**, based on the best scored version, v2.
+See [the falling-target gun prediction fix](docs/V6.md). V3, v4, and v5 scored lower;
 keep the v2 submission as the fallback until a new official run beats it.
 
 | Version | User-reported practice score |
@@ -10,7 +10,8 @@ keep the v2 submission as the fallback until a new official run beats it.
 | v2 | **4.50** |
 | v3 | 3.96 |
 | v4 | 4.40 |
-| v5 | Not yet scored |
+| v5 | 4.17 |
+| v6 | Not yet scored |
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.
@@ -30,14 +31,14 @@ Practice qualifies the entry; the final series decides the winner.
   the supplied campus map. It checks whether ground destinations are reachable.
 - Leads moving targets and aims at the scaled robot torso. It waits for its
   actual gun direction to line up before wasting shots.
+- Predicts a descending enemy's future body height, ground or roof landing,
+  and recently observed jet braking when aiming the gun.
 - Uses the gun, releases charged lasers, aims ballistic mortar shells, and
   saves lightning energy when nothing is in range.
 - Collects cubes and useful weapons, farms safe crates, and considers supply
   drops for healing. It prefers lightning for close fights and keeps the gun.
 - Strafes, evaluates incoming projectile paths, and keeps the torso toward
   attackers to protect rear armor.
-- Uses nearby hard cover while its gun reloads if no secondary can attack,
-  reserving time to return to combat before the gun is loaded.
 - Seeks cover and stops shooting when retreating to heal. It moves inward
   before the shrinking circle reaches it and saves energy for escapes.
 - Chooses upgrades for survival, mobility, and the weapons it carries.
@@ -118,6 +119,8 @@ The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 `tests/` contains tactical regressions; `check/benchmark.py` and
 `check/navigation_probe.py` are local diagnostic tools. `check/reload_probe.py`
 compares line-of-fire exposure and return-to-fire timing during scripted reloads.
+`check/gun_prediction_probe.py` checks gun trajectories against scripted moving
+cylinders; none of these diagnostics is an official match simulator or scorer.
 
 The Builders starter kit supplies `mechfight.py`, `check/check.py`, the
 recorded stream, schema, protocol, and campus map. Those are included for

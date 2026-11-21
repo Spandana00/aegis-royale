@@ -11,10 +11,20 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bot import Bot, angle, future_zone, intercept
-from world import Prism
+from world import Prism, World
 
 
 class GeometryTests(unittest.TestCase):
+    def test_landing_surface_distinguishes_roof_bridge_and_courtyard(self):
+        w=World.__new__(World)
+        w.ground=lambda x,y:0.
+        w.nearby=lambda x,y,r:{0}
+        w.prisms=[Prism({'base':10,'top':30,'ring':[0,0,20,0,20,20,0,20],
+                         'holes':[[5,5,15,5,15,15,5,15]]})]
+        self.assertEqual(w.support_height(2,2,5),0.)
+        self.assertEqual(w.support_height(2,2,40),30.)
+        self.assertEqual(w.support_height(10,10,40),0.)
+        self.assertEqual(w.support_height(25,2,40),0.)
     def test_wall_roof_courtyard_bridge(self):
         p = Prism({'base': 10, 'top': 20, 'ring': [0,0,20,0,20,20,0,20], 'holes': [[5,5,15,5,15,15,5,15]]})
         self.assertFalse(p.ray_hits([-10,2,5],[30,2,5]))  # below bridge
@@ -65,6 +75,7 @@ class TacticsTests(unittest.TestCase):
         assert cls.start is not None
 
     def scenario(self):
+        self.bot.vertical_accel.clear()
         o = copy.deepcopy(self.initial)
         o['self']['pos'] = self.start[:]
         o['self']['aim'] = [0.,0.]
@@ -88,123 +99,61 @@ class TacticsTests(unittest.TestCase):
         self.assertGreater(sol[0],.04)
         self.assertLess(abs(sol[1]),.15)
 
-    def test_empty_gun_uses_available_cover(self):
-        o=self.scenario();e=self.enemy(o);o['mechs']=[e]
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        self.bot.mode='fight'
-        x,y,z=o['self']['pos']
-        with patch.object(self.bot,'reload_cover',return_value=[x,y+20]):
-            self.bot.act(o)
-        self.assertEqual(self.bot.mode,'reload')
-        self.assertEqual(self.bot.goal,[x,y+20])
+    def test_falling_target_is_hit_below_its_current_feet(self):
+        o=self.scenario();e=self.enemy(o,distance=150,vel=[0,0,-24])
+        e['pos'][2]=40.
+        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertIsNotNone(sol)
+        point,flight=sol[2:]
+        t=flight+.045
+        future_feet=max(0.,40.-24*t-11*t*t)
+        self.assertLess(point[2],e['pos'][2]-5.)
+        self.assertGreater(point[2],future_feet)
+        self.assertLess(point[2],future_feet+9.)
 
-    def test_ready_lightning_keeps_attacking_during_gun_reload(self):
-        o=self.scenario();e=self.enemy(o,distance=30);o['mechs']=[e]
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        o['self']['weapons'][1]=self.weapon('lightning')
-        self.bot.mode='fight'
-        with patch.object(self.bot,'reload_cover') as cover:
-            self.bot.act(o)
-        cover.assert_not_called()
-        self.assertEqual(self.bot.mode,'fight')
+    def test_falling_target_aim_stays_above_landing_surface(self):
+        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-24])
+        e['pos'][2]=10.
+        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertIsNotNone(sol)
+        self.assertAlmostEqual(sol[2][2],4.68)
 
-    def test_ready_laser_keeps_attacking_during_gun_reload(self):
-        o=self.scenario();o['mechs']=[self.enemy(o)]
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        o['self']['weapons'][1]=self.weapon('laser')
-        self.bot.mode='fight'
-        with patch.object(self.bot,'reload_cover') as cover:
-            self.bot.act(o)
-        cover.assert_not_called()
+    def test_falling_target_lands_on_roof_instead_of_terrain(self):
+        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-35])
+        e['pos'][2]=50.
+        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=30.):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertIsNotNone(sol)
+        self.assertAlmostEqual(sol[2][2],34.68)
 
-    def test_no_cover_retains_normal_combat_movement(self):
-        o=self.scenario();o['mechs']=[self.enemy(o)]
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        self.bot.mode='fight';self.bot.reload_checked=-100.
-        with patch.object(self.bot.world,'clear_ray',return_value=True):
-            a=self.bot.act(o)
-        self.assertEqual(self.bot.mode,'fight')
-        self.assertGreater(math.hypot(*a['move']),.5)
+    def test_falling_target_preserves_cube_scaled_body_height(self):
+        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-24],cubes=10)
+        e['pos'][2]=10.
+        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertIsNotNone(sol)
+        self.assertAlmostEqual(sol[2][2],9.*1.5*.52)
 
-    def test_reload_cover_requires_upper_body_protection(self):
-        o=self.scenario();e=self.enemy(o)
-        self.bot.mode='fight';self.bot.reload_checked=-100.
-        ground=self.bot.world.ground
-        # A low wall hides the feet and center, but leaves the head exposed.
-        def ray(a,b):
-            return b[2] > ground(*b[:2]) + o['self']['stats']['height']*.8
-        with patch.object(self.bot.world,'clear_ray',side_effect=ray):
-            goal=self.bot.reload_cover(o,[e],2.4)
-        self.assertIsNone(goal)
+    def test_observed_jets_brake_a_fall(self):
+        o=self.scenario();o['t']=10.
+        e=self.enemy(o,vel=[0,0,-12]);e['pos'][2]=30.;o['mechs']=[e]
+        self.bot.enemies.clear()
+        self.bot.remember(o)
+        o2=copy.deepcopy(o);o2['t']=10.1
+        o2['mechs'][0]['vel'][2]=-10.8;o2['mechs'][0]['pos'][2]=28.86
+        self.bot.remember(o2)
+        self.assertAlmostEqual(self.bot.vertical_accel[e['id']][0],12.)
+        with patch.object(self.bot.world,'support_height',return_value=0.):
+            p=self.bot.predict_falling_target(o2['mechs'][0],.5)
+        self.assertAlmostEqual(p[2],28.86-10.8*.5+6.*.5**2+4.68)
 
-    def test_reload_does_not_override_zone_escape(self):
-        o=self.scenario();x,y,z=o['self']['pos']
-        o['zone'].update(center=[x-80,y],radius=100,next_center=[x-80,y],next_radius=25,shrink_start=0,shrink_end=20)
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        self.bot.mode='fight'
-        with patch.object(self.bot,'reload_cover') as cover:
-            self.bot.act(o)
-        cover.assert_not_called()
-        self.assertEqual(self.bot.mode,'zone')
-
-    def test_covered_reload_holds_position(self):
-        o=self.scenario()
-        self.bot.mode='reload'
-        self.assertEqual(self.bot.reload_cover(o,[],2.),o['self']['pos'][:2])
-
-    def test_covered_reload_stops_with_a_tracked_enemy(self):
-        o=self.scenario();e=self.enemy(o)
-        self.bot.mode='reload'
-        with patch.object(self.bot.world,'clear_ray',return_value=False):
-            self.assertEqual(self.bot.reload_cover(o,[e],2.),o['self']['pos'][:2])
-
-    def test_reload_starts_return_before_gun_is_loaded(self):
-        o=self.scenario();e=self.enemy(o);o['mechs']=[e]
-        x,y,z=o['self']['pos']
-        o['self']['weapons'][0].update(ammo=0,reload=.8)
-        self.bot.mode='reload';self.bot.reload_origin=[x,y+15]
-        self.bot.direct_ids={e['id']}
-        goal=self.bot.choose_goal(o,[e],None,{})
-        self.assertEqual(self.bot.mode,'rejoin')
-        self.assertEqual(goal,[x,y+15])
-
-    def test_loaded_gun_does_not_finish_rejoin_when_target_is_available(self):
-        o=self.scenario();e=self.enemy(o);o['mechs']=[e]
-        x,y,z=o['self']['pos']
-        self.bot.mode='rejoin';self.bot.reload_origin=[x,y+15]
-        self.bot.rejoin_until=o['t']+2
-        self.bot.direct_ids={e['id']}
-        solution=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        self.bot.choose_goal(o,[e],e,{0:solution})
-        self.assertEqual(self.bot.mode,'fight')
-
-    def test_cooling_secondary_does_not_leave_empty_gun_exposed(self):
-        o=self.scenario();o['mechs']=[self.enemy(o)]
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        o['self']['weapons'][1]=self.weapon('laser')
-        o['self']['weapons'][1]['cooldown']=1.4
-        self.bot.mode='fight'
-        with patch.object(self.bot,'reload_cover',return_value=o['self']['pos'][:2]):
-            self.bot.act(o)
-        self.assertEqual(self.bot.mode,'reload')
-
-    def test_low_health_healing_takes_priority_over_reload_cover(self):
-        o=self.scenario();o['mechs']=[self.enemy(o)];o['self']['hp']=400
-        o['self']['weapons'][0].update(ammo=0,reload=2.)
-        self.bot.mode='fight'
-        with patch.object(self.bot,'reload_cover') as cover:
-            self.bot.act(o)
-        cover.assert_not_called()
-        self.assertEqual(self.bot.mode,'recover')
-
-    def test_gun_becomes_active_after_reload(self):
-        o=self.scenario();e=self.enemy(o);o['mechs']=[e]
-        self.bot.mode='reload'
-        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        o['self']['aim']=list(sol[:2])
-        a=self.bot.act(o)
-        self.assertEqual(self.bot.mode,'fight')
-        self.assertTrue(a['fire'][0])
+    def test_old_vertical_motion_samples_expire(self):
+        o=self.scenario();o['t']=20.;o['mechs']=[]
+        self.bot.vertical_accel={5:(12.,19.)}
+        self.bot.remember(o)
+        self.assertNotIn(5,self.bot.vertical_accel)
 
     def test_gun_waits_for_turn(self):
         o=self.scenario();o['mechs']=[self.enemy(o)];o['self']['aim']=[math.pi,0]
