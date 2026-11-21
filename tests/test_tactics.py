@@ -11,20 +11,10 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bot import Bot, angle, future_zone, intercept
-from world import Prism, World
+from world import Prism
 
 
 class GeometryTests(unittest.TestCase):
-    def test_landing_surface_distinguishes_roof_bridge_and_courtyard(self):
-        w=World.__new__(World)
-        w.ground=lambda x,y:0.
-        w.nearby=lambda x,y,r:{0}
-        w.prisms=[Prism({'base':10,'top':30,'ring':[0,0,20,0,20,20,0,20],
-                         'holes':[[5,5,15,5,15,15,5,15]]})]
-        self.assertEqual(w.support_height(2,2,5),0.)
-        self.assertEqual(w.support_height(2,2,40),30.)
-        self.assertEqual(w.support_height(10,10,40),0.)
-        self.assertEqual(w.support_height(25,2,40),0.)
     def test_wall_roof_courtyard_bridge(self):
         p = Prism({'base': 10, 'top': 20, 'ring': [0,0,20,0,20,20,0,20], 'holes': [[5,5,15,5,15,15,5,15]]})
         self.assertFalse(p.ray_hits([-10,2,5],[30,2,5]))  # below bridge
@@ -75,7 +65,6 @@ class TacticsTests(unittest.TestCase):
         assert cls.start is not None
 
     def scenario(self):
-        self.bot.vertical_accel.clear()
         o = copy.deepcopy(self.initial)
         o['self']['pos'] = self.start[:]
         o['self']['aim'] = [0.,0.]
@@ -99,61 +88,65 @@ class TacticsTests(unittest.TestCase):
         self.assertGreater(sol[0],.04)
         self.assertLess(abs(sol[1]),.15)
 
-    def test_falling_target_is_hit_below_its_current_feet(self):
-        o=self.scenario();e=self.enemy(o,distance=150,vel=[0,0,-24])
-        e['pos'][2]=40.
-        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
-            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        self.assertIsNotNone(sol)
-        point,flight=sol[2:]
-        t=flight+.045
-        future_feet=max(0.,40.-24*t-11*t*t)
-        self.assertLess(point[2],e['pos'][2]-5.)
-        self.assertGreater(point[2],future_feet)
-        self.assertLess(point[2],future_feet+9.)
+    def test_lightning_range_estimate_allows_possible_enemy_upgrades(self):
+        o=self.scenario()
+        self.assertAlmostEqual(self.bot.enemy_lightning_range(self.enemy(o,cubes=0)),45.)
+        self.assertAlmostEqual(self.bot.enemy_lightning_range(self.enemy(o,cubes=1)),54.)
+        self.assertAlmostEqual(self.bot.enemy_lightning_range(self.enemy(o,cubes=3)),64.8)
+        self.assertAlmostEqual(self.bot.enemy_lightning_range(self.enemy(o,cubes=40)),64.8)
 
-    def test_falling_target_aim_stays_above_landing_surface(self):
-        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-24])
-        e['pos'][2]=10.
-        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
-            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        self.assertIsNotNone(sol)
-        self.assertAlmostEqual(sol[2][2],4.68)
+    def test_upgraded_lightning_keeps_a_real_range_advantage(self):
+        o=self.scenario();e=self.enemy(o,weapons=['gun','lightning'],cubes=0)
+        lightning=self.weapon('lightning');lightning['stats']['range']=54.
+        o['self']['weapons'][1]=lightning
+        self.bot.direct_ids={e['id']}
+        self.assertAlmostEqual(self.bot.engagement_distance(o,e),50.)
+        self.assertGreater(self.bot.engagement_distance(o,e),self.bot.enemy_lightning_range(e))
+        self.assertLess(self.bot.engagement_distance(o,e),lightning['stats']['range']-.5)
 
-    def test_falling_target_lands_on_roof_instead_of_terrain(self):
-        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-35])
-        e['pos'][2]=50.
-        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=30.):
-            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        self.assertIsNotNone(sol)
-        self.assertAlmostEqual(sol[2][2],34.68)
+    def test_no_assumed_range_advantage_against_possible_matching_upgrade(self):
+        o=self.scenario();e=self.enemy(o,weapons=['gun','lightning'],cubes=1)
+        lightning=self.weapon('lightning');lightning['stats']['range']=54.
+        o['self']['weapons'][1]=lightning
+        self.bot.direct_ids={e['id']}
+        self.assertAlmostEqual(self.bot.engagement_distance(o,e),54.*.82)
 
-    def test_falling_target_preserves_cube_scaled_body_height(self):
-        o=self.scenario();e=self.enemy(o,distance=180,vel=[0,0,-24],cubes=10)
-        e['pos'][2]=10.
-        with patch.object(self.bot.world,'clear_ray',return_value=True), patch.object(self.bot.world,'support_height',return_value=0.):
-            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
-        self.assertIsNotNone(sol)
-        self.assertAlmostEqual(sol[2][2],9.*1.5*.52)
+    def test_gun_retreats_from_a_closing_lightning_opponent(self):
+        o=self.scenario();e=self.enemy(o,distance=100,weapons=['gun','lightning'],vel=[-11.7,0.,0.])
+        o['self']['weapons'][1]=None
+        self.bot.mode='fight';self.bot.target_id=e['id'];self.bot.direct_ids={e['id']}
+        self.bot.escaping_until=-100.;self.bot.history.clear()
+        x,y,z=o['self']['pos']
+        with patch.object(self.bot.world,'travel_clear',return_value=True):
+            move,boost,jump=self.bot.steer(o,[x+100,y],[e],e)
+        self.assertLess(move[0],-.9)
+        self.assertGreater(abs(move[1]),.1)
 
-    def test_observed_jets_brake_a_fall(self):
-        o=self.scenario();o['t']=10.
-        e=self.enemy(o,vel=[0,0,-12]);e['pos'][2]=30.;o['mechs']=[e]
-        self.bot.enemies.clear()
-        self.bot.remember(o)
-        o2=copy.deepcopy(o);o2['t']=10.1
-        o2['mechs'][0]['vel'][2]=-10.8;o2['mechs'][0]['pos'][2]=28.86
-        self.bot.remember(o2)
-        self.assertAlmostEqual(self.bot.vertical_accel[e['id']][0],12.)
-        with patch.object(self.bot.world,'support_height',return_value=0.):
-            p=self.bot.predict_falling_target(o2['mechs'][0],.5)
-        self.assertAlmostEqual(p[2],28.86-10.8*.5+6.*.5**2+4.68)
+    def test_stationary_opponent_does_not_cause_unnecessary_retreat(self):
+        o=self.scenario();e=self.enemy(o,distance=100,weapons=['gun','lightning'],vel=[0.,0.,0.])
+        o['self']['weapons'][1]=None
+        self.bot.mode='fight';self.bot.target_id=e['id'];self.bot.direct_ids={e['id']}
+        self.bot.escaping_until=-100.;self.bot.history.clear()
+        x,y,z=o['self']['pos']
+        with patch.object(self.bot.world,'travel_clear',return_value=True):
+            move,boost,jump=self.bot.steer(o,[x+100,y],[e],e)
+        self.assertLess(abs(move[0]),.1)
 
-    def test_old_vertical_motion_samples_expire(self):
-        o=self.scenario();o['t']=20.;o['mechs']=[]
-        self.bot.vertical_accel={5:(12.,19.)}
-        self.bot.remember(o)
-        self.assertNotIn(5,self.bot.vertical_accel)
+    def test_range_control_keeps_an_aligned_gun_firing(self):
+        o=self.scenario();e=self.enemy(o,distance=100,weapons=['gun','lightning'],vel=[-11.7,0.,0.])
+        o['mechs']=[e]
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        o['self']['aim']=list(sol[:2]);self.bot.mode='fight'
+        a=self.bot.act(o)
+        self.assertTrue(a['fire'][0])
+        self.assertEqual(self.bot.mode,'fight')
+
+    def test_range_advantage_does_not_override_a_small_zone(self):
+        o=self.scenario();e=self.enemy(o,weapons=['gun','lightning'])
+        lightning=self.weapon('lightning');lightning['stats']['range']=54.
+        o['self']['weapons'][1]=lightning;o['zone']['radius']=40.
+        self.bot.direct_ids={e['id']}
+        self.assertLessEqual(self.bot.engagement_distance(o,e),40.*.72)
 
     def test_gun_waits_for_turn(self):
         o=self.scenario();o['mechs']=[self.enemy(o)];o['self']['aim']=[math.pi,0]

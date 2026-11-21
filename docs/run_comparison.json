@@ -1,0 +1,172 @@
+{
+  "kind": "submitted-source audit and user-reported official scores; not a local scorer",
+  "score_source": "user-supplied submission screenshots",
+  "reference_commit": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+  "reference_score": 4.5,
+  "matches_per_run": 48,
+  "minimum_extra_integer_placement_points_to_reach_5_30": 39,
+  "runs": [
+    {
+      "version": "v1",
+      "commit": "cf2994318977d241b5c65b16eea33a4163cb0be8",
+      "user_reported_scores": [
+        3.75
+      ],
+      "deltas_from_best": [
+        -0.75
+      ],
+      "changed_bot_methods_vs_v2": [
+        "__init__",
+        "firing_solution",
+        "choose_upgrade",
+        "choose_goal",
+        "choose_target",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_v2": [
+        "engagement_distance",
+        "engage"
+      ],
+      "runtime_sha256": {
+        "bot.py": "5cf68273712368bc646912cc06fa7412d1ad7de44487cc697df8062458d06e30",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v2",
+      "commit": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+      "user_reported_scores": [
+        4.5
+      ],
+      "deltas_from_best": [
+        0.0
+      ],
+      "changed_bot_methods_vs_v2": [],
+      "removed_bot_methods_vs_v2": [],
+      "runtime_sha256": {
+        "bot.py": "82c66d54686871f5350ffc083d7e54dcbf26012cce0098787353ca65215b62d2",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v3",
+      "commit": "790c32ab40d011a827ec370ace67c2972e6375b5",
+      "user_reported_scores": [
+        3.96
+      ],
+      "deltas_from_best": [
+        -0.54
+      ],
+      "changed_bot_methods_vs_v2": [
+        "__init__",
+        "remember",
+        "safe_goal",
+        "healing_drop",
+        "loot_score",
+        "choose_goal",
+        "find_cover",
+        "choose_target",
+        "engagement_distance",
+        "engage",
+        "act"
+      ],
+      "removed_bot_methods_vs_v2": [],
+      "runtime_sha256": {
+        "bot.py": "1cd44f67366140300e92a01e72534aea56eac1ec5d3dc0a5d9299ae7ea1c1669",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v4",
+      "commit": "463d65d15c11fb26057e1fec22000f9708455fbe",
+      "user_reported_scores": [
+        4.4
+      ],
+      "deltas_from_best": [
+        -0.1
+      ],
+      "changed_bot_methods_vs_v2": [
+        "dodge_cost"
+      ],
+      "removed_bot_methods_vs_v2": [],
+      "runtime_sha256": {
+        "bot.py": "4f191fcf8c7e863fcf075f4714da35f25132e3616f72e5ac304b4c6abb5a88a9",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v5",
+      "commit": "1fa9554ef876770d36badc949bdf130fd9270156",
+      "user_reported_scores": [
+        4.17,
+        4.15
+      ],
+      "deltas_from_best": [
+        -0.33,
+        -0.35
+      ],
+      "changed_bot_methods_vs_v2": [
+        "__init__",
+        "choose_goal",
+        "reload_cover",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_v2": [],
+      "runtime_sha256": {
+        "bot.py": "f94b40af017dc70330b73b823726f2689d9740a4ac5fdbb19c1dbb04c7d066d7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v6",
+      "commit": "be9c963d0bb180c781984d85d50fb5896e07a6c2",
+      "user_reported_scores": [
+        4.46
+      ],
+      "deltas_from_best": [
+        -0.04
+      ],
+      "changed_bot_methods_vs_v2": [
+        "__init__",
+        "remember",
+        "predict_falling_target",
+        "firing_solution"
+      ],
+      "removed_bot_methods_vs_v2": [],
+      "runtime_sha256": {
+        "bot.py": "500c314e994c92e795cc55595e0fcbe977fdc6e96e97a6420e6cfd4c8165a4d3",
+        "world.py": "3c068f288721cbb2f9a93ce63abddb22194d4351e06d27f4660bc1a91d7d4e2d",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    }
+  ],
+  "candidate": {
+    "name": "AEGIS v7",
+    "changed_bot_methods_vs_v2": [
+      "enemy_lightning_range",
+      "engagement_distance",
+      "steer"
+    ],
+    "all_other_bot_methods_identical_to_v2": true,
+    "map_navigation_wrapper_and_docker_identical_to_v2": true
+  }
+}

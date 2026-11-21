@@ -52,7 +52,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v6'
+    name = 'AEGIS v7'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -80,7 +80,6 @@ class Bot:
         self.loot_blacklist = {}
         self.scan_yaw = None
         self.direct_ids = set()
-        self.vertical_accel = {}
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -116,46 +115,14 @@ class Bot:
                     if item['hp'] <= 0:
                         self.items['crates'].pop(event['target'], None)
         for enemy in obs.get('mechs', []):
-            previous = self.enemies.get(enemy['id'])
-            if previous and .04 < now - previous[1] < .26:
-                acceleration = (enemy.get('vel', [0, 0, 0])[2] - previous[0].get('vel', [0, 0, 0])[2]) / (now - previous[1])
-                gravity = self.config['mech']['gravity']
-                jet = self.config['mech']['jet_accel'] - gravity
-                # Large discontinuities can be landings or mortar impulses,
-                # not an acceleration that will continue for a whole flight.
-                if -gravity * 1.5 <= acceleration <= jet + 1.:
-                    self.vertical_accel[enemy['id']] = (clamp(acceleration, -gravity, jet), now)
-                else:
-                    self.vertical_accel.pop(enemy['id'], None)
-            else:
-                self.vertical_accel.pop(enemy['id'], None)
             self.enemies[enemy['id']] = (enemy, now)
         self.enemies = {i: v for i, v in self.enemies.items() if now - v[1] < 5.1}
-        self.vertical_accel = {i: v for i, v in self.vertical_accel.items() if now - v[1] < .26}
         self.history.append((now, me['pos'][:], math.hypot(*self.last_move)))
 
     def enemy_center(self, enemy):
         scale = 1 + self.config['cubes'].get('size_per_cube', .05) * enemy.get('cubes', 0)
         h = self.config['npc']['height'] if enemy['kind'] == 'npc' else self.config['mech']['height'] * scale
         return [enemy['pos'][0], enemy['pos'][1], enemy['pos'][2] + h * .52]
-
-    def predict_falling_target(self, target, t):
-        """Forecast a descending mech, including landing or observed jet braking."""
-        point = self.enemy_center(target)
-        velocity = target.get('vel', [0., 0., 0.])
-        point = [point[i] + velocity[i] * t for i in range(3)]
-        pos = target['pos']
-        gravity = self.config['mech']['gravity']
-        acceleration = self.vertical_accel.get(target['id'], (-gravity, 0.))[0]
-        feet = pos[2] + velocity[2] * t + .5 * acceleration * t * t
-        if acceleration > 0 and velocity[2] + acceleration * t > self.config['mech']['max_rise_speed']:
-            cap_time = max(0., (self.config['mech']['max_rise_speed'] - velocity[2]) / acceleration)
-            feet = (pos[2] + velocity[2] * cap_time + .5 * acceleration * cap_time ** 2
-                    + self.config['mech']['max_rise_speed'] * (t - cap_time))
-        landing = self.world.support_height(point[0], point[1], max(pos[2], feet))
-        center_height = self.enemy_center(target)[2] - pos[2]
-        point[2] = max(landing, feet) + center_height
-        return point
 
     def firing_solution(self, me, target, weapon):
         stats = weapon['stats']
@@ -168,12 +135,7 @@ class Bot:
         flight = 0.
         if kind == 'gun':
             aimpoint, flight = intercept(origin, aimpoint, vel, stats['speed'])
-            if target.get('kind') == 'mech' and vel[2] < -.8:
-                offset = me['stats'].get('radius', 2.5) + .5
-                for _ in range(3):
-                    aimpoint = self.predict_falling_target(target, flight + .045)
-                    flight = max(0., math.dist(origin, aimpoint) - offset) / stats['speed']
-            elif abs(vel[2]) > .8:
+            if abs(vel[2]) > .8:
                 aimpoint[2] = max(target['pos'][2] - 1., aimpoint[2] - .5 * self.config['mech']['gravity'] * flight ** 2)
         elif kind == 'mortar':
             origin[2] = me['pos'][2] + me['stats'].get('height', 9) + .5
@@ -419,6 +381,19 @@ class Bot:
         self.target_id = target['id'] if target else None
         return enemies, target, solutions
 
+    def enemy_lightning_range(self, target):
+        """Conservative upper bound: every unlocked offer could be Tesla coil."""
+        upgrade = next((u for u in self.config['upgrades'] if u['id'] == 'lightning_range'), None)
+        count = sum(target.get('cubes', 0) >= n for n in self.config['cubes']['upgrade_thresholds'])
+        reach = self.config['weapons']['lightning']['range']
+        if upgrade:
+            stack = min(count, upgrade.get('max', 0))
+            for _ in range(stack):
+                for effect in upgrade.get('effects', []):
+                    if effect['path'] == 'weapons.lightning.range':
+                        reach = reach * effect.get('mul', 1.) + effect.get('add', 0.)
+        return reach
+
     def engagement_distance(self, obs, target):
         me = obs['self']
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
@@ -432,6 +407,12 @@ class Bot:
             # keep gun distance while outnumbered or short of energy.
             if len(self.direct_ids) <= 1 and me['energy'] > 20 and me['hp'] > .58 * me['max_hp']:
                 preferred = secondary['stats']['range'] * .82
+                if target and 'lightning' in target.get('weapons', []):
+                    opposing = self.enemy_lightning_range(target)
+                    dz = self.enemy_center(target)[2] - me['pos'][2] - me['stats'].get('muzzle_height', 7.)
+                    horizontal = math.sqrt(max(0., secondary['stats']['range'] ** 2 - dz * dz))
+                    if horizontal > opposing + 8.:
+                        preferred = min(secondary['stats']['range'] - 4., horizontal - 2.)
             else:
                 preferred = 92.
         if target and 'lightning' in target.get('weapons', []) and (not secondary or secondary['kind'] != 'lightning'):
@@ -474,6 +455,7 @@ class Bot:
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
         preferred = self.engagement_distance(obs, target)
         fighting = self.mode in ('fight', 'farm') and target is not None
+        standoff = None
         if fighting:
             ex, ey = target['pos'][0] - pos[0], target['pos'][1] - pos[1]
             d = math.hypot(ex, ey)
@@ -486,6 +468,15 @@ class Bot:
             approach = [pos[0] + rx * min(15., d), pos[1] + ry * min(15., d)]
             if d < preferred + 18 or self.world.travel_clear(pos, approach, radius + .35, height, elevated):
                 ux, uy = unit(rx * radial - ry * side, ry * radial + rx * side)
+                # V2's direction-only orbit caps retreat at about two thirds
+                # of walking speed. Account for a pursuer's radial velocity
+                # when maintaining distance denies its short-range weapon.
+                if ('lightning' in target.get('weapons', []) and len(self.direct_ids) <= 1
+                        and preferred > self.enemy_lightning_range(target) + 4.
+                        and d < preferred + 20.):
+                    velocity = target.get('vel', [0., 0., 0.])
+                    incoming = velocity[0] * rx + velocity[1] * ry
+                    standoff = rx, ry, side, incoming + .8 * (d - preferred)
         ratio = me['hp'] / me['max_hp']
         boost = (self.mode == 'zone' or (self.mode in ('recover', 'cover') and enemies)) and me['energy'] > 25
         if fighting and target:
@@ -499,6 +490,12 @@ class Bot:
         speed = stats['boost_speed'] if boost and me['grounded'] else stats['walk_speed']
         if any(w and w['kind'] == 'laser' and w.get('charge', 0) > 0 for w in me['weapons']):
             speed *= stats.get('charge_move_mult', .5)
+        if standoff is not None:
+            rx, ry, side, desired_radial = standoff
+            radial_speed = clamp(desired_radial, -.97 * speed, .97 * speed)
+            tangent_speed = math.sqrt(max(0., speed * speed - radial_speed * radial_speed)) * side
+            ux, uy = unit(rx * radial_speed - ry * tangent_speed,
+                          ry * radial_speed + rx * tangent_speed)
         center, zr = future_zone(obs['zone'], now, 1.2)
         best, move = float('inf'), (0., 0.)
         candidates = [(ux, uy)] + [(math.cos(i * TAU / 20), math.sin(i * TAU / 20)) for i in range(20)]

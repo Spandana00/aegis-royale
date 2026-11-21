@@ -117,15 +117,6 @@ class World:
                 ids.update(self.cells.get((gx, gy), ()))
         return ids
 
-    def support_height(self, x, y, ceiling):
-        """Highest terrain or solid top below a possible landing height."""
-        floor = self.ground(x, y)
-        for i in self.nearby(x, y, 0.):
-            p = self.prisms[i]
-            if floor < p.top <= ceiling + .01 and p.contains(x, y):
-                floor = p.top
-        return floor
-
     def free(self, x, y, z=None, radius=3., height=9., step_up=1.2):
         x0, y0, x1, y1 = self.bounds
         if not x0 + radius < x < x1 - radius or not y0 + radius < y < y1 - radius:

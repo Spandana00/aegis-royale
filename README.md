@@ -1,8 +1,8 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v6**, based on the best scored version, v2.
-See [the falling-target gun prediction fix](docs/V6.md). V3, v4, and v5 scored lower;
-keep the v2 submission as the fallback until a new official run beats it.
+Current candidate: **AEGIS v7**, based on the best scored version, v2.
+See [the run-by-run source comparison and range-control experiment](docs/RUN_COMPARISON.md).
+V3–V6 have not beaten v2; keep v2 selected until an official run improves on it.
 
 | Version | User-reported practice score |
 | --- | --- |
@@ -10,8 +10,9 @@ keep the v2 submission as the fallback until a new official run beats it.
 | v2 | **4.50** |
 | v3 | 3.96 |
 | v4 | 4.40 |
-| v5 | 4.17 |
-| v6 | Not yet scored |
+| v5 | 4.17; repeat 4.15 |
+| v6 | 4.46 |
+| v7 | Not yet scored |
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.
@@ -31,14 +32,14 @@ Practice qualifies the entry; the final series decides the winner.
   the supplied campus map. It checks whether ground destinations are reachable.
 - Leads moving targets and aims at the scaled robot torso. It waits for its
   actual gun direction to line up before wasting shots.
-- Predicts a descending enemy's future body height, ground or roof landing,
-  and recently observed jet braking when aiming the gun.
 - Uses the gun, releases charged lasers, aims ballistic mortar shells, and
   saves lightning energy when nothing is in range.
 - Collects cubes and useful weapons, farms safe crates, and considers supply
   drops for healing. It prefers lightning for close fights and keeps the gun.
 - Strafes, evaluates incoming projectile paths, and keeps the torso toward
   attackers to protect rear armor.
+- Compensates for a closing lightning opponent when maintaining weapon distance,
+  and preserves a lightning range advantage when enemy upgrade bounds allow it.
 - Seeks cover and stops shooting when retreating to heal. It moves inward
   before the shrinking circle reaches it and saves energy for escapes.
 - Chooses upgrades for survival, mobility, and the weapons it carries.
@@ -101,17 +102,16 @@ public until results are published. There are at most four submissions per hour.
 
 The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 
-## First-score optimization loop
+## Scored optimization loop
 
-1. Submit this version once; record its commit, score, rank, and official
-   feedback. Wait for the 48-match run to finish.
-2. Change one policy at a time. Useful comparisons are combat distance,
-   weapon preference, retreat HP, and the balance between loot and fighting.
-3. Pass the tactical and Docker checks, then submit the new commit. Compare
-   the official score on the fixed practice seeds; timing can cause variation.
-4. Preserve the earlier best commit. The system normally retains the best
-   score, and earlier submissions win score ties. Do not optimize only for
-   cooperative practice bots: the final uses unseen seeds and free-for-all play.
+1. Use v2's 4.50 as the scored reference. The comparison report distinguishes
+   code baselines, individual experiments, and repeat runs of the same code.
+2. Change one feature family while retaining the rest of that reference.
+   Unit tests and local probes establish behavior; they do not predict score.
+3. Pass tactical and Docker checks, score the exact commit once, and retain
+   the official result. A repeat can measure variation but costs submission quota.
+4. Keep every submitted commit public and preserve the earlier best entry.
+   Practice uses cooperating house bots; finals use unseen free-for-all matches.
 
 ## Files and credits
 
@@ -121,6 +121,8 @@ The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 compares line-of-fire exposure and return-to-fire timing during scripted reloads.
 `check/gun_prediction_probe.py` checks gun trajectories against scripted moving
 cylinders; none of these diagnostics is an official match simulator or scorer.
+`check/compare_versions.py` audits submitted source and the current V7 scope;
+it requires a clone containing the submitted commit history.
 
 The Builders starter kit supplies `mechfight.py`, `check/check.py`, the
 recorded stream, schema, protocol, and campus map. Those are included for
