@@ -1,0 +1,42 @@
+{
+  "kind": "native correctness and protocol; no official score",
+  "tests": {
+    "count": 86,
+    "passed": 86
+  },
+  "organizer_check": {
+    "observations": 300,
+    "timely": 300,
+    "late": 0,
+    "bad_lines": 0,
+    "wrong_tick": 0,
+    "ready_ms": 291,
+    "p99_ms": 4.8,
+    "max_ms": 8.4,
+    "production_process_guard": true
+  },
+  "timing_stress": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "active",
+    "startup_ms": 323.46,
+    "observations": 840,
+    "p50_ms": 1.706,
+    "p99_ms": 3.187,
+    "max_ms": 14.739,
+    "over_50_ms": 0,
+    "max_rss_mib": 86.86,
+    "invalid_actions": [],
+    "mode_counts": {
+      "loot": 329,
+      "retreat": 70,
+      "heal": 122,
+      "rotate": 220,
+      "engage": 99
+    },
+    "module_errors": {},
+    "soft_budget_overruns": {},
+    "arming_decisions": 15,
+    "process_deadline_guard_tested": false
+  },
+  "container_validation": "GitHub Actions builds and checks the exact pushed commit; see workflow run. Local Docker was unavailable."
+}

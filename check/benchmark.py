@@ -20,7 +20,7 @@ from check import Schema
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--policy',choices=('v9','v11'),default='v11')
+    parser.add_argument('--policy',choices=('v9','active'),default='active')
     args=parser.parse_args()
     with gzip.open(ROOT / 'check/stream.jsonl.gz', 'rt') as f:
         messages = [json.loads(line) for line in f]
@@ -170,7 +170,7 @@ def main():
               'observations_with_learned_aim':learned_observations,
               'observations_with_tactical_collection':tactical_resource_observations,
               'invalid_actions':failures}
-    if args.policy=='v11':
+    if args.policy=='active':
         report.pop('observations_with_learned_aim')
         report.pop('observations_with_tactical_collection')
         report.update(mode_counts=dict(modes),module_errors=bot.policy.errors,

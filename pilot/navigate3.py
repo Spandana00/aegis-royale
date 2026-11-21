@@ -392,6 +392,15 @@ def _engage_dir(state: WorldState, intent: Intent, m) -> Optional[Tuple[float, f
             m["strafe_t"] = state.t + 1.2 + ((state.tick * 7919) % 13) / 10.0
     s = m["strafe_sign"]
     tx, ty = -uy * s, ux * s
+    if _flag("pursuit_range"):
+        velocity = _walk_speed(state)
+        if any(w and w.get("kind") == "laser" and w.get("charge", 0.0) > 0
+               for w in state.me.get("weapons") or []):
+            velocity *= .5
+        enemy_radial = tr.vel[0] * ux + tr.vel[1] * uy
+        radial = max(-.98, min(.98, radial + enemy_radial / max(1.0, velocity)))
+        sideways = math.sqrt(max(0.0, 1.0 - radial * radial))
+        return (ux * radial + tx * sideways, uy * radial + ty * sideways)
     w_t = 0.85 if abs(radial) < 0.7 else 0.4
     vx, vy = ux * radial + tx * w_t, uy * radial + ty * w_t
     return unit2(vx, vy)
@@ -517,9 +526,16 @@ def _step(state: WorldState, intent: Intent, threats: Threats, m) -> NavOut:
     elif mode == "engage" and intent is not None and intent.target_id is not None:
         want = _engage_dir(state, intent, m)
 
+    predicted = False
+    if want is not None and mode == "engage" and goal is None and grounded and _flag("predictive_move"):
+        from .local_motion import choose
+        selected = choose(state, intent, threats, want, k)
+        if selected is not None:
+            want, predicted = selected, True
+
     # ---------------- dodge incoming projectiles
     dodge = threats.dodge if threats is not None else None
-    if dodge is not None and (dodge[0] or dodge[1]):
+    if not predicted and dodge is not None and (dodge[0] or dodge[1]):
         soon = min((p.t_impact for p in (threats.incoming or [])), default=1.0)
         w = 1.0 if soon < 0.6 else 0.5
         if want is None:
@@ -560,6 +576,14 @@ def _step(state: WorldState, intent: Intent, threats: Threats, m) -> NavOut:
         elif urgency >= 0.4 and energy > 80 and far:
             boost = True
     out.move = (dx * speed, dy * speed)
+    if mode == "engage" and grounded and allow_boost and speed >= .99:
+        from .brain import P
+        threshold = P.get("fight_boost", 0.0)
+        weapons = state.me.get("weapons") or []
+        charging = any(w and w.get("kind") == "laser" and w.get("charge", 0.0) > 0 for w in weapons)
+        reserve = max(threshold, 60.0) if "lightning" in state.weapon_kinds() else threshold
+        if threshold > 0 and energy > reserve and not charging:
+            boost = True
     out.boost = boost
     out.eta = (eta_s * walk_v / (state.stat("boost_speed", 19.5) if boost else walk_v)) if eta_s is not None else None
     _cmd(m, state, speed)

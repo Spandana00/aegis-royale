@@ -1,68 +1,79 @@
 # AEGIS Royale
 
-**Current candidate: V11. Our best reported official score: V10, 5.33.**
+**V12 candidate: unscored. Best reported official result: V10, 5.33. V11 scored 5.25.**
 
-V11 builds on V10's 5.33 scored policy, originally adapted from
-[JuanQuenga/buildathon-mech-royale](https://github.com/JuanQuenga/buildathon-mech-royale).
-V11 fixes a gun-only fight taking priority over collecting a useful nearby
-secondary. It commits to the pickup while firing, limits the detour, abandons
-stale objectives and prefers useful equipment when drops overlap. V11 is
-unscored; see [docs/V11_COMPARISON.md](docs/V11_COMPARISON.md) for the evidence.
+V12 retains V11's bounded weapon collection and adds grounded combat sprinting.
+It was selected after feature screens and fresh-seed comparisons. The other
+experiments remain disabled. See [the feature ranking and results](docs/V12_COMPARISON.md).
+The 6.00 target has not been established by an official run.
 
 **The active Docker entrypoint is `pilot/main.py`.** Root `bot.py` preserves V9
-for comparison; it is not included in the active image.
+for historical comparisons and is excluded from the active image.
 
-## The track in simple words
+## Current behavior
 
-Sixteen robots fight while a shrinking circle pushes them together. Our code
-chooses where to move, aim and shoot ten times a second. A win gives 15 points;
-being eliminated first gives zero. Practice averages 48 matches against a
-cooperating house squad. Qualifying and the final are free-for-all matches
-against other entries on new seeds.
+The foundation is adapted, with MIT attribution, from Juan Quenga's `good-31`
+policy: surface-aware routes, planned jet hops, zone travel estimates,
+laser-first equipment, steady strafing, recovery, upgrades and an independent
+26 ms process deadline guard. V11 collects a nearby useful secondary during
+otherwise favorable gun-only fights while retaining fire and zone priority.
 
-## What is retained and what V11 changes
+V12 sprints during grounded `engage` movement when energy exceeds 40. It does
+not start a combat sprint during a laser charge; carrying lightning raises the
+energy threshold to 60. Existing route, airborne boost and recovery rules apply.
 
-The scored V10 foundation retains upstream credit and provides:
+| Experiment switch | Submitted default | Decision |
+| --- | ---: | --- |
+| `arm_commit` | true | Retain bounded V11 arming |
+| `fight_boost` | 40 | Selected V12 change |
+| `pickup_race` | false | Did not improve the first screen |
+| `wide_band` | false | Did not improve the first screen |
+| `focus_lock` | false | Did not improve the first screen |
+| `pursuit_range` | false | Not promoted; one combined screen incurred zone damage |
+| `predictive_move` | false | Improved one fresh pursuit model and regressed the other |
 
-- Surface-aware navigation, rooftop routes and planned jet hops.
-- Resumable route searches and travel-time estimates for zone escape.
-- Laser-first equipment, steady combat strafes and weapon-specific firing.
-- Threat assessment, regeneration, cube collection and supply-drop decisions.
-- An independent process deadline guard, targeting replies after 26 ms.
+The flags support reproducible experiments through `MECH_BRAIN`. Their presence
+does not activate them. Source hashes and protected function scopes are in
+[reference_manifest.json](docs/reference_manifest.json). See [THIRD_PARTY.md](THIRD_PARTY.md).
 
-V11 changes only the armament decision family and the display name. Its new
-commitment has a 150 m limit, a 20 s timeout and exclusions for zone emergencies,
-low health, multiple close attackers and a killable target. It keeps firing and
-also handles zero-HP observations without dividing by zero in fight assessment.
-Other movement, firing, healing, upgrade and deadline behavior is unchanged
-from the scored V10 source.
-Tests verify file hashes and the syntax-tree scope of the changed brain functions.
-See [THIRD_PARTY.md](THIRD_PARTY.md) and the complete [MIT notice](pilot/LICENSE).
+## Evidence
 
-## Our reported runs
+Two fresh sets of 24 simulated squad matches compared the exact V10 checkout,
+V11 and two candidate packages. V12's selected package averaged 5.458 versus
+V10's 5.083 with moderate pursuit, and 3.958 versus 3.833 with faster pursuit.
+The pooled difference is +0.25, with a paired 95% interval of approximately
+[-0.36, +0.86]. It is a provisional experiment, not an established placement gain.
+
+These are third-party simulations with reconstructed house AI and locally
+chosen seeds. They are not leaderboard scores and cannot establish 6.00.
+The [raw diagnostics](docs/v12_matches.jsonl.gz), [summaries](docs/v12_experiments.json)
+and [research ledger](docs/v12_research.json) preserve the evidence and limits.
+
+## Reported official runs
 
 | Version | Official score reported by our user | Experiment |
 | --- | --- | --- |
-| V1 | 3.75 | Initial bot |
-| V2 | 4.50 | Coordinated fire, recovery and navigation bundle |
-| V3 | 3.96 | Broader retreat policy |
+| V1 | 3.75 | Initial policy |
+| V2 | 4.50 | Coordinated fire, recovery and navigation |
+| V3 | 3.96 | Broader retreat |
 | V4 | 4.40 | Stronger projectile dodge |
-| V5 | 4.17; repeat 4.15 | Reload cover |
+| V5 | 4.17; 4.15 | Reload cover |
 | V6 | 4.46 | Falling-target prediction |
-| V7 | 4.60; repeat 4.52 | Weapon range control |
+| V7 | 4.60; 4.52 | Weapon range control |
 | V8 | 4.60 | Online aim-model selection |
 | V9 | 4.77 | Tactical equipment and cube collection |
-| V10 | **5.33** | Attributed reproduction of upstream `good-31` |
-| V11 | Unscored | Bounded weapon commitment while fighting; pickup ordering |
+| V10 | **5.33** | Attributed upstream `good-31` reproduction |
+| V11 | 5.25 | Bounded weapon commitment and pickup ordering |
+| V12 | Unscored | Grounded combat boost, retaining V11 arming |
 
-Keep the existing 5.33 entry selected until a new official result improves it.
-A native check or proxy simulator cannot establish placement or guarantee 5.50.
+Keep the 5.33 entry selected until another official result improves it.
 
 ## Build and validate
 
-From the repository root:
-
 ```sh
+python3 -B -m unittest discover -s tests -v
+python3 check/check.py -- python3 -B -u pilot/main.py
+python3 -B check/benchmark.py
 docker build --platform linux/amd64 -t aegis-royale .
 python3 check/check.py --map-dir /arena -- docker run --rm -i \
   --network none --cpus 1 --memory 512m --memory-swap 512m \
@@ -71,35 +82,32 @@ python3 check/check.py --map-dir /arena -- docker run --rm -i \
   -v "$PWD/arena:/arena:ro" aegis-royale
 ```
 
-The image pins the Python base by digest and NumPy to 2.5.5. Runtime needs no
-network or external AI service. It runs as uid 65534; the arena is mounted at
-`/arena`, and writes are limited to `/tmp` by the match sandbox.
+The image pins Python by digest and NumPy to 2.5.5. GitHub Actions builds the
+actual image and runs the tests and organizer's checker under the runtime limits.
+The native timing benchmark covers 840 observations; it measures behavior and
+time, not placement. Fifty-seven older tests cover the retained V9 policy.
 
-GitHub Actions builds the actual image, runs provenance and regression tests
-inside it, then performs the organizer's sandbox conformance check.
+## Reproduce the feature comparison
 
-For local diagnostics with Python and NumPy already installed:
+Clone the simulator separately and pin it before running. Create the exact V10
+checkout, then run an experiment with a fresh output path:
 
 ```sh
-python3 -B -m unittest discover -s tests -v
-python3 check/check.py -- python3 -B -u pilot/main.py
-python3 -B check/benchmark.py                 # active V11, 840 observations
-python3 -B check/benchmark.py --policy v9     # retained V9
-python3 -B check/compare_versions.py          # requires submitted git history
+git clone https://github.com/JuanQuenga/buildathon-mech-royale ../reference-juan
+git -C ../reference-juan checkout b50b794522c134d9eb54cc2e9bc4782f4f4a3da9
+git worktree add ../baseline-v10 d75253a91ccb4d199d4374c076ee0d58c383e590
+python3 -B check/ablate.py --sim-root ../reference-juan \
+  --baseline-root ../baseline-v10 --seeds 4000-4023 \
+  --arms v10,v11_arm,arm_boost,arm_predictive --jobs 3 \
+  --out local-results/comparison.jsonl
 ```
 
-Active-policy tests cover arming decisions, provenance, the navigation cache,
-selected profile and fallback behavior. The 57 older regressions cover retained
-V9. The benchmark measures behavior and time, not match placement.
-Its direct-policy calls do not exercise the separate process guard.
+Different machine scheduling can change proxy outcomes. The harness records
+per-arm source hashes, settings, raw matches and paired uncertainty.
 
 ## Submit
 
 Submit [this public repository](https://github.com/Spandana00/aegis-royale) with
-the exact 40-character validated commit hash on the Builders track page.
-Every submitted commit remains public. The current cutoff is Sunday,
-November 22, 2026 at 11:00 AM EST. There are at most four submissions per hour.
-
-The original AEGIS experiments and source remain available in history and at
-the root. Research sources and licenses are recorded in
-[docs/research_sources.json](docs/research_sources.json).
+the exact validated 40-character commit hash on the Builders track page.
+Practice uses 48 matches; the limit is four submissions per hour. Keep every
+submitted commit public. The documented cutoff is November 22, 2026 at 11:00 AM EST.

@@ -23,6 +23,13 @@ from .state import EnemyThreat, Intent, InvOut, Threats, WorldState, ang_diff, d
 
 # ----------------------------------------------------------------------------- tunables (eval may override)
 P: Dict[str, Any] = {
+    "arm_commit": True,           # V11 experiment; independently switchable for matched ablations
+    "pickup_race": False,         # abandon visible-but-missing or clearly lost pickup races
+    "wide_band": False,           # preserve lightning range; widen gun/laser fights under pressure
+    "focus_lock": False,          # keep a viable target unless another is materially easier to finish
+    "fight_boost": 40.0,          # V12: grounded combat sprint; zero disables it for comparisons
+    "pursuit_range": False,       # match a closing target's radial speed while retaining sideways motion
+    "predictive_move": False,     # bounded acceleration/projectile lookahead in grounded combat
     "zone_buffer_s": 6.0,          # leave this much spare time when rotating
     "zone_path_factor": 1.25,      # path length / straight distance fudge when no planner
     "zone_margin_frac": 0.25,      # aim this deep into the next circle (fraction of its radius)
@@ -241,6 +248,7 @@ def _remember_items(state: WorldState, m: Dict[str, Any]) -> None:
     for i, r in items.items():
         if i in seen:
             r.pop("close_t", None)
+            r.pop("missing_since", None)
             continue
         d = dist2d(r["pos"], state.pos)
         if t - r["t"] > P["memory_item_s"]:
@@ -256,6 +264,54 @@ def _remember_items(state: WorldState, m: Dict[str, Any]) -> None:
             gone.append(i)
     for i in gone:
         del items[i]
+    if P["pickup_race"]:
+        _prune_missing_pickups(state, m, seen)
+
+
+def _prune_missing_pickups(state: WorldState, m, seen) -> None:
+    """Forget a missing pickup only after two unobstructed views, with bounded ray work."""
+    if state.arena is None:
+        return
+    vision = state.cfg.get("vision", {})
+    near = float(vision.get("near_range", 45.0)) + state.stat("near_range_bonus") - 10.0
+    far = float(vision.get("range", 200.0)) + state.stat("vision_bonus") - 10.0
+    half_fov = math.radians(float(vision.get("fov_deg", 120.0))) / 2.0 - .05
+    eye = (state.pos[0], state.pos[1], state.pos[2] + 8.0 * (1 + .05 * state.me.get("cubes", 0)))
+    yaw = float((state.me.get("aim") or [0.0])[0])
+    candidates = sorted((r for i, r in m["items"].items() if i not in seen and r["type"] == "pickup"),
+                        key=lambda r: r.get("view_checked", -1e9))
+    for r in candidates[:4]:
+        r["view_checked"] = state.t
+        d = dist2d(state.pos, r["pos"])
+        in_view = d < near or (d < far and abs(ang_diff(yaw_to(state.pos, r["pos"]), yaw)) < half_fov)
+        top = (r["pos"][0], r["pos"][1], r["pos"][2] + .5)
+        if not in_view or not state.arena.los(eye, top):
+            r.pop("missing_since", None)
+            continue
+        start = r.setdefault("missing_since", state.t)
+        if state.t - start >= .5:
+            m["items"].pop(r["id"], None)
+            m["stale_pickups"] = m.get("stale_pickups", 0) + 1
+
+
+def _lost_pickup_race(state: WorldState, item) -> bool:
+    """A fresh rival substantially closer on the same level can claim this pickup first."""
+    if not P["pickup_race"]:
+        return False
+    mine = dist2d(state.pos, item["pos"])
+    if mine <= 8.0:
+        return False
+    for tr in state.tracks.values():
+        if tr.kind != "mech" or tr.dead or state.t - tr.last_seen_t > 1.0:
+            continue
+        if item.get("kind") in tr.weapons:
+            continue
+        if abs(tr.pos[2] - item["pos"][2]) > 4.0:
+            continue
+        theirs = dist2d(tr.pos, item["pos"])
+        if theirs + 10.0 < .8 * mine:
+            return True
+    return False
 
 
 # ----------------------------------------------------------------------------- round detection
@@ -599,7 +655,7 @@ def choose_intent(state: WorldState, threats: Threats) -> Intent:
         it.arrive_by = zp.get("deadline")
         return _finish(state, m, it)
 
-    arm = _arming_intent(state, m, hot, fight, attackers, face, hpf)
+    arm = _arming_intent(state, m, hot, fight, attackers, face, hpf) if P["arm_commit"] else None
     if arm is not None:
         return _finish(state, m, arm)
 
@@ -761,6 +817,8 @@ def _arming_intent(state: WorldState, m: Dict[str, Any], hot, fight, attackers, 
     for iid,item in m["items"].items():
         if item["type"] != "pickup" or item.get("kind") in (None,"gun"):
             continue
+        if _lost_pickup_race(state, item):
+            continue
         value = WEAPON_VALUE.get(item["kind"],0.)
         if value <= 0. or m["blacklist"].get(iid,-1e9) > state.t:
             continue
@@ -823,7 +881,8 @@ def _assess_fight(state: WorldState, threats: Threats, fresh: List[EnemyThreat],
     # A live mech with less than half a hit point can be serialized as HP 0.
     # Keep the fight estimate finite instead of losing this intent decision.
     their_ttk = max(ehp, 1.0) / inc
-    best, best_r = None, 1e9
+    best, best_r, best_score = None, 1e9, 1e9
+    previous = _mem(state).get("focus_id") if P["focus_lock"] else None
     for e in fresh:
         if not e.visible and state.t - e.last_seen_t > 0.6:
             continue
@@ -838,8 +897,11 @@ def _assess_fight(state: WorldState, threats: Threats, fresh: List[EnemyThreat],
             r *= 0.9
         if P["hunter_model"] and e.id in hunters and state.weapon_kinds()[1] is not None:
             r *= P["hunter_pref"]
-        if r < best_r:
-            best, best_r = e, r
+        score = r * .85 if e.id == previous and e.visible and state.t - e.last_seen_t < .6 else r
+        if score < best_score:
+            best, best_r, best_score = e, r, score
+    if P["focus_lock"]:
+        _mem(state)["focus_id"] = best.id if best is not None else None
     out["target"], out["ratio"] = best, best_r
     sq = state.mode_guess == "squad"
     eng = P["engage_ratio_squad"] if sq else P["engage_ratio_ffa"]
@@ -926,6 +988,13 @@ def _desired_range(state: WorldState, e: EnemyThreat) -> float:
         if "mortar" in their:
             return 25.0
         return 28.0
+    if P["wide_band"]:
+        th = _mem(state).get("threats_ref")
+        crowd = sum(1 for a in (getattr(th, "enemies", None) or [])
+                    if a.kind == "mech" and a.visible and a.dist < 160.0)
+        if "laser" in their or "mortar" in their or crowd >= 2:
+            _, radius = state.zone_circle_at(state.t + 2.0)
+            return min(110.0 if "laser" not in kinds else 120.0, max(20.0, .65 * radius))
     so = P["squad_standoff"]
     if so > 0 and state.mode_guess != "ffa" and "lightning" not in their and "laser" not in their:
         return max(so, 90.0 if "laser" in kinds else 0.0)
@@ -1083,6 +1152,8 @@ def _loot_choice(state: WorldState, m, fresh, zp, hpf) -> Optional[Intent]:
             continue
         val = 0.0
         if r["type"] == "pickup":
+            if _lost_pickup_race(state, r):
+                continue
             k = r["kind"]
             if k in have or k == "gun":
                 continue
@@ -1152,6 +1223,8 @@ def _known_weapon(state: WorldState, m, max_d: float):
     best, bd = None, max_d
     for i, r in m["items"].items():
         if r["type"] != "pickup" or r.get("kind") in ("gun", None) or m["blacklist"].get(i, -1e9) > state.t:
+            continue
+        if _lost_pickup_race(state, r):
             continue
         if WEAPON_VALUE.get(r.get("kind"), 1.0) <= 0:
             continue
@@ -1387,7 +1460,10 @@ def summary(state: WorldState) -> Dict[str, Any]:
             "cause": cause, "cubes": state.me.get("cubes", 0), "weapons": state.weapon_kinds(),
             "attackers": len(m["attackers_ever"]), "foreign_deaths": m["foreign_deaths"], "last": m.get("last_ctx"),
             "first_weapon_t": m.get("first_weapon_t"), "profile": P.get("profile"),
-            "arming": {"decisions":m.get("arm_decisions",0),"timeouts":m.get("arm_timeouts",0)}}
+            "arming": {"decisions":m.get("arm_decisions",0),"timeouts":m.get("arm_timeouts",0)},
+            "features": {k:P[k] for k in ("arm_commit", "pickup_race", "wide_band", "focus_lock",
+                                           "fight_boost", "pursuit_range", "predictive_move")},
+            "motion": dict(state.scratch.get("motion", {}))}
 
 
 def debug(state: WorldState, intent: Intent, threats: Threats, nav, cmb) -> Dict[str, Any]:

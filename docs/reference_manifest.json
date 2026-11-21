@@ -8,9 +8,11 @@
   "official_score_independently_verified": false,
   "our_v9_score_user_reported": 4.77,
   "changes": [
-    "Rename Python package bot to pilot to preserve the earlier AEGIS implementations.",
-    "Change display name OSU-Walker to AEGIS v11.",
-    "V11: bounded weapon commitment during favorable gun-only fights, utility-ordered pickup selection, arming diagnostics and a zero-HP fight-denominator guard."
+    "Rename Python package bot to pilot to preserve earlier AEGIS implementations.",
+    "Change display name OSU-Walker to AEGIS v12.",
+    "Retain V11 bounded weapon commitment, pickup ordering and zero-HP guard.",
+    "Enable V12 grounded combat boost above 40 energy, with laser-charge and lightning-energy guards.",
+    "Keep pickup race, wider band, focus, pursuit and predictive movement experiments disabled; record hashes and protected function scopes."
   ],
   "files": [
     {
@@ -44,8 +46,8 @@
       "source_path": "bot/brain.py",
       "path": "pilot/brain.py",
       "source_sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
-      "sha256": "7bd61d2787b0cdd499c33778161d6a812170a252a998cb2c3d3d05a8f2576304",
-      "size_bytes": 67922,
+      "sha256": "d4ac5138845ba0625c113cd02d85919c337bef9fddccb68c0683f31c03fe76be",
+      "size_bytes": 72004,
       "changed": true,
       "v10_sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714"
     },
@@ -62,7 +64,7 @@
       "source_path": "bot/main.py",
       "path": "pilot/main.py",
       "source_sha256": "9b1c145ebd702679e8aefad78a42a47f1d7c378ec77eca2089bbbdc38f73b17e",
-      "sha256": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+      "sha256": "5293dcd9bffe12a89dabb8518aa5ff448dc0befac9d28ada8263f6207a005cca",
       "size_bytes": 24943,
       "changed": true,
       "v10_sha256": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac"
@@ -89,9 +91,9 @@
       "source_path": "bot/navigate3.py",
       "path": "pilot/navigate3.py",
       "source_sha256": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
-      "sha256": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
-      "size_bytes": 29424,
-      "changed": false,
+      "sha256": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+      "size_bytes": 30724,
+      "changed": true,
       "v10_sha256": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666"
     },
     {
@@ -111,20 +113,57 @@
       "size_bytes": 34003,
       "changed": false,
       "v10_sha256": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+    },
+    {
+      "path": "pilot/local_motion.py",
+      "size_bytes": 6029,
+      "sha256": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+      "source_sha256": null,
+      "origin": "Independently implemented V12 experiment; disabled in shipping defaults",
+      "changed": true
     }
   ],
-  "candidate": "AEGIS v11",
+  "candidate": "AEGIS v12",
   "baseline_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
   "baseline_user_reported_score": 5.33,
-  "tactical_scope": {
-    "modified_functions": [
-      "choose_intent",
-      "_arming_intent",
-      "inventory",
-      "summary"
-    ],
-    "protected_brain_ast_sha256": "489aff22980b548c4e83018c0c22fe9efe0490f1fcb42178b7a7dea802c8b82e",
-    "numeric_guard": "their_ttk = max(ehp, 1.0) / inc",
-    "fingerprint_format": "Canonical JSON of AST types and named fields, excluding optional None fields"
+  "previous_candidate_user_reported_score": 5.25,
+  "previous_candidate_receipt": "BB-524096D2",
+  "tactical_scopes": {
+    "pilot/brain.py": {
+      "modified_functions": [
+        "choose_intent",
+        "_arming_intent",
+        "inventory",
+        "summary",
+        "_remember_items",
+        "_prune_missing_pickups",
+        "_lost_pickup_race",
+        "_assess_fight",
+        "_desired_range",
+        "_loot_choice",
+        "_known_weapon"
+      ],
+      "modified_globals": [
+        "P"
+      ],
+      "protected_ast_sha256": "1ae4507e52aafac6e515415d686dbc1c4188547e92f6c0f361f3e0df0ddb8876"
+    },
+    "pilot/navigate3.py": {
+      "modified_functions": [
+        "_engage_dir",
+        "_step"
+      ],
+      "modified_globals": [],
+      "protected_ast_sha256": "40d0609fa50598846b884fdbe44ce6e17701fcf5fe724cd70aa0009caa644f9e"
+    }
+  },
+  "enabled_features": {
+    "arm_commit": true,
+    "pickup_race": false,
+    "wide_band": false,
+    "focus_lock": false,
+    "fight_boost": 40.0,
+    "pursuit_range": false,
+    "predictive_move": false
   }
 }

@@ -1,0 +1,1386 @@
+{
+  "kind": "third-party proxy experiments; no official V12 score",
+  "simulator": {
+    "repository": "JuanQuenga/buildathon-mech-royale",
+    "commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9"
+  },
+  "official": {
+    "v10": {
+      "commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+      "user_reported_score": 5.33
+    },
+    "v11": {
+      "commit": "be5f383d11735740a283aa730d0a66344b496e85",
+      "user_reported_score": 5.25,
+      "receipt": "BB-524096D2"
+    }
+  },
+  "sets": {
+    "v12_screen2": {
+      "kind": "third-party simulator diagnostics, not official placement",
+      "arms": {
+        "v10": {
+          "n": 16,
+          "mean_proxy_points": 4.875,
+          "sd": 1.2583057392117916,
+          "mean_alive_s": 119.5625,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 11,
+          "mean_first_weapon_s": 26.4375,
+          "mean_cubes": 5.5625,
+          "mean_damage_dealt": 10947.875,
+          "deaths": {
+            "gun": 11,
+            "laser": 5
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0,
+          "paired_95pct_halfwidth": 0.0,
+          "better_tied_worse": [
+            0,
+            16,
+            0
+          ]
+        },
+        "v11_arm": {
+          "n": 16,
+          "mean_proxy_points": 5.1875,
+          "sd": 1.682012683265696,
+          "mean_alive_s": 121.5,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 16.04375,
+          "mean_cubes": 6.6875,
+          "mean_damage_dealt": 11408.25,
+          "deaths": {
+            "gun": 12,
+            "laser": 4
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.3125,
+          "paired_95pct_halfwidth": 0.7463255180591442,
+          "better_tied_worse": [
+            5,
+            9,
+            2
+          ]
+        },
+        "pickup_race": {
+          "n": 16,
+          "mean_proxy_points": 4.6875,
+          "sd": 1.4476993242152645,
+          "mean_alive_s": 111.421875,
+          "mean_zone_damage": 0,
+          "armed": 15,
+          "armed_by_30_s": 11,
+          "mean_first_weapon_s": 26.826666666666668,
+          "mean_cubes": 6.0625,
+          "mean_damage_dealt": 10260.25,
+          "deaths": {
+            "mortar": 1,
+            "laser": 5,
+            "gun": 10
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": -0.1875,
+          "paired_95pct_halfwidth": 1.0515347829432857,
+          "better_tied_worse": [
+            5,
+            6,
+            5
+          ]
+        },
+        "wide_band": {
+          "n": 16,
+          "mean_proxy_points": 4.5625,
+          "sd": 1.631716887208072,
+          "mean_alive_s": 108.00937499999999,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 8,
+          "mean_first_weapon_s": 35.78125,
+          "mean_cubes": 5.25,
+          "mean_damage_dealt": 10202.1875,
+          "deaths": {
+            "gun": 13,
+            "laser": 3
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": -0.3125,
+          "paired_95pct_halfwidth": 0.5404634313003208,
+          "better_tied_worse": [
+            2,
+            8,
+            6
+          ]
+        },
+        "focus_lock": {
+          "n": 16,
+          "mean_proxy_points": 4.625,
+          "sd": 1.6278820596099706,
+          "mean_alive_s": 115.9375,
+          "mean_zone_damage": 0,
+          "armed": 15,
+          "armed_by_30_s": 11,
+          "mean_first_weapon_s": 21.026666666666667,
+          "mean_cubes": 5.875,
+          "mean_damage_dealt": 10566.375,
+          "deaths": {
+            "mortar": 2,
+            "gun": 12,
+            "laser": 2
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": -0.25,
+          "paired_95pct_halfwidth": 0.9823424619245571,
+          "better_tied_worse": [
+            4,
+            7,
+            5
+          ]
+        },
+        "fight_boost": {
+          "n": 16,
+          "mean_proxy_points": 5.125,
+          "sd": 1.2583057392117916,
+          "mean_alive_s": 112.765625,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 9,
+          "mean_first_weapon_s": 29.39375,
+          "mean_cubes": 5.625,
+          "mean_damage_dealt": 11079.8125,
+          "deaths": {
+            "gun": 12,
+            "laser": 3,
+            "npc": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.25,
+          "paired_95pct_halfwidth": 0.7407588142123813,
+          "better_tied_worse": [
+            7,
+            3,
+            6
+          ]
+        },
+        "pursuit_range": {
+          "n": 16,
+          "mean_proxy_points": 5,
+          "sd": 1.8257418583505538,
+          "mean_alive_s": 125.321875,
+          "mean_zone_damage": 7.5,
+          "armed": 16,
+          "armed_by_30_s": 9,
+          "mean_first_weapon_s": 27.41875,
+          "mean_cubes": 7,
+          "mean_damage_dealt": 11609.5625,
+          "deaths": {
+            "gun": 15,
+            "laser": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.125,
+          "paired_95pct_halfwidth": 1.0270705220634397,
+          "better_tied_worse": [
+            8,
+            1,
+            7
+          ]
+        }
+      },
+      "metadata": {
+        "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+        "seeds": "3300-3315",
+        "mode": "squad",
+        "join_per_loss": 0.6,
+        "jobs": 4,
+        "policy": "/workspace/scratch/7c8dc532823d/aegis-royale",
+        "time": "2026-11-21T18:06:52Z",
+        "arms": {
+          "v10": {
+            "arm_commit": 0,
+            "pickup_race": 0,
+            "wide_band": 0,
+            "focus_lock": 0,
+            "fight_boost": 0,
+            "pursuit_range": 0
+          },
+          "v11_arm": {
+            "arm_commit": 1,
+            "pickup_race": 0,
+            "wide_band": 0,
+            "focus_lock": 0,
+            "fight_boost": 0,
+            "pursuit_range": 0
+          },
+          "pickup_race": {
+            "arm_commit": 0,
+            "pickup_race": 1,
+            "wide_band": 0,
+            "focus_lock": 0,
+            "fight_boost": 0,
+            "pursuit_range": 0
+          },
+          "wide_band": {
+            "arm_commit": 0,
+            "pickup_race": 0,
+            "wide_band": 1,
+            "focus_lock": 0,
+            "fight_boost": 0,
+            "pursuit_range": 0
+          },
+          "focus_lock": {
+            "arm_commit": 0,
+            "pickup_race": 0,
+            "wide_band": 0,
+            "focus_lock": 1,
+            "fight_boost": 0,
+            "pursuit_range": 0
+          },
+          "fight_boost": {
+            "arm_commit": 0,
+            "pickup_race": 0,
+            "wide_band": 0,
+            "focus_lock": 0,
+            "fight_boost": 40,
+            "pursuit_range": 0
+          },
+          "pursuit_range": {
+            "arm_commit": 0,
+            "pickup_race": 0,
+            "wide_band": 0,
+            "focus_lock": 0,
+            "fight_boost": 0,
+            "pursuit_range": 1
+          }
+        }
+      },
+      "control_note": "V11 minus arming, with V11 inventory ordering and numeric guard; not byte-identical V10"
+    },
+    "v12_structure_screen": {
+      "kind": "third-party simulator diagnostics, not official placement",
+      "arms": {
+        "v10": {
+          "n": 16,
+          "mean_proxy_points": 4.625,
+          "sd": 1.4548768561863463,
+          "mean_alive_s": 120.640625,
+          "mean_zone_damage": 27.5,
+          "armed": 16,
+          "armed_by_30_s": 11,
+          "mean_first_weapon_s": 26.4125,
+          "mean_cubes": 5.125,
+          "mean_damage_dealt": 10411.9375,
+          "deaths": {
+            "gun": 12,
+            "laser": 4
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0,
+          "paired_95pct_halfwidth": 0.0,
+          "better_tied_worse": [
+            0,
+            16,
+            0
+          ]
+        },
+        "v11_arm": {
+          "n": 16,
+          "mean_proxy_points": 5,
+          "sd": 1.7888543819998317,
+          "mean_alive_s": 112.321875,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 18.88125,
+          "mean_cubes": 6.3125,
+          "mean_damage_dealt": 10676.75,
+          "deaths": {
+            "gun": 11,
+            "laser": 4,
+            "mortar": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 4,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.375,
+          "paired_95pct_halfwidth": 0.8672541672572117,
+          "better_tied_worse": [
+            6,
+            6,
+            4
+          ]
+        },
+        "predictive_move": {
+          "n": 16,
+          "mean_proxy_points": 5.0625,
+          "sd": 2.4074537032585557,
+          "mean_alive_s": 119.60625,
+          "mean_zone_damage": 101.5,
+          "armed": 14,
+          "armed_by_30_s": 8,
+          "mean_first_weapon_s": 23.521428571428572,
+          "mean_cubes": 6.8125,
+          "mean_damage_dealt": 10250.75,
+          "deaths": {
+            "gun": 13,
+            "laser": 2,
+            "zone": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.4375,
+          "paired_95pct_halfwidth": 0.9523915192763863,
+          "better_tied_worse": [
+            6,
+            6,
+            4
+          ]
+        },
+        "arm_predictive": {
+          "n": 16,
+          "mean_proxy_points": 5.625,
+          "sd": 1.9621416870348583,
+          "mean_alive_s": 102.3125,
+          "mean_zone_damage": 0,
+          "armed": 15,
+          "armed_by_30_s": 13,
+          "mean_first_weapon_s": 13.826666666666666,
+          "mean_cubes": 6.9375,
+          "mean_damage_dealt": 10897.125,
+          "deaths": {
+            "laser": 3,
+            "gun": 13
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 1,
+          "paired_95pct_halfwidth": 0.912439687504513,
+          "better_tied_worse": [
+            10,
+            3,
+            3
+          ]
+        },
+        "arm_boost": {
+          "n": 16,
+          "mean_proxy_points": 5.75,
+          "sd": 1.6532795690182993,
+          "mean_alive_s": 103.071875,
+          "mean_zone_damage": 0,
+          "armed": 16,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 18.39375,
+          "mean_cubes": 7.6875,
+          "mean_damage_dealt": 11748.6875,
+          "deaths": {
+            "laser": 6,
+            "gun": 10
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 1.125,
+          "paired_95pct_halfwidth": 0.7246183413528806,
+          "better_tied_worse": [
+            11,
+            2,
+            3
+          ]
+        },
+        "arm_pursuit": {
+          "n": 16,
+          "mean_proxy_points": 5.5625,
+          "sd": 1.631716887208072,
+          "mean_alive_s": 141.528125,
+          "mean_zone_damage": 108.5625,
+          "armed": 15,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 14.006666666666668,
+          "mean_cubes": 8.4375,
+          "mean_damage_dealt": 12514.5,
+          "deaths": {
+            "zone": 1,
+            "gun": 14,
+            "npc": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.9375,
+          "paired_95pct_halfwidth": 0.4947696031045662,
+          "better_tied_worse": [
+            11,
+            4,
+            1
+          ]
+        }
+      },
+      "metadata": {
+        "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+        "seeds": "3300-3315",
+        "mode": "squad",
+        "join_per_loss": 0.6,
+        "jobs": 4,
+        "policy": "/workspace/scratch/7c8dc532823d/aegis-royale",
+        "baseline_root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+        "control_note": "exact V10 checkout",
+        "time": "2026-11-21T18:12:22Z",
+        "arms": {
+          "v10": {
+            "switches": {
+              "arm_commit": 0,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/main.py": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "v11_arm": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "predictive_move": {
+            "switches": {
+              "arm_commit": 0,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 1
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_predictive": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 1
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_boost": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 40,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_pursuit": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 1,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          }
+        }
+      }
+    },
+    "v12_validation_moderate": {
+      "kind": "third-party simulator diagnostics, not official placement",
+      "arms": {
+        "v10": {
+          "n": 24,
+          "mean_proxy_points": 5.083333333333333,
+          "sd": 1.2481870911416901,
+          "mean_alive_s": 129.73333333333335,
+          "mean_zone_damage": 0,
+          "armed": 24,
+          "armed_by_30_s": 20,
+          "mean_first_weapon_s": 20.775,
+          "mean_cubes": 4.625,
+          "mean_damage_dealt": 11879.791666666666,
+          "deaths": {
+            "gun": 20,
+            "laser": 4
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0,
+          "paired_95pct_halfwidth": 0.0,
+          "better_tied_worse": [
+            0,
+            24,
+            0
+          ]
+        },
+        "v11_arm": {
+          "n": 24,
+          "mean_proxy_points": 5.416666666666667,
+          "sd": 2.962323803847341,
+          "mean_alive_s": 124.64791666666667,
+          "mean_zone_damage": 58.5,
+          "armed": 24,
+          "armed_by_30_s": 21,
+          "mean_first_weapon_s": 13.379166666666666,
+          "mean_cubes": 5.625,
+          "mean_damage_dealt": 11722.583333333334,
+          "deaths": {
+            "gun": 14,
+            "laser": 8,
+            "survived": 1,
+            "zone": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 2,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0.3333333333333333,
+          "paired_95pct_halfwidth": 1.4187259832183723,
+          "better_tied_worse": [
+            9,
+            6,
+            9
+          ]
+        },
+        "arm_boost": {
+          "n": 24,
+          "mean_proxy_points": 5.458333333333333,
+          "sd": 1.6145847942957392,
+          "mean_alive_s": 114.69583333333334,
+          "mean_zone_damage": 0,
+          "armed": 24,
+          "armed_by_30_s": 21,
+          "mean_first_weapon_s": 12.554166666666667,
+          "mean_cubes": 5.625,
+          "mean_damage_dealt": 11474.125,
+          "deaths": {
+            "gun": 17,
+            "laser": 7
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0.375,
+          "paired_95pct_halfwidth": 0.8311105222418734,
+          "better_tied_worse": [
+            12,
+            7,
+            5
+          ]
+        },
+        "arm_predictive": {
+          "n": 24,
+          "mean_proxy_points": 5.708333333333333,
+          "sd": 1.5736738147920994,
+          "mean_alive_s": 104.50833333333334,
+          "mean_zone_damage": 0,
+          "armed": 24,
+          "armed_by_30_s": 21,
+          "mean_first_weapon_s": 12.775,
+          "mean_cubes": 6.333333333333333,
+          "mean_damage_dealt": 11276.875,
+          "deaths": {
+            "gun": 18,
+            "laser": 4,
+            "mortar": 2
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 2,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0.625,
+          "paired_95pct_halfwidth": 0.7721069452891667,
+          "better_tied_worse": [
+            9,
+            9,
+            6
+          ]
+        }
+      },
+      "metadata": {
+        "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+        "seeds": "4000-4023",
+        "mode": "squad",
+        "join_per_loss": 0.6,
+        "jobs": 3,
+        "policy": "/workspace/scratch/7c8dc532823d/aegis-royale",
+        "baseline_root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+        "control_note": "exact V10 checkout",
+        "time": "2026-11-21T18:16:28Z",
+        "arms": {
+          "v10": {
+            "switches": {
+              "arm_commit": 0,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/main.py": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "v11_arm": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_boost": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 40,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_predictive": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 1
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          }
+        }
+      }
+    },
+    "v12_validation_fast": {
+      "kind": "third-party simulator diagnostics, not official placement",
+      "arms": {
+        "v10": {
+          "n": 24,
+          "mean_proxy_points": 3.8333333333333335,
+          "sd": 1.6061476099435992,
+          "mean_alive_s": 102.88958333333333,
+          "mean_zone_damage": 0,
+          "armed": 21,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 22.35238095238095,
+          "mean_cubes": 4.333333333333333,
+          "mean_damage_dealt": 8014.375,
+          "deaths": {
+            "laser": 4,
+            "gun": 20
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0,
+          "paired_95pct_halfwidth": 0.0,
+          "better_tied_worse": [
+            0,
+            24,
+            0
+          ]
+        },
+        "v11_arm": {
+          "n": 24,
+          "mean_proxy_points": 3.7916666666666665,
+          "sd": 1.9332146390351255,
+          "mean_alive_s": 98.38958333333333,
+          "mean_zone_damage": 7.333333333333333,
+          "armed": 22,
+          "armed_by_30_s": 19,
+          "mean_first_weapon_s": 14.081818181818182,
+          "mean_cubes": 3.875,
+          "mean_damage_dealt": 7884,
+          "deaths": {
+            "gun": 23,
+            "laser": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 0,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": -0.041666666666666664,
+          "paired_95pct_halfwidth": 1.090870786189563,
+          "better_tied_worse": [
+            10,
+            5,
+            9
+          ]
+        },
+        "arm_boost": {
+          "n": 24,
+          "mean_proxy_points": 3.9583333333333335,
+          "sd": 1.7062332443303205,
+          "mean_alive_s": 100.70208333333333,
+          "mean_zone_damage": 0,
+          "armed": 23,
+          "armed_by_30_s": 19,
+          "mean_first_weapon_s": 14.965217391304348,
+          "mean_cubes": 4.458333333333333,
+          "mean_damage_dealt": 8288.625,
+          "deaths": {
+            "laser": 4,
+            "gun": 20
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": 0.125,
+          "paired_95pct_halfwidth": 0.9670142589397291,
+          "better_tied_worse": [
+            11,
+            4,
+            9
+          ]
+        },
+        "arm_predictive": {
+          "n": 24,
+          "mean_proxy_points": 3.625,
+          "sd": 1.4084373085707127,
+          "mean_alive_s": 87.5,
+          "mean_zone_damage": 0,
+          "armed": 23,
+          "armed_by_30_s": 18,
+          "mean_first_weapon_s": 18.41304347826087,
+          "mean_cubes": 2.7916666666666665,
+          "mean_damage_dealt": 7454.875,
+          "deaths": {
+            "gun": 19,
+            "laser": 4,
+            "mortar": 1
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 24,
+          "paired_delta": -0.20833333333333334,
+          "paired_95pct_halfwidth": 0.8606219479999491,
+          "better_tied_worse": [
+            10,
+            6,
+            8
+          ]
+        }
+      },
+      "metadata": {
+        "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+        "seeds": "4100-4123",
+        "mode": "squad",
+        "join_per_loss": 1.0,
+        "jobs": 3,
+        "policy": "/workspace/scratch/7c8dc532823d/aegis-royale",
+        "baseline_root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+        "control_note": "exact V10 checkout",
+        "time": "2026-11-21T18:16:28Z",
+        "arms": {
+          "v10": {
+            "switches": {
+              "arm_commit": 0,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/main.py": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "v11_arm": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_boost": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 40,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_predictive": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 1
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "caf72068ef7300a81030bacf07ee320f032ebff28edb8acbf9f9b7dc3388f80f",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          }
+        }
+      }
+    },
+    "v12_ffa": {
+      "kind": "third-party simulator diagnostics, not official placement",
+      "arms": {
+        "v10": {
+          "n": 16,
+          "mean_proxy_points": 11.5625,
+          "sd": 4.530912343741233,
+          "mean_alive_s": 121.06875,
+          "mean_zone_damage": 0,
+          "armed": 14,
+          "armed_by_30_s": 12,
+          "mean_first_weapon_s": 13.942857142857143,
+          "mean_cubes": 5.8125,
+          "mean_damage_dealt": 3080.3125,
+          "deaths": {
+            "survived": 8,
+            "gun": 5,
+            "mortar": 1,
+            "laser": 2
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 3,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0,
+          "paired_95pct_halfwidth": 0.0,
+          "better_tied_worse": [
+            0,
+            16,
+            0
+          ]
+        },
+        "arm_boost": {
+          "n": 16,
+          "mean_proxy_points": 11.625,
+          "sd": 3.575378767813745,
+          "mean_alive_s": 117.771875,
+          "mean_zone_damage": 0,
+          "armed": 15,
+          "armed_by_30_s": 14,
+          "mean_first_weapon_s": 11.66,
+          "mean_cubes": 4.3125,
+          "mean_damage_dealt": 3492.6875,
+          "deaths": {
+            "survived": 6,
+            "gun": 6,
+            "mortar": 1,
+            "npc": 1,
+            "laser": 2
+          },
+          "late": 0,
+          "missed": 0,
+          "tracebacks": 0,
+          "fallbacks": 1,
+          "module_errors": 0,
+          "paired_n": 16,
+          "paired_delta": 0.0625,
+          "paired_95pct_halfwidth": 2.1084048200372356,
+          "better_tied_worse": [
+            5,
+            6,
+            5
+          ]
+        }
+      },
+      "metadata": {
+        "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+        "seeds": "4200-4215",
+        "mode": "ffa",
+        "join_per_loss": 0.6,
+        "jobs": 4,
+        "policy": "/workspace/scratch/7c8dc532823d/aegis-royale",
+        "baseline_root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+        "control_note": "exact V10 checkout",
+        "time": "2026-11-21T19:26:41Z",
+        "arms": {
+          "v10": {
+            "switches": {
+              "arm_commit": 0,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 0,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/baseline-v10",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/main.py": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          },
+          "arm_boost": {
+            "switches": {
+              "arm_commit": 1,
+              "pickup_race": 0,
+              "wide_band": 0,
+              "focus_lock": 0,
+              "fight_boost": 40,
+              "pursuit_range": 0,
+              "predictive_move": 0
+            },
+            "root": "/workspace/scratch/7c8dc532823d/aegis-royale",
+            "source_sha256": {
+              "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+              "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+              "pilot/brain.py": "d4ac5138845ba0625c113cd02d85919c337bef9fddccb68c0683f31c03fe76be",
+              "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+              "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+              "pilot/main.py": "5293dcd9bffe12a89dabb8518aa5ff448dc0befac9d28ada8263f6207a005cca",
+              "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+              "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+              "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+              "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+            }
+          }
+        }
+      }
+    }
+  },
+  "selection": "arm_boost: positive point estimate on both fresh pursuit models; all paired intervals include zero",
+  "limits": [
+    "House AI and seeds are reconstructed, not the official scorer.",
+    "The initial feature screen control retains V11 inventory ordering. The structural screen and validation use the exact scored V10 checkout.",
+    "Development scores selected candidates; they do not estimate official score or establish isolated causal effects.",
+    "Source edits added disabled features during the exploratory screen; later validation records frozen per-arm source hashes."
+  ],
+  "pooled_validation": {
+    "kind": "third-party simulator diagnostics, not official placement",
+    "arms": {
+      "v10": {
+        "n": 48,
+        "mean_proxy_points": 4.458333333333333,
+        "sd": 1.5568425948849893,
+        "mean_alive_s": 116.31145833333333,
+        "mean_zone_damage": 0,
+        "armed": 45,
+        "armed_by_30_s": 34,
+        "mean_first_weapon_s": 21.51111111111111,
+        "mean_cubes": 4.479166666666667,
+        "mean_damage_dealt": 9947.083333333334,
+        "deaths": {
+          "gun": 40,
+          "laser": 8
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0,
+        "paired_n": 48,
+        "paired_delta": 0,
+        "paired_95pct_halfwidth": 0.0,
+        "better_tied_worse": [
+          0,
+          48,
+          0
+        ]
+      },
+      "v11_arm": {
+        "n": 48,
+        "mean_proxy_points": 4.604166666666667,
+        "sd": 2.6071879636908006,
+        "mean_alive_s": 111.51875,
+        "mean_zone_damage": 32.916666666666664,
+        "armed": 46,
+        "armed_by_30_s": 40,
+        "mean_first_weapon_s": 13.715217391304348,
+        "mean_cubes": 4.75,
+        "mean_damage_dealt": 9803.291666666666,
+        "deaths": {
+          "gun": 37,
+          "laser": 9,
+          "survived": 1,
+          "zone": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0,
+        "paired_n": 48,
+        "paired_delta": 0.14583333333333334,
+        "paired_95pct_halfwidth": 0.8594403886739486,
+        "better_tied_worse": [
+          19,
+          11,
+          18
+        ]
+      },
+      "arm_boost": {
+        "n": 48,
+        "mean_proxy_points": 4.708333333333333,
+        "sd": 1.8096471189255272,
+        "mean_alive_s": 107.69895833333334,
+        "mean_zone_damage": 0,
+        "armed": 47,
+        "armed_by_30_s": 40,
+        "mean_first_weapon_s": 13.73404255319149,
+        "mean_cubes": 5.041666666666667,
+        "mean_damage_dealt": 9881.375,
+        "deaths": {
+          "gun": 37,
+          "laser": 11
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0,
+        "paired_n": 48,
+        "paired_delta": 0.25,
+        "paired_95pct_halfwidth": 0.6121839490708655,
+        "better_tied_worse": [
+          23,
+          11,
+          14
+        ]
+      },
+      "arm_predictive": {
+        "n": 48,
+        "mean_proxy_points": 4.666666666666667,
+        "sd": 1.8140507550352531,
+        "mean_alive_s": 96.00416666666666,
+        "mean_zone_damage": 0,
+        "armed": 47,
+        "armed_by_30_s": 39,
+        "mean_first_weapon_s": 15.534042553191489,
+        "mean_cubes": 4.5625,
+        "mean_damage_dealt": 9365.875,
+        "deaths": {
+          "gun": 37,
+          "laser": 8,
+          "mortar": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 3,
+        "module_errors": 0,
+        "paired_n": 48,
+        "paired_delta": 0.20833333333333334,
+        "paired_95pct_halfwidth": 0.5675512473801619,
+        "better_tied_worse": [
+          19,
+          15,
+          14
+        ]
+      }
+    }
+  },
+  "primary_match_count": 432,
+  "public_reference_comparison": {
+    "reference_commit": "8ed48da5e0ca7b01097019d1a1038c892e1fd174",
+    "reference_runtime": "Node 24.22.3, not original Bun image",
+    "seeds": "3200-3207",
+    "reference_mean": 5.125,
+    "v10_mean": 5.5,
+    "paired_reference_minus_v10": -0.375,
+    "paired_95pct_halfwidth": 1.941,
+    "match_count": 16
+  },
+  "all_published_match_count": 448
+}

@@ -1,0 +1,641 @@
+{
+  "date": "2026-11-21",
+  "repositories_discovered": 127,
+  "trees_inspected": 55,
+  "repositories": [
+    {
+      "repository": "shreypatel1/quokka-lattice-7f3k",
+      "commit": "c56e4afa920f5f3495f29407fa718fca9b4fba62",
+      "documents": []
+    },
+    {
+      "repository": "kpfarn/osuhackathon",
+      "commit": "b5dab4b3296e859e642744c081ad48631a5c7525",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "6592870a044c88b42e4be7e0aafe4fdc736b63e3",
+          "url": "https://github.com/kpfarn/osuhackathon/blob/b5dab4b3296e859e642744c081ad48631a5c7525/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "enkyuan/aquarius",
+      "commit": "a6b3cd27a698c8bc6ccf2444a3806027b86e3837",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "ee1cf9bec8842d4be9bb5ccb83bd29ee63378e58",
+          "url": "https://github.com/enkyuan/aquarius/blob/a6b3cd27a698c8bc6ccf2444a3806027b86e3837/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "himagna16/mech-royale-bot",
+      "commit": "9e55f3cb3f5cbf6fd166f22d26af865fa6c2c354",
+      "documents": []
+    },
+    {
+      "repository": "aymanm31/Builders-MechRoyale",
+      "commit": "baf8d6c6a7c1c7767e68388358bc63bdb6a67739",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "52841574698e3c80a80a7d9fd9bee0de160e7cfb",
+          "url": "https://github.com/aymanm31/Builders-MechRoyale/blob/baf8d6c6a7c1c7767e68388358bc63bdb6a67739/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "EvanDamron/mech-royale-bot",
+      "commit": "9a7321569347b063391a81111195a92d885ffeb9",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "4d46c01f1f332db7505dfb446d91cb54285ff1e7",
+          "url": "https://github.com/EvanDamron/mech-royale-bot/blob/9a7321569347b063391a81111195a92d885ffeb9/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "mbaglo/MechRoyale-Agent",
+      "commit": "8a87e8a467dde525d25fcf9cb5181087c6e55fd7",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "6290caaddb73e01e04d7ef6fa63e227cf5e94340",
+          "url": "https://github.com/mbaglo/MechRoyale-Agent/blob/8a87e8a467dde525d25fcf9cb5181087c6e55fd7/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "0629owen-del/mechfight-early",
+      "commit": "fb303986de4bd131a0648927326a4f39352439a2",
+      "documents": []
+    },
+    {
+      "repository": "viktor-lorentz/mech-royale-overcooked",
+      "commit": "b7f3c9441cd39a60cbece9a7474e640655323ccc",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "e714661d4d30c133695a1f510f49e303dc6e0641",
+          "url": "https://github.com/viktor-lorentz/mech-royale-overcooked/blob/b7f3c9441cd39a60cbece9a7474e640655323ccc/README.md"
+        },
+        {
+          "path": "results.tsv",
+          "blob_sha": "75e077c74b84f19eede291ce066c2ce2faa13e01",
+          "url": "https://github.com/viktor-lorentz/mech-royale-overcooked/blob/b7f3c9441cd39a60cbece9a7474e640655323ccc/results.tsv"
+        }
+      ]
+    },
+    {
+      "repository": "micah-andelman/mech-royale",
+      "commit": "7fb9a15f50ac6ec3a4480d8367ce5f485522d6de",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "40cc428bb56c9c3d2ade16fa7f76f6e7a98e2a4c",
+          "url": "https://github.com/micah-andelman/mech-royale/blob/7fb9a15f50ac6ec3a4480d8367ce5f485522d6de/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "JosiahAklog/nexus-mech-royale",
+      "commit": "d0a1b4ba86339c68e9f526c345861b353714e1b7",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "f5caf57f7c6a4174cadac9a44f82638c392d94ce",
+          "url": "https://github.com/JosiahAklog/nexus-mech-royale/blob/d0a1b4ba86339c68e9f526c345861b353714e1b7/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Not-Ethan/oval-ghost-mech",
+      "commit": "0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "d4c7c820ff54be1f8e581d192287aebe4514efdd",
+          "url": "https://github.com/Not-Ethan/oval-ghost-mech/blob/0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a/README.md"
+        },
+        {
+          "path": "SUBMISSIONS.md",
+          "blob_sha": "ea2ede0b8929e98beb06bd9f2d53a54b4cf2206b",
+          "url": "https://github.com/Not-Ethan/oval-ghost-mech/blob/0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a/SUBMISSIONS.md"
+        }
+      ]
+    },
+    {
+      "repository": "niranjankumarnk/mech-royale",
+      "commit": "1d04c65c73f4d0dcaf8735951024aaf00b9d753d",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "38a757c6fae039aa0eee0b7a011aa2c254d4bd7d",
+          "url": "https://github.com/niranjankumarnk/mech-royale/blob/1d04c65c73f4d0dcaf8735951024aaf00b9d753d/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "suresh-vlsi/mech-royale-bot",
+      "commit": "079e4d05be713f5281b377c25325478de736c9c1",
+      "documents": []
+    },
+    {
+      "repository": "brycehcmcgrath/mechfight-bot",
+      "commit": "b8683cd829b67685ce922c77d8b9b3e4acd05d46",
+      "documents": []
+    },
+    {
+      "repository": "anthonyteti/buildathon-mech-royale",
+      "commit": "c8d92eadaf8d891187171417e8cc94782591b7ab",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "daf6984ed22da4c2b1af21fcfed31fdf3e4ed342",
+          "url": "https://github.com/anthonyteti/buildathon-mech-royale/blob/c8d92eadaf8d891187171417e8cc94782591b7ab/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "aqilc/mech-royale",
+      "commit": "fdfe7a609cc55eb338f277dfc68560cb944a71ef",
+      "documents": []
+    },
+    {
+      "repository": "ruizmic0100/mechfighter3000",
+      "commit": "822a52fec33908dcc40d95e4420497eb9076235d",
+      "documents": []
+    },
+    {
+      "repository": "F0RF31T/Mechfight",
+      "commit": "20d870bfe421b7ca0c82c30beae92b61e76c6ca4",
+      "documents": []
+    },
+    {
+      "repository": "caioplcerda/oval-pilot",
+      "commit": "5b018c72a050d46b57dd111fc08d9eca8c29bdad",
+      "documents": []
+    },
+    {
+      "repository": "nguyenphuquang1234567/kestrel",
+      "commit": "a6b8a70d16fa3394a2d2b2546102625aac1568f9",
+      "documents": []
+    },
+    {
+      "repository": "Medici357/AllQuietOnTheFrontalLobe",
+      "commit": "aee6a25a0f5df24315e0d36fb2fb0ff089333d43",
+      "documents": []
+    },
+    {
+      "repository": "Epicepicdemic/buildathon-mech-royale",
+      "commit": "70e4ba904c2b71917fc89ce0a4b1b40707ae21ae",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "e36f57f658e6f64de74778f2e572f5e9ae3e68a1",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "CtrlZGau/strat-game",
+      "commit": "89263594903431f5ff5954c828a9e193c2f3ef9f",
+      "documents": []
+    },
+    {
+      "repository": "pnp6113/mech-royale-bot",
+      "commit": "ec18871d4e85821f53387a263890cc34d25d449b",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "5a096946794005d42366f02b33a8c010685db73b",
+          "url": "https://github.com/pnp6113/mech-royale-bot/blob/ec18871d4e85821f53387a263890cc34d25d449b/README.md"
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "blob_sha": "b24c1ed9f9e1f5425f6924a17632bf834fd85bf8",
+          "url": "https://github.com/pnp6113/mech-royale-bot/blob/ec18871d4e85821f53387a263890cc34d25d449b/docs/EXPERIMENTS.md"
+        }
+      ]
+    },
+    {
+      "repository": "pedduvedcharan/mech-royale-bot",
+      "commit": "f0c71889b73451c0480bce206695941db6edd9bf",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "c9cc781413638f5afb64a2e1e7ed5967ff22d29a",
+          "url": "https://github.com/pedduvedcharan/mech-royale-bot/blob/f0c71889b73451c0480bce206695941db6edd9bf/README.md"
+        },
+        {
+          "path": "NOTES.md",
+          "blob_sha": "2845da005300f9826c96f41e104597eb6e96c29e",
+          "url": "https://github.com/pedduvedcharan/mech-royale-bot/blob/f0c71889b73451c0480bce206695941db6edd9bf/NOTES.md"
+        },
+        {
+          "path": "SUBMISSIONS.md",
+          "blob_sha": "c21cab3c66174aae3d55001f7a9c228cc28e0a03",
+          "url": "https://github.com/pedduvedcharan/mech-royale-bot/blob/f0c71889b73451c0480bce206695941db6edd9bf/SUBMISSIONS.md"
+        }
+      ]
+    },
+    {
+      "repository": "VivekRnx/bob-the-builder-2026",
+      "commit": "8ca1ffa8052cb66f4ce6aad07cc1a97dde47464d",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "80f43d41d382684f6343d4855a9c7fa604d90520",
+          "url": "https://github.com/VivekRnx/bob-the-builder-2026/blob/8ca1ffa8052cb66f4ce6aad07cc1a97dde47464d/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "c155baf23245c9c4a956f0fad711c64a4e64c59d",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/b50b794522c134d9eb54cc2e9bc4782f4f4a3da9/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "mike200004/mech-royale-bot",
+      "commit": "7e3cbee392a930f5baa4ea83be74b4a576f9477e",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "6393032dbaf0f796965fdd07be59d84d198b48da",
+          "url": "https://github.com/mike200004/mech-royale-bot/blob/7e3cbee392a930f5baa4ea83be74b4a576f9477e/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "NurdauletZhalgas/Mech-Royale-Bot",
+      "commit": "0335be4994a1e4a78242c73dddc263b2771d401e",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "294540b4be9cb54595c856360586510066e76b41",
+          "url": "https://github.com/NurdauletZhalgas/Mech-Royale-Bot/blob/0335be4994a1e4a78242c73dddc263b2771d401e/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "whyMiso/buildathon-mech-royale",
+      "commit": "eaea6fe236c5ed57476822e7aa8f6ae37e69b0e6",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "2f4dab582c92853b5123ee01c92989d5db4df791",
+          "url": "https://github.com/whyMiso/buildathon-mech-royale/blob/eaea6fe236c5ed57476822e7aa8f6ae37e69b0e6/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Hiresh2007/buildathon-mech-royale",
+      "commit": "ae7797bf175c7ee47650673e88e8c665d30bfa44",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "b0e3d53f4d03808cb833222bd0572c2f4f9c32e2",
+          "url": "https://github.com/Hiresh2007/buildathon-mech-royale/blob/ae7797bf175c7ee47650673e88e8c665d30bfa44/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "h-ardy/buildathon-mech-royale",
+      "commit": "48ae4f527f47baff4222be64dcb30622239ab1c9",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "6877bc01cba1a22332a83bdf8436384516eb74e2",
+          "url": "https://github.com/h-ardy/buildathon-mech-royale/blob/48ae4f527f47baff4222be64dcb30622239ab1c9/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "wzardomri/buildathon-mech-royale",
+      "commit": "c5c56f17517632785390d0168fd8a8fd24a6cdc6",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "cd421fd19380addbb793a08d7d719df3b4ff54a1",
+          "url": "https://github.com/wzardomri/buildathon-mech-royale/blob/c5c56f17517632785390d0168fd8a8fd24a6cdc6/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "trompeterm/buildathon-mech-royale",
+      "commit": "b9e09ada49ddfcb634199b691b9e5198d5642783",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "5511f0dea6ecd6ccbfe74987ad16ea61cb306f42",
+          "url": "https://github.com/trompeterm/buildathon-mech-royale/blob/b9e09ada49ddfcb634199b691b9e5198d5642783/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "shanmukha-here/eagle-eye-mech-royale",
+      "commit": "e322ffe872a52ef83a89ab194b6500edc0da36df",
+      "documents": []
+    },
+    {
+      "repository": "nshuai808/mech-royale",
+      "commit": "28551163ff98f29603be44eb83526ecc0f0feb02",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "8e6405a4706d9cfbb15c76babd115ef48fb12c9b",
+          "url": "https://github.com/nshuai808/mech-royale/blob/28551163ff98f29603be44eb83526ecc0f0feb02/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Hermes-25/builders-mech-royale",
+      "commit": "5bee336c0d7c03f5ba809a30d088e038948ed440",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "b0a5d3ae90359fbcacaaa5123b2bac489b255eba",
+          "url": "https://github.com/Hermes-25/builders-mech-royale/blob/5bee336c0d7c03f5ba809a30d088e038948ed440/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "himanshu-thalor/apexmech-buildathon",
+      "commit": "e8ada7210df7e5ee9a15d58e1a3b7f7c3d4aa040",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "5f14e4bf3d7615ffc29d0200d9a3917f85d156e9",
+          "url": "https://github.com/himanshu-thalor/apexmech-buildathon/blob/e8ada7210df7e5ee9a15d58e1a3b7f7c3d4aa040/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "charliescull/mech-royale-bot",
+      "commit": "919f18b1785cd59048854ada11bc76c2b3c393f9",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "dfaf47b79c882caa11023abd8b1d2fed4a4a31b5",
+          "url": "https://github.com/charliescull/mech-royale-bot/blob/919f18b1785cd59048854ada11bc76c2b3c393f9/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "pcetner/mech-royale-bot",
+      "commit": "057f216c14817df10e21f90dd7a8455b89804fd6",
+      "documents": []
+    },
+    {
+      "repository": "Warrior-hound/mech-royale",
+      "commit": "c35061924570055e45fabd5bd11c2ba4740927b5",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "f8aa316b37b951e209f65160b3542e0a18568a2d",
+          "url": "https://github.com/Warrior-hound/mech-royale/blob/c35061924570055e45fabd5bd11c2ba4740927b5/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "nelsonwong506-lang/mech-royale",
+      "commit": "6d0ec73fa4e081f1f3781dc73c6be96010d3c1ee",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "a5fe3c3990e6782c1adecdd74809ba0c01b2bedb",
+          "url": "https://github.com/nelsonwong506-lang/mech-royale/blob/6d0ec73fa4e081f1f3781dc73c6be96010d3c1ee/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Achintya-Lakshmanan/mech-royale-bot",
+      "commit": "902a16ec08488ca4e2fbc3da115d82355f10df2d",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "bdf8b4e832449370f5bcae882d42ea60e5982823",
+          "url": "https://github.com/Achintya-Lakshmanan/mech-royale-bot/blob/902a16ec08488ca4e2fbc3da115d82355f10df2d/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Borovail/builders-mech-royale",
+      "commit": "e13dc1a0ee70aa49a74836016fe5687a7b8c5319",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "6d1789884565690fd0b624861bca9ebbd669f04f",
+          "url": "https://github.com/Borovail/builders-mech-royale/blob/e13dc1a0ee70aa49a74836016fe5687a7b8c5319/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Nadipalli-Sandeep/mech-royale-bot",
+      "commit": "c90d760fe46905e373eac476927c0a7e30560e4e",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "479b8ebba10d4067e35c8686062875cb6d92b1b3",
+          "url": "https://github.com/Nadipalli-Sandeep/mech-royale-bot/blob/c90d760fe46905e373eac476927c0a7e30560e4e/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "egeiran/mech-royale-bot",
+      "commit": "3c0fe5bbaff0c36ea7cb5a74c75f22209327cf6d",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "408d59bfba1cf6f3e7d60e3f9b26f77c75d414cb",
+          "url": "https://github.com/egeiran/mech-royale-bot/blob/3c0fe5bbaff0c36ea7cb5a74c75f22209327cf6d/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "BIGBIGBIGJoJo/labubu-mech-royale",
+      "commit": "39b6d509af8e82b0ceb9e1c430dd964674d7488e",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "462ef3d639b51a097c448d71c0bf88d2d8018869",
+          "url": "https://github.com/BIGBIGBIGJoJo/labubu-mech-royale/blob/39b6d509af8e82b0ceb9e1c430dd964674d7488e/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "VenujaRH/mech-royale",
+      "commit": "80a1fa6c01df5004e3fe3fb22f46a83168e5e9c4",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "7496ea2f139cab1f34213d49d3276fe68ccc8f19",
+          "url": "https://github.com/VenujaRH/mech-royale/blob/80a1fa6c01df5004e3fe3fb22f46a83168e5e9c4/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "teetham-t/mech-royale-pocket-comet",
+      "commit": "47ca23a5d5c18d0306389b9db3a0c8fdefe3a3c1",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "12faf6ff3c90882e35b506608262b0c52d991536",
+          "url": "https://github.com/teetham-t/mech-royale-pocket-comet/blob/47ca23a5d5c18d0306389b9db3a0c8fdefe3a3c1/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "jmonked/monked-mech-royale",
+      "commit": "2229ab89a70b9658627701578d0e2466e5ac0805",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "52c2a811658340eda2f99e28e8b913c7fb51b761",
+          "url": "https://github.com/jmonked/monked-mech-royale/blob/2229ab89a70b9658627701578d0e2466e5ac0805/README.md"
+        },
+        {
+          "path": "NOTES.md",
+          "blob_sha": "90b44e463423c31e3175bb91af9529f3db7a89e5",
+          "url": "https://github.com/jmonked/monked-mech-royale/blob/2229ab89a70b9658627701578d0e2466e5ac0805/NOTES.md"
+        }
+      ]
+    },
+    {
+      "repository": "dmclaughlin-bit/mech-bot",
+      "commit": "5e9da75c4152db2a8bcb33c78e04b14e31edcd67",
+      "documents": [
+        {
+          "path": "README.md",
+          "blob_sha": "c5063f6916285a76d85eb04f2b0c42b4b4d5830b",
+          "url": "https://github.com/dmclaughlin-bit/mech-bot/blob/5e9da75c4152db2a8bcb33c78e04b14e31edcd67/README.md"
+        },
+        {
+          "path": "EXPERIMENTS.md",
+          "blob_sha": "1dfbc2c12ef35b8dbe8abf74db18603cb729aece",
+          "url": "https://github.com/dmclaughlin-bit/mech-bot/blob/5e9da75c4152db2a8bcb33c78e04b14e31edcd67/EXPERIMENTS.md"
+        },
+        {
+          "path": "coord/data/site_results.csv",
+          "blob_sha": "c7c8d7161cf6c38e29e3e15d79586fb21ab7c3b3",
+          "url": "https://github.com/dmclaughlin-bit/mech-bot/blob/5e9da75c4152db2a8bcb33c78e04b14e31edcd67/coord/data/site_results.csv"
+        }
+      ]
+    },
+    {
+      "repository": "LanceHuang245/mech-royale",
+      "commit": "5b7ed4bcde399e7f1424bd10e524ce97d96e9a20",
+      "documents": []
+    },
+    {
+      "repository": "justnau/giddygiddyboy-mech-royale",
+      "commit": "207fc1c9695cea4baa4a18ac3738877531a8898d",
+      "documents": []
+    },
+    {
+      "repository": "varchaskukreja/TTUN",
+      "commit": "596f339454aa7e0c407618299315b7dc57b678a6",
+      "documents": []
+    }
+  ],
+  "score_evidence": [
+    {
+      "repository": "aqilc/mech-royale",
+      "policy": "far5",
+      "commit": "8ed48da5e0ca7b01097019d1a1038c892e1fd174",
+      "reported_draws": [
+        5.67,
+        5.6
+      ],
+      "mean": 5.635,
+      "n": 2,
+      "source": "https://github.com/aqilc/mech-royale/blob/fdfe7a609cc55eb338f277dfc68560cb944a71ef/bots/gang/brain.ts",
+      "status": "author-reported in source comments; no independent score receipts or complete run history"
+    },
+    {
+      "repository": "aqilc/mech-royale",
+      "policy": "farx",
+      "reported_draws": [
+        5.71
+      ],
+      "n": 1,
+      "source": "https://github.com/aqilc/mech-royale/blob/fdfe7a609cc55eb338f277dfc68560cb944a71ef/bots/farxk/brain.ts",
+      "status": "author-reported single draw; repeat average unavailable"
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "policy": "good-31 family",
+      "reported_draws": [
+        5.56,
+        5.29,
+        5.4,
+        5.25,
+        5.29,
+        5.48,
+        5.42,
+        5.19,
+        5.19
+      ],
+      "mean": 5.3411111111,
+      "n": 9,
+      "source": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/b50b794522c134d9eb54cc2e9bc4782f4f4a3da9/docs/REVIEW.md",
+      "status": "author-reported family draws, not a 5.60+ average"
+    },
+    {
+      "repository": "justnau/giddygiddyboy-mech-royale",
+      "reported_draws": [
+        5.54,
+        6
+      ],
+      "source": "https://github.com/Arnav-M10/BuildersMechRoyale/blob/d177f3c3b4174d5523a11ba29a688db3d5b6c8ce/dev/OVERNIGHT.md",
+      "status": "another participant's report of two different configurations; no same-policy average established"
+    }
+  ],
+  "experimental_features": [
+    {
+      "key": "pickup_race",
+      "reference": "aqilc farx",
+      "change": "fresh-rival pickup race filter and bounded visibility-aware missing-item cleanup",
+      "basis": "source comments report farx 5.71, no isolated or repeated official feature gain"
+    },
+    {
+      "key": "wide_band",
+      "reference": "aqilc far/far5",
+      "change": "longer gun/laser engagement spacing against laser/mortar or crowds, preserving lightning reach",
+      "basis": "included in a reported 5.635 two-draw policy; individual effect not measured"
+    },
+    {
+      "key": "focus_lock",
+      "reference": "justnau target Stick/LowBonus",
+      "change": "15% selection preference for current viable target, actual fight ratio unchanged",
+      "basis": "configuration-only reference, no verified isolated gain"
+    },
+    {
+      "key": "fight_boost",
+      "reference": "justnau FightBoost 40; also own past range experiments",
+      "change": "grounded sprint above energy threshold, preserving charging laser and lightning energy",
+      "basis": "historical 6.00 report from another participant; removed in newer upstream; separate screen required"
+    },
+    {
+      "key": "pursuit_range",
+      "reference": "own V7 range control, reported 4.60/4.52 vs V2 4.50",
+      "change": "match observed target radial speed with remaining speed spent strafing",
+      "basis": "independent adaptation to current navigator; no expectation gains transfer"
+    },
+    {
+      "key": "predictive_move",
+      "reference": "aqilc kiter/far5 local acceleration and projectile planner",
+      "change": "nine candidate grounded fight moves, 0.6-second horizon, at most 2 ms optional work",
+      "basis": "independently implemented concept, no copied TypeScript source; full-match check required"
+    }
+  ]
+}
