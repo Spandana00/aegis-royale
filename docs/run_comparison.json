@@ -209,7 +209,7 @@
     ],
     "all_other_bot_methods_identical_to_reference": true,
     "map_navigation_and_wrapper_identical_to_reference": true,
-    "docker_change": "Copies aiming.py; all other content identical",
+    "docker_change": "Copies and allows aiming.py; other packaging content identical",
     "aiming_module_sha256": "136669c67605546b5f972f6106517ef5b1be19a74c229e4495b0fa292079efa2"
   }
 }

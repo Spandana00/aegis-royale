@@ -96,7 +96,7 @@ hashes and method syntax-tree differences. The historical V7 audit compared
 against V2 and limited changes to range control. The current V8 audit compares
 against V7 and limits bot-method changes to initialization, observation updates,
 and gun prediction. It checks that the map reader, navigator and protocol
-wrapper are unchanged; the sole Dockerfile difference copies `aiming.py`.
+wrapper are unchanged; the packaging differences copy and allow `aiming.py`.
 
 ```sh
 python3 -B check/compare_versions.py > docs/run_comparison.json

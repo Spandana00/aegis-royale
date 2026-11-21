@@ -82,7 +82,8 @@ change after an observation, and a learned model can still be wrong in a match.
 - The single-core benchmark handles 720 observations, including 104 with a
   learned model selected: p99 13.11 ms, maximum 17.43 ms, zero over 50 ms,
   peak process RSS 32.24 MiB on this host.
-- The pinned linux/amd64 Docker image copies `aiming.py`; GitHub Actions runs
+- The pinned linux/amd64 Docker image copies `aiming.py`, and the build allowlist
+  includes it. GitHub Actions runs
   the exact uid-65534, read-only, network-disabled competition sandbox check.
 
 Reproduce the diagnostics from the repository root:

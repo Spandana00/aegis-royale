@@ -51,6 +51,9 @@ def main():
     expected_docker=read(BASE,'Dockerfile').replace(b'COPY bot.py mechfight.py',b'COPY bot.py aiming.py mechfight.py')
     if (ROOT/'Dockerfile').read_bytes()!=expected_docker:
         raise SystemExit('Docker changed beyond copying aiming.py')
+    expected_ignore=read(BASE,'.dockerignore').replace(b'!bot.py',b'!bot.py\n!aiming.py')
+    if (ROOT/'.dockerignore').read_bytes()!=expected_ignore:
+        raise SystemExit('Docker build allowlist changed beyond including aiming.py')
     print(json.dumps({
         'kind':'submitted-source audit and user-reported official scores; not a local scorer',
         'score_source':'user-supplied submission screenshots',
@@ -60,7 +63,7 @@ def main():
         'candidate':{'name':'AEGIS v8','changed_bot_methods_vs_reference':changed,
                      'all_other_bot_methods_identical_to_reference':True,
                      'map_navigation_and_wrapper_identical_to_reference':True,
-                     'docker_change':'Copies aiming.py; all other content identical',
+                     'docker_change':'Copies and allows aiming.py; other packaging content identical',
                      'aiming_module_sha256':hashlib.sha256((ROOT/'aiming.py').read_bytes()).hexdigest()}
     },indent=2))
 

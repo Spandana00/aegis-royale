@@ -1,5 +1,6 @@
 *
 !bot.py
+!aiming.py
 !mechfight.py
 !navigation.py
 !world.py
