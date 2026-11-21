@@ -1,5 +1,27 @@
 # Third-party software
 
+## V13 active policy
+
+The `sentinel/` package reproduces the complete MIT-licensed Oval Sentinel
+recovery-v26 implementation from
+[JishnuMadav/mech-royale](https://github.com/JishnuMadav/mech-royale), commit
+`2054a5bb27fdd36c8b8f63eebddbcf145737694e`. Copyright (c) 2026 JishnuMadav.
+The complete license is retained in [sentinel/LICENSE](sentinel/LICENSE).
+The author reports 5.85 (BB-7097A598); our adaptation has no official score.
+
+`bot.py`, `survivor.py`, `navigation.py`, `combat.py` and the organizer's
+`mechfight.py` wrapper are preserved. Imports become package-relative to avoid
+conflicts with retained AEGIS sources, and the display name becomes AEGIS v13.
+There are no tactical edits or parameter changes. Tests reverse those two
+transformations and verify every original SHA-256 and Git blob ID against
+[the manifest](docs/sentinel_manifest.json). The source's 13 scenario tests
+are retained with import and local fixture paths adapted.
+
+The active image copies only `sentinel/`. The `pilot/` experiments below are
+historical diagnostics and do not run in the competition image. V13 source
+selection, local comparisons and limitations are in
+[the diagnosis](docs/V13_DIAGNOSIS.md).
+
 ## V10 foundation and V11/V12 adaptations
 
 The `pilot/` package is adapted from
@@ -14,8 +36,10 @@ and a zero-HP arithmetic guard in `brain.py`. The process entrypoint changes
 the package name from `bot` to
 `pilot` and the display name to `AEGIS v12`. V12 enables grounded combat boost
 and retains V11's arming behavior. Other experiments remain behind disabled
-switches in `brain.py` and `navigate3.py`. Ballistics, combat, threats, state,
-arena geometry, the navigation cache and the process guard retain the V10 source.
+switches in `brain.py` and `navigate3.py`. At V12, ballistics, combat, threats,
+state, arena geometry, the navigation cache and the process guard retained V10.
+V13's retained diagnostic copy adds the scoped combat/cover experiments described
+in its manifest; those files are excluded from the active image.
 File hashes and the tactical change scope are recorded
 in [docs/reference_manifest.json](docs/reference_manifest.json).
 

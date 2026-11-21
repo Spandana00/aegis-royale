@@ -20,7 +20,7 @@ from check import Schema
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--policy',choices=('v9','active'),default='active')
+    parser.add_argument('--policy',choices=('v9','pilot','active'),default='active')
     args=parser.parse_args()
     with gzip.open(ROOT / 'check/stream.jsonl.gz', 'rt') as f:
         messages = [json.loads(line) for line in f]
@@ -29,7 +29,7 @@ def main():
     start = time.perf_counter()
     if args.policy=='v9':
         bot=Bot(hello)
-    else:
+    elif args.policy=='pilot':
         from pilot.main import Pilot
         from types import SimpleNamespace
         class Candidate:
@@ -44,6 +44,19 @@ def main():
             def mode(self):
                 return getattr(self.policy.state.prev_intent,'mode','unknown')
         bot=Candidate()
+    else:
+        from sentinel.combat import Combat
+        from types import SimpleNamespace
+        class SentinelCandidate:
+            def __init__(self):
+                self.policy=Combat(hello)
+                self.world=SimpleNamespace(ground=self.policy.arena.ground)
+            def act(self,obs):
+                return self.policy.act(obs)
+            @property
+            def mode(self):
+                return 'heal' if self.policy.healing else ('combat' if self.policy.target_id is not None else 'route')
+        bot=SentinelCandidate()
     startup_ms = (time.perf_counter() - start) * 1000
     schema = Schema(ROOT / 'mechfight.schema.json')
     observations = [m for m in messages if m['type'] == 'obs']
@@ -170,7 +183,7 @@ def main():
               'observations_with_learned_aim':learned_observations,
               'observations_with_tactical_collection':tactical_resource_observations,
               'invalid_actions':failures}
-    if args.policy=='active':
+    if args.policy=='pilot':
         report.pop('observations_with_learned_aim')
         report.pop('observations_with_tactical_collection')
         report.update(mode_counts=dict(modes),module_errors=bot.policy.errors,
@@ -179,6 +192,11 @@ def main():
                       process_deadline_guard_tested=False)
         if bot.policy.errors:
             failures.append({'module_errors':bot.policy.errors})
+    elif args.policy=='active':
+        report.pop('observations_with_learned_aim')
+        report.pop('observations_with_tactical_collection')
+        report.update(mode_counts=dict(modes), module_errors={},
+                      active_package='sentinel', process_deadline_guard_tested=False)
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:
         sys.exit(1)

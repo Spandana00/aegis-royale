@@ -1,0 +1,20 @@
+{
+  "kind": "local correctness and timing; not a scored match",
+  "policy": "active",
+  "startup_ms": 603.11,
+  "observations": 840,
+  "p50_ms": 0.705,
+  "p99_ms": 3.777,
+  "max_ms": 5.186,
+  "over_50_ms": 0,
+  "max_rss_mib": 41.84,
+  "invalid_actions": [],
+  "mode_counts": {
+    "route": 101,
+    "combat": 632,
+    "heal": 107
+  },
+  "module_errors": {},
+  "active_package": "sentinel",
+  "process_deadline_guard_tested": false
+}

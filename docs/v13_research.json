@@ -1,0 +1,54 @@
+{
+  "retrieved_on": "2026-11-21",
+  "score_verification": "Repository authors' published scores/receipts and exact source mapping; no independent official match replays retrieved.",
+  "sources": [
+    {
+      "repo": "JishnuMadav/mech-royale",
+      "commit": "2054a5bb27fdd36c8b8f63eebddbcf145737694e",
+      "reported_best": 5.85,
+      "receipt": "BB-7097A598",
+      "readme_blob": "263869790b0708864033ec6ebbffe75782ad0d16",
+      "results_blob": "92cacc091d72faa10a873d27364b077e1252dc74",
+      "combat_blob": "d32b60017e37ff34c4061f5d8e8e1bacea7453a3",
+      "features": [
+        "Rounded laser charge full-release; already handled by ours with 0.02 second tolerance.",
+        "Conservative partial lethal release; ours has early release but different damage margin.",
+        "Supply drops and narrow 25%-60% health recovery.",
+        "No new laser charge while urgently escaping the zone; already handled by ours."
+      ],
+      "source_date_caveat": "The current README includes Nov 22 reporting although the task date is Nov 21; treat the score history as author-reported, not independently time-verified."
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "review_blob": "cc73e5cb8d2ba749e1367b89d10242e070bada8b",
+      "results_blob": "9af0a3df7f18d9c8659e296a7684424f4bd02a97",
+      "reported_base_family_mean": 5.34,
+      "reported_base_family_n": 9,
+      "reported_best": 5.56,
+      "features": [
+        "Navigation family +0.3 to +0.4 in author's comparisons.",
+        "Steady 3-5 second strafing; our best baseline already uses it.",
+        "Isolate: 5.48,5.44,5.17, mean5.36; cannot establish an improvement over base.",
+        "Slow6=4.77 and stand1=4.19; do not slow combat movement.",
+        "Cover code only checked first threat; all-threat fix is as yet unscored.",
+        "Final gun trigger after laser-aim override correction is as yet unscored."
+      ]
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "overnight_blob": "1b152cef3a581266ffa5f5a68c6d22786340ef42",
+      "reported_sprint_scores": [
+        4.73,
+        4.9,
+        4.79
+      ],
+      "reported_base_mean": 4.93,
+      "findings": [
+        "Sprinting worsened other policy across three reported draws.",
+        "Sim ranking disagreed with several real combat feature outcomes.",
+        "Giddy score6.00 is a third-party report; repository currently returns404.",
+        "Strong whole-policy results failed to transplant as individual features."
+      ]
+    }
+  ]
+}

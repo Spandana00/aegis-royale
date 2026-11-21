@@ -27,7 +27,11 @@ P: Dict[str, Any] = {
     "pickup_race": False,         # abandon visible-but-missing or clearly lost pickup races
     "wide_band": False,           # preserve lightning range; widen gun/laser fights under pressure
     "focus_lock": False,          # keep a viable target unless another is materially easier to finish
-    "fight_boost": 40.0,          # V12: grounded combat sprint; zero disables it for comparisons
+    "fight_boost": 0.0,           # V12 official regression: keep grounded combat sprint disabled
+    "cover_all": False,          # verify retreat shelter against every nearby shooter
+    "final_fire": False,         # recheck a gun trigger after the laser changes the final aim
+    "combat_cube": False,        # take a short cube detour only within a bounded damage budget
+    "critical_recover": False,   # latched 25% -> 60% recovery, only with reachable shelter
     "pursuit_range": False,       # match a closing target's radial speed while retaining sideways motion
     "predictive_move": False,     # bounded acceleration/projectile lookahead in grounded combat
     "zone_buffer_s": 6.0,          # leave this much spare time when rotating
@@ -655,6 +659,18 @@ def choose_intent(state: WorldState, threats: Threats) -> Intent:
         it.arrive_by = zp.get("deadline")
         return _finish(state, m, it)
 
+    if P["critical_recover"]:
+        from .tactics import recovery
+        recover = recovery(state, m, threats, fresh, fight, zp)
+        if recover is not None:
+            return _finish(state, m, recover)
+
+    if P["combat_cube"]:
+        from .tactics import cube_detour
+        cube = cube_detour(state, m, threats, hot, fight, zp)
+        if cube is not None:
+            return _finish(state, m, cube)
+
     arm = _arming_intent(state, m, hot, fight, attackers, face, hpf) if P["arm_commit"] else None
     if arm is not None:
         return _finish(state, m, arm)
@@ -1013,16 +1029,24 @@ def _cover_from(state: WorldState, threat_pos: List, zp: Dict[str, Any]):
         # nearest_cover is a few ms: reuse the last answer while the threat and we haven't moved much
         m = _mem(state)
         cc = m.get("cover_cache")
-        tp = threat_pos[0]
+        selected = tuple(sorted((tuple(p) for p in threat_pos), key=lambda p: dist2d(state.pos, p))[:3])
+        tp = selected[0] if P["cover_all"] else threat_pos[0]
         c = None
-        if cc is not None and state.t - cc[0] < 2.0 and dist2d(cc[1], tp) < 10 and dist2d(cc[2], state.pos) < 15:
+        cache_key = selected if P["cover_all"] else None
+        if (cc is not None and state.t - cc[0] < 2.0 and dist2d(cc[1], tp) < 10
+                and dist2d(cc[2], state.pos) < 15
+                and ((cache_key is None and m.get("cover_threats") is None)
+                     or (cache_key is not None and m.get("cover_threats") is not None
+                         and len(cache_key) == len(m["cover_threats"])
+                         and all(dist2d(a, b) < 10 for a, b in zip(cache_key, m["cover_threats"]))))):
             c = cc[3]
         else:
             try:
-                c = state.arena.nearest_cover(state.pos, tp, 60.0)
+                c = state.arena.nearest_cover(state.pos, selected if P["cover_all"] else tp, 60.0)
             except Exception:
                 c = None
             m["cover_cache"] = (state.t, tp, state.pos, c)
+            m["cover_threats"] = cache_key
         if c is not None and _in_safe_future(state, c) and _inside_zone_soon(state, c) and dist2d(c, state.pos) < 45:
             m["cover_real"] = True
             return tuple(c)
@@ -1462,7 +1486,9 @@ def summary(state: WorldState) -> Dict[str, Any]:
             "first_weapon_t": m.get("first_weapon_t"), "profile": P.get("profile"),
             "arming": {"decisions":m.get("arm_decisions",0),"timeouts":m.get("arm_timeouts",0)},
             "features": {k:P[k] for k in ("arm_commit", "pickup_race", "wide_band", "focus_lock",
-                                           "fight_boost", "pursuit_range", "predictive_move")},
+                                           "fight_boost", "pursuit_range", "predictive_move", "cover_all",
+                                           "final_fire", "combat_cube", "critical_recover")},
+            "tactics": dict(m.get("tactics_stats", {})),
             "motion": dict(state.scratch.get("motion", {}))}
 
 

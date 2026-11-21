@@ -19,7 +19,8 @@ class ProvenanceTests(unittest.TestCase):
             data=(ROOT/entry['path']).read_bytes()
             self.assertEqual(len(data),entry['size_bytes'],entry['path'])
             self.assertEqual(hashlib.sha256(data).hexdigest(),entry['sha256'],entry['path'])
-            if entry['path'] not in ('pilot/main.py','pilot/brain.py','pilot/navigate3.py','pilot/local_motion.py'):
+            if entry['path'] not in ('pilot/main.py','pilot/brain.py','pilot/navigate3.py','pilot/local_motion.py',
+                                     'pilot/combat.py','pilot/tactics.py'):
                 self.assertEqual(entry['sha256'],entry['source_sha256'],entry['path'])
 
     def test_entrypoint_diff_is_only_namespace_and_display_name(self):
@@ -30,7 +31,7 @@ class ProvenanceTests(unittest.TestCase):
         text=text.replace('f"pilot.{name}"','f"bot.{name}"')
         text=text.replace('"pilot.navigate3"','"bot.navigate3"')
         text=text.replace('import pilot.{name} failed','import bot.{name} failed')
-        text=text.replace('BOT_NAME = "AEGIS v12"','BOT_NAME = "OSU-Walker"')
+        text=text.replace(f'BOT_NAME = "{manifest["display_name"]}"','BOT_NAME = "OSU-Walker"')
         expected=next(e['source_sha256'] for e in manifest['files'] if e['path']=='pilot/main.py')
         self.assertEqual(hashlib.sha256(text.encode()).hexdigest(),expected)
 
@@ -54,7 +55,7 @@ class ProvenanceTests(unittest.TestCase):
             self.assertEqual(brain.P[key],value,key)
 
 
-class ActivePolicyTests(unittest.TestCase):
+class RetainedPilotTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         from pilot.main import Pilot

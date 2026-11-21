@@ -453,7 +453,7 @@ def summary(state: WorldState) -> Dict[str, Any]:
     m = state.scratch.get("combat") or {}
     st_ = m.get("stats") or {}
     out = {"shots": st_.get("shots", {}), "hits": st_.get("hits", {}), "dmg": {k: round(v) for k, v in (st_.get("dmg") or {}).items()},
-           "errors": m.get("errors", 0)}
+           "errors": m.get("errors", 0), "final_gun_veto": m.get("final_gun_veto", 0)}
     out["rate"] = {k: round(out["hits"].get(k, 0) / v, 3) for k, v in out["shots"].items() if v}
     return out
 
@@ -660,6 +660,19 @@ def _step(state: WorldState, intent: Intent, threats: Threats) -> CombatOutX:
             out.reason = (out.reason + " " + why).strip()
         if not trig and las_c > 0 and not dump:
             out.damaging = True
+
+    # The laser may replace the gun's lead with a hitscan direction above. A
+    # previously valid gun trigger must be checked against the aim actually sent.
+    if gun and fire[gun[0]] and tg is not None and best is not None:
+        from .brain import P
+        if P["final_fire"] and "gun" in best[3]:
+            gs = best[3]["gun"][2]
+            fa_g = B.slew(me.aim, cmd, me.yr, me.pr, gun_k * TICK, me.minp, me.maxp)
+            fa_g0 = B.slew(me.aim, cmd, me.yr, me.pr, (gun_k - 1) * TICK, me.minp, me.maxp)
+            final_p = .5 * (gun_p(me, tg, gs, fa_g, gst) + gun_p(me, tg, gs, fa_g0, gst))
+            if final_p < thr:
+                fire[gun[0]] = False
+                mem["final_gun_veto"] = mem.get("final_gun_veto", 0) + 1
 
     # ---- reload
     out.reload = _want_reload(state, threats, me, gun, gst, tg, best, fire)

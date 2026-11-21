@@ -21,6 +21,8 @@ VERSIONS=[
     ('v8','46d8cb1965a7a3c513ac705c588d34164292276d',[4.60]),
     ('v9','585ac9b06b7d9f6f5317ad52d1a3ab15c2656fa6',[4.77]),
     ('v10',BASE,[5.33]),
+    ('v11','be5f383d11735740a283aa730d0a66344b496e85',[5.25]),
+    ('v12','9001f5d9bbbf076b65e815e29ed3d1b488ff3a2f',[5.02]),
 ]
 
 
@@ -57,19 +59,25 @@ def main():
     manifest=json.loads((ROOT/'docs/reference_manifest.json').read_text())
     for f in manifest['files']:
         actual=hashlib.sha256((ROOT/f['path']).read_bytes()).hexdigest()
-        if actual!=f['sha256'] or (f['path'] not in ('pilot/main.py','pilot/brain.py') and actual!=f['source_sha256']):
+        if actual!=f['sha256']:
             raise SystemExit(f'Imported policy changed: {f["path"]}')
-    brain_text=(ROOT/'pilot/brain.py').read_text()
-    brain_text=brain_text.replace('their_ttk = max(ehp, 1.0) / inc','their_ttk = ehp / inc')
-    module=ast.parse(brain_text)
-    scope=manifest['tactical_scope']
-    module.body=[n for n in module.body if not(isinstance(n,ast.FunctionDef) and n.name in scope['modified_functions'])]
-    if hashlib.sha256(stable_ast_dump(module).encode()).hexdigest()!=scope['protected_brain_ast_sha256']:
-        raise SystemExit('Brain changed outside the documented armament functions')
-    for p in ['pilot/arena.py','pilot/navigate.py','pilot/navigate3.py','pilot/combat.py','pilot/ballistics.py',
-              'pilot/state.py','pilot/threats.py','pilot/navbake.npz','Dockerfile','.dockerignore']:
+    for filename,scope in manifest['tactical_scopes'].items():
+        module=ast.parse((ROOT/filename).read_text())
+        def changed(n):
+            if isinstance(n,ast.FunctionDef):
+                return n.name in scope['modified_functions']
+            return isinstance(n,ast.AnnAssign) and isinstance(n.target,ast.Name) and n.target.id in scope.get('modified_globals',[])
+        module.body=[n for n in module.body if not changed(n)]
+        if hashlib.sha256(stable_ast_dump(module).encode()).hexdigest()!=scope['protected_ast_sha256']:
+            raise SystemExit(f'{filename} changed outside its documented scope')
+    for p in ['pilot/arena.py','pilot/navigate.py','pilot/ballistics.py',
+              'pilot/state.py','pilot/threats.py','pilot/navbake.npz']:
         if (ROOT/p).read_bytes()!=read(BASE,p):
-            raise SystemExit(f'Unexpected change outside armament policy: {p}')
+            raise SystemExit(f'Unexpected change outside documented policy: {p}')
+    active=json.loads((ROOT/'docs/sentinel_manifest.json').read_text())
+    for entry in active['files']:
+        if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
+            raise SystemExit(f'Active source changed: {entry["path"]}')
     print(json.dumps({
         'kind':'source provenance and reported scores; not a local scorer',
         'score_source':'user-supplied submission screenshots and follow-up score reports',
@@ -77,16 +85,12 @@ def main():
         'minimum_extra_integer_placement_points_to_reach_5_50':8,
         'minimum_extra_integer_placement_points_to_reach_6_00':32,
         'runs':rows,
-        'candidate':{'name':'AEGIS v11','official_score':None,
-                     'active_entrypoint':'pilot/main.py','legacy_v9_source_preserved':True,
-                     'policy_source':manifest['upstream_repository'],
-                     'policy_commit':manifest['upstream_commit'],
-                     'reported_upstream_best':5.56,'reported_upstream_family_mean':5.34,
-                     'upstream_score_independently_verified':False,
-                     'unchanged_module_scope':'V10 map, navigation, combat, ballistics, threats, state, guard and packaging',
-                     'changed_tactics':scope['modified_functions'],
-                     'numeric_guard':'Floor effective HP at 1 only for the fight-time denominator',
-                     'only_source_edits':manifest['changes']}
+        'candidate':{'name':'AEGIS v13','official_score':None,
+                     'active_entrypoint':'python3 -B -u -m sentinel.main','legacy_v9_source_preserved':True,
+                     'policy_source':active['upstream_repository'],'policy_commit':active['upstream_commit'],
+                     'reported_upstream_best':active['reported_official_score'],
+                     'upstream_score_independently_verified':False,'only_source_edits':active['allowed_changes'],
+                     'retained_pilot_experiments_active_in_image':False}
     },indent=2))
 
 

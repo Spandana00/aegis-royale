@@ -1,0 +1,71 @@
+{
+  "policy": "AEGIS v13 / attributed intact Oval Sentinel recovery-v26",
+  "upstream_repository": "https://github.com/JishnuMadav/mech-royale",
+  "upstream_commit": "2054a5bb27fdd36c8b8f63eebddbcf145737694e",
+  "reported_official_score": 5.85,
+  "reported_receipt": "BB-7097A598",
+  "our_official_score": null,
+  "score_independently_verified": false,
+  "license": "MIT; Copyright (c) 2026 JishnuMadav",
+  "allowed_changes": [
+    "Package-relative imports prevent conflicts with retained AEGIS sources.",
+    "Display name changed to AEGIS v13.",
+    "Module entrypoint added; tactical code and numbers otherwise unchanged."
+  ],
+  "files": [
+    {
+      "path": "sentinel/bot.py",
+      "source_path": "bot.py",
+      "source_sha256": "d9bbd94e7dc5aae6c242a34a1c3851312eb46e684f19ae15f3aa4ed20f882944",
+      "source_git_blob": "6013d2aad01e9d2c3edef8cc76833c45fb98e1a6",
+      "sha256": "71b14c5e9c6a6c8e503f59a91c3f27e87b010a211ab4014fe94a6a934f294148",
+      "size_bytes": 8777
+    },
+    {
+      "path": "sentinel/survivor.py",
+      "source_path": "survivor.py",
+      "source_sha256": "e91853454749b92fd7676d32f8c919dbaf2d39431da547fe5948b266ca4a186a",
+      "source_git_blob": "1a2048e7d71d1f4658d6a70b5d663e2d4968662d",
+      "sha256": "90c652ec7ef328ab2915b1c35403711028fa3f17acb719421b3ce939225f9451",
+      "size_bytes": 9443
+    },
+    {
+      "path": "sentinel/navigation.py",
+      "source_path": "navigation.py",
+      "source_sha256": "61c0b9dccff8067ffdbea7e54e693427134d7214e00a5de5ce71da1411aee392",
+      "source_git_blob": "c721c9c9f859f86d3a5aada881142505e6f01e97",
+      "sha256": "61c0b9dccff8067ffdbea7e54e693427134d7214e00a5de5ce71da1411aee392",
+      "size_bytes": 6903
+    },
+    {
+      "path": "sentinel/combat.py",
+      "source_path": "combat.py",
+      "source_sha256": "bea546099cf23f47784172afb42089f80b26e88e2335975a03cfbd312c5c28e4",
+      "source_git_blob": "d32b60017e37ff34c4061f5d8e8e1bacea7453a3",
+      "sha256": "3b8d9b592349dcb90bdc23cd9a552d8cdb42df703c959323ae7cce39114d4e1b",
+      "size_bytes": 20980
+    },
+    {
+      "path": "sentinel/mechfight.py",
+      "source_path": "mechfight.py",
+      "source_sha256": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+      "source_git_blob": "71deaaef0da3adcc5c2b4c9704b9e821b79418fc",
+      "sha256": "02f9803bd65eab602356fc3b7c98a769bc40715bbc61274cdfac7b440342991c",
+      "size_bytes": 17404
+    },
+    {
+      "path": "sentinel/LICENSE",
+      "source_path": "LICENSE",
+      "source_sha256": "7deeaf37462114403831c1322e6bbcde64a58390aa5ce21d078065779a749c6a",
+      "source_git_blob": "3b4487ecde65d8764a42d0092d656de7de737a27",
+      "sha256": "7deeaf37462114403831c1322e6bbcde64a58390aa5ce21d078065779a749c6a",
+      "size_bytes": 1068
+    }
+  ],
+  "packaging_sha256": {
+    "sentinel/main.py": "fee81d14f331f38e27ec15c70820bfd0b226090fc40a819c015f82aba2162534",
+    "sentinel/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Dockerfile": "4b2d950db48f83329e1a9a064f512f8abd0e9d2019c8a7c2164594fc2031207c",
+    ".dockerignore": "96a1cf21574cd8b938adf3c1e0c3e290d85a024fc66bebb80ae7123c4be4b641"
+  }
+}

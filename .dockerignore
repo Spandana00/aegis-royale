@@ -1,4 +1,4 @@
 *
-!pilot/
-!pilot/**
+!sentinel/
+!sentinel/**
 !Dockerfile

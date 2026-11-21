@@ -16,9 +16,21 @@ import sys
 import time
 
 ROOT = Path(__file__).resolve().parents[1]
-OFF = dict(arm_commit=0, pickup_race=0, wide_band=0, focus_lock=0, fight_boost=0, pursuit_range=0, predictive_move=0)
+OFF = dict(arm_commit=0, pickup_race=0, wide_band=0, focus_lock=0, fight_boost=0, pursuit_range=0, predictive_move=0,
+           cover_all=0, final_fire=0, combat_cube=0, critical_recover=0)
 ARMS = {
     "v10": {},
+    "control": {},
+    "cover_all": {"cover_all": 1},
+    "final_fire": {"final_fire": 1},
+    "combat_cube": {"combat_cube": 1},
+    "critical_recover": {"critical_recover": 1},
+    "cover_fire": {"cover_all": 1, "final_fire": 1},
+    "cover_cube": {"cover_all": 1, "combat_cube": 1},
+    "cover_fire_cube": {"cover_all": 1, "final_fire": 1, "combat_cube": 1},
+    "arm_cube": {"arm_commit": 1, "combat_cube": 1},
+    "reference_jishnu": {},
+    "sentinel": {},
     "v11_arm": {"arm_commit": 1},
     "pickup_race": {"pickup_race": 1},
     "wide_band": {"wide_band": 1},
@@ -96,6 +108,8 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--sim-root", type=Path, required=True)
     p.add_argument("--baseline-root", type=Path, help="exact scored V10 checkout; otherwise control retains V11's pickup ordering")
+    p.add_argument("--historic-root", action="append", default=[], help="arm=/absolute/path to use an immutable historical checkout")
+    p.add_argument("--traces", type=Path, help="optional per-arm trace directory")
     p.add_argument("--seeds", default="3300-3315")
     p.add_argument("--arms", default="v10,v11_arm,pickup_race,wide_band,focus_lock,fight_boost,pursuit_range")
     p.add_argument("--join-per-loss", type=float, default=.6)
@@ -104,6 +118,7 @@ def main():
     p.add_argument("--out", type=Path, default=ROOT / "local-results/ablation.jsonl")
     a = p.parse_args()
     a.sim_root = a.sim_root.resolve()
+    historic = dict(x.split("=", 1) for x in a.historic_root)
     a.out = a.out.resolve()
     a.out.parent.mkdir(parents=True, exist_ok=True)
     if a.baseline_root:
@@ -119,18 +134,25 @@ def main():
                 "time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "arms": {}}
     for name in a.arms.split(","):
         params = dict(OFF, **ARMS[name])
-        root = a.baseline_root if name == "v10" and a.baseline_root else ROOT
-        metadata["arms"][name] = {"switches": params, "root": str(root),
+        root = Path(historic[name]).resolve() if name in historic else (a.baseline_root if name == "v10" and a.baseline_root else ROOT)
+        entrypoint = root / "sentinel/main.py" if name == "sentinel" else (root / "pilot/main.py" if (root / "pilot/main.py").is_file() else root / "combat.py")
+        source_dir = root / "sentinel" if name == "sentinel" else (root / "pilot" if (root / "pilot").is_dir() else root)
+        metadata["arms"][name] = {"switches": params, "root": str(root), "entrypoint": str(entrypoint),
             "source_sha256": {str(f.relative_to(root)): hashlib.sha256(f.read_bytes()).hexdigest()
-                              for f in sorted((root / "pilot").glob("*.py"))}}
+                              for f in sorted(source_dir.glob("*.py"))}}
         spec = ",".join(f"{k}={v}" for k, v in params.items())
         # All arms run the same source tree and production process guard. Only these switches differ.
-        env = dict(os.environ, MECH_BRAIN=spec, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1")
+        env = dict(os.environ, MECH_BRAIN=spec, OPENBLAS_NUM_THREADS="1", OMP_NUM_THREADS="1", PYTHONHASHSEED="0")
         temp = a.out.with_name(a.out.stem + "-" + name + ".jsonl")
+        bot_cmd = f"{sys.executable} -B -u -m sentinel.main" if name == "sentinel" else f"{sys.executable} -B -u {entrypoint}"
         command = [sys.executable, "sim/run_matches.py", "--mode", a.mode,
-                   "--bot", f"{sys.executable} -B -u {root}/pilot/main.py",
+                   "--bot", bot_cmd,
                    "--arena", str(ROOT / "arena"), "--seeds", a.seeds, "--jobs", str(a.jobs),
                    "--squad", f"join_per_loss={a.join_per_loss}", "--out", str(temp)]
+        if name == "sentinel":
+            command += ["--cwd", str(root)]
+        if a.traces:
+            command += ["--traces", str(a.traces.resolve() / name)]
         print(f"Starting {name}: {spec}", flush=True)
         with a.out.with_name(a.out.stem + "-" + name + ".log").open("w") as log:
             subprocess.run(command, cwd=a.sim_root, env=env, stdout=log, stderr=subprocess.STDOUT, check=True)

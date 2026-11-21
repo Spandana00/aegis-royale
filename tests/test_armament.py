@@ -14,6 +14,12 @@ from pilot.state import WorldState,EnemyThreat,Threats
 
 
 class ArmamentTests(unittest.TestCase):
+    def setUp(self):
+        saved = dict(brain.P)
+        self.addCleanup(lambda: (brain.P.clear(), brain.P.update(saved)))
+        brain.P.update(arm_commit=True, cover_all=False, final_fire=False,
+                       combat_cube=False, critical_recover=False)
+
     @classmethod
     def setUpClass(cls):
         with gzip.open(ROOT/'check/stream.jsonl.gz','rt') as f:

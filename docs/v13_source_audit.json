@@ -1,0 +1,360 @@
+{
+  "kind": "source provenance and reported scores; not a local scorer",
+  "score_source": "user-supplied submission screenshots and follow-up score reports",
+  "reference_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+  "reference_score": 5.33,
+  "matches_per_run": 48,
+  "minimum_extra_integer_placement_points_to_reach_5_50": 8,
+  "minimum_extra_integer_placement_points_to_reach_6_00": 32,
+  "runs": [
+    {
+      "version": "v1",
+      "commit": "cf2994318977d241b5c65b16eea33a4163cb0be8",
+      "user_reported_scores": [
+        3.75
+      ],
+      "deltas_from_best": [
+        -1.58
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_upgrade",
+        "choose_goal",
+        "choose_target",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range",
+        "engagement_distance",
+        "engage"
+      ],
+      "runtime_sha256": {
+        "bot.py": "5cf68273712368bc646912cc06fa7412d1ad7de44487cc697df8062458d06e30",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v2",
+      "commit": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+      "user_reported_scores": [
+        4.5
+      ],
+      "deltas_from_best": [
+        -0.83
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "runtime_sha256": {
+        "bot.py": "82c66d54686871f5350ffc083d7e54dcbf26012cce0098787353ca65215b62d2",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v3",
+      "commit": "790c32ab40d011a827ec370ace67c2972e6375b5",
+      "user_reported_scores": [
+        3.96
+      ],
+      "deltas_from_best": [
+        -1.37
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "safe_goal",
+        "healing_drop",
+        "loot_score",
+        "choose_goal",
+        "find_cover",
+        "choose_target",
+        "engagement_distance",
+        "steer",
+        "engage",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "runtime_sha256": {
+        "bot.py": "1cd44f67366140300e92a01e72534aea56eac1ec5d3dc0a5d9299ae7ea1c1669",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v4",
+      "commit": "463d65d15c11fb26057e1fec22000f9708455fbe",
+      "user_reported_scores": [
+        4.4
+      ],
+      "deltas_from_best": [
+        -0.93
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "dodge_cost",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "runtime_sha256": {
+        "bot.py": "4f191fcf8c7e863fcf075f4714da35f25132e3616f72e5ac304b4c6abb5a88a9",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v5",
+      "commit": "1fa9554ef876770d36badc949bdf130fd9270156",
+      "user_reported_scores": [
+        4.17,
+        4.15
+      ],
+      "deltas_from_best": [
+        -1.16,
+        -1.18
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "reload_cover",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "runtime_sha256": {
+        "bot.py": "f94b40af017dc70330b73b823726f2689d9740a4ac5fdbb19c1dbb04c7d066d7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v6",
+      "commit": "be9c963d0bb180c781984d85d50fb5896e07a6c2",
+      "user_reported_scores": [
+        4.46
+      ],
+      "deltas_from_best": [
+        -0.87
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "predict_falling_target",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "runtime_sha256": {
+        "bot.py": "500c314e994c92e795cc55595e0fcbe977fdc6e96e97a6420e6cfd4c8165a4d3",
+        "world.py": "3c068f288721cbb2f9a93ce63abddb22194d4351e06d27f4660bc1a91d7d4e2d",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v7",
+      "commit": "acec27de854684d8e9853c2adcc610411701f11d",
+      "user_reported_scores": [
+        4.6,
+        4.52
+      ],
+      "deltas_from_best": [
+        -0.73,
+        -0.81
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal"
+      ],
+      "runtime_sha256": {
+        "bot.py": "1937807266c5d5d578a0cdbccfb2099c07f153db6276955d62e93bc692238ac8",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
+    },
+    {
+      "version": "v8",
+      "commit": "46d8cb1965a7a3c513ac705c588d34164292276d",
+      "user_reported_scores": [
+        4.6
+      ],
+      "deltas_from_best": [
+        -0.73
+      ],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "choose_goal",
+        "act"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "weapon_preferences",
+        "tactical_resource_goal"
+      ],
+      "runtime_sha256": {
+        "bot.py": "99c934f6f5e036353a20882f2d1ffdcb37a9ef5d7a9f3142794b49e7a5e98147",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
+      }
+    },
+    {
+      "version": "v9",
+      "commit": "585ac9b06b7d9f6f5317ad52d1a3ab15c2656fa6",
+      "user_reported_scores": [
+        4.77
+      ],
+      "deltas_from_best": [
+        -0.56
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
+      }
+    },
+    {
+      "version": "v10",
+      "commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+      "user_reported_scores": [
+        5.33
+      ],
+      "deltas_from_best": [
+        0.0
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      }
+    },
+    {
+      "version": "v11",
+      "commit": "be5f383d11735740a283aa730d0a66344b496e85",
+      "user_reported_scores": [
+        5.25
+      ],
+      "deltas_from_best": [
+        -0.08
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      }
+    },
+    {
+      "version": "v12",
+      "commit": "9001f5d9bbbf076b65e815e29ed3d1b488ff3a2f",
+      "user_reported_scores": [
+        5.02
+      ],
+      "deltas_from_best": [
+        -0.31
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      }
+    }
+  ],
+  "candidate": {
+    "name": "AEGIS v13",
+    "official_score": null,
+    "active_entrypoint": "python3 -B -u -m sentinel.main",
+    "legacy_v9_source_preserved": true,
+    "policy_source": "https://github.com/JishnuMadav/mech-royale",
+    "policy_commit": "2054a5bb27fdd36c8b8f63eebddbcf145737694e",
+    "reported_upstream_best": 5.85,
+    "upstream_score_independently_verified": false,
+    "only_source_edits": [
+      "Package-relative imports prevent conflicts with retained AEGIS sources.",
+      "Display name changed to AEGIS v13.",
+      "Module entrypoint added; tactical code and numbers otherwise unchanged."
+    ],
+    "retained_pilot_experiments_active_in_image": false
+  }
+}

@@ -1,0 +1,613 @@
+{
+  "kind": "Local diagnostic evidence, not official scores",
+  "match_count": 472,
+  "sets": {
+    "feature_screen": {
+      "v10": {
+        "n": 16,
+        "mean_proxy_points": 5.25,
+        "sd": 1.8439088914585775,
+        "mean_alive_s": 119.44375,
+        "mean_zone_damage": 0,
+        "armed": 15,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 31.073333333333334,
+        "mean_cubes": 4.25,
+        "mean_damage_dealt": 11081.3125,
+        "deaths": {
+          "gun": 13,
+          "laser": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "control": {
+        "n": 16,
+        "mean_proxy_points": 5.375,
+        "sd": 2.276693508870558,
+        "mean_alive_s": 116.86875,
+        "mean_zone_damage": 0,
+        "armed": 15,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 28.306666666666665,
+        "mean_cubes": 5.25,
+        "mean_damage_dealt": 11010.0625,
+        "deaths": {
+          "gun": 12,
+          "laser": 4
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0
+      },
+      "v11_arm": {
+        "n": 16,
+        "mean_proxy_points": 5.875,
+        "sd": 1.9958289839896939,
+        "mean_alive_s": 121.271875,
+        "mean_zone_damage": 74,
+        "armed": 16,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 7.75,
+        "mean_cubes": 6.625,
+        "mean_damage_dealt": 11889.0625,
+        "deaths": {
+          "laser": 7,
+          "gun": 9
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "fight_boost": {
+        "n": 16,
+        "mean_proxy_points": 4.9375,
+        "sd": 2.048373338367138,
+        "mean_alive_s": 124.03125,
+        "mean_zone_damage": 0,
+        "armed": 15,
+        "armed_by_30_s": 8,
+        "mean_first_weapon_s": 43.98,
+        "mean_cubes": 4.4375,
+        "mean_damage_dealt": 10232.625,
+        "deaths": {
+          "gun": 13,
+          "laser": 2,
+          "mortar": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "arm_boost": {
+        "n": 16,
+        "mean_proxy_points": 5.3125,
+        "sd": 1.40089257261219,
+        "mean_alive_s": 121.690625,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 7.83125,
+        "mean_cubes": 5,
+        "mean_damage_dealt": 11063.5625,
+        "deaths": {
+          "mortar": 2,
+          "gun": 12,
+          "laser": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0
+      },
+      "cover_all": {
+        "n": 16,
+        "mean_proxy_points": 4.9375,
+        "sd": 1.9822125684867067,
+        "mean_alive_s": 105.409375,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 33.69375,
+        "mean_cubes": 4.1875,
+        "mean_damage_dealt": 10370.75,
+        "deaths": {
+          "gun": 13,
+          "laser": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0
+      },
+      "final_fire": {
+        "n": 16,
+        "mean_proxy_points": 5,
+        "sd": 1.8973665961010275,
+        "mean_alive_s": 110.24375,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 29.30625,
+        "mean_cubes": 4.6875,
+        "mean_damage_dealt": 10101.6875,
+        "deaths": {
+          "gun": 13,
+          "laser": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "combat_cube": {
+        "n": 16,
+        "mean_proxy_points": 5.5,
+        "sd": 2.1908902300206643,
+        "mean_alive_s": 111.365625,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 36.1,
+        "mean_cubes": 5.4375,
+        "mean_damage_dealt": 11036.5,
+        "deaths": {
+          "gun": 13,
+          "mortar": 1,
+          "laser": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0
+      },
+      "critical_recover": {
+        "n": 16,
+        "mean_proxy_points": 5.3125,
+        "sd": 1.8874586088176875,
+        "mean_alive_s": 114.99375,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 34.31875,
+        "mean_cubes": 4.9375,
+        "mean_damage_dealt": 10563.0625,
+        "deaths": {
+          "gun": 12,
+          "laser": 3,
+          "mortar": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0
+      }
+    },
+    "combination_screen": {
+      "cover_fire": {
+        "n": 16,
+        "mean_proxy_points": 4.875,
+        "sd": 2.0936411663256274,
+        "mean_alive_s": 111.478125,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 34.7,
+        "mean_cubes": 3.9375,
+        "mean_damage_dealt": 10329.4375,
+        "deaths": {
+          "gun": 14,
+          "laser": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "cover_cube": {
+        "n": 16,
+        "mean_proxy_points": 5.125,
+        "sd": 1.927865832122834,
+        "mean_alive_s": 116.996875,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 34.1125,
+        "mean_cubes": 4.3125,
+        "mean_damage_dealt": 10459.625,
+        "deaths": {
+          "gun": 12,
+          "laser": 4
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 3,
+        "module_errors": 0
+      },
+      "cover_fire_cube": {
+        "n": 16,
+        "mean_proxy_points": 5,
+        "sd": 2.1908902300206643,
+        "mean_alive_s": 115.7875,
+        "mean_zone_damage": 87.6875,
+        "armed": 14,
+        "armed_by_30_s": 10,
+        "mean_first_weapon_s": 21.442857142857143,
+        "mean_cubes": 4.25,
+        "mean_damage_dealt": 10570.9375,
+        "deaths": {
+          "gun": 12,
+          "laser": 2,
+          "zone": 1,
+          "mortar": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0
+      },
+      "arm_cube": {
+        "n": 16,
+        "mean_proxy_points": 5.75,
+        "sd": 1.8073922282301278,
+        "mean_alive_s": 102.690625,
+        "mean_zone_damage": 0,
+        "armed": 16,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 7.75,
+        "mean_cubes": 7.625,
+        "mean_damage_dealt": 10735.75,
+        "deaths": {
+          "gun": 12,
+          "mortar": 1,
+          "laser": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0
+      }
+    },
+    "fresh_moderate": {
+      "v10": {
+        "n": 24,
+        "mean_proxy_points": 4.833333333333333,
+        "sd": 2.0781820371926383,
+        "mean_alive_s": 119.67708333333333,
+        "mean_zone_damage": 151.83333333333334,
+        "armed": 22,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 28.259090909090908,
+        "mean_cubes": 4.625,
+        "mean_damage_dealt": 10410.041666666666,
+        "deaths": {
+          "mortar": 4,
+          "gun": 17,
+          "laser": 1,
+          "zone": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 3,
+        "module_errors": 0
+      },
+      "v11_arm": {
+        "n": 24,
+        "mean_proxy_points": 5.375,
+        "sd": 1.6891598117304405,
+        "mean_alive_s": 110.50833333333334,
+        "mean_zone_damage": 0,
+        "armed": 24,
+        "armed_by_30_s": 20,
+        "mean_first_weapon_s": 18.65416666666667,
+        "mean_cubes": 5.541666666666667,
+        "mean_damage_dealt": 10995.208333333334,
+        "deaths": {
+          "gun": 20,
+          "mortar": 1,
+          "laser": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "combat_cube": {
+        "n": 24,
+        "mean_proxy_points": 5.458333333333333,
+        "sd": 2.021174145771767,
+        "mean_alive_s": 119.80625,
+        "mean_zone_damage": 0,
+        "armed": 21,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 21.485714285714284,
+        "mean_cubes": 4.916666666666667,
+        "mean_damage_dealt": 11438.666666666666,
+        "deaths": {
+          "mortar": 2,
+          "gun": 18,
+          "laser": 4
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "arm_cube": {
+        "n": 24,
+        "mean_proxy_points": 5.333333333333333,
+        "sd": 1.7362294645648624,
+        "mean_alive_s": 99.66875,
+        "mean_zone_damage": 0,
+        "armed": 24,
+        "armed_by_30_s": 20,
+        "mean_first_weapon_s": 16.9,
+        "mean_cubes": 6.041666666666667,
+        "mean_damage_dealt": 10182.125,
+        "deaths": {
+          "laser": 4,
+          "gun": 17,
+          "mortar": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    },
+    "fresh_fast": {
+      "v10": {
+        "n": 24,
+        "mean_proxy_points": 3.6666666666666665,
+        "sd": 1.4645571126562065,
+        "mean_alive_s": 100.25416666666666,
+        "mean_zone_damage": 0,
+        "armed": 22,
+        "armed_by_30_s": 15,
+        "mean_first_weapon_s": 22.65909090909091,
+        "mean_cubes": 4.333333333333333,
+        "mean_damage_dealt": 8126.708333333333,
+        "deaths": {
+          "gun": 23,
+          "laser": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 1,
+        "module_errors": 0
+      },
+      "v11_arm": {
+        "n": 24,
+        "mean_proxy_points": 4.166666666666667,
+        "sd": 1.3726099121798927,
+        "mean_alive_s": 84.49166666666666,
+        "mean_zone_damage": 0,
+        "armed": 24,
+        "armed_by_30_s": 21,
+        "mean_first_weapon_s": 15.370833333333334,
+        "mean_cubes": 3.7916666666666665,
+        "mean_damage_dealt": 8506.958333333334,
+        "deaths": {
+          "gun": 20,
+          "laser": 4
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "combat_cube": {
+        "n": 24,
+        "mean_proxy_points": 3.75,
+        "sd": 1.8474424154113356,
+        "mean_alive_s": 106.05,
+        "mean_zone_damage": 60.833333333333336,
+        "armed": 23,
+        "armed_by_30_s": 16,
+        "mean_first_weapon_s": 23.51304347826087,
+        "mean_cubes": 4.416666666666667,
+        "mean_damage_dealt": 8307.625,
+        "deaths": {
+          "gun": 21,
+          "zone": 1,
+          "laser": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 2,
+        "module_errors": 0
+      },
+      "arm_cube": {
+        "n": 24,
+        "mean_proxy_points": 4.166666666666667,
+        "sd": 1.2740441145412122,
+        "mean_alive_s": 88.25416666666666,
+        "mean_zone_damage": 0,
+        "armed": 23,
+        "armed_by_30_s": 21,
+        "mean_first_weapon_s": 12.304347826086957,
+        "mean_cubes": 3.875,
+        "mean_damage_dealt": 8847.791666666666,
+        "deaths": {
+          "gun": 20,
+          "laser": 3,
+          "mortar": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    },
+    "reference_small": {
+      "reference_jishnu": {
+        "n": 8,
+        "mean_proxy_points": 5.25,
+        "sd": 2.2519832529192065,
+        "mean_alive_s": 173.81875000000002,
+        "mean_zone_damage": 30.75,
+        "armed": 7,
+        "armed_by_30_s": null,
+        "mean_first_weapon_s": null,
+        "mean_cubes": 6.5,
+        "mean_damage_dealt": 11693.375,
+        "deaths": {
+          "gun": 7,
+          "laser": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    },
+    "reference_moderate": {
+      "reference_jishnu": {
+        "n": 24,
+        "mean_proxy_points": 5.416666666666667,
+        "sd": 2.282574188835104,
+        "mean_alive_s": 148.81875,
+        "mean_zone_damage": 105.95833333333333,
+        "armed": 23,
+        "armed_by_30_s": null,
+        "mean_first_weapon_s": null,
+        "mean_cubes": 5.166666666666667,
+        "mean_damage_dealt": 11463.416666666666,
+        "deaths": {
+          "gun": 19,
+          "laser": 2,
+          "mortar": 3
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    },
+    "active_fast": {
+      "sentinel": {
+        "n": 24,
+        "mean_proxy_points": 4.458333333333333,
+        "sd": 1.5030162910010298,
+        "mean_alive_s": 109.35416666666667,
+        "mean_zone_damage": 14.708333333333334,
+        "armed": 23,
+        "armed_by_30_s": null,
+        "mean_first_weapon_s": null,
+        "mean_cubes": 4.541666666666667,
+        "mean_damage_dealt": 9333.458333333334,
+        "deaths": {
+          "gun": 19,
+          "laser": 4,
+          "mortar": 1
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    },
+    "ffa_sanity": {
+      "v10": {
+        "n": 8,
+        "mean_proxy_points": 11.625,
+        "sd": 3.8521793460696654,
+        "mean_alive_s": 137.41875,
+        "mean_zone_damage": 0,
+        "armed": 7,
+        "armed_by_30_s": 3,
+        "mean_first_weapon_s": 39.72857142857143,
+        "mean_cubes": 6.875,
+        "mean_damage_dealt": 4748.875,
+        "deaths": {
+          "laser": 2,
+          "gun": 4,
+          "survived": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      },
+      "sentinel": {
+        "n": 8,
+        "mean_proxy_points": 11.25,
+        "sd": 4.097037257057139,
+        "mean_alive_s": 96.75625,
+        "mean_zone_damage": 18.375,
+        "armed": 8,
+        "armed_by_30_s": null,
+        "mean_first_weapon_s": null,
+        "mean_cubes": 4.375,
+        "mean_damage_dealt": 4274.875,
+        "deaths": {
+          "survived": 3,
+          "laser": 3,
+          "gun": 2
+        },
+        "late": 0,
+        "missed": 0,
+        "tracebacks": 0,
+        "fallbacks": 0,
+        "module_errors": 0
+      }
+    }
+  },
+  "selection": {
+    "policy": "sentinel recovery-v26, entire pinned implementation",
+    "our_official_score": null,
+    "reference_reported_score": 5.85,
+    "candidate_proxy_mean": 4.9375,
+    "baseline_proxy_mean": 4.25,
+    "n": 48,
+    "mean_delta": 0.6875,
+    "paired_95pct_interval": [
+      0.042082738120040486,
+      1.3329172618799596
+    ],
+    "better_tied_worse": [
+      25,
+      6,
+      17
+    ]
+  },
+  "limits": [
+    "House AI is reconstructed, not the private official scorer.",
+    "Intervals exclude model error and selection effects.",
+    "Clock-limited route searches and process fallbacks create scheduling noise.",
+    "Moderate reference uses the exact upstream source; faster and FFA runs use the namespace-only adaptation, protected by source equivalence tests.",
+    "The first screen predates the explicit PYTHONHASHSEED=0 setting; fresh validation, combinations and reference runs use 0.",
+    "No official per-match replay for V10/V11/V12 was available.",
+    "The disabled cover experiment cache was subsequently corrected to allow small threat movement; its original screen does not score that corrected variant."
+  ]
+}

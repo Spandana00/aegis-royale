@@ -12,7 +12,9 @@
     "Change display name OSU-Walker to AEGIS v12.",
     "Retain V11 bounded weapon commitment, pickup ordering and zero-HP guard.",
     "Enable V12 grounded combat boost above 40 energy, with laser-charge and lightning-energy guards.",
-    "Keep pickup race, wider band, focus, pursuit and predictive movement experiments disabled; record hashes and protected function scopes."
+    "Keep pickup race, wider band, focus, pursuit and predictive movement experiments disabled; record hashes and protected function scopes.",
+    "V13 retains these files only for comparative experiments; the competition image now uses the separately audited sentinel package.",
+    "V13 added independently gated resource/recovery experiments and final gun-aim and multi-threat shelter checks. All four new diagnostic switches default off."
   ],
   "files": [
     {
@@ -46,8 +48,8 @@
       "source_path": "bot/brain.py",
       "path": "pilot/brain.py",
       "source_sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
-      "sha256": "d4ac5138845ba0625c113cd02d85919c337bef9fddccb68c0683f31c03fe76be",
-      "size_bytes": 72004,
+      "sha256": "42d5d68b498f468ede6b571b8ccaa44094f9f563ca378f6006ef3335ec65e20d",
+      "size_bytes": 73572,
       "changed": true,
       "v10_sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714"
     },
@@ -55,9 +57,9 @@
       "source_path": "bot/combat.py",
       "path": "pilot/combat.py",
       "source_sha256": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
-      "sha256": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
-      "size_bytes": 45925,
-      "changed": false,
+      "sha256": "a929909d5ae8be1cf517c4902d1739755de7635c056fc2c127df5ca9c7dba831",
+      "size_bytes": 46720,
+      "changed": true,
       "v10_sha256": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449"
     },
     {
@@ -121,13 +123,22 @@
       "source_sha256": null,
       "origin": "Independently implemented V12 experiment; disabled in shipping defaults",
       "changed": true
+    },
+    {
+      "source_path": null,
+      "path": "pilot/tactics.py",
+      "source_sha256": null,
+      "sha256": "7a5ff72f16b381e063e5be354d7278d3b0a5d3cbd77d1dfaeb892b311df489f1",
+      "size_bytes": 4425,
+      "changed": true,
+      "origin": "independent diagnostic experiments"
     }
   ],
-  "candidate": "AEGIS v12",
+  "candidate": "Retained V10-V12 diagnostic pilot; not the competition entrypoint",
   "baseline_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
   "baseline_user_reported_score": 5.33,
-  "previous_candidate_user_reported_score": 5.25,
-  "previous_candidate_receipt": "BB-524096D2",
+  "previous_candidate_user_reported_score": 5.02,
+  "previous_candidate_receipt": "BB-64E9FDE1",
   "tactical_scopes": {
     "pilot/brain.py": {
       "modified_functions": [
@@ -141,12 +152,13 @@
         "_assess_fight",
         "_desired_range",
         "_loot_choice",
-        "_known_weapon"
+        "_known_weapon",
+        "_cover_from"
       ],
       "modified_globals": [
         "P"
       ],
-      "protected_ast_sha256": "1ae4507e52aafac6e515415d686dbc1c4188547e92f6c0f361f3e0df0ddb8876"
+      "protected_ast_sha256": "3d3145fbdc0fd405ebaa59f65c263f69057c7eac0d48f2d463aae796988f8b92"
     },
     "pilot/navigate3.py": {
       "modified_functions": [
@@ -155,15 +167,28 @@
       ],
       "modified_globals": [],
       "protected_ast_sha256": "40d0609fa50598846b884fdbe44ce6e17701fcf5fe724cd70aa0009caa644f9e"
+    },
+    "pilot/combat.py": {
+      "modified_functions": [
+        "_step",
+        "summary"
+      ],
+      "modified_globals": [],
+      "protected_ast_sha256": "8fcf6b852f97fa693a3dd4c60d73dfb5d47182e0d1eb63f4dfbdf0d445a05c6a"
     }
   },
   "enabled_features": {
     "arm_commit": true,
+    "fight_boost": 0.0,
+    "cover_all": false,
+    "final_fire": false,
+    "combat_cube": false,
+    "critical_recover": false,
     "pickup_race": false,
     "wide_band": false,
     "focus_lock": false,
-    "fight_boost": 40.0,
     "pursuit_range": false,
     "predictive_move": false
-  }
+  },
+  "display_name": "AEGIS v12"
 }

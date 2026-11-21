@@ -1,0 +1,38 @@
+{
+  "kind": "Correctness and timing, not official placement",
+  "tests": 108,
+  "tests_passed": true,
+  "native_conformance": {
+    "observations": 300,
+    "answered_on_time": 300,
+    "max_ms": 3.6,
+    "bad_lines": 0,
+    "wrong_tick": 0
+  },
+  "native_stress": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "active",
+    "startup_ms": 603.11,
+    "observations": 840,
+    "p50_ms": 0.705,
+    "p99_ms": 3.777,
+    "max_ms": 5.186,
+    "over_50_ms": 0,
+    "max_rss_mib": 41.84,
+    "invalid_actions": [],
+    "mode_counts": {
+      "route": 101,
+      "combat": 632,
+      "heal": 107
+    },
+    "module_errors": {},
+    "active_package": "sentinel",
+    "process_deadline_guard_tested": false
+  },
+  "image_check": "The per-commit GitHub Actions validation status is authoritative for the restricted linux/amd64 image.",
+  "workflow_url": "https://github.com/Spandana00/aegis-royale/actions/workflows/validate.yml",
+  "container_validation": {
+    "status": "not_run",
+    "reason": "GitHub push rejected by automatic approval review pending explicit publication authorization; no local container runtime is available."
+  }
+}
