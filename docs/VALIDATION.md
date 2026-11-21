@@ -1,5 +1,8 @@
 # Initial candidate validation
 
+Historical report for v1 before publication. The Docker build and exact sandbox
+check later passed in GitHub Actions. For the current candidate, see [V2.md](V2.md).
+
 These are local correctness and timing checks. **No official practice run has
 been submitted and no leaderboard score or rank has been measured.**
 

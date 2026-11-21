@@ -52,7 +52,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v1'
+    name = 'AEGIS v2'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -79,6 +79,7 @@ class Bot:
         self.escaping_until = -100.
         self.loot_blacklist = {}
         self.scan_yaw = None
+        self.direct_ids = set()
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -170,19 +171,28 @@ class Bot:
         if math.sqrt(dx * dx + dy * dy + dz * dz) > stats.get('range', 230) + 2:
             return None
         yaw, pitch = math.atan2(dy, dx), math.atan2(dz, distance)
-        if not me['stats'].get('min_pitch', -.7) <= pitch <= me['stats'].get('max_pitch', 1.3):
+        if kind == 'lightning':
+            pitch = clamp(pitch, me['stats'].get('min_pitch', -.7), me['stats'].get('max_pitch', 1.3))
+        elif not me['stats'].get('min_pitch', -.7) <= pitch <= me['stats'].get('max_pitch', 1.3):
             return None
         if not self.world.clear_ray(origin, aimpoint):
-            return None
+            if kind not in ('gun', 'laser') or 'kind' not in target:
+                return None
+            target_height = (self.config['npc']['height'] if target['kind'] == 'npc' else
+                             self.config['mech']['height'] * (1 + self.config['cubes'].get('size_per_cube', .05) * target.get('cubes', 0)))
+            aimpoint[2] += target_height * .3
+            pitch = math.atan2(aimpoint[2] - origin[2], distance)
+            if not me['stats'].get('min_pitch', -.7) <= pitch <= me['stats'].get('max_pitch', 1.3) or not self.world.clear_ray(origin, aimpoint):
+                return None
         return yaw, pitch, aimpoint, flight
 
     def choose_upgrade(self, obs):
         me = obs['self']
         ratio = me['hp'] / me['max_hp']
-        weights = {'servos': 93, 'nanites': 87, 'plating': 80, 'armor': 83,
+        weights = {'servos': 83, 'nanites': 82, 'plating': 88, 'armor': 86,
                    'reactor': 74, 'jets': 70, 'capacitor': 55, 'gyros': 39, 'sensors': 24,
-                   'gun_damage': 72, 'gun_mag': 76, 'gun_rate': 66, 'gun_velocity': 68,
-                   'laser_damage': 78, 'laser_charge': 73, 'laser_pierce': 35,
+                   'gun_damage': 94, 'gun_mag': 100, 'gun_rate': 75, 'gun_velocity': 78,
+                   'laser_damage': 93, 'laser_charge': 88, 'laser_pierce': 35,
                    'lightning_range': 96, 'lightning_efficiency': 82, 'lightning_chain': 50,
                    'mortar_reload': 64, 'mortar_splash': 61, 'mortar_velocity': 44}
         if ratio < .5:
@@ -222,20 +232,29 @@ class Bot:
         pos, zone = me['pos'], obs['zone']
         safe, urgent = self.safe_goal(obs)
         ratio = me['hp'] / me['max_hp']
-        close = [e for e in enemies if math.dist(pos[:2], e['pos'][:2]) < 105]
-        recovering = ratio < .48 or (ratio < .78 and now - self.last_harm < 7 and len(close) > 1)
+        exposed = [e for e in enemies if e['id'] in self.direct_ids]
+        close = [e for e in exposed if math.dist(pos[:2], e['pos'][:2]) < 115]
+        # Stay in recovery until substantially healed. The old policy resumed
+        # firing at half health and repeatedly reset its own regeneration.
+        recovering = (ratio < .5 or (self.mode == 'recover' and ratio < .88)
+                      or (ratio < .72 and len(close) > 1))
+        if target and len(close) <= 1 and target.get('hp', 1400) < min(220., me['hp'] * .3):
+            recovering = False
         if urgent:
             self.mode, self.goal_id = 'zone', None
             return safe
-        if recovering and enemies:
+        if recovering and (enemies or self.mode == 'recover'):
             self.mode, self.goal_id = 'recover', None
-            return self.find_cover(obs, enemies)
+            if enemies:
+                return self.find_cover(obs, exposed or enemies)
+            return me['pos'][:2]
         best, goal, gid, mode = .22, None, None, 'explore'
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
         for iid, (item, last) in self.items['cubes'].items():
             if self.loot_blacklist.get(iid, 0) > now:
                 continue
-            score = self.loot_score(obs, item['pos'], 105., close)
+            value = 105. if me.get('cubes', 0) < 10 else 50.
+            score = self.loot_score(obs, item['pos'], value, close)
             if self.goal_id == iid:
                 score *= 1.16
             if score > best:
@@ -263,7 +282,7 @@ class Bot:
             if mode != 'drop' or goal is None or math.dist(me['pos'][:2], goal[:2]) > 18:
                 self.mode, self.goal_id = 'recover', None
                 return self.find_cover(obs, enemies)
-        if not close and ratio > .68:
+        if not close and ratio > .72:
             for iid, (item, last) in self.items['crates'].items():
                 if self.loot_blacklist.get(iid, 0) > now:
                     continue
@@ -276,6 +295,9 @@ class Bot:
             if len(close) <= 1 and ratio > .5 and (goal is None or d < 65 or best < 1.1):
                 self.mode, self.goal_id = 'fight', target['id']
                 return target['pos'][:2]
+        if target and target['kind'] == 'npc' and not close and ratio > .72:
+            self.mode, self.goal_id = 'farm', target['id']
+            return target['pos'][:2]
         if goal is not None:
             self.mode, self.goal_id = mode, gid
             if mode == 'crate':
@@ -332,6 +354,7 @@ class Bot:
             candidates += [e for e in obs['mechs'] if e['kind'] == 'npc' and math.dist(e['pos'][:2], me['pos'][:2]) < 75]
         candidates.sort(key=lambda e: math.dist(e['pos'][:2], me['pos'][:2]))
         best, target, solutions = -1., None, {}
+        self.direct_ids = set()
         for e in candidates[:6]:
             d = math.dist(me['pos'][:2], e['pos'][:2])
             available = {}
@@ -343,6 +366,8 @@ class Bot:
                     available[i] = solution
             if not available:
                 continue
+            if any(me['weapons'][i]['kind'] != 'mortar' for i in available):
+                self.direct_ids.add(e['id'])
             hp = max(1., e.get('hp', 1400))
             score = 1500 / (hp + 300) + 75. / (d + 30)
             if e['id'] == self.target_id:
@@ -355,6 +380,25 @@ class Bot:
                 best, target, solutions = score, e, available
         self.target_id = target['id'] if target else None
         return enemies, target, solutions
+
+    def engagement_distance(self, obs, target):
+        me = obs['self']
+        secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
+        preferred = 100.
+        if target and target.get('kind') == 'npc':
+            preferred = 57.
+        elif secondary and secondary['kind'] == 'laser':
+            preferred = 145.
+        elif secondary and secondary['kind'] == 'lightning':
+            # Commit to the short-range weapon against an isolated opponent;
+            # keep gun distance while outnumbered or short of energy.
+            if len(self.direct_ids) <= 1 and me['energy'] > 20 and me['hp'] > .58 * me['max_hp']:
+                preferred = secondary['stats']['range'] * .82
+            else:
+                preferred = 92.
+        if target and 'lightning' in target.get('weapons', []) and (not secondary or secondary['kind'] != 'lightning'):
+            preferred = max(95., preferred)
+        return min(preferred, max(18., obs['zone']['radius'] * .72))
 
     def dodge_cost(self, obs, vx, vy, x, y):
         me = obs['self']
@@ -390,9 +434,8 @@ class Bot:
         elevated = pos[2] > self.world.ground(*pos[:2]) + 3.
         ux, uy = unit(waypoint[0] - pos[0], waypoint[1] - pos[1])
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
-        reach = secondary['stats'].get('range', 110.) if secondary else 110.
-        preferred = clamp(reach * .78, 32., 130.)
-        fighting = self.mode == 'fight' and target is not None
+        preferred = self.engagement_distance(obs, target)
+        fighting = self.mode in ('fight', 'farm') and target is not None
         if fighting:
             ex, ey = target['pos'][0] - pos[0], target['pos'][1] - pos[1]
             d = math.hypot(ex, ey)
@@ -401,7 +444,10 @@ class Bot:
             # Smooth changes of strafe direction frustrate linear leading without
             # spending energy on constant jumping or canceling horizontal speed.
             side = self.strafe * (1 if math.sin(now * 1.65 + self.phase) > -.2 else -1)
-            ux, uy = unit(rx * radial - ry * side, ry * radial + rx * side)
+            # Keep following A* around a wall until the short approach is clear.
+            approach = [pos[0] + rx * min(15., d), pos[1] + ry * min(15., d)]
+            if d < preferred + 18 or self.world.travel_clear(pos, approach, radius + .35, height, elevated):
+                ux, uy = unit(rx * radial - ry * side, ry * radial + rx * side)
         ratio = me['hp'] / me['max_hp']
         boost = (self.mode == 'zone' or (self.mode in ('recover', 'cover') and enemies)) and me['energy'] > 25
         if fighting and target:
@@ -421,7 +467,7 @@ class Bot:
         goal_dist = math.dist(waypoint[:2], pos[:2])
         if goal_dist < 3 and self.mode in ('drop', 'recover', 'zone', 'crate') and not enemies:
             candidates.insert(0, (0., 0.))
-        danger = sorted(enemies, key=lambda e: math.dist(e['pos'][:2], pos[:2]))[:4]
+        danger = sorted((e for e in enemies if e['id'] in self.direct_ids), key=lambda e: math.dist(e['pos'][:2], pos[:2]))[:4]
         for mx, my in candidates:
             vx, vy = mx * speed, my * speed
             px, py = pos[0] + vx * .62, pos[1] + vy * .62
@@ -448,9 +494,22 @@ class Bot:
                         cost += max(0., radius + 3 - line_dist) * 1.8
             if cost < best:
                 best, move = cost, (mx, my)
-        stuck = len(self.history) >= 14 and now - self.history[0][0] > 1.1 and math.dist(pos[:2], self.history[0][1][:2]) < 2.5 and self.history[0][2] > .5
+        # A long look-ahead can reject every direction at a tight corner even
+        # though the next actual step is safe. Creep to the turn before jumping.
+        if best == float('inf'):
+            for mx, my in candidates:
+                px, py = pos[0] + mx * speed * .13, pos[1] + my * speed * .13
+                if self.world.travel_clear(pos, (px, py), radius + .08, height, elevated):
+                    cost = 1 - mx * ux - my * uy
+                    if cost < best:
+                        best, move = cost, (mx, my)
+        trying = goal_dist > 8 or fighting
+        stuck = (trying and len(self.history) >= 14 and now - self.history[0][0] > 1.1
+                 and math.dist(pos[:2], self.history[0][1][:2]) < 2.5)
         jump = False
         if stuck:
+            if move == (0., 0.):
+                move = (ux, uy)
             if self.goal_id is not None and now - self.nav.planned < .3:
                 self.loot_blacklist[self.goal_id] = now + 9.
             jump = me['grounded'] and me['energy'] > 25
@@ -461,7 +520,84 @@ class Bot:
         # for clearing obstacles; flying continuously drains the escape budget.
         if me['grounded'] and enemies and me['energy'] > 45 and obs['projectiles'] and int(now * 10) % 24 == 0:
             jump = True
-        return list(move), bool(boost and move != (0., 0.)), bool(jump)
+        return list(move), bool(boost and (not me['grounded'] or move != (0., 0.))), bool(jump)
+
+    def engage(self, obs, target, solutions, action):
+        """Schedule independent triggers around one real, shared torso direction."""
+        me = obs['self']
+        slots = me['weapons']
+        d = max(1., math.dist(me['pos'][:2], target['pos'][:2]))
+        scale = 1 + self.config['cubes'].get('size_per_cube', .05) * target.get('cubes', 0)
+        if target.get('kind') == 'npc':
+            radius, height = self.config['npc']['radius'], self.config['npc']['height']
+        elif 'kind' in target:
+            radius, height = self.config['mech']['radius'] * scale, self.config['mech']['height'] * scale
+        else:
+            radius, height = self.config['crates']['radius'], self.config['crates']['height']
+        gun = next((i for i in solutions if slots[i]['kind'] == 'gun'), None)
+        laser = next((i for i in solutions if slots[i]['kind'] == 'laser'), None)
+        mortar = next((i for i in solutions if slots[i]['kind'] == 'mortar'), None)
+        gun_ready = gun is not None and slots[gun].get('ammo', 0) > 0 and slots[gun].get('reload', 0) <= .05
+        chosen = gun if gun is not None else next(iter(solutions))
+        laser_release = False
+        if laser is not None:
+            w = slots[laser]
+            fraction = min(1., w.get('charge', 0) / max(.01, w['stats']['charge']))
+            cube_mult = 1 + self.config['cubes'].get('damage_per_cube', .04) * min(me.get('cubes', 0), self.config['cubes'].get('stat_cap', 10))
+            damage = w['stats']['damage'] * (.35 + .65 * fraction) * cube_mult
+            if 'mortar' in target.get('weapons', []):
+                damage *= 1 + w['stats'].get('cookoff', .6)
+            laser_release = w.get('charge', 0) > 0 and (fraction >= .97 or target.get('hp', 1400) < damage * .9)
+            # Charge while the gun tracks its projectile intercept. Only the
+            # release needs the hitscan direction, and a full charge can wait.
+            if laser_release or not gun_ready:
+                chosen = laser
+        mortar_due = mortar is not None and slots[mortar]['cooldown'] <= .05
+        if mortar_due and not laser_release:
+            velocity = target.get('vel', [0, 0, 0])
+            slow = math.hypot(*velocity[:2]) < 6.
+            if not gun_ready or (slow and d > 60 and laser is None):
+                chosen = mortar
+        yaw, pitch, _, _ = solutions[chosen]
+        action['aim'] = [yaw, pitch]
+        for i, w in enumerate(slots):
+            if w is None or i not in solutions:
+                continue
+            wy, wp, _, _ = solutions[i]
+            yaw_error = abs(angle(wy - me['aim'][0]))
+            pitch_error = abs(wp - me['aim'][1])
+            kind = w['kind']
+            if kind == 'lightning':
+                # Lightning checks a yaw cone, independent of gun pitch and
+                # projectile lead. A shared-pitch gate incorrectly disabled it.
+                cone = math.radians(w['stats']['cone_deg']) * .48
+                reserve = 8. if self.mode in ('recover', 'zone') else 1.
+                action['fire'][i] = bool(yaw_error < cone and d < w['stats']['range'] - .5
+                                         and me['energy'] >= w['stats']['energy'] + reserve)
+                continue
+            # Test alignment against the actual torso, not a broad turn-rate
+            # allowance which permitted long-range shots many metres off target.
+            aligned = (yaw_error <= math.atan2(radius * .9, d) + .012
+                       and pitch_error <= math.atan2(height * .43, d) + .012)
+            if kind == 'laser':
+                charge = w.get('charge', 0)
+                if charge > 0:
+                    action['fire'][i] = not (laser_release and aligned and chosen == i)
+                else:
+                    safe_charge = (self.mode not in ('recover', 'zone', 'cover') and
+                                   ('lightning' not in target.get('weapons', []) or d > 65))
+                    useful = d > 48 or not gun_ready or target.get('hp', 1400) < 180
+                    action['fire'][i] = bool(w['cooldown'] <= .05 and safe_charge and useful and yaw_error < .4)
+            elif kind == 'mortar':
+                action['fire'][i] = bool(aligned and chosen == i and w['cooldown'] <= .06)
+            else:
+                # Preserve gun fire while charging another weapon. Do not point
+                # it at an incompatible hitscan/ballistic aim for an entire clip.
+                compatible = abs(angle(wy - yaw)) < math.atan2(radius, d) + .035 and abs(wp - pitch) < math.atan2(height * .5, d) + .025
+                action['fire'][i] = bool(aligned and compatible and w.get('reload', 0) <= 0 and w.get('ammo', 0) > 0)
+        healing = self.mode == 'recover' or (self.mode == 'cover' and me['hp'] < me['max_hp'] * .7)
+        if healing and obs['t'] - self.last_harm > 1.5:
+            action['fire'] = [False, False]
 
     def act(self, obs):
         self.remember(obs)
@@ -498,44 +634,7 @@ class Bot:
                 target = saved[0]
                 solutions = {i: s for i, w in enumerate(slots) if w and (s := self.firing_solution(me, target, w))}
         if target is not None and solutions:
-            # The mortar has a different firing angle, so schedule it separately.
-            chosen = next((i for i in solutions if slots[i]['kind'] == 'laser' and (slots[i].get('charge', 0) > 0 or slots[i]['cooldown'] <= .05)), None)
-            if chosen is None:
-                chosen = next((i for i in solutions if slots[i]['kind'] == 'mortar' and slots[i]['cooldown'] <= .05), None)
-            if chosen is None:
-                chosen = next((i for i in solutions if slots[i]['kind'] == 'gun'), next(iter(solutions)))
-            yaw, pitch, point, flight = solutions[chosen]
-            action['aim'] = [yaw, pitch]
-            d = max(1., math.dist(me['pos'][:2], target['pos'][:2]))
-            scale = 1 + self.config['cubes'].get('size_per_cube', .05) * target.get('cubes', 0)
-            target_radius = (self.config['npc']['radius'] if target.get('kind') == 'npc' else (self.config['mech']['radius'] * scale if 'kind' in target else self.config['crates']['radius']))
-            turn = me['stats'].get('turn_rate', 4.)
-            pitch_rate = me['stats'].get('pitch_rate', 3.)
-            for i, w in enumerate(slots):
-                if w is None or i not in solutions:
-                    continue
-                wy, wp, _, _ = solutions[i]
-                if abs(angle(wy - yaw)) > .08 or abs(wp - pitch) > .07:
-                    continue
-                yaw_error, pitch_error = abs(angle(wy - me['aim'][0])), abs(wp - me['aim'][1])
-                aligned = yaw_error < math.atan2(target_radius * .8, d) + turn * .025 and pitch_error < math.atan2(2.5 * scale, d) + pitch_rate * .025
-                if w['kind'] == 'lightning':
-                    cone = math.radians(w['stats']['cone_deg']) * .48
-                    action['fire'][i] = bool(yaw_error < cone and d < w['stats']['range'] - 1 and me['energy'] > w['stats']['energy'] + 7)
-                elif w['kind'] == 'laser':
-                    charge = w.get('charge', 0)
-                    if charge > 0:
-                        full = charge >= w['stats']['charge'] - .045
-                        lethal = target.get('hp', 1400) < w['stats']['damage'] * (.35 + .65 * min(1., charge / w['stats']['charge']))
-                        action['fire'][i] = not (aligned and (full or lethal))
-                    else:
-                        action['fire'][i] = bool(w['cooldown'] <= .05 and self.mode not in ('recover', 'zone') and d > 50 and aligned)
-                elif w['kind'] == 'mortar':
-                    action['fire'][i] = bool(aligned and chosen == i and w['cooldown'] <= .06)
-                else:
-                    action['fire'][i] = bool(aligned and w.get('reload', 0) <= 0)
-            if self.mode in ('recover', 'cover') and me['hp'] < me['max_hp'] * .7 and now - self.last_harm > 1.5:
-                action['fire'] = [False, False]
+            self.engage(obs, target, solutions, action)
         else:
             # Face a nearby attacker to protect rear armor; scan when safe.
             if enemies:

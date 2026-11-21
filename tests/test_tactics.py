@@ -6,6 +6,8 @@ import math
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -150,6 +152,92 @@ class TacticsTests(unittest.TestCase):
         projected=nav.nearest(-202.38,206.91,component=nav.components[start])
         self.assertIsNotNone(projected)
         self.assertEqual(nav.components[projected],nav.components[start])
+
+    def test_fast_close_target_does_not_silence_gun_with_ready_laser(self):
+        o=self.scenario();e=self.enemy(o,distance=38,vel=[0,25,0]);o['mechs']=[e]
+        o['self']['weapons'][1]=self.weapon('laser')
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        o['self']['aim']=list(sol[:2])
+        a=self.bot.act(o)
+        self.assertTrue(a['fire'][0], 'A ready close-range laser must not suppress an aligned gun.')
+
+    def test_lightning_uses_yaw_cone_with_different_gun_pitch(self):
+        o=self.scenario();e=self.enemy(o,distance=30,vel=[0,0,18]);o['mechs']=[e]
+        o['self']['weapons'][1]=self.weapon('lightning')
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        o['self']['aim']=list(sol[:2])
+        a=self.bot.act(o)
+        self.assertTrue(a['fire'][1], 'Lightning has a yaw cone; it must not require matching gun pitch.')
+
+    def test_recovery_does_not_end_at_half_health(self):
+        o=self.scenario();o['self']['hp']=730;o['mechs']=[self.enemy(o)]
+        self.bot.mode='recover';self.bot.last_harm=o['t']-3
+        a=self.bot.act(o)
+        self.assertEqual(self.bot.mode,'recover')
+        self.assertEqual(a['fire'],[False,False])
+
+    def test_aims_at_exposed_upper_body(self):
+        o=self.scenario();e=self.enemy(o)
+        threshold=e['pos'][2]+6.5
+        with patch.object(self.bot.world,'clear_ray',side_effect=lambda a,b:b[2]>threshold):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertIsNotNone(sol)
+        self.assertGreater(sol[2][2],threshold)
+
+    def test_lightning_reaches_high_target_without_pitch_gate(self):
+        o=self.scenario();e=self.enemy(o,distance=6)
+        e['pos'][2]=o['self']['pos'][2]+32
+        o['self']['weapons'][1]=self.weapon('lightning')
+        with patch.object(self.bot.world,'clear_ray',return_value=True):
+            sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][1])
+        self.assertIsNotNone(sol)
+
+    def test_gun_keeps_tracking_during_laser_charge(self):
+        o=self.scenario();e=self.enemy(o,distance=100,vel=[0,24,0]);o['mechs']=[e]
+        laser=self.weapon('laser');laser['charge']=.4;o['self']['weapons'][1]=laser
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0]);o['self']['aim']=list(sol[:2])
+        a=self.bot.act(o)
+        self.assertTrue(a['fire'][0])
+        self.assertTrue(a['fire'][1])
+        self.assertAlmostEqual(a['aim'][0],sol[0])
+
+    def test_combat_follows_route_when_direct_approach_is_blocked(self):
+        o=self.scenario();e=self.enemy(o,distance=180)
+        self.bot.mode='fight';self.bot.target_id=e['id'];self.bot.direct_ids={e['id']}
+        self.bot.phase=0.;self.bot.strafe=-1
+        x,y,z=o['self']['pos']
+        def clear(a,b,*args):
+            return not (b[0] > x+1 and abs(b[1]-y)<1)
+        with patch.object(self.bot.world,'travel_clear',side_effect=clear):
+            move,boost,jump=self.bot.steer(o,[x,y+50],[e],e)
+        self.assertGreater(move[1],.5)
+
+    def test_can_creep_to_a_tight_corner(self):
+        o=self.scenario();x,y,z=o['self']['pos']
+        self.bot.mode='explore';self.bot.direct_ids=set();self.bot.history.clear()
+        def clear(a,b,*args):
+            return math.dist(a[:2],b[:2]) <= 2.
+        with patch.object(self.bot.world,'travel_clear',side_effect=clear):
+            move,boost,jump=self.bot.steer(o,[x,y+50],[],None)
+        self.assertGreater(move[1],.5)
+
+    def test_blocked_commands_still_trigger_escape(self):
+        o=self.scenario();o['t']=3.;x,y,z=o['self']['pos']
+        self.bot.mode='explore';self.bot.direct_ids=set();self.bot.history.clear()
+        for i in range(18):
+            self.bot.history.append((i*.1,[x,y,z],0.))
+        with patch.object(self.bot.world,'travel_clear',return_value=False):
+            move,boost,jump=self.bot.steer(o,[x,y+50],[],None)
+        self.assertTrue(jump)
+        self.assertGreater(move[1],.5)
+
+    def test_does_not_charge_laser_inside_enemy_lightning_range(self):
+        o=self.scenario();e=self.enemy(o,distance=55,weapons=['gun','lightning']);o['mechs']=[e]
+        o['self']['weapons'][1]=self.weapon('laser')
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0]);o['self']['aim']=list(sol[:2])
+        a=self.bot.act(o)
+        self.assertTrue(a['fire'][0])
+        self.assertFalse(a['fire'][1])
 
 
 if __name__=='__main__':
