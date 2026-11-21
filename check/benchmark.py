@@ -68,12 +68,36 @@ def main():
                          radius=300, next_radius=250,
                          shrink_start=now+60, shrink_end=now+100)
         observations.append(o)
+    # Continuous tracks exercise the learned circular model; independent random
+    # snapshots alone reset its history and mostly time the linear fallback.
+    for index in range(120):
+        o = copy.deepcopy(observations[0])
+        now = 300 + index*.1
+        o.update(t=now,tick=6000+2*index,events=[],crates=[],cubes=[],pickups=[],
+                 projectiles=[],sounds=[],drops=[],offer=None)
+        me=o['self'];me['hp']=me['max_hp'];me['weapons'][1]=None
+        me['weapons'][0].update(ammo=12,reload=0.,cooldown=0.)
+        o['zone'].update(center=me['pos'][:2],next_center=me['pos'][:2],radius=300,
+                         next_radius=250,shrink_start=now+60,shrink_end=now+100)
+        o['mechs']=[]
+        for i in range(6):
+            a=now*1.2+i
+            cx=me['pos'][0]+140*math.cos(i*math.tau/6)
+            cy=me['pos'][1]+140*math.sin(i*math.tau/6)
+            o['mechs'].append({'id':i+10,'kind':'mech','pos':[cx+16*math.cos(a),cy+16*math.sin(a),me['pos'][2]],
+                'vel':[-19.2*math.sin(a),19.2*math.cos(a),0.], 'aim':[a+math.pi,0.],
+                'hp':1400,'max_hp':1400,'cubes':0,'weapons':['gun','lightning'],'charging':False})
+        observations.append(o)
     timings = []
+    learned_observations = 0
     failures = []
     for o in observations:
         start = time.perf_counter()
         action = bot.act(o)
         timings.append((time.perf_counter()-start)*1000)
+        learner=getattr(bot,'aim_learner',None)
+        if learner and any(tr['selected'] for tr in learner.tracks.values()):
+            learned_observations += 1
         errors = schema.errors(action, 'Action')
         if errors or not all(math.isfinite(v) for k in ('move','aim') for v in action.get(k, [])):
             failures.append({'tick':o['tick'],'errors':errors})
@@ -87,6 +111,7 @@ def main():
               'p99_ms':round(timings[int(len(timings)*.99)],3),
               'max_ms':round(max(timings),3), 'over_50_ms':sum(v>50 for v in timings),
               'max_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),
+              'observations_with_learned_aim':learned_observations,
               'invalid_actions':failures}
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:

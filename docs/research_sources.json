@@ -1,0 +1,146 @@
+{
+  "research_date": "2026-11-21",
+  "scope": "Public GitHub repository snapshots inspected for Mech Royale ideas",
+  "sources": [
+    {
+      "repository": "Voidious/Diamond",
+      "url": "https://github.com/Voidious/Diamond",
+      "commit": "2d1c6a2b911cf077c5f13d2baa45da7d18d6babb",
+      "license": "Modified zlib (inspected LICENSE)",
+      "inspected_features": [
+        "Per-opponent virtual-gun ratings and selection",
+        "Minimum-risk melee destinations and recent-position penalties"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/Voidious/Diamond/blob/2d1c6a2b911cf077c5f13d2baa45da7d18d6babb/LICENSE"
+        },
+        {
+          "path": "voidious/gun/VirtualGunsManager.java",
+          "url": "https://github.com/Voidious/Diamond/blob/2d1c6a2b911cf077c5f13d2baa45da7d18d6babb/voidious/gun/VirtualGunsManager.java"
+        },
+        {
+          "path": "voidious/move/MeleeMover.java",
+          "url": "https://github.com/Voidious/Diamond/blob/2d1c6a2b911cf077c5f13d2baa45da7d18d6babb/voidious/move/MeleeMover.java"
+        }
+      ],
+      "adopted": "General model-comparison idea; independent Python forecast-error implementation",
+      "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    },
+    {
+      "repository": "caioplcerda/oval-pilot",
+      "url": "https://github.com/caioplcerda/oval-pilot",
+      "commit": "5b018c72a050d46b57dd111fc08d9eca8c29bdad",
+      "license": "MIT",
+      "inspected_features": [
+        "Map rasterization and incremental A*",
+        "Laser/lightning loadout preference",
+        "Cube collection and cover memory",
+        "Explicitly approximate local simulator"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/caioplcerda/oval-pilot/blob/5b018c72a050d46b57dd111fc08d9eca8c29bdad/LICENSE"
+        },
+        {
+          "path": "bot.py",
+          "url": "https://github.com/caioplcerda/oval-pilot/blob/5b018c72a050d46b57dd111fc08d9eca8c29bdad/bot.py"
+        },
+        {
+          "path": "tools/sim.py",
+          "url": "https://github.com/caioplcerda/oval-pilot/blob/5b018c72a050d46b57dd111fc08d9eca8c29bdad/tools/sim.py"
+        }
+      ],
+      "adopted": "Reviewed; no source code copied or ported into this candidate",
+      "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    },
+    {
+      "repository": "shreypatel1/quokka-lattice-7f3k",
+      "url": "https://github.com/shreypatel1/quokka-lattice-7f3k",
+      "commit": "c56e4afa920f5f3495f29407fa718fca9b4fba62",
+      "license": "MIT",
+      "inspected_features": [
+        "Tracked enemy state and map flow routing",
+        "Weapon-specific interception and gun-preserving swaps",
+        "Holding a laser charge through lost sight"
+      ],
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/shreypatel1/quokka-lattice-7f3k/blob/c56e4afa920f5f3495f29407fa718fca9b4fba62/LICENSE"
+        },
+        {
+          "path": "bot.py",
+          "url": "https://github.com/shreypatel1/quokka-lattice-7f3k/blob/c56e4afa920f5f3495f29407fa718fca9b4fba62/bot.py"
+        }
+      ],
+      "adopted": "Reviewed; no source code copied or ported into this candidate",
+      "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    },
+    {
+      "repository": "nguyenphuquang1234567/kestrel",
+      "url": "https://github.com/nguyenphuquang1234567/kestrel",
+      "commit": "c1c53d120145ef3235664adf981e72dc93ae37d8",
+      "license": "No repository license detected in inspected tree",
+      "inspected_features": [
+        "Barrel-offset interception and mortar arcs",
+        "Projectile danger vectors",
+        "Preserving laser charge and handling pickup failures"
+      ],
+      "files": [
+        {
+          "path": "bot/combat.py",
+          "url": "https://github.com/nguyenphuquang1234567/kestrel/blob/c1c53d120145ef3235664adf981e72dc93ae37d8/bot/combat.py"
+        },
+        {
+          "path": "bot/brain.py",
+          "url": "https://github.com/nguyenphuquang1234567/kestrel/blob/c1c53d120145ef3235664adf981e72dc93ae37d8/bot/brain.py"
+        }
+      ],
+      "adopted": "Reviewed; no source code copied or ported into this candidate",
+      "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    },
+    {
+      "repository": "sphugne/mech-royale-bot",
+      "url": "https://github.com/sphugne/mech-royale-bot",
+      "commit": "3018b5d8996e71c1cf0c0f824e545f4cb0b6ff33",
+      "license": "No repository license detected in inspected tree",
+      "inspected_features": [
+        "Separate scored movement, combat, cover, and recovery experiments",
+        "README self-reported duel score 2.19; not independently verified"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/sphugne/mech-royale-bot/blob/3018b5d8996e71c1cf0c0f824e545f4cb0b6ff33/README.md"
+        },
+        {
+          "path": "evasion_bot.py",
+          "url": "https://github.com/sphugne/mech-royale-bot/blob/3018b5d8996e71c1cf0c0f824e545f4cb0b6ff33/evasion_bot.py"
+        }
+      ],
+      "adopted": "Reviewed; no source code copied or ported into this candidate",
+      "performance_evidence": "README self-report only"
+    },
+    {
+      "repository": "mahathio/mechfight",
+      "url": "https://github.com/mahathio/mechfight",
+      "commit": "497f4647b978ec649d22a22cd3d06b7eabbd41d1",
+      "license": "No repository license detected in inspected tree",
+      "inspected_features": [
+        "Lowest-health target priority",
+        "Position-difference lead and alternating strafes"
+      ],
+      "files": [
+        {
+          "path": "our_bot_trial3.py",
+          "url": "https://github.com/mahathio/mechfight/blob/497f4647b978ec649d22a22cd3d06b7eabbd41d1/our_bot_trial3.py"
+        }
+      ],
+      "adopted": "Reviewed; no source code copied or ported into this candidate",
+      "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    }
+  ]
+}

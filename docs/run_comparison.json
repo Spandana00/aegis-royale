@@ -1,10 +1,10 @@
 {
   "kind": "submitted-source audit and user-reported official scores; not a local scorer",
   "score_source": "user-supplied submission screenshots",
-  "reference_commit": "5209875b7f6f512de87b0411b6c44258cd113fbb",
-  "reference_score": 4.5,
+  "reference_commit": "acec27de854684d8e9853c2adcc610411701f11d",
+  "reference_score": 4.6,
   "matches_per_run": 48,
-  "minimum_extra_integer_placement_points_to_reach_5_30": 39,
+  "minimum_extra_integer_placement_points_to_reach_5_30": 34,
   "runs": [
     {
       "version": "v1",
@@ -13,9 +13,9 @@
         3.75
       ],
       "deltas_from_best": [
-        -0.75
+        -0.85
       ],
-      "changed_bot_methods_vs_v2": [
+      "changed_bot_methods_vs_reference": [
         "__init__",
         "firing_solution",
         "choose_upgrade",
@@ -24,7 +24,8 @@
         "steer",
         "act"
       ],
-      "removed_bot_methods_vs_v2": [
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range",
         "engagement_distance",
         "engage"
       ],
@@ -43,10 +44,15 @@
         4.5
       ],
       "deltas_from_best": [
-        0.0
+        -0.1
       ],
-      "changed_bot_methods_vs_v2": [],
-      "removed_bot_methods_vs_v2": [],
+      "changed_bot_methods_vs_reference": [
+        "engagement_distance",
+        "steer"
+      ],
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range"
+      ],
       "runtime_sha256": {
         "bot.py": "82c66d54686871f5350ffc083d7e54dcbf26012cce0098787353ca65215b62d2",
         "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
@@ -62,9 +68,9 @@
         3.96
       ],
       "deltas_from_best": [
-        -0.54
+        -0.64
       ],
-      "changed_bot_methods_vs_v2": [
+      "changed_bot_methods_vs_reference": [
         "__init__",
         "remember",
         "safe_goal",
@@ -74,10 +80,13 @@
         "find_cover",
         "choose_target",
         "engagement_distance",
+        "steer",
         "engage",
         "act"
       ],
-      "removed_bot_methods_vs_v2": [],
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range"
+      ],
       "runtime_sha256": {
         "bot.py": "1cd44f67366140300e92a01e72534aea56eac1ec5d3dc0a5d9299ae7ea1c1669",
         "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
@@ -93,12 +102,16 @@
         4.4
       ],
       "deltas_from_best": [
-        -0.1
+        -0.2
       ],
-      "changed_bot_methods_vs_v2": [
-        "dodge_cost"
+      "changed_bot_methods_vs_reference": [
+        "engagement_distance",
+        "dodge_cost",
+        "steer"
       ],
-      "removed_bot_methods_vs_v2": [],
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range"
+      ],
       "runtime_sha256": {
         "bot.py": "4f191fcf8c7e863fcf075f4714da35f25132e3616f72e5ac304b4c6abb5a88a9",
         "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
@@ -115,17 +128,20 @@
         4.15
       ],
       "deltas_from_best": [
-        -0.33,
-        -0.35
+        -0.43,
+        -0.45
       ],
-      "changed_bot_methods_vs_v2": [
+      "changed_bot_methods_vs_reference": [
         "__init__",
         "choose_goal",
         "reload_cover",
+        "engagement_distance",
         "steer",
         "act"
       ],
-      "removed_bot_methods_vs_v2": [],
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range"
+      ],
       "runtime_sha256": {
         "bot.py": "f94b40af017dc70330b73b823726f2689d9740a4ac5fdbb19c1dbb04c7d066d7",
         "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
@@ -141,15 +157,19 @@
         4.46
       ],
       "deltas_from_best": [
-        -0.04
+        -0.14
       ],
-      "changed_bot_methods_vs_v2": [
+      "changed_bot_methods_vs_reference": [
         "__init__",
         "remember",
         "predict_falling_target",
-        "firing_solution"
+        "firing_solution",
+        "engagement_distance",
+        "steer"
       ],
-      "removed_bot_methods_vs_v2": [],
+      "removed_bot_methods_vs_reference": [
+        "enemy_lightning_range"
+      ],
       "runtime_sha256": {
         "bot.py": "500c314e994c92e795cc55595e0fcbe977fdc6e96e97a6420e6cfd4c8165a4d3",
         "world.py": "3c068f288721cbb2f9a93ce63abddb22194d4351e06d27f4660bc1a91d7d4e2d",
@@ -157,16 +177,39 @@
         "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
         "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
       }
+    },
+    {
+      "version": "v7",
+      "commit": "acec27de854684d8e9853c2adcc610411701f11d",
+      "user_reported_scores": [
+        4.6,
+        4.52
+      ],
+      "deltas_from_best": [
+        0.0,
+        -0.08
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "1937807266c5d5d578a0cdbccfb2099c07f153db6276955d62e93bc692238ac8",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      }
     }
   ],
   "candidate": {
-    "name": "AEGIS v7",
-    "changed_bot_methods_vs_v2": [
-      "enemy_lightning_range",
-      "engagement_distance",
-      "steer"
+    "name": "AEGIS v8",
+    "changed_bot_methods_vs_reference": [
+      "__init__",
+      "remember",
+      "firing_solution"
     ],
-    "all_other_bot_methods_identical_to_v2": true,
-    "map_navigation_wrapper_and_docker_identical_to_v2": true
+    "all_other_bot_methods_identical_to_reference": true,
+    "map_navigation_and_wrapper_identical_to_reference": true,
+    "docker_change": "Copies aiming.py; all other content identical",
+    "aiming_module_sha256": "136669c67605546b5f972f6106517ef5b1be19a74c229e4495b0fa292079efa2"
   }
 }

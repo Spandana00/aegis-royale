@@ -5,6 +5,7 @@ from collections import deque
 from pathlib import Path
 
 import mechfight as mf
+from aiming import AimLearner
 from navigation import Navigator
 from world import World
 
@@ -52,7 +53,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v7'
+    name = 'AEGIS v8'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -80,6 +81,7 @@ class Bot:
         self.loot_blacklist = {}
         self.scan_yaw = None
         self.direct_ids = set()
+        self.aim_learner = AimLearner()
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -118,13 +120,18 @@ class Bot:
             self.enemies[enemy['id']] = (enemy, now)
         self.enemies = {i: v for i, v in self.enemies.items() if now - v[1] < 5.1}
         self.history.append((now, me['pos'][:], math.hypot(*self.last_move)))
+        gun = next((w for w in me['weapons'] if w and w['kind'] == 'gun'), None)
+        if gun:
+            self.aim_learner.observe(obs, gun['stats']['speed'],
+                                     self.config['cubes'].get('size_per_cube', .05),
+                                     self.config['mech']['radius'])
 
     def enemy_center(self, enemy):
         scale = 1 + self.config['cubes'].get('size_per_cube', .05) * enemy.get('cubes', 0)
         h = self.config['npc']['height'] if enemy['kind'] == 'npc' else self.config['mech']['height'] * scale
         return [enemy['pos'][0], enemy['pos'][1], enemy['pos'][2] + h * .52]
 
-    def firing_solution(self, me, target, weapon):
+    def firing_solution(self, me, target, weapon, adaptive=True):
         stats = weapon['stats']
         kind = weapon['kind']
         origin = [me['pos'][0], me['pos'][1], me['pos'][2] + me['stats'].get('muzzle_height', 7)]
@@ -133,8 +140,18 @@ class Bot:
         # Account for the middle of the two simulation ticks in each action.
         aimpoint = [aimpoint[i] + vel[i] * .045 for i in range(3)]
         flight = 0.
+        model_used = False
         if kind == 'gun':
             aimpoint, flight = intercept(origin, aimpoint, vel, stats['speed'])
+            if adaptive and target.get('kind') == 'mech':
+                forecast = self.aim_learner.predict(target, flight+.045)
+                if forecast is not None:
+                    model_used = True
+                    center = self.enemy_center(target)
+                    for _ in range(3):
+                        forecast = self.aim_learner.predict(target, flight+.045)
+                        aimpoint = [*forecast, center[2]+vel[2]*(flight+.045)]
+                        flight = math.dist(origin, aimpoint)/stats['speed']
             if abs(vel[2]) > .8:
                 aimpoint[2] = max(target['pos'][2] - 1., aimpoint[2] - .5 * self.config['mech']['gravity'] * flight ** 2)
         elif kind == 'mortar':
@@ -169,13 +186,21 @@ class Bot:
         dx, dy, dz = (aimpoint[i] - origin[i] for i in range(3))
         distance = math.hypot(dx, dy)
         if math.sqrt(dx * dx + dy * dy + dz * dz) > stats.get('range', 230) + 2:
+            if model_used:
+                return self.firing_solution(me, target, weapon, False)
             return None
         yaw, pitch = math.atan2(dy, dx), math.atan2(dz, distance)
         if kind == 'lightning':
             pitch = clamp(pitch, me['stats'].get('min_pitch', -.7), me['stats'].get('max_pitch', 1.3))
         elif not me['stats'].get('min_pitch', -.7) <= pitch <= me['stats'].get('max_pitch', 1.3):
+            if model_used:
+                return self.firing_solution(me, target, weapon, False)
             return None
         if not self.world.clear_ray(origin, aimpoint):
+            if model_used:
+                baseline = self.firing_solution(me, target, weapon, False)
+                if baseline is not None:
+                    return baseline
             if kind not in ('gun', 'laser') or 'kind' not in target:
                 return None
             target_height = (self.config['npc']['height'] if target['kind'] == 'npc' else

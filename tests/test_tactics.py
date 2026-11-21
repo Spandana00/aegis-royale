@@ -11,6 +11,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from bot import Bot, angle, future_zone, intercept
+from aiming import AimLearner
 from world import Prism
 
 
@@ -87,6 +88,43 @@ class TacticsTests(unittest.TestCase):
         self.assertIsNotNone(sol)
         self.assertGreater(sol[0],.04)
         self.assertLess(abs(sol[1]),.15)
+
+    def test_blocked_learned_prediction_falls_back_to_baseline(self):
+        o=self.scenario();e=self.enemy(o,distance=100,vel=[0.,12.,0.])
+        baseline=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0],False)
+        x,y,z=e['pos']
+        with patch.object(self.bot.aim_learner,'predict',return_value=(x,y+50.)), patch.object(
+                self.bot.world,'clear_ray',side_effect=lambda a,b: b[1] < y+20.):
+            solution=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+        self.assertEqual(solution,baseline)
+
+    def test_cold_start_gun_solution_is_exactly_the_baseline(self):
+        o=self.scenario();e=self.enemy(o,distance=100,vel=[0.,12.,0.])
+        with patch.object(self.bot.aim_learner,'predict',return_value=None):
+            adaptive=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])
+            baseline=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0],False)
+        self.assertEqual(adaptive,baseline)
+
+    def test_learned_gun_intercept_tracks_a_circling_body(self):
+        o=self.scenario();me=o['self'];x,y,z=me['pos']
+        self.bot.aim_learner=AimLearner()
+        radius,rate=16.,1.2
+        for i in range(100):
+            now=10.+i*.1
+            e=self.enemy(o,distance=150)
+            e.update(pos=[x+150+radius*math.cos(rate*now),y+radius*math.sin(rate*now),z],
+                     vel=[-radius*rate*math.sin(rate*now),radius*rate*math.cos(rate*now),0.])
+            o.update(t=now,mechs=[e])
+            self.bot.aim_learner.observe(o,252.,.05,2.5)
+        with patch.object(self.bot.world,'clear_ray',return_value=True):
+            adaptive=self.bot.firing_solution(me,e,me['weapons'][0])
+            baseline=self.bot.firing_solution(me,e,me['weapons'][0],False)
+        future=now+adaptive[3]+.045
+        actual=[x+150+radius*math.cos(rate*future),y+radius*math.sin(rate*future)]
+        self.assertLess(math.dist(adaptive[2][:2],actual),.4)
+        future=now+baseline[3]+.045
+        actual=[x+150+radius*math.cos(rate*future),y+radius*math.sin(rate*future)]
+        self.assertGreater(math.dist(baseline[2][:2],actual),2.5)
 
     def test_lightning_range_estimate_allows_possible_enemy_upgrades(self):
         o=self.scenario()

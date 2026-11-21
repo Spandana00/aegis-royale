@@ -1,0 +1,48 @@
+{
+  "kind": "online horizontal-forecast diagnostic; not game hit rate or placement",
+  "duration_per_scenario_s": 8.0,
+  "decision_hz": 10,
+  "gun_speed_m_s": 252.0,
+  "linear_forecasts_preserved": true,
+  "groups": {
+    "linear": {
+      "scenarios": 9,
+      "forecasts": 720,
+      "after_2s_forecasts": 540,
+      "selected_models": {
+        "linear": 720,
+        "circular": 0
+      },
+      "linear_lateral_rmse_m": 0.0,
+      "adaptive_lateral_rmse_m": 0.0,
+      "linear_after_2s_rmse_m": 0.0,
+      "adaptive_after_2s_rmse_m": 0.0
+    },
+    "circle": {
+      "scenarios": 54,
+      "forecasts": 4320,
+      "after_2s_forecasts": 3240,
+      "selected_models": {
+        "linear": 2571,
+        "circular": 1749
+      },
+      "linear_lateral_rmse_m": 1.9862,
+      "adaptive_lateral_rmse_m": 1.0578,
+      "linear_after_2s_rmse_m": 1.9574,
+      "adaptive_after_2s_rmse_m": 0.4837
+    },
+    "oscillation": {
+      "scenarios": 54,
+      "forecasts": 4320,
+      "after_2s_forecasts": 3240,
+      "selected_models": {
+        "linear": 4320,
+        "circular": 0
+      },
+      "linear_lateral_rmse_m": 2.9311,
+      "adaptive_lateral_rmse_m": 2.9311,
+      "linear_after_2s_rmse_m": 2.9128,
+      "adaptive_after_2s_rmse_m": 2.9128
+    }
+  }
+}

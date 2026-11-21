@@ -1,5 +1,11 @@
 # Official run comparison and next experiment
 
+**Update:** V7 subsequently scored **4.60**, with a repeat of **4.52**, and is
+the current best submission. V8 retains that source baseline and tests the
+research-based aiming adaptation described in [GITHUB_RESEARCH.md](GITHUB_RESEARCH.md).
+The table below retains V2 as the historical comparison point; the current
+source-audit script uses V7 as its reference.
+
 ## What the submitted runs show
 
 Scores below come from the user's submission screenshots. Every comparison is
@@ -11,11 +17,12 @@ all the submitted commits.
 | Version | Reported score | Difference from V2 | Change being tested |
 | --- | ---: | ---: | --- |
 | V1 | 3.75 | −0.75 | Initial bot |
-| V2 | **4.50** | — | Coordinated gun/laser/lightning fire; tighter aim; weapon-specific distance; weapon upgrade priorities; persistent recovery; navigation fixes |
+| V2 | 4.50 | — | Coordinated gun/laser/lightning fire; tighter aim; weapon-specific distance; weapon upgrade priorities; persistent recovery; navigation fixes |
 | V3 | 3.96 | −0.54 | Earlier and broader recovery, stricter fights and loot, different cover, healing drops, earlier rotations |
 | V4 | 4.40 | −0.10 | Acceleration-aware projectile dodging and fourfold dodge priority |
 | V5 | 4.17; repeat 4.15 | −0.33; −0.35 | Short cover trips during gun reloads |
 | V6 | 4.46 | −0.04 | Gun prediction for falling targets and landings |
+| V7 | **4.60**; repeat 4.52 | +0.10; +0.02 | Pursuer-aware weapon spacing and preserving lightning range advantage |
 
 The two V5 screenshots show the same `1f…` commit prefix, matching the V5
 commit in this repository. The one-point difference across 48 matches rounds
@@ -25,8 +32,9 @@ as proof that correcting falling-target aim is harmful.
 
 ## Which features have evidence behind them
 
-The only observed aggregate improvement is the **V1 → V2 bundle**, worth 0.75
-points. Several things changed together, so these results cannot identify the
+The largest observed aggregate improvement is the **V1 → V2 bundle**, worth 0.75
+points. V7 later improved the best score by 0.10, with a smaller gain on repeat.
+Several things changed together in V2, so these results cannot identify the
 individual placement contribution of aim, upgrades, healing, or navigation.
 Code regressions established specific V1 failures independently of score:
 
@@ -83,11 +91,12 @@ score or claim of a 5.30 result is being used to justify the candidate.
 
 ## Source cross-check and evaluation
 
-`check/compare_versions.py` reads every submitted revision, records hashes of
-the runtime files, and compares method syntax trees against V2. For V7 it
-rejects changes outside `engagement_distance`, `steer`, and the new
-`enemy_lightning_range` helper. It also checks that the map reader, navigator,
-protocol wrapper, and Dockerfile are byte-identical to V2.
+`check/compare_versions.py` reads submitted revisions and records runtime
+hashes and method syntax-tree differences. The historical V7 audit compared
+against V2 and limited changes to range control. The current V8 audit compares
+against V7 and limits bot-method changes to initialization, observation updates,
+and gun prediction. It checks that the map reader, navigator and protocol
+wrapper are unchanged; the sole Dockerfile difference copies `aiming.py`.
 
 ```sh
 python3 -B check/compare_versions.py > docs/run_comparison.json
@@ -96,15 +105,17 @@ python3 check/check.py -- python3 -B -u bot.py
 python3 -B check/benchmark.py
 ```
 
-The 31 tests include closing and stationary opponents, preserving aligned gun
+The V7 suite's 31 tests included closing and stationary opponents, preserving aligned gun
 fire, conservative enemy upgrade bounds, actual lightning range advantage,
 and late-zone constraints. These validate scope and behavior, not placement.
-All 300 recorded protocol observations were answered within the deadline.
-The single-core 600-observation stress check had no invalid actions or answers
-over 50 ms (p99 13.12 ms, maximum 18.69 ms on this host). The published GitHub
+V7 answered all 300 recorded protocol observations within the deadline.
+Its single-core 600-observation stress check had no invalid actions or answers
+over 50 ms (p99 13.12 ms, maximum 18.69 ms on this host). The current V8 suite
+has 42 tests and a 720-observation benchmark, reported in the research notes. The published GitHub
 workflow builds linux/amd64 and runs the Docker sandbox conformance check.
 
-Keep V2's 4.50 entry selected while scoring V7 once. Across 48 matches, 4.50
-represents 216 placement points. Reaching at least 5.30 requires at least 255,
-or 39 more total placement points. If V7 does not improve the official result,
-reject this change rather than combining it with more unmeasured changes.
+V7 has now improved the selected best score to 4.60 (221 placement points
+across 48 matches). Reaching at least 5.30 requires at least 255, or 34 more
+total placement points. V8 changes only learned gun prediction on top of V7;
+its source audit preserves the other V7 behaviors. Keep the 4.60 entry selected
+while evaluating the new candidate.
