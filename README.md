@@ -1,7 +1,15 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v3**. See [the survival policy changes](docs/V3.md).
-The previous v2 submission remains available for comparison.
+Current candidate: **AEGIS v4**, based on the best scored version, v2.
+See [the controlled dodge experiment](docs/V4.md). V3 scored lower and its
+strategic changes have been reverted. Keep the v2 submission as the fallback.
+
+| Version | User-reported practice score |
+| --- | --- |
+| v1 | 3.75 |
+| v2 | **4.50** |
+| v3 | 3.96 |
+| v4 | Not yet scored |
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.

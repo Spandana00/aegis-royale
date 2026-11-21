@@ -1,0 +1,350 @@
+{
+  "kind": "paired horizontal-evasion diagnostic; not a game or placement score",
+  "baseline_ref": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+  "candidate": "AEGIS v4",
+  "seed": 101,
+  "trials": 24,
+  "seconds_per_trial": 12.0,
+  "dodge_scale": 4.0,
+  "baseline_hits": 658,
+  "candidate_hits": 508,
+  "hit_reduction_pct": 22.8,
+  "cases": [
+    {
+      "seed": 101,
+      "shooters": 1,
+      "baseline": {
+        "shots": 29,
+        "hits": 22,
+        "mean_range": 101.01
+      },
+      "candidate": {
+        "shots": 29,
+        "hits": 10,
+        "mean_range": 101.88
+      }
+    },
+    {
+      "seed": 104830,
+      "shooters": 2,
+      "baseline": {
+        "shots": 60,
+        "hits": 39,
+        "mean_range": 108.11
+      },
+      "candidate": {
+        "shots": 60,
+        "hits": 28,
+        "mean_range": 109.48
+      }
+    },
+    {
+      "seed": 209559,
+      "shooters": 3,
+      "baseline": {
+        "shots": 88,
+        "hits": 35,
+        "mean_range": 105.7
+      },
+      "candidate": {
+        "shots": 88,
+        "hits": 31,
+        "mean_range": 109.28
+      }
+    },
+    {
+      "seed": 314288,
+      "shooters": 1,
+      "baseline": {
+        "shots": 30,
+        "hits": 20,
+        "mean_range": 100.84
+      },
+      "candidate": {
+        "shots": 30,
+        "hits": 8,
+        "mean_range": 101.72
+      }
+    },
+    {
+      "seed": 419017,
+      "shooters": 2,
+      "baseline": {
+        "shots": 58,
+        "hits": 30,
+        "mean_range": 110.2
+      },
+      "candidate": {
+        "shots": 58,
+        "hits": 28,
+        "mean_range": 111.37
+      }
+    },
+    {
+      "seed": 523746,
+      "shooters": 3,
+      "baseline": {
+        "shots": 88,
+        "hits": 36,
+        "mean_range": 103.8
+      },
+      "candidate": {
+        "shots": 88,
+        "hits": 34,
+        "mean_range": 109.76
+      }
+    },
+    {
+      "seed": 628475,
+      "shooters": 1,
+      "baseline": {
+        "shots": 29,
+        "hits": 17,
+        "mean_range": 104.27
+      },
+      "candidate": {
+        "shots": 29,
+        "hits": 4,
+        "mean_range": 106.01
+      }
+    },
+    {
+      "seed": 733204,
+      "shooters": 2,
+      "baseline": {
+        "shots": 59,
+        "hits": 27,
+        "mean_range": 101.82
+      },
+      "candidate": {
+        "shots": 59,
+        "hits": 18,
+        "mean_range": 103.15
+      }
+    },
+    {
+      "seed": 837933,
+      "shooters": 3,
+      "baseline": {
+        "shots": 89,
+        "hits": 39,
+        "mean_range": 99.0
+      },
+      "candidate": {
+        "shots": 89,
+        "hits": 34,
+        "mean_range": 100.07
+      }
+    },
+    {
+      "seed": 942662,
+      "shooters": 1,
+      "baseline": {
+        "shots": 30,
+        "hits": 11,
+        "mean_range": 110.07
+      },
+      "candidate": {
+        "shots": 30,
+        "hits": 4,
+        "mean_range": 111.87
+      }
+    },
+    {
+      "seed": 1047391,
+      "shooters": 2,
+      "baseline": {
+        "shots": 60,
+        "hits": 22,
+        "mean_range": 103.89
+      },
+      "candidate": {
+        "shots": 60,
+        "hits": 16,
+        "mean_range": 105.02
+      }
+    },
+    {
+      "seed": 1152120,
+      "shooters": 3,
+      "baseline": {
+        "shots": 87,
+        "hits": 42,
+        "mean_range": 113.06
+      },
+      "candidate": {
+        "shots": 87,
+        "hits": 42,
+        "mean_range": 115.37
+      }
+    },
+    {
+      "seed": 1256849,
+      "shooters": 1,
+      "baseline": {
+        "shots": 30,
+        "hits": 15,
+        "mean_range": 107.86
+      },
+      "candidate": {
+        "shots": 30,
+        "hits": 8,
+        "mean_range": 110.04
+      }
+    },
+    {
+      "seed": 1361578,
+      "shooters": 2,
+      "baseline": {
+        "shots": 59,
+        "hits": 25,
+        "mean_range": 98.81
+      },
+      "candidate": {
+        "shots": 59,
+        "hits": 20,
+        "mean_range": 97.68
+      }
+    },
+    {
+      "seed": 1466307,
+      "shooters": 3,
+      "baseline": {
+        "shots": 88,
+        "hits": 47,
+        "mean_range": 102.0
+      },
+      "candidate": {
+        "shots": 88,
+        "hits": 41,
+        "mean_range": 105.6
+      }
+    },
+    {
+      "seed": 1571036,
+      "shooters": 1,
+      "baseline": {
+        "shots": 29,
+        "hits": 17,
+        "mean_range": 101.44
+      },
+      "candidate": {
+        "shots": 29,
+        "hits": 11,
+        "mean_range": 101.92
+      }
+    },
+    {
+      "seed": 1675765,
+      "shooters": 2,
+      "baseline": {
+        "shots": 60,
+        "hits": 33,
+        "mean_range": 102.05
+      },
+      "candidate": {
+        "shots": 60,
+        "hits": 29,
+        "mean_range": 99.16
+      }
+    },
+    {
+      "seed": 1780494,
+      "shooters": 3,
+      "baseline": {
+        "shots": 87,
+        "hits": 35,
+        "mean_range": 115.42
+      },
+      "candidate": {
+        "shots": 87,
+        "hits": 31,
+        "mean_range": 114.91
+      }
+    },
+    {
+      "seed": 1885223,
+      "shooters": 1,
+      "baseline": {
+        "shots": 30,
+        "hits": 19,
+        "mean_range": 101.78
+      },
+      "candidate": {
+        "shots": 30,
+        "hits": 6,
+        "mean_range": 102.71
+      }
+    },
+    {
+      "seed": 1989952,
+      "shooters": 2,
+      "baseline": {
+        "shots": 59,
+        "hits": 28,
+        "mean_range": 99.05
+      },
+      "candidate": {
+        "shots": 59,
+        "hits": 16,
+        "mean_range": 103.65
+      }
+    },
+    {
+      "seed": 2094681,
+      "shooters": 3,
+      "baseline": {
+        "shots": 88,
+        "hits": 33,
+        "mean_range": 99.23
+      },
+      "candidate": {
+        "shots": 88,
+        "hits": 32,
+        "mean_range": 98.87
+      }
+    },
+    {
+      "seed": 2199410,
+      "shooters": 1,
+      "baseline": {
+        "shots": 29,
+        "hits": 15,
+        "mean_range": 107.18
+      },
+      "candidate": {
+        "shots": 29,
+        "hits": 7,
+        "mean_range": 108.37
+      }
+    },
+    {
+      "seed": 2304139,
+      "shooters": 2,
+      "baseline": {
+        "shots": 59,
+        "hits": 19,
+        "mean_range": 112.63
+      },
+      "candidate": {
+        "shots": 59,
+        "hits": 15,
+        "mean_range": 115.11
+      }
+    },
+    {
+      "seed": 2408868,
+      "shooters": 3,
+      "baseline": {
+        "shots": 89,
+        "hits": 32,
+        "mean_range": 96.71
+      },
+      "candidate": {
+        "shots": 89,
+        "hits": 35,
+        "mean_range": 96.43
+      }
+    }
+  ]
+}
