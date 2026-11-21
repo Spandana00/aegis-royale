@@ -1,0 +1,21 @@
+name: Validate competition image
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Tactical regression tests
+        run: python3 -B -m unittest discover -s tests -v
+      - name: Build linux/amd64 image
+        run: docker build --platform linux/amd64 -t aegis-royale .
+      - name: Official conformance check in the competition sandbox
+        run: >-
+          python3 check/check.py --map-dir /arena --
+          docker run --rm -i --network none --cpus 1 --memory 512m
+          --memory-swap 512m --pids-limit 128 --cap-drop ALL --read-only
+          --tmpfs /tmp:rw,size=64m --user 65534:65534
+          -v "$PWD/arena:/arena:ro" aegis-royale
