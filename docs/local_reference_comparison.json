@@ -1,0 +1,127 @@
+{
+  "kind": "third-party proxy simulation; not official scored matches",
+  "simulator": {
+    "repository": "https://github.com/JuanQuenga/buildathon-mech-royale",
+    "commit": "48288e2b84f8c96685fdd98f09b4960bf1c51876",
+    "mode": "squad",
+    "join_per_loss": 0.6,
+    "timing_enforced": false,
+    "jobs": 2
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "seeds": [
+    1000,
+    1001,
+    1002,
+    1003,
+    1004,
+    1005,
+    1006,
+    1007,
+    1008,
+    1009
+  ],
+  "our_v9": {
+    "commit": "585ac9b06b7d9f6f5317ad52d1a3ab15c2656fa6",
+    "user_reported_official_score": 4.77,
+    "matches": 10,
+    "mean_proxy_points": 4.8,
+    "mean_death_s": 130.05,
+    "mean_kills": 4.7,
+    "total_zone_damage": 1145,
+    "late_replies": 1,
+    "protocol_errors": 0,
+    "tracebacks": 0
+  },
+  "upstream": {
+    "commit": "1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3",
+    "author_reported_best_official_score": 5.56,
+    "official_score_independently_verified": false,
+    "matches": 10,
+    "mean_proxy_points": 4.5,
+    "mean_death_s": 136.27,
+    "mean_kills": 4.4,
+    "total_zone_damage": 0,
+    "late_replies": 0,
+    "protocol_errors": 0,
+    "tracebacks": 0
+  },
+  "paired_proxy_difference_v9_minus_upstream": 0.3,
+  "paired_proxy_difference_95pct_t_half_width": 1.583,
+  "conclusion": "The proxy does not establish which policy will score higher officially. It exposed a legacy zone-navigation failure. Published upstream run history, not these proxy means, motivates reproducing the reported policy.",
+  "matches": [
+    {
+      "seed": 1000,
+      "v9_points": 4,
+      "upstream_points": 4,
+      "v9_zone_damage": 1145,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1001,
+      "v9_points": 5,
+      "upstream_points": 2,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1002,
+      "v9_points": 7,
+      "upstream_points": 7,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1003,
+      "v9_points": 2,
+      "upstream_points": 3,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1004,
+      "v9_points": 1,
+      "upstream_points": 2,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1005,
+      "v9_points": 8,
+      "upstream_points": 4,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1006,
+      "v9_points": 6,
+      "upstream_points": 8,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1007,
+      "v9_points": 7,
+      "upstream_points": 4,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1008,
+      "v9_points": 4,
+      "upstream_points": 6,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    },
+    {
+      "seed": 1009,
+      "v9_points": 4,
+      "upstream_points": 5,
+      "v9_zone_damage": 0,
+      "upstream_zone_damage": 0
+    }
+  ]
+}

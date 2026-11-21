@@ -1,5 +1,7 @@
 # Official run comparison and next experiment
 
+**Current update:** V9 scored **4.77**. The active V10 candidate replaces the policy with an attributed upstream reproduction; see [V10_COMPARISON.md](V10_COMPARISON.md). The sections below retain the earlier experiment analysis.
+
 **Update:** V7 scored **4.60**, with a repeat of **4.52**. V8 scored **4.60**,
 matching the best. V9 tests armament and tactical collection, documented in
 [ARMAMENT.md](ARMAMENT.md).

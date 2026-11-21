@@ -1,5 +1,7 @@
 # V9: acquire useful equipment while maintaining pressure
 
+**Result:** V9 scored **4.77**. This is the historical V9 experiment; V10 uses the policy described in [V10_COMPARISON.md](V10_COMPARISON.md).
+
 ## Why change direction
 
 V7's reported best was 4.60 (repeat 4.52). V8 also scored 4.60. Its better

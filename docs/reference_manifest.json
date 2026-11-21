@@ -1,0 +1,104 @@
+{
+  "upstream_repository": "https://github.com/JuanQuenga/buildathon-mech-royale",
+  "upstream_commit": "1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3",
+  "upstream_tag": "good-31",
+  "license": "MIT; Copyright (c) 2026 Juan Quenga",
+  "reported_upstream_best_score": 5.56,
+  "reported_same_policy_family_mean": 5.34,
+  "official_score_independently_verified": false,
+  "our_v9_score_user_reported": 4.77,
+  "changes": [
+    "Rename Python package bot to pilot to retain the AEGIS V9 source alongside it.",
+    "Change display name OSU-Walker to AEGIS v10; no policy parameters changed."
+  ],
+  "files": [
+    {
+      "source_path": "bot/__init__.py",
+      "path": "pilot/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "changed": false
+    },
+    {
+      "source_path": "bot/arena.py",
+      "path": "pilot/arena.py",
+      "source_sha256": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+      "sha256": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+      "size_bytes": 63666,
+      "changed": false
+    },
+    {
+      "source_path": "bot/ballistics.py",
+      "path": "pilot/ballistics.py",
+      "source_sha256": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+      "sha256": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+      "size_bytes": 13903,
+      "changed": false
+    },
+    {
+      "source_path": "bot/brain.py",
+      "path": "pilot/brain.py",
+      "source_sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+      "sha256": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+      "size_bytes": 64887,
+      "changed": false
+    },
+    {
+      "source_path": "bot/combat.py",
+      "path": "pilot/combat.py",
+      "source_sha256": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+      "sha256": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+      "size_bytes": 45925,
+      "changed": false
+    },
+    {
+      "source_path": "bot/main.py",
+      "path": "pilot/main.py",
+      "source_sha256": "9b1c145ebd702679e8aefad78a42a47f1d7c378ec77eca2089bbbdc38f73b17e",
+      "sha256": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+      "size_bytes": 24943,
+      "changed": true
+    },
+    {
+      "source_path": "bot/navbake.npz",
+      "path": "pilot/navbake.npz",
+      "source_sha256": "57068ba333029d2df090d20fa193860d51c5ece75e53755bd34c5e7daeb17517",
+      "sha256": "57068ba333029d2df090d20fa193860d51c5ece75e53755bd34c5e7daeb17517",
+      "size_bytes": 1019955,
+      "changed": false
+    },
+    {
+      "source_path": "bot/navigate.py",
+      "path": "pilot/navigate.py",
+      "source_sha256": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+      "sha256": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+      "size_bytes": 31577,
+      "changed": false
+    },
+    {
+      "source_path": "bot/navigate3.py",
+      "path": "pilot/navigate3.py",
+      "source_sha256": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+      "sha256": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+      "size_bytes": 29424,
+      "changed": false
+    },
+    {
+      "source_path": "bot/state.py",
+      "path": "pilot/state.py",
+      "source_sha256": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+      "sha256": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+      "size_bytes": 14583,
+      "changed": false
+    },
+    {
+      "source_path": "bot/threats.py",
+      "path": "pilot/threats.py",
+      "source_sha256": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696",
+      "sha256": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696",
+      "size_bytes": 34003,
+      "changed": false
+    }
+  ]
+}

@@ -1,146 +1,99 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v9**, based on v8's **4.60** scored source.
-See [the new armament policy, further GitHub research and validation](docs/ARMAMENT.md)
-and [the earlier aiming experiment](docs/GITHUB_RESEARCH.md).
-Keep the earlier 4.60 submission selected until an official run improves on it.
+**Current candidate: V10. Our best reported official score: V9, 4.77.**
 
-| Version | User-reported practice score |
-| --- | --- |
-| v1 | 3.75 |
-| v2 | 4.50 |
-| v3 | 3.96 |
-| v4 | 4.40 |
-| v5 | 4.17; repeat 4.15 |
-| v6 | 4.46 |
-| v7 | **4.60**; repeat 4.52 |
-| v8 | **4.60** |
-| v9 | Not yet scored |
+V10 reproduces the MIT-licensed `good-31` policy from
+[JuanQuenga/buildathon-mech-royale](https://github.com/JuanQuenga/buildathon-mech-royale).
+Its author reports a 5.56 best and a 5.34 average over nine same-policy draws.
+Those are not independently verified results, and V10 is not yet officially scored.
+The full comparison, source hashes and local evidence are in
+[docs/V10_COMPARISON.md](docs/V10_COMPARISON.md).
 
-A Python bot for Builders Mech Royale. No API keys, paid services, runtime
-network calls, or third-party Python dependencies.
+**The active Docker entrypoint is `pilot/main.py`.** Root `bot.py` preserves V9
+for comparison; it is not included in the V10 image.
 
-## The track, in simple words
+## The track in simple words
 
-Sixteen robots fight while a shrinking circle pushes them together. Your code
-gets a picture of the situation ten times a second and chooses movement, aim,
-and shooting. A win gives 15 points; being eliminated first gives zero.
-Practice averages 48 matches. Practice opponents cooperate against you, while
-the qualifying round and final use free-for-all matches against other entries.
-Practice qualifies the entry; the final series decides the winner.
+Sixteen robots fight while a shrinking circle pushes them together. Our code
+chooses where to move, aim and shoot ten times a second. A win gives 15 points;
+being eliminated first gives zero. Practice averages 48 matches against a
+cooperating house squad. Qualifying and the final are free-for-all matches
+against other entries on new seeds.
 
-## What this bot does
+## Why V10 is different
 
-- Plans routes around buildings, courtyards, bridges, and steep terrain using
-  the supplied campus map. It checks whether ground destinations are reachable.
-- Leads moving targets and aims at the scaled robot torso. It waits for its
-  actual gun direction to line up before wasting shots.
-- Compares linear and circular gun forecasts against past observations of each
-  opponent, retaining linear aim until the alternative has sufficient evidence.
-- Uses the gun, releases charged lasers, aims ballistic mortar shells, and
-  saves lightning energy when nothing is in range.
-- Prioritizes reachable nearby second weapons and short cube collection
-  windows during isolated fights, while continuing to fire. It rejects
-  detours that cut through an attacker or enter its lightning range.
-- Prefers a laser in open fights and lightning in close contact, keeps the
-  gun, and limits repeated swaps. It also farms safe crates and considers
-  supply drops for healing.
-- Strafes, evaluates incoming projectile paths, and keeps the torso toward
-  attackers to protect rear armor.
-- Compensates for a closing lightning opponent when maintaining weapon distance,
-  and preserves a lightning range advantage when enemy upgrade bounds allow it.
-- Seeks cover and stops shooting when retreating to heal. It moves inward
-  before the shrinking circle reaches it and saves energy for escapes.
-- Chooses upgrades for survival, mobility, and the weapons it carries.
+This is a substantial policy replacement, with explicit upstream credit:
 
-This is an experimental candidate, not a proven leaderboard winner. The included
-checker and synthetic probes cannot predict an official score or rank.
+- Surface-aware navigation, rooftop routes and planned jet hops.
+- Resumable route searches and travel-time estimates for zone escape.
+- Laser-first equipment, steady combat strafes and weapon-specific firing.
+- Threat assessment, regeneration, cube collection and supply-drop decisions.
+- An independent process deadline guard, targeting replies after 26 ms.
 
-## Run the checks
+The upstream policy parameters and map cache are unchanged. Only Python package
+imports and the display name were edited. Tests verify the exact source hashes.
+See [THIRD_PARTY.md](THIRD_PARTY.md) and the complete [MIT notice](pilot/LICENSE).
 
-From this repository's root, with Python 3.10 or newer:
+## Our reported runs
 
-```sh
-python3 -B -m unittest discover -s tests -v
-python3 check/check.py -- python3 -B -u bot.py
-python3 -B check/benchmark.py
-python3 -B check/navigation_probe.py
-```
+| Version | Official score reported by our user | Experiment |
+| --- | --- | --- |
+| V1 | 3.75 | Initial bot |
+| V2 | 4.50 | Coordinated fire, recovery and navigation bundle |
+| V3 | 3.96 | Broader retreat policy |
+| V4 | 4.40 | Stronger projectile dodge |
+| V5 | 4.17; repeat 4.15 | Reload cover |
+| V6 | 4.46 | Falling-target prediction |
+| V7 | 4.60; repeat 4.52 | Weapon range control |
+| V8 | 4.60 | Online aim-model selection |
+| V9 | **4.77** | Tactical equipment and cube collection |
+| V10 | Unscored | Attributed reproduction of upstream `good-31` |
 
-The benchmark combines 300 recorded observations, 220 synthetic busy
-combat observations, 80 reload cases, 120 continuous-track observations and
-120 resource-rich contact cases (840 observations total).
-The navigation probe moves through a simplified local
-controller on the real campus map. Neither is a match simulator or scorer.
+Keep the existing 4.77 entry selected until a new official result improves it.
+A native check or proxy simulator cannot establish placement or guarantee 5.50.
 
-## Required Docker check
+## Build and validate
+
+From the repository root:
 
 ```sh
 docker build --platform linux/amd64 -t aegis-royale .
 python3 check/check.py --map-dir /arena -- docker run --rm -i \
-  --network none --cpus 1 --memory 512m --read-only \
+  --network none --cpus 1 --memory 512m --memory-swap 512m \
+  --pids-limit 128 --cap-drop ALL --read-only \
   --tmpfs /tmp:rw,size=64m --user 65534:65534 \
   -v "$PWD/arena:/arena:ro" aegis-royale
 ```
 
-The root Dockerfile pins Python 3.13.7 by image digest. Its default user is
-65534 and its Python bytecode cache is disabled. The map comes from the
-organizer's `/arena` mount; it is not copied into the image.
+The image pins the Python base by digest and NumPy to 2.5.5. Runtime needs no
+network or external AI service. It runs as uid 65534; the arena is mounted at
+`/arena`, and writes are limited to `/tmp` by the match sandbox.
 
-The GitHub Actions workflow runs the tactical tests and this exact Docker
-check on every push. Inspect its result before submitting. A successful local
-Python check alone does not establish Docker conformance.
+GitHub Actions builds the actual image, runs provenance and regression tests
+inside it, then performs the organizer's sandbox conformance check.
 
-## Publish and submit
-
-The public repository must contain **this folder's contents at its root**,
-with `Dockerfile` at the top level. Do not nest the folder inside the repo.
-
-If this folder has not already been published and GitHub CLI is authenticated:
+For local diagnostics with Python and NumPy already installed:
 
 ```sh
-git init -b main
-git add .
-git commit -m "Add AEGIS Mech Royale bot"
-gh repo create aegis-royale --public --source . --remote origin --push
-git rev-parse HEAD
+python3 -B -m unittest discover -s tests -v
+python3 check/check.py -- python3 -B -u pilot/main.py
+python3 -B check/benchmark.py                 # active V10, 840 observations
+python3 -B check/benchmark.py --policy v9     # retained V9
+python3 -B check/compare_versions.py          # requires submitted git history
 ```
 
-Submit the public GitHub repository URL and the full 40-character commit hash
-on the [Mech Royale track page](https://www.joinbuilders.org/buildathon/tracks/builders).
-An exact commit makes the scored version reproducible. Keep submitted commits
-public until results are published. There are at most four submissions per hour.
+The five active-policy/provenance tests verify the imported source, navigation
+cache, selected profile and fallback behavior. The other 57 regressions cover
+the retained V9. The benchmark measures behavior and time, not match placement.
+Its direct-policy calls do not exercise the separate process guard.
 
-The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
+## Submit
 
-## Scored optimization loop
+Submit [this public repository](https://github.com/Spandana00/aegis-royale) with
+the exact 40-character validated commit hash on the Builders track page.
+Every submitted commit remains public. The current cutoff is Sunday,
+November 22, 2026 at 11:00 AM EST. There are at most four submissions per hour.
 
-1. Use v8's 4.60 source as the reference and preserve the earlier tied best entry.
-   The comparison report distinguishes
-   code baselines, individual experiments, and repeat runs of the same code.
-2. Change one feature family while retaining the rest of that reference.
-   Unit tests and local probes establish behavior; they do not predict score.
-3. Pass tactical and Docker checks, score the exact commit once, and retain
-   the official result. A repeat can measure variation but costs submission quota.
-4. Keep every submitted commit public and preserve the earlier best entry.
-   Practice uses cooperating house bots; finals use unseen free-for-all matches.
-
-## Files and credits
-
-`bot.py`, `world.py`, and `navigation.py` implement the new decision policy.
-`tests/` contains tactical regressions; `check/benchmark.py` and
-`check/navigation_probe.py` are local diagnostic tools. `check/reload_probe.py`
-compares line-of-fire exposure and return-to-fire timing during scripted reloads.
-`check/gun_prediction_probe.py` checks gun trajectories against scripted moving
-cylinders; none of these diagnostics is an official match simulator or scorer.
-`check/compare_versions.py` audits submitted source and the current V9 scope;
-it requires a clone containing the submitted commit history.
-`check/aiming_probe.py` evaluates online forecasts on scripted trajectories.
-
-The Builders starter kit supplies `mechfight.py`, `check/check.py`, the
-recorded stream, schema, protocol, and campus map. Those are included for
-compatibility, validation, and local map access. No other external code or
-libraries are used by the bot. Research sources and licenses are recorded in
-`docs/research_sources.json`; the aiming and armament adaptations are independently implemented.
-New code is released under the MIT License,
-as required by the event.
+The original AEGIS experiments and source remain available in history and at
+the root. Research sources and licenses are recorded in
+[docs/research_sources.json](docs/research_sources.json).

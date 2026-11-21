@@ -1,5 +1,7 @@
 """Replay + synthetic stress timings. These are NOT match scores."""
 import copy
+import argparse
+from collections import Counter
 import gzip
 import json
 import math
@@ -17,12 +19,31 @@ from check import Schema
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--policy',choices=('v9','v10'),default='v10')
+    args=parser.parse_args()
     with gzip.open(ROOT / 'check/stream.jsonl.gz', 'rt') as f:
         messages = [json.loads(line) for line in f]
     hello = messages[0]
     hello['map']['dir'] = str(ROOT / 'arena')
     start = time.perf_counter()
-    bot = Bot(hello)
+    if args.policy=='v9':
+        bot=Bot(hello)
+    else:
+        from pilot.main import Pilot
+        from types import SimpleNamespace
+        class Candidate:
+            def __init__(self):
+                self.policy=Pilot(hello)
+                if self.policy.state.arena is None or not self.policy.state.arena.ok_nav:
+                    raise RuntimeError('Active navigation cache did not load')
+                self.world=SimpleNamespace(ground=self.policy.state.arena.ground_z)
+            def act(self,obs):
+                return self.policy.decide(obs,time.perf_counter())
+            @property
+            def mode(self):
+                return getattr(self.policy.state.prev_intent,'mode','unknown')
+        bot=Candidate()
     startup_ms = (time.perf_counter() - start) * 1000
     schema = Schema(ROOT / 'mechfight.schema.json')
     observations = [m for m in messages if m['type'] == 'obs']
@@ -121,10 +142,12 @@ def main():
     learned_observations = 0
     tactical_resource_observations = 0
     failures = []
+    modes=Counter()
     for o in observations:
         start = time.perf_counter()
         action = bot.act(o)
         timings.append((time.perf_counter()-start)*1000)
+        modes[bot.mode]+=1
         learner=getattr(bot,'aim_learner',None)
         if learner and any(tr['selected'] for tr in learner.tracks.values()):
             learned_observations += 1
@@ -138,6 +161,7 @@ def main():
         mechfight.draw.take()
     timings.sort()
     report = {'kind':'local correctness and timing; not a scored match',
+              'policy':args.policy,
               'startup_ms':round(startup_ms,2), 'observations':len(timings),
               'p50_ms':round(statistics.median(timings),3),
               'p99_ms':round(timings[int(len(timings)*.99)],3),
@@ -146,6 +170,14 @@ def main():
               'observations_with_learned_aim':learned_observations,
               'observations_with_tactical_collection':tactical_resource_observations,
               'invalid_actions':failures}
+    if args.policy=='v10':
+        report.pop('observations_with_learned_aim')
+        report.pop('observations_with_tactical_collection')
+        report.update(mode_counts=dict(modes),module_errors=bot.policy.errors,
+                      soft_budget_overruns=bot.policy.overruns,
+                      process_deadline_guard_tested=False)
+        if bot.policy.errors:
+            failures.append({'module_errors':bot.policy.errors})
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:
         sys.exit(1)

@@ -1,0 +1,22 @@
+{
+  "kind": "local correctness and timing; not a scored match",
+  "policy": "v10",
+  "startup_ms": 338.45,
+  "observations": 840,
+  "p50_ms": 1.756,
+  "p99_ms": 3.049,
+  "max_ms": 8.946,
+  "over_50_ms": 0,
+  "max_rss_mib": 87.1,
+  "invalid_actions": [],
+  "mode_counts": {
+    "loot": 314,
+    "engage": 114,
+    "retreat": 70,
+    "heal": 122,
+    "rotate": 220
+  },
+  "module_errors": {},
+  "soft_budget_overruns": {},
+  "process_deadline_guard_tested": false
+}

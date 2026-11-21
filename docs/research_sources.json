@@ -329,6 +329,132 @@
       ],
       "adopted": "Reviewed only; no source copied or executed",
       "performance_evidence": "No score evidence; payload not read, reverse-engineered or executed"
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "commit": "1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3",
+      "license": "MIT; LICENSE read and retained in pilot/LICENSE",
+      "inspected_features": [
+        "Complete good-31 policy",
+        "Surface-aware map bake and jet routes",
+        "Resumable navigation and deadline guard"
+      ],
+      "adopted": "V10 copies the complete policy and cache with attribution; only namespace imports and display name differ",
+      "performance_evidence": "Author reports 5.56 for this tag; tag-to-commit mapping verified, official score not independently verified",
+      "url": "https://github.com/JuanQuenga/buildathon-mech-royale",
+      "files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/LICENSE"
+        },
+        {
+          "path": "Dockerfile",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/Dockerfile"
+        },
+        {
+          "path": "bot/main.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/bot/main.py"
+        },
+        {
+          "path": "bot/brain.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/bot/brain.py"
+        },
+        {
+          "path": "bot/arena.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/bot/arena.py"
+        },
+        {
+          "path": "bot/navigate3.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/bot/navigate3.py"
+        },
+        {
+          "path": "bot/combat.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/1f7fa6fa9204e80b7b3cb6ed9180c33b7b7aeaf3/bot/combat.py"
+        }
+      ]
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "commit": "48288e2b84f8c96685fdd98f09b4960bf1c51876",
+      "license": "MIT",
+      "inspected_features": [
+        "Public official-results ledger",
+        "Repeated-policy family means",
+        "Proxy simulator assumptions and calibration"
+      ],
+      "adopted": "Simulator used locally as a diagnostic only; not included in the submitted image",
+      "performance_evidence": "Author reports good-31 best 5.56 and same-policy nine-draw mean 5.34; not independently verified",
+      "url": "https://github.com/JuanQuenga/buildathon-mech-royale",
+      "files": [
+        {
+          "path": "eval/RESULTS.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/eval/RESULTS.md"
+        },
+        {
+          "path": "docs/REVIEW.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/docs/REVIEW.md"
+        },
+        {
+          "path": "docs/HANDOFF.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/docs/HANDOFF.md"
+        },
+        {
+          "path": "sim/ASSUMPTIONS.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/sim/ASSUMPTIONS.md"
+        },
+        {
+          "path": "sim/runner.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/sim/runner.py"
+        },
+        {
+          "path": "sim/engine.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/sim/engine.py"
+        },
+        {
+          "path": "sim/world.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/sim/world.py"
+        },
+        {
+          "path": "sim/config.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/48288e2b84f8c96685fdd98f09b4960bf1c51876/sim/config.py"
+        }
+      ]
+    },
+    {
+      "repository": "LanceHuang245/mech-royale",
+      "commit": "5b7ed4bcde399e7f1424bd10e524ce97d96e9a20",
+      "license": "MIT (GitHub metadata)",
+      "inspected_features": [
+        "Official-versus-proxy experiment ledger",
+        "Weapon-loadout proxy misranking"
+      ],
+      "adopted": "Reviewed only; no source copied",
+      "performance_evidence": "README reports a 4.88 best among listed experiments; not independently verified",
+      "url": "https://github.com/LanceHuang245/mech-royale",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/LanceHuang245/mech-royale/blob/5b7ed4bcde399e7f1424bd10e524ce97d96e9a20/README.md"
+        }
+      ]
+    },
+    {
+      "repository": "Kyt0V0/Mech-Royale",
+      "commit": "f0cc3817f6e035e6766e10f362e9121769f8c046",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "Rust architecture described in README",
+        "Commit messages describing retreat, pursuit and cover experiments"
+      ],
+      "adopted": "Documentation and commit metadata only; no source copied",
+      "performance_evidence": "No score evidence found; owner name is not proof of a matching leaderboard team",
+      "url": "https://github.com/Kyt0V0/Mech-Royale",
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Kyt0V0/Mech-Royale/blob/f0cc3817f6e035e6766e10f362e9121769f8c046/README.md"
+        }
+      ]
     }
   ]
 }

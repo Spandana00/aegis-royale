@@ -1,6 +1,7 @@
-FROM python:3.13.7-slim-bookworm@sha256:adafcc17694d715c905b4c7bebd96907a1fd5cf183395f0ebc4d3428bd22d92d
-ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
-WORKDIR /bot
-COPY bot.py aiming.py mechfight.py navigation.py world.py ./
+FROM python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
+RUN pip install --no-cache-dir --disable-pip-version-check numpy==2.5.5
+WORKDIR /app
+COPY pilot/ /app/pilot/
 USER 65534:65534
-ENTRYPOINT ["python3", "-B", "-u", "/bot/bot.py"]
+ENTRYPOINT ["python3", "-B", "-u", "/app/pilot/main.py"]
