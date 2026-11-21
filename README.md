@@ -1,15 +1,16 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v4**, based on the best scored version, v2.
-See [the controlled dodge experiment](docs/V4.md). V3 scored lower and its
-strategic changes have been reverted. Keep the v2 submission as the fallback.
+Current candidate: **AEGIS v5**, based on the best scored version, v2.
+See [the reload cover experiment](docs/V5.md). V3 and v4 scored lower;
+keep the v2 submission as the fallback until a new official run beats it.
 
 | Version | User-reported practice score |
 | --- | --- |
 | v1 | 3.75 |
 | v2 | **4.50** |
 | v3 | 3.96 |
-| v4 | Not yet scored |
+| v4 | 4.40 |
+| v5 | Not yet scored |
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.
@@ -35,11 +36,13 @@ Practice qualifies the entry; the final series decides the winner.
   drops for healing. It prefers lightning for close fights and keeps the gun.
 - Strafes, evaluates incoming projectile paths, and keeps the torso toward
   attackers to protect rear armor.
+- Uses nearby hard cover while its gun reloads if no secondary can attack,
+  reserving time to return to combat before the gun is loaded.
 - Seeks cover and stops shooting when retreating to heal. It moves inward
   before the shrinking circle reaches it and saves energy for escapes.
 - Chooses upgrades for survival, mobility, and the weapons it carries.
 
-This is an initial candidate, not a proven leaderboard winner. The included
+This is an experimental candidate, not a proven leaderboard winner. The included
 checker and synthetic probes cannot predict an official score or rank.
 
 ## Run the checks
@@ -53,8 +56,8 @@ python3 -B check/benchmark.py
 python3 -B check/navigation_probe.py
 ```
 
-The benchmark combines 300 recorded observations with 220 synthetic busy
-combat observations. The navigation probe moves through a simplified local
+The benchmark combines 300 recorded observations, 220 synthetic busy
+combat observations, and 80 reload search stress cases. The navigation probe moves through a simplified local
 controller on the real campus map. Neither is a match simulator or scorer.
 
 ## Required Docker check
@@ -113,7 +116,8 @@ The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 
 `bot.py`, `world.py`, and `navigation.py` implement the new decision policy.
 `tests/` contains tactical regressions; `check/benchmark.py` and
-`check/navigation_probe.py` are local diagnostic tools.
+`check/navigation_probe.py` are local diagnostic tools. `check/reload_probe.py`
+compares line-of-fire exposure and return-to-fire timing during scripted reloads.
 
 The Builders starter kit supplies `mechfight.py`, `check/check.py`, the
 recorded stream, schema, protocol, and campus map. Those are included for

@@ -161,9 +161,12 @@ def main():
     hello['map']['dir'] = str(ROOT / 'arena')
     template = next(m for m in messages if m['type']=='obs')
     baseline, candidate = baseline_module.Bot(hello), Bot(hello)
+    legacy_motion = args.legacy_motion or not hasattr(candidate, 'dodge_scale')
+    if not hasattr(candidate, 'dodge_scale'):
+        candidate.dodge_scale = 1.
     if args.dodge_scale is not None:
         candidate.dodge_scale = args.dodge_scale
-    if args.legacy_motion:
+    if legacy_motion:
         old_cost = baseline_module.Bot.dodge_cost
         candidate.dodge_cost = lambda obs,vx,vy,x,y: old_cost(candidate,obs,vx,vy,x,y) * candidate.dodge_scale
     baseline.world = FlatWorld()
@@ -180,7 +183,7 @@ def main():
     report = {'kind':'paired horizontal-evasion diagnostic; not a game or placement score',
               'baseline_ref':args.baseline_ref,'candidate':candidate.name,'seed':args.seed,
               'trials':args.trials,'seconds_per_trial':args.seconds,'dodge_scale':candidate.dodge_scale,
-              'motion_model':'legacy' if args.legacy_motion else 'acceleration limited',
+              'motion_model':'legacy' if legacy_motion else 'acceleration limited',
               'baseline_hits':a,'candidate_hits':b,
               'hit_reduction_pct':round(100 * (a-b) / max(1,a),2),
               'cases':results}

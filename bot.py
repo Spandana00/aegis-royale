@@ -25,23 +25,6 @@ def unit(x, y):
     return (x / d, y / d) if d > 1e-6 else (0., 0.)
 
 
-def accelerated_motion(current, desired, acceleration, t):
-    """Horizontal displacement and velocity after a bounded acceleration ramp."""
-    dx, dy = desired[0] - current[0], desired[1] - current[1]
-    delta = math.hypot(dx, dy)
-    if delta < 1e-8:
-        return current[0] * t, current[1] * t, current[0], current[1]
-    if acceleration <= 0:
-        return current[0] * t, current[1] * t, current[0], current[1]
-    ramp = delta / acceleration
-    if t < ramp:
-        integral, fraction = .5 * t * t / ramp, t / ramp
-    else:
-        integral, fraction = t - .5 * ramp, 1.
-    return (current[0] * t + dx * integral, current[1] * t + dy * integral,
-            current[0] + dx * fraction, current[1] + dy * fraction)
-
-
 def intercept(origin, target, velocity, speed):
     """Earliest positive constant-velocity intercept, no shooter-velocity inheritance."""
     r = [target[i] - origin[i] for i in range(3)]
@@ -69,8 +52,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v4'
-    dodge_scale = 4.
+    name = 'AEGIS v5'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -98,6 +80,10 @@ class Bot:
         self.loot_blacklist = {}
         self.scan_yaw = None
         self.direct_ids = set()
+        self.reload_goal = None
+        self.reload_checked = -100.
+        self.reload_origin = None
+        self.rejoin_until = -100.
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -266,6 +252,34 @@ class Bot:
             if enemies:
                 return self.find_cover(obs, exposed or enemies)
             return me['pos'][:2]
+        # An empty gun cannot trade damage. Use nearby hard cover for the
+        # reload window, unless a secondary weapon can still attack.
+        gun = next((w for w in me['weapons'] if w and w['kind'] == 'gun'), None)
+        if self.mode == 'reload' and gun and self.reload_origin is not None:
+            speed = me['stats']['boost_speed'] if me['energy'] > 35 else me['stats']['walk_speed']
+            return_time = math.dist(pos[:2], self.reload_origin) / max(1., speed) + .4
+            if gun.get('reload', 0) <= return_time:
+                self.mode = 'rejoin'
+                self.rejoin_until = now + min(3., return_time + .75)
+        if self.mode == 'rejoin' and self.reload_origin is not None:
+            ready_target = gun and gun.get('reload', 0) <= .05 and target is not None and solutions
+            if enemies and now < self.rejoin_until and not ready_target and math.dist(pos[:2], self.reload_origin) > 3:
+                self.goal_id = None
+                return self.reload_origin
+        if gun and gun.get('reload', 0) > .35:
+            secondary_active = any(
+                me['weapons'][i]['kind'] != 'gun'
+                and me['weapons'][i].get('cooldown', 0) <= .2
+                and (me['weapons'][i]['kind'] != 'lightning'
+                     or me['energy'] >= me['weapons'][i]['stats']['energy'] + 8)
+                for i in solutions)
+            if not secondary_active and self.mode != 'rejoin':
+                reload_goal = self.reload_cover(obs, enemies, gun['reload'])
+                if reload_goal is not None:
+                    if self.mode != 'reload':
+                        self.reload_origin = pos[:2]
+                    self.mode, self.goal_id = 'reload', None
+                    return reload_goal
         best, goal, gid, mode = .22, None, None, 'explore'
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
         for iid, (item, last) in self.items['cubes'].items():
@@ -334,6 +348,54 @@ class Bot:
         goal = [zone['next_center'][0] + radius * math.cos(direction), zone['next_center'][1] + radius * math.sin(direction)]
         k = self.reachable_cell(me['pos'], goal)
         return list(self.nav.point(k)) if k is not None else safe
+
+    def reload_cover(self, obs, threats, remaining):
+        """Only divert a reload when a nearby, reachable point has hard cover."""
+        me, now = obs['self'], obs['t']
+        if not threats:
+            # Once a wall blocks the attacker, stay there for the reload.
+            return me['pos'][:2] if self.mode == 'reload' else None
+        pos, stats = me['pos'], me['stats']
+        sources = []
+        for e in sorted(threats, key=lambda e: math.dist(pos[:2], e['pos'][:2]))[:3]:
+            scale = 1 + self.config['cubes'].get('size_per_cube', .05) * e.get('cubes', 0)
+            sources.append([*e['pos'][:2], e['pos'][2] + self.config['mech']['muzzle_height'] * scale])
+        if not any(self.world.clear_ray(source, [*pos[:2], pos[2] + stats.get('height', 9) * fraction])
+                   for source in sources for fraction in (.25, .55, .9)):
+            return pos[:2] if self.mode == 'reload' else None
+        if now - self.reload_checked < .5:
+            return self.reload_goal
+        self.reload_checked, self.reload_goal = now, None
+        center, radius = future_zone(obs['zone'], now, remaining + .5)
+        speed = stats['boost_speed'] if me['energy'] > 35 else stats['walk_speed']
+        # Reserve approximately half the reload for the trip back. Distant
+        # cover that costs the next loaded firing window is not a free dodge.
+        reach = min(24., max(6., speed * max(.2, remaining - .4) * .45))
+        best, visited = float('inf'), set()
+        for distance in (8., 16., 24.):
+            if distance > reach + 3.:
+                continue
+            for i in range(8):
+                a = i * TAU / 8
+                k = self.reachable_cell(pos, [pos[0] + distance * math.cos(a), pos[1] + distance * math.sin(a)])
+                if k is None or k in visited:
+                    continue
+                visited.add(k)
+                p = list(self.nav.point(k))
+                travel = math.dist(pos[:2], p)
+                if travel < 4 or travel > reach + 3 or math.dist(p, center) > radius - stats.get('radius', 2.5) - 3:
+                    continue
+                z = self.world.ground(*p)
+                if not self.world.free(*p, z, stats.get('radius', 2.5) + .3, stats.get('height', 9)):
+                    continue
+                # Cover must conceal the upper body as well as the center;
+                # trees cannot stop shots and are not in clear_ray geometry.
+                if any(self.world.clear_ray(source, [*p, z + stats.get('height', 9) * fraction])
+                       for source in sources for fraction in (.25, .55, .9)):
+                    continue
+                if travel < best:
+                    best, self.reload_goal = travel, p
+        return self.reload_goal
 
     def find_cover(self, obs, enemies):
         now, me = obs['t'], obs['self']
@@ -421,9 +483,6 @@ class Bot:
     def dodge_cost(self, obs, vx, vy, x, y):
         me = obs['self']
         radius, height = me['stats'].get('radius', 2.5), me['stats'].get('height', 9.)
-        current = me.get('vel', [0., 0., 0.])
-        acceleration = me['stats'].get('ground_accel', 58.5) if me['grounded'] else me['stats'].get('air_accel', 12.)
-        desired = (vx, vy)
         risk = 0.
         for bullet in obs.get('projectiles', [])[:36]:
             p, v = bullet['pos'], bullet['vel']
@@ -436,26 +495,17 @@ class Bot:
                 t = (v[2] + math.sqrt(det)) / g
                 if not 0 < t < 1.7:
                     continue
-                dx, dy, _, _ = accelerated_motion(current, desired, acceleration, t)
-                d = math.hypot(p[0] + v[0] * t - x - dx, p[1] + v[1] * t - y - dy)
+                d = math.hypot(p[0] + v[0] * t - x - vx * t, p[1] + v[1] * t - y - vy * t)
                 risk += max(0., (11 + radius - d) / 6.) ** 2 * 5.
             else:
                 rx, ry = p[0] - x, p[1] - y
-                dx, dy = v[0] - current[0], v[1] - current[1]
+                dx, dy = v[0] - vx, v[1] - vy
                 t = clamp(-(rx * dx + ry * dy) / (dx * dx + dy * dy + 1e-6), 0., .8)
-                # Refine the closest approach along the acceleration-limited
-                # path. Reversing direction cannot teleport the existing speed.
-                for _ in range(3):
-                    sx, sy, mx, my = accelerated_motion(current, desired, acceleration, t)
-                    ex, ey = rx + v[0] * t - sx, ry + v[1] * t - sy
-                    rvx, rvy = v[0] - mx, v[1] - my
-                    t = clamp(t - (ex * rvx + ey * rvy) / (rvx * rvx + rvy * rvy + 1e-6), 0., .8)
-                sx, sy, _, _ = accelerated_motion(current, desired, acceleration, t)
                 z = p[2] + v[2] * t
                 if me['pos'][2] - 1 < z < me['pos'][2] + height + 1:
-                    d = math.hypot(rx + v[0] * t - sx, ry + v[1] * t - sy)
+                    d = math.hypot(rx + dx * t, ry + dy * t)
                     risk += max(0., radius + 1.2 - d) * (1.3 if bullet['kind'] == 'gun' else .4)
-        return risk * self.dodge_scale
+        return risk
 
     def steer(self, obs, waypoint, enemies, target):
         me, now = obs['self'], obs['t']
@@ -479,7 +529,7 @@ class Bot:
             if d < preferred + 18 or self.world.travel_clear(pos, approach, radius + .35, height, elevated):
                 ux, uy = unit(rx * radial - ry * side, ry * radial + rx * side)
         ratio = me['hp'] / me['max_hp']
-        boost = (self.mode == 'zone' or (self.mode in ('recover', 'cover') and enemies)) and me['energy'] > 25
+        boost = (self.mode == 'zone' or (self.mode in ('recover', 'cover', 'reload', 'rejoin') and enemies)) and me['energy'] > 25
         if fighting and target:
             d = math.dist(pos[:2], target['pos'][:2])
             boost = me['energy'] > 58 and (d > preferred + 35 or d < preferred - 18)
@@ -495,7 +545,7 @@ class Bot:
         best, move = float('inf'), (0., 0.)
         candidates = [(ux, uy)] + [(math.cos(i * TAU / 20), math.sin(i * TAU / 20)) for i in range(20)]
         goal_dist = math.dist(waypoint[:2], pos[:2])
-        if goal_dist < 3 and self.mode in ('drop', 'recover', 'zone', 'crate') and not enemies:
+        if goal_dist < 3 and self.mode in ('drop', 'recover', 'zone', 'crate', 'reload') and not enemies:
             candidates.insert(0, (0., 0.))
         danger = sorted((e for e in enemies if e['id'] in self.direct_ids), key=lambda e: math.dist(e['pos'][:2], pos[:2]))[:4]
         for mx, my in candidates:
@@ -652,7 +702,7 @@ class Bot:
             if preference[pickup['kind']] > preference[slots[old]['kind']] and not slots[old].get('charge', 0):
                 action.update(take=pickup['id'], drop=old)
                 break
-        threats = [(e['pos'][0], e['pos'][1], 1.5 if self.mode in ('cover', 'recover') else .35) for e in enemies[:4]]
+        threats = [(e['pos'][0], e['pos'][1], 1.5 if self.mode in ('cover', 'recover', 'reload') else .35) for e in enemies[:4]]
         waypoint = self.nav.waypoint(me['pos'], self.goal, now, obs['zone'], threats,
                                      me['stats'].get('radius', 2.5) + .3, me['stats'].get('height', 9))
         action['move'], action['boost'], action['jump'] = self.steer(obs, waypoint, enemies, target)

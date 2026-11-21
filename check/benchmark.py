@@ -52,6 +52,22 @@ def main():
                 'pos':[x,y,me['pos'][2]+rng.uniform(0,30)],
                 'vel':[-200*math.cos(a),-200*math.sin(a),-5]})
         observations.append(o)
+    # Exercise cover searches while healthy and reloading; low-HP recovery
+    # would otherwise bypass this branch in most busy observations above.
+    busy = observations[300:]
+    for index in range(80):
+        o = copy.deepcopy(busy[index % len(busy)])
+        now = 220 + index * .6
+        o.update(t=now, tick=4400 + 12 * index)
+        me = o['self']
+        me['hp'] = me['max_hp']
+        me['weapons'][0].update(ammo=0, reload=2.3, cooldown=0.)
+        me['weapons'][1] = None
+        o['mechs'] = o['mechs'][:(1,3,15)[index % 3]]
+        o['zone'].update(center=me['pos'][:2], next_center=me['pos'][:2],
+                         radius=300, next_radius=250,
+                         shrink_start=now+60, shrink_end=now+100)
+        observations.append(o)
     timings = []
     failures = []
     for o in observations:

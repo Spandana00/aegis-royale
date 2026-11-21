@@ -1,0 +1,814 @@
+{
+  "kind": "paired reload-window line-of-fire diagnostic; not damage or placement",
+  "seed": 32917,
+  "trials": 32,
+  "baseline_ref": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+  "candidate": "AEGIS v5",
+  "seconds_per_trial": 2.4,
+  "baseline_exposed_s": 74.05,
+  "candidate_exposed_s": 70.5,
+  "exposure_reduction_pct": 4.79,
+  "post_reload_observation_s": 2.0,
+  "cases": [
+    {
+      "case": 0,
+      "start": [
+        392.62,
+        -288.09,
+        0.5534000000000049
+      ],
+      "observer": [
+        255.9359064053016,
+        -263.3577732791169,
+        -2.2374362562120633
+      ],
+      "baseline": {
+        "exposed_s": 1.7,
+        "cover_decisions": 0,
+        "travel_m": 32.94,
+        "first_loaded_trigger_delay_s": 0.3
+      },
+      "candidate": {
+        "exposed_s": 1.55,
+        "cover_decisions": 13,
+        "travel_m": 26.95,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 1,
+      "start": [
+        72.62,
+        356.91,
+        0.6286999999999944
+      ],
+      "observer": [
+        66.3866087450811,
+        241.09293035226125,
+        1.4685506110079314
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.48,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.48,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 2,
+      "start": [
+        302.62,
+        146.91000000000003,
+        4.3482
+      ],
+      "observer": [
+        409.44012957442794,
+        139.58544594148722,
+        4.778546836329407
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 8.75,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 8.75,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 3,
+      "start": [
+        -457.38,
+        -163.08999999999997,
+        -4.846499999999999
+      ],
+      "observer": [
+        -504.7690285305045,
+        -84.91549572538047,
+        -5.6105083499637045
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 9.42,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 9.42,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 4,
+      "start": [
+        -497.38,
+        -88.08999999999997,
+        -5.700899999999999
+      ],
+      "observer": [
+        -441.76129854530944,
+        -162.73088456654966,
+        -4.4675033618109925
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 7.67,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 7.67,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 5,
+      "start": [
+        102.62,
+        41.910000000000025,
+        4.2571579999999996
+      ],
+      "observer": [
+        10.71143107143557,
+        1.4285098376688694,
+        0.5915361891423343
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 5.87,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 5.87,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 6,
+      "start": [
+        297.62,
+        -223.08999999999997,
+        2.795484
+      ],
+      "observer": [
+        402.71747667592155,
+        -192.22404225018965,
+        2.222825233240785
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 14.96,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 14.96,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 7,
+      "start": [
+        297.62,
+        -228.08999999999997,
+        2.9226999999999994
+      ],
+      "observer": [
+        238.77723853378708,
+        -324.5360174430309,
+        3.957318588645617
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 15.97,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 1.2,
+        "cover_decisions": 14,
+        "travel_m": 19.06,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 8,
+      "start": [
+        -127.38,
+        16.910000000000025,
+        -5.583500000000002
+      ],
+      "observer": [
+        -140.27456887518446,
+        125.87118235311634,
+        -5.212745688751845
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 10.62,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 1,
+        "travel_m": 9.38,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 9,
+      "start": [
+        -212.38,
+        106.91000000000003,
+        4.599442000000004
+      ],
+      "observer": [
+        -239.25597419367844,
+        236.99994089486177,
+        17.049806123988628
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 29.75,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 29.75,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 10,
+      "start": [
+        262.62,
+        -18.089999999999975,
+        4.692342000000001
+      ],
+      "observer": [
+        355.5861276307473,
+        -97.2646646735041,
+        2.375062817812621
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 20.47,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 20.47,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 11,
+      "start": [
+        462.62,
+        181.91000000000003,
+        4.6138
+      ],
+      "observer": [
+        334.05087686957745,
+        174.48573942037817,
+        4.425960157992482
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 31.08,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 31.08,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 12,
+      "start": [
+        452.62,
+        -28.089999999999975,
+        3.001100000000001
+      ],
+      "observer": [
+        361.0079430085931,
+        -31.74008978317728,
+        3.3625196720822963
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 14.51,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 14.51,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 13,
+      "start": [
+        542.62,
+        -23.089999999999975,
+        3.385383999999996
+      ],
+      "observer": [
+        450.1437206835447,
+        -116.85526647872972,
+        1.7716350904642781
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 27.39,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 27.39,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 14,
+      "start": [
+        -362.38,
+        256.91,
+        -5.4129000000000005
+      ],
+      "observer": [
+        -437.08694915953026,
+        365.1547784592185,
+        -2.1926434742359153
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 27.29,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 27.29,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 15,
+      "start": [
+        -122.38,
+        331.91,
+        -4.4438
+      ],
+      "observer": [
+        -230.59799390955118,
+        383.1635856003587,
+        -2.5491124928937268
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.56,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.56,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 16,
+      "start": [
+        -472.38,
+        6.910000000000025,
+        -5.4693000000000005
+      ],
+      "observer": [
+        -459.4556931880135,
+        123.67577058333795,
+        -4.275212822910233
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 16.72,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 16.72,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 17,
+      "start": [
+        347.62,
+        71.91000000000003,
+        4.3909
+      ],
+      "observer": [
+        435.53250887259514,
+        102.47071285741585,
+        4.190682394752013
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 9.05,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 14,
+        "travel_m": 6.28,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 18,
+      "start": [
+        -97.38,
+        296.91,
+        -4.055358000000001
+      ],
+      "observer": [
+        -198.757087290603,
+        301.370006658934,
+        -5.140170739727351
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 6.53,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 6.53,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 19,
+      "start": [
+        177.62,
+        -303.09,
+        -1.4753260000000044
+      ],
+      "observer": [
+        148.3871479987684,
+        -175.95818437806253,
+        4.5124507524018
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 26.63,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 26.63,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 20,
+      "start": [
+        37.620000000000005,
+        -173.08999999999997,
+        -0.06925800000000046
+      ],
+      "observer": [
+        94.551979120988,
+        -91.7873689178066,
+        4.058331341735208
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 6.97,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 6.97,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 21,
+      "start": [
+        -387.38,
+        216.91000000000003,
+        -5.4838000000000005
+      ],
+      "observer": [
+        -436.879061554807,
+        345.6306420640169,
+        -3.5519337398727515
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 31.19,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 31.19,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 22,
+      "start": [
+        422.62,
+        -273.09,
+        0.7536999999999995
+      ],
+      "observer": [
+        333.68055617052704,
+        -276.33683255417054,
+        0.07422896442966799
+      ],
+      "baseline": {
+        "exposed_s": 1.9,
+        "cover_decisions": 0,
+        "travel_m": 7.34,
+        "first_loaded_trigger_delay_s": 0.1
+      },
+      "candidate": {
+        "exposed_s": 1.7,
+        "cover_decisions": 12,
+        "travel_m": 24.29,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 23,
+      "start": [
+        507.62,
+        281.91,
+        5.111500000000001
+      ],
+      "observer": [
+        456.6771138649605,
+        368.50473375984353,
+        4.870188760918643
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 5.87,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 5.87,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 24,
+      "start": [
+        -387.38,
+        191.91000000000003,
+        -5.3838
+      ],
+      "observer": [
+        -450.0431118924167,
+        296.8157748524621,
+        -5.832076171673423
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 20.53,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 20.53,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 25,
+      "start": [
+        -127.38,
+        191.91000000000003,
+        -5.167042
+      ],
+      "observer": [
+        -151.212880778278,
+        301.12031770587566,
+        -4.606668015158464
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 12.18,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 12.18,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 26,
+      "start": [
+        197.62,
+        -33.089999999999975,
+        5.7029000000000005
+      ],
+      "observer": [
+        204.51443075671415,
+        -123.63462890208571,
+        5.543465465426396
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 9.84,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 9.84,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 27,
+      "start": [
+        307.62,
+        6.910000000000025,
+        4.344742000000001
+      ],
+      "observer": [
+        413.17308081908425,
+        -33.46264131671104,
+        2.742424412142016
+      ],
+      "baseline": {
+        "exposed_s": 2.3,
+        "cover_decisions": 0,
+        "travel_m": 8.82,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 0.55,
+        "cover_decisions": 18,
+        "travel_m": 7.35,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 28,
+      "start": [
+        67.62,
+        -168.08999999999997,
+        1.7920580000000026
+      ],
+      "observer": [
+        152.69064768380588,
+        -212.4454678078792,
+        3.0734586504126002
+      ],
+      "baseline": {
+        "exposed_s": 1.6,
+        "cover_decisions": 0,
+        "travel_m": 17.06,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 1.5,
+        "cover_decisions": 12,
+        "travel_m": 22.04,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 29,
+      "start": [
+        342.62,
+        106.91000000000003,
+        4.513458
+      ],
+      "observer": [
+        437.98420060982363,
+        150.02504739693362,
+        4.410092480067572
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.81,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 18.81,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 30,
+      "start": [
+        -92.38,
+        121.91000000000003,
+        -3.792641999999999
+      ],
+      "observer": [
+        -124.03355783037858,
+        216.93494947322807,
+        -5.15065050526772
+      ],
+      "baseline": {
+        "exposed_s": 1.75,
+        "cover_decisions": 0,
+        "travel_m": 5.74,
+        "first_loaded_trigger_delay_s": 0.1
+      },
+      "candidate": {
+        "exposed_s": 1.6,
+        "cover_decisions": 12,
+        "travel_m": 24.34,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    },
+    {
+      "case": 31,
+      "start": [
+        -242.38,
+        -143.08999999999997,
+        -5.358983999999996
+      ],
+      "observer": [
+        -205.855818473655,
+        -224.60203877430467,
+        -4.619898061284767
+      ],
+      "baseline": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 10.92,
+        "first_loaded_trigger_delay_s": 0.0
+      },
+      "candidate": {
+        "exposed_s": 2.4,
+        "cover_decisions": 0,
+        "travel_m": 10.92,
+        "first_loaded_trigger_delay_s": 0.0
+      }
+    }
+  ]
+}
