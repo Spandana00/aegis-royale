@@ -1,0 +1,45 @@
+{
+  "candidate": "AEGIS v11",
+  "reference_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+  "reference_user_reported_score": 5.33,
+  "candidate_official_score": null,
+  "kind": "local correctness, provenance and timing; not scored matches",
+  "unit_tests": {
+    "passed": 75,
+    "failed": 0,
+    "legacy_v9": 57,
+    "active_policy_provenance_and_regressions": 18
+  },
+  "organizer_protocol_check": {
+    "observations": 300,
+    "answered_in_time": 300,
+    "missed": 0,
+    "wrong_tick": 0,
+    "bad_lines": 0
+  },
+  "benchmark": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "v11",
+    "startup_ms": 385.48,
+    "observations": 840,
+    "p50_ms": 1.878,
+    "p99_ms": 4.14,
+    "max_ms": 13.132,
+    "over_50_ms": 0,
+    "max_rss_mib": 86.81,
+    "invalid_actions": [],
+    "mode_counts": {
+      "loot": 329,
+      "retreat": 70,
+      "heal": 122,
+      "rotate": 220,
+      "engage": 99
+    },
+    "module_errors": {},
+    "soft_budget_overruns": {},
+    "arming_decisions": 15,
+    "process_deadline_guard_tested": false
+  },
+  "docker_check": "The GitHub validate workflow builds and checks the exact published commit in the competition sandbox.",
+  "scope": "Armament goal selection, inventory ordering, arming diagnostics and a zero-HP arithmetic guard; other V10 behavior preserved."
+}

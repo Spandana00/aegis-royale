@@ -1,5 +1,10 @@
 # V10: reproduce a documented higher-scoring policy
 
+**Result:** V10 scored **5.33**, receipt `BB-DC5BDF45`, reported in the user's
+submission screenshot. It is now our scored baseline. V11's targeted follow-up
+is documented in [V11_COMPARISON.md](V11_COMPARISON.md). The remainder records
+the evidence available when V10 was prepared.
+
 ## Evidence and comparison
 
 Our V9 scored **4.77**, up from V7/V8's 4.60. Broader retreat scored 3.96;

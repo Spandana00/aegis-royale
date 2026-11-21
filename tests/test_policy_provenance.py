@@ -1,4 +1,5 @@
-"""Verify the active V10 policy, its cache and the narrowly scoped repackaging."""
+"""Verify the active policy's provenance, unchanged modules and tactical scope."""
+import ast
 import gzip
 import hashlib
 import json
@@ -17,7 +18,7 @@ class ProvenanceTests(unittest.TestCase):
             data=(ROOT/entry['path']).read_bytes()
             self.assertEqual(len(data),entry['size_bytes'],entry['path'])
             self.assertEqual(hashlib.sha256(data).hexdigest(),entry['sha256'],entry['path'])
-            if entry['path']!='pilot/main.py':
+            if entry['path'] not in ('pilot/main.py','pilot/brain.py'):
                 self.assertEqual(entry['sha256'],entry['source_sha256'],entry['path'])
 
     def test_entrypoint_diff_is_only_namespace_and_display_name(self):
@@ -28,9 +29,20 @@ class ProvenanceTests(unittest.TestCase):
         text=text.replace('f"pilot.{name}"','f"bot.{name}"')
         text=text.replace('"pilot.navigate3"','"bot.navigate3"')
         text=text.replace('import pilot.{name} failed','import bot.{name} failed')
-        text=text.replace('BOT_NAME = "AEGIS v10"','BOT_NAME = "OSU-Walker"')
+        text=text.replace('BOT_NAME = "AEGIS v11"','BOT_NAME = "OSU-Walker"')
         expected=next(e['source_sha256'] for e in manifest['files'] if e['path']=='pilot/main.py')
         self.assertEqual(hashlib.sha256(text.encode()).hexdigest(),expected)
+
+    def test_brain_changes_are_limited_to_the_documented_arming_scope(self):
+        manifest=json.loads((ROOT/'docs/reference_manifest.json').read_text())
+        scope=manifest['tactical_scope']
+        text=(ROOT/'pilot/brain.py').read_text()
+        text=text.replace('their_ttk = max(ehp, 1.0) / inc','their_ttk = ehp / inc')
+        module=ast.parse(text)
+        module.body=[n for n in module.body if not(isinstance(n,ast.FunctionDef)
+                     and n.name in scope['modified_functions'])]
+        digest=hashlib.sha256(ast.dump(module,include_attributes=False).encode()).hexdigest()
+        self.assertEqual(digest,scope['protected_brain_ast_sha256'])
 
 
 class ActivePolicyTests(unittest.TestCase):

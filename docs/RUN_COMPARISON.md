@@ -1,5 +1,9 @@
 # Official run comparison and next experiment
 
+**Latest result:** V10 scored **5.33**, up 0.56 from V9. V11 retains that
+foundation and changes bounded weapon collection during a fight; see
+[V11_COMPARISON.md](V11_COMPARISON.md). The earlier notes below are historical.
+
 **Current update:** V9 scored **4.77**. The active V10 candidate replaces the policy with an attributed upstream reproduction; see [V10_COMPARISON.md](V10_COMPARISON.md). The sections below retain the earlier experiment analysis.
 
 **Update:** V7 scored **4.60**, with a repeat of **4.52**. V8 scored **4.60**,

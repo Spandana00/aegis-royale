@@ -455,6 +455,32 @@
           "url": "https://github.com/Kyt0V0/Mech-Royale/blob/f0cc3817f6e035e6766e10f362e9121769f8c046/README.md"
         }
       ]
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "url": "https://github.com/JuanQuenga/buildathon-mech-royale",
+      "commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+      "license": "MIT; original notice retained in pilot/LICENSE",
+      "inspected_features": [
+        "Updated experiment results for peek, isolation and target commitment",
+        "Pending arm-first experiment and unarmed late-collection failure analysis"
+      ],
+      "files": [
+        {
+          "path": "docs/REVIEW.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/b50b794522c134d9eb54cc2e9bc4782f4f4a3da9/docs/REVIEW.md"
+        },
+        {
+          "path": "eval/RESULTS.md",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/b50b794522c134d9eb54cc2e9bc4782f4f4a3da9/eval/RESULTS.md"
+        },
+        {
+          "path": "bot/brain.py",
+          "url": "https://github.com/JuanQuenga/buildathon-mech-royale/blob/b50b794522c134d9eb54cc2e9bc4782f4f4a3da9/bot/brain.py"
+        }
+      ],
+      "adopted": "V11 independently implements bounded arming commitment and pickup utility ordering on the attributed V10 foundation; no wholesale update to upstream main",
+      "performance_evidence": "Author reports peek draws 5.44/5.15, target commitment 5.33, isolation 5.48 first draw; arm-first is pending in the inspected snapshot. These are not independently verified receipts."
     }
   ]
 }

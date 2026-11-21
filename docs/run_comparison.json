@@ -1,10 +1,11 @@
 {
   "kind": "source provenance and reported scores; not a local scorer",
   "score_source": "user-supplied submission screenshots and follow-up score reports",
-  "reference_commit": "585ac9b06b7d9f6f5317ad52d1a3ab15c2656fa6",
-  "reference_score": 4.77,
+  "reference_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+  "reference_score": 5.33,
   "matches_per_run": 48,
-  "minimum_extra_integer_placement_points_to_reach_5_50": 35,
+  "minimum_extra_integer_placement_points_to_reach_5_50": 8,
+  "minimum_extra_integer_placement_points_to_reach_6_00": 32,
   "runs": [
     {
       "version": "v1",
@@ -13,7 +14,7 @@
         3.75
       ],
       "deltas_from_best": [
-        -1.02
+        -1.58
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -47,7 +48,7 @@
         4.5
       ],
       "deltas_from_best": [
-        -0.27
+        -0.83
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -78,7 +79,7 @@
         3.96
       ],
       "deltas_from_best": [
-        -0.81
+        -1.37
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -115,7 +116,7 @@
         4.4
       ],
       "deltas_from_best": [
-        -0.37
+        -0.93
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -148,8 +149,8 @@
         4.15
       ],
       "deltas_from_best": [
-        -0.6,
-        -0.62
+        -1.16,
+        -1.18
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -181,7 +182,7 @@
         4.46
       ],
       "deltas_from_best": [
-        -0.31
+        -0.87
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -214,8 +215,8 @@
         4.52
       ],
       "deltas_from_best": [
-        -0.17,
-        -0.25
+        -0.73,
+        -0.81
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -243,7 +244,7 @@
         4.6
       ],
       "deltas_from_best": [
-        -0.17
+        -0.73
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
@@ -270,7 +271,7 @@
         4.77
       ],
       "deltas_from_best": [
-        0.0
+        -0.56
       ],
       "changed_bot_methods_vs_reference": [],
       "removed_bot_methods_vs_reference": [],
@@ -281,10 +282,29 @@
         "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
         "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
       }
+    },
+    {
+      "version": "v10",
+      "commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+      "user_reported_scores": [
+        5.33
+      ],
+      "deltas_from_best": [
+        0.0
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      }
     }
   ],
   "candidate": {
-    "name": "AEGIS v10",
+    "name": "AEGIS v11",
     "official_score": null,
     "active_entrypoint": "pilot/main.py",
     "legacy_v9_source_preserved": true,
@@ -293,10 +313,18 @@
     "reported_upstream_best": 5.56,
     "reported_upstream_family_mean": 5.34,
     "upstream_score_independently_verified": false,
-    "policy_parameters_unchanged_from_upstream": true,
+    "unchanged_module_scope": "V10 map, navigation, combat, ballistics, threats, state, guard and packaging",
+    "changed_tactics": [
+      "choose_intent",
+      "_arming_intent",
+      "inventory",
+      "summary"
+    ],
+    "numeric_guard": "Floor effective HP at 1 only for the fight-time denominator",
     "only_source_edits": [
-      "Rename Python package bot to pilot to retain the AEGIS V9 source alongside it.",
-      "Change display name OSU-Walker to AEGIS v10; no policy parameters changed."
+      "Rename Python package bot to pilot to preserve the earlier AEGIS implementations.",
+      "Change display name OSU-Walker to AEGIS v11.",
+      "V11: bounded weapon commitment during favorable gun-only fights, utility-ordered pickup selection, arming diagnostics and a zero-HP fight-denominator guard."
     ]
   }
 }

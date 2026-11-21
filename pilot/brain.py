@@ -599,6 +599,10 @@ def choose_intent(state: WorldState, threats: Threats) -> Intent:
         it.arrive_by = zp.get("deadline")
         return _finish(state, m, it)
 
+    arm = _arming_intent(state, m, hot, fight, attackers, face, hpf)
+    if arm is not None:
+        return _finish(state, m, arm)
+
     # 1b. squad: pick up nearby cubes (kill drops) before starting the next fight
     if P["cube_greed"] and state.mode_guess != "ffa" and not attackers and int(state.me.get("cubes", 0) or 0) < 10:
         cb = [r for r in m["items"].values() if r["type"] == "cube" and dist2d(r["pos"], state.pos) < P["cube_grab_m"]
@@ -728,6 +732,61 @@ def choose_intent(state: WorldState, threats: Threats) -> Intent:
     return _finish(state, m, it)
 
 
+def _arming_intent(state: WorldState, m: Dict[str, Any], hot, fight, attackers, face, hpf) -> Optional[Intent]:
+    """Keep a useful weapon destination during an otherwise favorable gun-only fight.
+
+    The scored V10 policy's engage branch overrides its loot destination. This
+    bounded commitment retains shooting and leaves zone/retreat decisions alone.
+    Inspired by the upstream arm-first experiment; routing and firing stay V10.
+    """
+    if state.weapon_kinds()[1] is not None:
+        m.pop("arming_goal",None)
+        return None
+    if not hot or fight.get("verdict") != "engage" or hpf <= .35:
+        return None
+    target = fight.get("target")
+    if target is not None and target.id in set(getattr(m.get("threats_ref"),"killable",None) or []):
+        return None
+    hunters = set(getattr(m.get("threats_ref"),"hunters",None) or [])
+    close = [e for e in hot if e.dist < 60. and (e.id in attackers or e.id in hunters)]
+    if len(close) > 1:
+        return None
+    current = m.get("arming_goal")
+    if current and state.t-current[1] > 20.:
+        m["blacklist"][current[0]] = state.t+60.
+        m.pop("arming_goal",None)
+        m["arm_timeouts"] = m.get("arm_timeouts",0)+1
+        current = None
+    options = []
+    for iid,item in m["items"].items():
+        if item["type"] != "pickup" or item.get("kind") in (None,"gun"):
+            continue
+        value = WEAPON_VALUE.get(item["kind"],0.)
+        if value <= 0. or m["blacklist"].get(iid,-1e9) > state.t:
+            continue
+        distance = dist2d(state.pos,item["pos"])
+        if distance > 150. or item["pos"][2]-state.pos[2] > P["roof_weapon_dz"]:
+            continue
+        # Don't turn a short collection window into a charge at the attacker.
+        if distance > 15. and any(dist2d(e.pos,item["pos"]) < e.dist-12. for e in close):
+            continue
+        score = value/(1.+_eta_quick(state,item["pos"])/6.)
+        if current and iid == current[0]:
+            score *= 1.4
+        options.append((score,iid,item))
+    for _,iid,item in sorted(options,key=lambda v:-v[0])[:4]:
+        if not _in_safe_future(state,item["pos"]):
+            continue
+        if current is None or current[0] != iid:
+            m["arming_goal"] = (iid,state.t)
+        m["loot"] = iid
+        m["arm_decisions"] = m.get("arm_decisions",0)+1
+        return Intent(mode="loot",goal=item["pos"],loot_id=iid,urgency=.6,
+                      face=face,allow_fire=True,target_id=target.id if target is not None else None,
+                      reason=f"arm while firing {iid}")
+    return None
+
+
 def _finish(state: WorldState, m: Dict[str, Any], it: Intent) -> Intent:
     th = m.get("threats_ref")
     if P["conveyor"] and th is not None:
@@ -761,7 +820,9 @@ def _assess_fight(state: WorldState, threats: Threats, fresh: List[EnemyThreat],
         if e.id in attackers or e.can_hit_me or (e.visible and e.dist < 120):
             inc += enemy_dps(e, e.dist)
     inc = max(inc, 1.0)
-    their_ttk = ehp / inc
+    # A live mech with less than half a hit point can be serialized as HP 0.
+    # Keep the fight estimate finite instead of losing this intent decision.
+    their_ttk = max(ehp, 1.0) / inc
     best, best_r = None, 1e9
     for e in fresh:
         if not e.visible and state.t - e.last_seen_t > 0.6:
@@ -1264,6 +1325,7 @@ def inventory(state: WorldState, intent: Intent) -> InvOut:
         if (r["type"] == "pickup" and r["id"] not in seen_ids and dist2d(r["pos"], state.pos) < reach
                 and m["blacklist"].get(r["id"], -1e9) <= state.t):
             pk.append({"id": r["id"], "kind": r.get("kind"), "pos": r["pos"]})
+    pk.sort(key=lambda p:-WEAPON_VALUE.get(p.get("kind"),0.))
     for p in pk:
         k = p.get("kind")
         if k is None or k in kinds:
@@ -1324,7 +1386,8 @@ def summary(state: WorldState) -> Dict[str, Any]:
             "kills": state.kills, "hp": round(state.hp), "t": state.t, "zone_out_s": round(m["zone_out_s"], 1),
             "cause": cause, "cubes": state.me.get("cubes", 0), "weapons": state.weapon_kinds(),
             "attackers": len(m["attackers_ever"]), "foreign_deaths": m["foreign_deaths"], "last": m.get("last_ctx"),
-            "first_weapon_t": m.get("first_weapon_t"), "profile": P.get("profile")}
+            "first_weapon_t": m.get("first_weapon_t"), "profile": P.get("profile"),
+            "arming": {"decisions":m.get("arm_decisions",0),"timeouts":m.get("arm_timeouts",0)}}
 
 
 def debug(state: WorldState, intent: Intent, threats: Threats, nav, cmb) -> Dict[str, Any]:
