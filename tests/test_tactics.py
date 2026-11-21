@@ -1,5 +1,6 @@
 """Tactical regression tests with the real map and recorded rule set."""
 import copy
+from contextlib import contextmanager
 import gzip
 import json
 import math
@@ -64,6 +65,21 @@ class TacticsTests(unittest.TestCase):
             if cls.start:
                 break
         assert cls.start is not None
+
+    def setUp(self):
+        # Keep map geometry shared but isolate all mutable match and path state.
+        prototype = type(self).bot
+        self.bot = copy.deepcopy(prototype, {id(prototype.world): prototype.world})
+
+    @contextmanager
+    def open_policy_arena(self):
+        # Resource decisions are tested in open terrain. The real campus
+        # geometry and disconnected roofs have separate regressions below.
+        with patch.object(self.bot.world,'clear_ray',return_value=True), \
+                patch.object(self.bot.world,'travel_clear',return_value=True), \
+                patch.object(self.bot,'reachable_cell',side_effect=lambda pos,p:self.bot.nav.cell(*p[:2])), \
+                patch.object(self.bot.nav,'waypoint',side_effect=lambda pos,p,*args:list(p[:2])):
+            yield
 
     def scenario(self):
         o = copy.deepcopy(self.initial)
@@ -216,6 +232,142 @@ class TacticsTests(unittest.TestCase):
         o=self.scenario();o['pickups']=[{'id':8001,'kind':'lightning','pos':o['self']['pos'][:]}]
         a=self.bot.act(o)
         self.assertEqual(a.get('take'),8001)
+
+    def test_arms_during_contact_and_keeps_aligned_gun_firing(self):
+        o=self.scenario();e=self.enemy(o,distance=50);o['mechs']=[e]
+        p=o['self']['pos'][:];p[0]-=20
+        o['pickups']=[{'id':8001,'kind':'laser','pos':p}]
+        with self.open_policy_arena():
+            o['self']['aim']=list(self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])[:2])
+            a=self.bot.act(o)
+        self.assertEqual(self.bot.mode,'arm')
+        self.assertEqual(self.bot.goal,p[:2])
+        self.assertLess(a['move'][0],-.8)
+        self.assertTrue(a['fire'][0])
+
+    def test_arming_does_not_run_toward_a_nearby_opponent(self):
+        o=self.scenario();e=self.enemy(o,distance=50);o['mechs']=[e]
+        p=o['self']['pos'][:];p[0]+=25
+        o['pickups']=[{'id':8001,'kind':'lightning','pos':p}]
+        with self.open_policy_arena():
+            self.bot.act(o)
+        self.assertEqual(self.bot.mode,'fight')
+
+    def test_arming_does_not_cross_into_lightning_reach(self):
+        o=self.scenario();e=self.enemy(o,distance=50,weapons=['gun','lightning'])
+        # An 8 m detour is normally short enough for salvage, but is unsafe
+        # when it crosses the opposing weapon's range boundary.
+        p=o['self']['pos'][:];p[0]+=8
+        o['cubes']=[{'id':5001,'pos':p}]
+        with self.open_policy_arena():
+            self.bot.remember(o)
+            self.assertIsNone(self.bot.tactical_resource_goal(o,[e]))
+
+    def test_arming_rejects_long_blocked_approaches(self):
+        o=self.scenario();e=self.enemy(o,distance=50)
+        p=o['self']['pos'][:];p[0]-=30
+        o['pickups']=[{'id':8001,'kind':'laser','pos':p}]
+        with self.open_policy_arena():
+            self.bot.remember(o)
+            with patch.object(self.bot.world,'travel_clear',return_value=False):
+                self.assertIsNone(self.bot.tactical_resource_goal(o,[e]))
+
+    def test_detour_cannot_pass_through_an_enemy_to_a_safe_endpoint(self):
+        o=self.scenario();e=self.enemy(o,distance=30)
+        p=o['self']['pos'][:];p[0]+=60
+        o['pickups']=[{'id':8001,'kind':'laser','pos':p}]
+        with self.open_policy_arena():
+            self.bot.remember(o)
+            self.assertIsNone(self.bot.tactical_resource_goal(o,[e]))
+
+    def test_safe_kill_cube_collection_keeps_firing(self):
+        o=self.scenario();e=self.enemy(o,distance=50);o['mechs']=[e]
+        p=o['self']['pos'][:];p[1]+=8
+        o['cubes']=[{'id':5001,'pos':p}]
+        with self.open_policy_arena():
+            o['self']['aim']=list(self.bot.firing_solution(o['self'],e,o['self']['weapons'][0])[:2])
+            a=self.bot.act(o)
+        self.assertEqual(self.bot.mode,'salvage')
+        self.assertGreater(a['move'][1],.8)
+        self.assertTrue(a['fire'][0])
+
+    def test_tactical_cube_priority_stops_at_stat_cap(self):
+        o=self.scenario();p=o['self']['pos'][:];p[1]+=8
+        o['self']['cubes']=self.hello['config']['cubes']['stat_cap']
+        o['cubes']=[{'id':5001,'pos':p}]
+        with self.open_policy_arena():
+            self.bot.remember(o)
+            self.assertIsNone(self.bot.tactical_resource_goal(o,[]))
+
+    def test_multiple_attackers_prevent_tactical_resource_override(self):
+        o=self.scenario();p=o['self']['pos'][:];p[0]-=20
+        o['pickups']=[{'id':8001,'kind':'laser','pos':p}]
+        with self.open_policy_arena():
+            self.bot.remember(o)
+            self.assertIsNone(self.bot.tactical_resource_goal(o,[self.enemy(o),self.enemy(o,id=6)]))
+
+    def test_recovery_precedes_an_attractive_weapon(self):
+        o=self.scenario();o['self']['hp']=400;o['mechs']=[self.enemy(o,distance=50)]
+        o['pickups']=[{'id':8001,'kind':'laser','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena(), patch.object(self.bot,'tactical_resource_goal') as goal:
+            self.bot.act(o)
+        goal.assert_not_called()
+        self.assertEqual(self.bot.mode,'recover')
+
+    def test_zone_escape_precedes_an_attractive_weapon(self):
+        o=self.scenario();x,y,z=o['self']['pos']
+        o['zone'].update(center=[x-80,y],radius=100,next_center=[x-80,y],
+                         next_radius=25,shrink_start=0,shrink_end=20)
+        o['pickups']=[{'id':8001,'kind':'laser','pos':[x+10,y,z]}]
+        with self.open_policy_arena(), patch.object(self.bot,'tactical_resource_goal') as goal:
+            self.bot.act(o)
+        goal.assert_not_called()
+        self.assertEqual(self.bot.mode,'zone')
+
+    def test_opening_prefers_laser_when_both_secondaries_are_at_foot(self):
+        o=self.scenario()
+        o['pickups']=[{'id':8001,'kind':'lightning','pos':o['self']['pos'][:]},
+                      {'id':8002,'kind':'laser','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena():
+            a=self.bot.act(o)
+        self.assertEqual(a.get('take'),8002)
+
+    def test_close_fight_retains_lightning(self):
+        o=self.scenario();o['mechs']=[self.enemy(o,distance=50)]
+        o['self']['weapons'][1]=self.weapon('lightning')
+        o['pickups']=[{'id':8001,'kind':'laser','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena():
+            a=self.bot.act(o)
+        self.assertNotIn('drop',a)
+        self.assertNotIn('take',a)
+
+    def test_distant_fight_can_exchange_lightning_for_laser_and_preserves_gun(self):
+        o=self.scenario();o['mechs']=[self.enemy(o,distance=150)]
+        o['self']['weapons'][1]=self.weapon('lightning')
+        o['pickups']=[{'id':8001,'kind':'laser','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena():
+            a=self.bot.act(o)
+        self.assertEqual((a.get('take'),a.get('drop')),(8001,1))
+
+    def test_actual_pickup_event_prevents_immediate_swap_back(self):
+        o=self.scenario();o['mechs']=[self.enemy(o,distance=50)]
+        o['self']['weapons'][1]=self.weapon('laser')
+        o['events']=[{'type':'took','id':8002}]
+        o['pickups']=[{'id':8001,'kind':'lightning','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena():
+            a=self.bot.act(o)
+            self.assertNotIn('take',a)
+            o['events']=[];o['t']+=4.1
+            a=self.bot.act(o)
+        self.assertEqual((a.get('take'),a.get('drop')),(8001,1))
+
+    def test_never_exchanges_a_charging_laser(self):
+        o=self.scenario();o['mechs']=[self.enemy(o,distance=50)]
+        o['self']['weapons'][1]=self.weapon('laser');o['self']['weapons'][1]['charge']=.4
+        o['pickups']=[{'id':8001,'kind':'lightning','pos':o['self']['pos'][:]}]
+        with self.open_policy_arena():
+            a=self.bot.act(o)
+        self.assertNotIn('drop',a)
 
     def test_early_reload(self):
         o=self.scenario();o['self']['weapons'][0]['ammo']=3

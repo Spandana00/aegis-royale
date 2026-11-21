@@ -1,5 +1,9 @@
 # GitHub bot research and the V8 adaptation
 
+**Result:** V8 scored **4.60**, tying V7's best. The next experiment and
+additional sources are recorded in [ARMAMENT.md](ARMAMENT.md). The measurements
+below describe the V8 experiment, rather than the current candidate.
+
 Research date: 2026-11-21. Queries included `mechfight`, `mech royale`, and
 `robocode wave surfing`. Six public repositories were inspected at pinned
 commits. Full source links, commit IDs, inspected files, and license findings
@@ -95,5 +99,6 @@ python3 -B check/aiming_probe.py
 taskset -c 0 python3 -B check/benchmark.py
 ```
 
-V7's user-reported scores are **4.60** and **4.52**. V8 is unscored. Keep V7's
-4.60 submission selected until an official run provides a better result.
+V7's user-reported scores are **4.60** and **4.52**. V8 subsequently scored
+**4.60**. Its forecast improvements did not improve the reported placement
+score. Keep the earlier 4.60 submission selected until a better result exists.

@@ -53,7 +53,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v8'
+    name = 'AEGIS v9'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -82,6 +82,7 @@ class Bot:
         self.scan_yaw = None
         self.direct_ids = set()
         self.aim_learner = AimLearner()
+        self.last_weapon_change = -100.
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -109,6 +110,7 @@ class Bot:
                 self.last_combat = now
             if event['type'] == 'took':
                 self.items['pickups'].pop(event['id'], None)
+                self.last_weapon_change = now
             if event['type'] == 'hit':
                 saved = self.items['crates'].get(event['target'])
                 if saved and event['target'] not in {c['id'] for c in obs['crates']}:
@@ -252,6 +254,71 @@ class Bot:
         danger = sum(max(0., 1 - math.dist(p[:2], e['pos'][:2]) / 65.) for e in enemies)
         return value / (d + 16.) - danger * 2.5
 
+    def weapon_preferences(self, obs):
+        """Prefer ranged power in open fights, lightning for immediate contact."""
+        me = obs['self']
+        close = any(e['kind'] == 'mech' and e['id'] in self.direct_ids
+                    and math.dist(me['pos'][:2], e['pos'][:2]) < 65.
+                    for e in obs.get('mechs', []))
+        return {'gun':0., 'mortar':.35,
+                'laser':.85 if close else 1., 'lightning':1. if close else .85}
+
+    def tactical_resource_goal(self, obs, threats):
+        """Use short safe collection windows while the existing gun keeps firing."""
+        me, now = obs['self'], obs['t']
+        if me['hp'] < me['max_hp'] * .52 or len(threats) > 1:
+            return None
+        secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
+        needs_weapon = secondary is None or secondary['kind'] == 'mortar'
+        preferences = self.weapon_preferences(obs)
+        candidates = []
+        groups = [('pickups',80.)] if needs_weapon else []
+        if me.get('cubes',0) < self.config['cubes'].get('stat_cap',10):
+            groups.append(('cubes',20.))
+        for group, limit in groups:
+            for iid, (item,last) in self.items[group].items():
+                if group == 'pickups' and item['kind'] not in ('laser','lightning'):
+                    continue
+                if self.loot_blacklist.get(iid,0) > now:
+                    continue
+                p = item['pos']
+                d = math.dist(me['pos'][:2],p[:2])
+                if d > limit:
+                    continue
+                value = 130.*preferences[item['kind']] if group == 'pickups' else 105.
+                score = self.loot_score(obs,p,value,threats)
+                if score <= .22:
+                    continue
+                unsafe = False
+                for enemy in threats:
+                    here = math.dist(me['pos'][:2],enemy['pos'][:2])
+                    dx,dy = p[0]-me['pos'][0],p[1]-me['pos'][1]
+                    along = clamp(((enemy['pos'][0]-me['pos'][0])*dx+
+                                   (enemy['pos'][1]-me['pos'][1])*dy)/(d*d+1e-6),0.,1.)
+                    nearest = math.dist([me['pos'][0]+along*dx,me['pos'][1]+along*dy],
+                                        enemy['pos'][:2])
+                    if 'lightning' in enemy.get('weapons',[]):
+                        reach = self.enemy_lightning_range(enemy)+3.
+                        if here > reach and nearest < reach:
+                            unsafe = True
+                    if d > 12. and nearest < here-8.:
+                        unsafe = True
+                if not unsafe:
+                    candidates.append((score,iid,p,'arm' if group=='pickups' else 'salvage'))
+        for score,iid,p,mode in sorted(candidates,key=lambda c:-c[0])[:4]:
+            k = self.reachable_cell(me['pos'],p)
+            if k is None or math.dist(self.nav.point(k),p[:2]) > 6.:
+                continue
+            # Under fire, a long blocked approach is not a short collection
+            # window. Existing navigation still handles ordinary safe looting.
+            if threats and math.dist(me['pos'][:2],p[:2]) > 20.:
+                if not self.world.travel_clear(me['pos'],p,me['stats'].get('radius',2.5)+.3,
+                        me['stats'].get('height',9.),
+                        me['pos'][2] > self.world.ground(*me['pos'][:2])+3.):
+                    continue
+            return list(p[:2]),iid,mode
+        return None
+
     def choose_goal(self, obs, enemies, target, solutions):
         me, now = obs['self'], obs['t']
         pos, zone = me['pos'], obs['zone']
@@ -273,6 +340,11 @@ class Bot:
             if enemies:
                 return self.find_cover(obs, exposed or enemies)
             return me['pos'][:2]
+        resource = self.tactical_resource_goal(obs,close)
+        if resource is not None:
+            goal,iid,mode = resource
+            self.mode,self.goal_id = mode,iid
+            return goal
         best, goal, gid, mode = .22, None, None, 'explore'
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
         for iid, (item, last) in self.items['cubes'].items():
@@ -284,7 +356,7 @@ class Bot:
                 score *= 1.16
             if score > best:
                 best, goal, gid, mode = score, item['pos'], iid, 'cube'
-        preference = {'lightning': 1., 'laser': .85, 'mortar': .35, 'gun': 0.}
+        preference = self.weapon_preferences(obs)
         held = preference.get(secondary['kind'], 0) if secondary else 0
         for iid, (item, last) in self.items['pickups'].items():
             improvement = preference[item['kind']] - held
@@ -668,7 +740,7 @@ class Bot:
         enemies, target, solutions = self.choose_target(obs)
         self.goal = self.choose_goal(obs, enemies, target, solutions)
         # Actively take nearby useful loot, even while fighting or rotating.
-        preference = {'gun': 0, 'mortar': 1, 'laser': 3, 'lightning': 4}
+        preference = self.weapon_preferences(obs)
         slots = me['weapons']
         held = {w['kind'] for w in slots if w}
         for pickup in sorted(obs.get('pickups', []), key=lambda p: -preference[p['kind']]):
@@ -679,6 +751,8 @@ class Bot:
                 action['take'] = pickup['id']
                 break
             old = next((i for i, w in enumerate(slots) if w['kind'] != 'gun'), 1)
+            if slots[old]['kind'] in ('laser','lightning') and now-self.last_weapon_change < 4.:
+                continue
             if preference[pickup['kind']] > preference[slots[old]['kind']] and not slots[old].get('charge', 0):
                 action.update(take=pickup['id'], drop=old)
                 break

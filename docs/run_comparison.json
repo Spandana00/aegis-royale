@@ -1,7 +1,7 @@
 {
   "kind": "submitted-source audit and user-reported official scores; not a local scorer",
   "score_source": "user-supplied submission screenshots",
-  "reference_commit": "acec27de854684d8e9853c2adcc610411701f11d",
+  "reference_commit": "46d8cb1965a7a3c513ac705c588d34164292276d",
   "reference_score": 4.6,
   "matches_per_run": 48,
   "minimum_extra_integer_placement_points_to_reach_5_30": 34,
@@ -17,6 +17,7 @@
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
+        "remember",
         "firing_solution",
         "choose_upgrade",
         "choose_goal",
@@ -47,6 +48,9 @@
         -0.1
       ],
       "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
         "engagement_distance",
         "steer"
       ],
@@ -73,6 +77,7 @@
       "changed_bot_methods_vs_reference": [
         "__init__",
         "remember",
+        "firing_solution",
         "safe_goal",
         "healing_drop",
         "loot_score",
@@ -105,6 +110,9 @@
         -0.2
       ],
       "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution",
         "engagement_distance",
         "dodge_cost",
         "steer"
@@ -133,6 +141,8 @@
       ],
       "changed_bot_methods_vs_reference": [
         "__init__",
+        "remember",
+        "firing_solution",
         "choose_goal",
         "reload_cover",
         "engagement_distance",
@@ -189,7 +199,11 @@
         0.0,
         -0.08
       ],
-      "changed_bot_methods_vs_reference": [],
+      "changed_bot_methods_vs_reference": [
+        "__init__",
+        "remember",
+        "firing_solution"
+      ],
       "removed_bot_methods_vs_reference": [],
       "runtime_sha256": {
         "bot.py": "1937807266c5d5d578a0cdbccfb2099c07f153db6276955d62e93bc692238ac8",
@@ -198,18 +212,41 @@
         "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
         "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
       }
+    },
+    {
+      "version": "v8",
+      "commit": "46d8cb1965a7a3c513ac705c588d34164292276d",
+      "user_reported_scores": [
+        4.6
+      ],
+      "deltas_from_best": [
+        0.0
+      ],
+      "changed_bot_methods_vs_reference": [],
+      "removed_bot_methods_vs_reference": [],
+      "runtime_sha256": {
+        "bot.py": "99c934f6f5e036353a20882f2d1ffdcb37a9ef5d7a9f3142794b49e7a5e98147",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
+      }
     }
   ],
   "candidate": {
-    "name": "AEGIS v8",
+    "name": "AEGIS v9",
     "changed_bot_methods_vs_reference": [
       "__init__",
       "remember",
-      "firing_solution"
+      "weapon_preferences",
+      "tactical_resource_goal",
+      "choose_goal",
+      "act"
     ],
     "all_other_bot_methods_identical_to_reference": true,
     "map_navigation_and_wrapper_identical_to_reference": true,
-    "docker_change": "Copies and allows aiming.py; other packaging content identical",
+    "docker_change": "None; packaging identical to V8",
+    "aiming_identical_to_reference": true,
     "aiming_module_sha256": "136669c67605546b5f972f6106517ef5b1be19a74c229e4495b0fa292079efa2"
   }
 }

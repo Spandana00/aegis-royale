@@ -1,0 +1,13 @@
+{
+  "kind": "local correctness and timing; not a scored match",
+  "startup_ms": 739.4,
+  "observations": 840,
+  "p50_ms": 1.437,
+  "p99_ms": 12.359,
+  "max_ms": 17.68,
+  "over_50_ms": 0,
+  "max_rss_mib": 33.76,
+  "observations_with_learned_aim": 104,
+  "observations_with_tactical_collection": 120,
+  "invalid_actions": []
+}

@@ -141,6 +141,194 @@
       ],
       "adopted": "Reviewed; no source code copied or ported into this candidate",
       "performance_evidence": "No independently verified Mech Royale placement score from this repository"
+    },
+    {
+      "repository": "pnp6113/mech-royale-bot",
+      "url": "https://github.com/pnp6113/mech-royale-bot",
+      "commit": "ec18871d4e85821f53387a263890cc34d25d449b",
+      "license": "MIT (GitHub metadata)",
+      "inspected_features": [
+        "Mid-fight secondary acquisition",
+        "Laser-first loadout while retaining gun",
+        "Public experiment ledger"
+      ],
+      "files": [
+        {
+          "path": "brain.py",
+          "url": "https://github.com/pnp6113/mech-royale-bot/blob/ec18871d4e85821f53387a263890cc34d25d449b/brain.py"
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "url": "https://github.com/pnp6113/mech-royale-bot/blob/ec18871d4e85821f53387a263890cc34d25d449b/docs/EXPERIMENTS.md"
+        },
+        {
+          "path": "docs/COMPLETION.md",
+          "url": "https://github.com/pnp6113/mech-royale-bot/blob/ec18871d4e85821f53387a263890cc34d25d449b/docs/COMPLETION.md"
+        }
+      ],
+      "adopted": "General armament-priority idea independently implemented in V9; no source copied",
+      "performance_evidence": "Author reports 3.79 to 4.04 after weapon collection changes and 4.29 to 4.48 after a later laser package; not independently verified"
+    },
+    {
+      "repository": "Not-Ethan/oval-ghost-mech",
+      "url": "https://github.com/Not-Ethan/oval-ghost-mech",
+      "commit": "0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a",
+      "license": "MIT (GitHub metadata)",
+      "inspected_features": [
+        "Separate cover, routing and weapon decisions",
+        "Bounded map cache work"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Not-Ethan/oval-ghost-mech/blob/0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a/README.md"
+        },
+        {
+          "path": "SUBMISSIONS.md",
+          "url": "https://github.com/Not-Ethan/oval-ghost-mech/blob/0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a/SUBMISSIONS.md"
+        },
+        {
+          "path": "src/brain.ts",
+          "url": "https://github.com/Not-Ethan/oval-ghost-mech/blob/0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a/src/brain.ts"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "Submission notes self-report 3.04; not independently verified"
+    },
+    {
+      "repository": "Epicepicdemic/buildathon-mech-royale",
+      "url": "https://github.com/Epicepicdemic/buildathon-mech-royale",
+      "commit": "70e4ba904c2b71917fc89ce0a4b1b40707ae21ae",
+      "license": "MIT (GitHub metadata)",
+      "inspected_features": [
+        "Explicit weapon and combat doctrine",
+        "Diagnostics for locally captured spectator replays"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/README.md"
+        },
+        {
+          "path": "mech/doctrine.py",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/mech/doctrine.py"
+        },
+        {
+          "path": "tools/replays.py",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/tools/replays.py"
+        },
+        {
+          "path": "tools/replay_opening.py",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/tools/replay_opening.py"
+        },
+        {
+          "path": "tools/replay_shooting.py",
+          "url": "https://github.com/Epicepicdemic/buildathon-mech-royale/blob/70e4ba904c2b71917fc89ce0a4b1b40707ae21ae/tools/replay_shooting.py"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "No independently verified placement score or our private scored replays obtained"
+    },
+    {
+      "repository": "nguyenphuquang1234567/kestrel",
+      "url": "https://github.com/nguyenphuquang1234567/kestrel",
+      "commit": "6900375fff96f51224c193dd7838763df3ccbaff",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "Updated laser preference and gun-preserving loadout"
+      ],
+      "files": [
+        {
+          "path": "bot/brain.py",
+          "url": "https://github.com/nguyenphuquang1234567/kestrel/blob/6900375fff96f51224c193dd7838763df3ccbaff/bot/brain.py"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "No independently verified placement score obtained"
+    },
+    {
+      "repository": "mbaglo/MechRoyale-Agent",
+      "url": "https://github.com/mbaglo/MechRoyale-Agent",
+      "commit": "8a87e8a467dde525d25fcf9cb5181087c6e55fd7",
+      "license": "MIT (GitHub metadata)",
+      "inspected_features": [
+        "Documentation of experimental agent architecture"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/mbaglo/MechRoyale-Agent/blob/8a87e8a467dde525d25fcf9cb5181087c6e55fd7/README.md"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "README explicitly does not establish measured gameplay strength"
+    },
+    {
+      "repository": "Meows3s/mechfight-cpp",
+      "url": "https://github.com/Meows3s/mechfight-cpp",
+      "commit": "47fc9ebc30108bff97709f70ea612715a211b78a",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "C++ geometry and rooftop navigation approach"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Meows3s/mechfight-cpp/blob/47fc9ebc30108bff97709f70ea612715a211b78a/README.md"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "README indicates unsubmitted implementation; local checks are not a score"
+    },
+    {
+      "repository": "Yiyang-Jin/mech-royale",
+      "url": "https://github.com/Yiyang-Jin/mech-royale",
+      "commit": "8de229c17e8409b28b912e84978e30853b42e53f",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "Practice-oriented looting, combat and healing states"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/Yiyang-Jin/mech-royale/blob/8de229c17e8409b28b912e84978e30853b42e53f/README.md"
+        },
+        {
+          "path": "strategy_bot.py",
+          "url": "https://github.com/Yiyang-Jin/mech-royale/blob/8de229c17e8409b28b912e84978e30853b42e53f/strategy_bot.py"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "No independently verified placement score obtained"
+    },
+    {
+      "repository": "0629owen-del/mechfight-early",
+      "url": "https://github.com/0629owen-del/mechfight-early",
+      "commit": "fb303986de4bd131a0648927326a4f39352439a2",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "Repository tree and file layout reviewed only"
+      ],
+      "files": [],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "No score evidence; source implementation not reviewed"
+    },
+    {
+      "repository": "brycehcmcgrath/mechfight-bot",
+      "url": "https://github.com/brycehcmcgrath/mechfight-bot",
+      "commit": "0ba1ddb15d752dc9c893982eae34e9a4d690d77f",
+      "license": "No license detected in inspected tree",
+      "inspected_features": [
+        "Compiled-payload repository layout"
+      ],
+      "files": [
+        {
+          "path": "README.md",
+          "url": "https://github.com/brycehcmcgrath/mechfight-bot/blob/0ba1ddb15d752dc9c893982eae34e9a4d690d77f/README.md"
+        }
+      ],
+      "adopted": "Reviewed only; no source copied or executed",
+      "performance_evidence": "No score evidence; payload not read, reverse-engineered or executed"
     }
   ]
 }

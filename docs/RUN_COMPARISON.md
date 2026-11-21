@@ -1,10 +1,10 @@
 # Official run comparison and next experiment
 
-**Update:** V7 subsequently scored **4.60**, with a repeat of **4.52**, and is
-the current best submission. V8 retains that source baseline and tests the
-research-based aiming adaptation described in [GITHUB_RESEARCH.md](GITHUB_RESEARCH.md).
+**Update:** V7 scored **4.60**, with a repeat of **4.52**. V8 scored **4.60**,
+matching the best. V9 tests armament and tactical collection, documented in
+[ARMAMENT.md](ARMAMENT.md).
 The table below retains V2 as the historical comparison point; the current
-source-audit script uses V7 as its reference.
+source-audit script uses the scored V8 source as its reference.
 
 ## What the submitted runs show
 
@@ -23,6 +23,8 @@ all the submitted commits.
 | V5 | 4.17; repeat 4.15 | −0.33; −0.35 | Short cover trips during gun reloads |
 | V6 | 4.46 | −0.04 | Gun prediction for falling targets and landings |
 | V7 | **4.60**; repeat 4.52 | +0.10; +0.02 | Pursuer-aware weapon spacing and preserving lightning range advantage |
+| V8 | **4.60** | +0.10 | Online linear/circular gun-forecast selection; no placement gain over V7's best |
+| V9 | Unscored | — | Second-weapon collection during contact, nearby kill cubes, range-aware secondary preference |
 
 The two V5 screenshots show the same `1f…` commit prefix, matching the V5
 commit in this repository. The one-point difference across 48 matches rounds
@@ -110,12 +112,13 @@ fire, conservative enemy upgrade bounds, actual lightning range advantage,
 and late-zone constraints. These validate scope and behavior, not placement.
 V7 answered all 300 recorded protocol observations within the deadline.
 Its single-core 600-observation stress check had no invalid actions or answers
-over 50 ms (p99 13.12 ms, maximum 18.69 ms on this host). The current V8 suite
-has 42 tests and a 720-observation benchmark, reported in the research notes. The published GitHub
+over 50 ms (p99 13.12 ms, maximum 18.69 ms on this host). V8's suite
+had 42 tests and a 720-observation benchmark, reported in the research notes. The published GitHub
 workflow builds linux/amd64 and runs the Docker sandbox conformance check.
 
 V7 has now improved the selected best score to 4.60 (221 placement points
 across 48 matches). Reaching at least 5.30 requires at least 255, or 34 more
-total placement points. V8 changes only learned gun prediction on top of V7;
-its source audit preserves the other V7 behaviors. Keep the 4.60 entry selected
-while evaluating the new candidate.
+total placement points. V8's learned prediction tied 4.60. V9 changes equipment
+and collection policy on top of that scored source; its audit preserves aim,
+steering, upgrades, healing and zone policy. Keep the earlier 4.60 entry selected
+while evaluating V9.

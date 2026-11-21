@@ -88,8 +88,38 @@ def main():
                 'vel':[-19.2*math.sin(a),19.2*math.cos(a),0.], 'aim':[a+math.pi,0.],
                 'hp':1400,'max_hp':1400,'cubes':0,'weapons':['gun','lightning'],'charging':False})
         observations.append(o)
+    # Resource-rich contact frames exercise V9's additional reachability and
+    # collision checks, including rejected detours and multiple attackers.
+    for index in range(120):
+        o = copy.deepcopy(observations[0])
+        now = 330 + index*.1
+        o.update(t=now,tick=6600+2*index,events=[],crates=[],cubes=[],pickups=[],
+                 projectiles=[],sounds=[],drops=[],offer=None)
+        me=o['self'];me['hp']=me['max_hp'];me['cubes']=index%11
+        me['weapons'][0].update(ammo=12,reload=0.,cooldown=0.)
+        me['weapons'][1]=None if index%2 else {
+            'kind':'mortar','cooldown':0.,'stats':copy.deepcopy(hello['config']['weapons']['mortar'])}
+        o['zone'].update(center=me['pos'][:2],next_center=me['pos'][:2],radius=300,
+                         next_radius=250,shrink_start=now+60,shrink_end=now+100)
+        o['mechs']=[]
+        for i in range(1 if index%3 else 2):
+            a=i*1.5
+            o['mechs'].append({'id':i+30,'kind':'mech',
+                'pos':[me['pos'][0]+50*math.cos(a),me['pos'][1]+50*math.sin(a),me['pos'][2]],
+                'vel':[-8.,0.,0.], 'aim':[math.pi+a,0.], 'hp':1400,'max_hp':1400,
+                'cubes':0,'weapons':['gun','lightning'],'charging':False})
+        for i in range(12):
+            a=i*math.tau/12
+            d=8.+(i%4)*18.
+            p=[me['pos'][0]+d*math.cos(a),me['pos'][1]+d*math.sin(a),me['pos'][2]]
+            o['pickups'].append({'id':8000+i,'kind':'laser' if i%2 else 'lightning','pos':p})
+            if i%3==0:
+                o['cubes'].append({'id':5000+i,'pos':[me['pos'][0]+8*math.cos(a),
+                                                        me['pos'][1]+8*math.sin(a),me['pos'][2]]})
+        observations.append(o)
     timings = []
     learned_observations = 0
+    tactical_resource_observations = 0
     failures = []
     for o in observations:
         start = time.perf_counter()
@@ -98,6 +128,8 @@ def main():
         learner=getattr(bot,'aim_learner',None)
         if learner and any(tr['selected'] for tr in learner.tracks.values()):
             learned_observations += 1
+        if bot.mode in ('arm','salvage'):
+            tactical_resource_observations += 1
         errors = schema.errors(action, 'Action')
         if errors or not all(math.isfinite(v) for k in ('move','aim') for v in action.get(k, [])):
             failures.append({'tick':o['tick'],'errors':errors})
@@ -112,6 +144,7 @@ def main():
               'max_ms':round(max(timings),3), 'over_50_ms':sum(v>50 for v in timings),
               'max_rss_mib':round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss/1024,2),
               'observations_with_learned_aim':learned_observations,
+              'observations_with_tactical_collection':tactical_resource_observations,
               'invalid_actions':failures}
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:

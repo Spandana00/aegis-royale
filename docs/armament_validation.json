@@ -1,0 +1,40 @@
+{
+  "candidate": "AEGIS v9",
+  "reference_commit": "46d8cb1965a7a3c513ac705c588d34164292276d",
+  "reference_user_reported_score": 4.6,
+  "official_candidate_score": null,
+  "kind": "local policy, protocol and timing checks; not scored matches",
+  "unit_tests": {
+    "command": "python3 -B -m unittest discover -s tests -q",
+    "passed": 57,
+    "failed": 0
+  },
+  "organizer_protocol_check": {
+    "command": "python3 -B check/check.py -- python3 -B -u bot.py",
+    "passed": true,
+    "observations": 300,
+    "answered_in_time": 300,
+    "missed_50_ms_budget": 0,
+    "bad_lines": 0,
+    "wrong_tick": 0
+  },
+  "benchmark_command": "taskset -c 0 python3 -B check/benchmark.py",
+  "benchmark": {
+    "kind": "local correctness and timing; not a scored match",
+    "startup_ms": 739.4,
+    "observations": 840,
+    "p50_ms": 1.437,
+    "p99_ms": 12.359,
+    "max_ms": 17.68,
+    "over_50_ms": 0,
+    "max_rss_mib": 33.76,
+    "observations_with_learned_aim": 104,
+    "observations_with_tactical_collection": 120,
+    "invalid_actions": []
+  },
+  "docker_check": "GitHub Actions validate workflow builds and checks the exact published commit; inspect that run before submission",
+  "notes": [
+    "Synthetic collection and forecast cases are diagnostics, not placement scores.",
+    "Only equipment selection and collection policy changed versus V8; the source audit preserves other Bot methods and runtime files."
+  ]
+}

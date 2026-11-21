@@ -1,8 +1,9 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v8**, based on the best scored version, v7.
-See [the GitHub research, feature ledger and adaptive aiming experiment](docs/GITHUB_RESEARCH.md).
-Keep v7's 4.60 submission selected until an official run improves on it.
+Current candidate: **AEGIS v9**, based on v8's **4.60** scored source.
+See [the new armament policy, further GitHub research and validation](docs/ARMAMENT.md)
+and [the earlier aiming experiment](docs/GITHUB_RESEARCH.md).
+Keep the earlier 4.60 submission selected until an official run improves on it.
 
 | Version | User-reported practice score |
 | --- | --- |
@@ -13,7 +14,8 @@ Keep v7's 4.60 submission selected until an official run improves on it.
 | v5 | 4.17; repeat 4.15 |
 | v6 | 4.46 |
 | v7 | **4.60**; repeat 4.52 |
-| v8 | Not yet scored |
+| v8 | **4.60** |
+| v9 | Not yet scored |
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.
@@ -37,8 +39,12 @@ Practice qualifies the entry; the final series decides the winner.
   opponent, retaining linear aim until the alternative has sufficient evidence.
 - Uses the gun, releases charged lasers, aims ballistic mortar shells, and
   saves lightning energy when nothing is in range.
-- Collects cubes and useful weapons, farms safe crates, and considers supply
-  drops for healing. It prefers lightning for close fights and keeps the gun.
+- Prioritizes reachable nearby second weapons and short cube collection
+  windows during isolated fights, while continuing to fire. It rejects
+  detours that cut through an attacker or enter its lightning range.
+- Prefers a laser in open fights and lightning in close contact, keeps the
+  gun, and limits repeated swaps. It also farms safe crates and considers
+  supply drops for healing.
 - Strafes, evaluates incoming projectile paths, and keeps the torso toward
   attackers to protect rear armor.
 - Compensates for a closing lightning opponent when maintaining weapon distance,
@@ -62,7 +68,8 @@ python3 -B check/navigation_probe.py
 ```
 
 The benchmark combines 300 recorded observations, 220 synthetic busy
-combat observations, 80 reload cases and 120 continuous-track observations.
+combat observations, 80 reload cases, 120 continuous-track observations and
+120 resource-rich contact cases (840 observations total).
 The navigation probe moves through a simplified local
 controller on the real campus map. Neither is a match simulator or scorer.
 
@@ -108,7 +115,8 @@ The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 
 ## Scored optimization loop
 
-1. Use v7's 4.60 as the scored reference. The comparison report distinguishes
+1. Use v8's 4.60 source as the reference and preserve the earlier tied best entry.
+   The comparison report distinguishes
    code baselines, individual experiments, and repeat runs of the same code.
 2. Change one feature family while retaining the rest of that reference.
    Unit tests and local probes establish behavior; they do not predict score.
@@ -125,7 +133,7 @@ The cutoff is Sunday, November 22, 2026 at 11:00 AM EST.
 compares line-of-fire exposure and return-to-fire timing during scripted reloads.
 `check/gun_prediction_probe.py` checks gun trajectories against scripted moving
 cylinders; none of these diagnostics is an official match simulator or scorer.
-`check/compare_versions.py` audits submitted source and the current V8 scope;
+`check/compare_versions.py` audits submitted source and the current V9 scope;
 it requires a clone containing the submitted commit history.
 `check/aiming_probe.py` evaluates online forecasts on scripted trajectories.
 
@@ -133,6 +141,6 @@ The Builders starter kit supplies `mechfight.py`, `check/check.py`, the
 recorded stream, schema, protocol, and campus map. Those are included for
 compatibility, validation, and local map access. No other external code or
 libraries are used by the bot. Research sources and licenses are recorded in
-`docs/GITHUB_RESEARCH.md`; its aiming adaptation is independently implemented.
+`docs/research_sources.json`; the aiming and armament adaptations are independently implemented.
 New code is released under the MIT License,
 as required by the event.
