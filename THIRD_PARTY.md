@@ -1,13 +1,39 @@
 # Third-party software
 
-## V13 active policy
+## V14 active policy
+
+The `automata/` tree reproduces the MIT-licensed policy from
+[jason-scheffel/automata](https://github.com/jason-scheffel/automata), commit
+`f114d641a0de0c565dc057e342b4305b8cfe6d53`.
+Copyright (c) 2026 Jason Scheffel. The complete license is retained in
+[automata/LICENSE](automata/LICENSE) and the final container.
+
+The only implementation change is the display name, from `automata` to
+`AEGIS v14`. All 35 original source, configuration, lock and license files are
+verified against [their source hashes and Git blob IDs](docs/automata_manifest.json).
+The original configuration is preserved in full. Packaging and research scripts
+are outside that implementation. No Go or historical Python policy is mixed into it.
+
+The public GMUNVIS repository identifies Automata f114d64 as its source;
+normalizing line endings and the name reproduces its runtime tree. The official
+board shows GMUNVIS at 6.23 and Team 67 at 6.29. The board does not disclose their
+submitted commit IDs, so these are corroborating source-family results, not
+verified exact-commit scores or a prediction for V14.
+
+Rust dependencies are locked in `automata/Cargo.lock`. Their MIT and applicable
+Unicode license notices are retained in [RUST_LICENSES.txt](RUST_LICENSES.txt)
+and copied into the final image. The final image contains the compiled Rust
+policy, configuration and license notices. It does not include the retained
+Python experiments or their NumPy dependency.
+
+## V13 retained policy
 
 The `sentinel/` package reproduces the complete MIT-licensed Oval Sentinel
 recovery-v26 implementation from
 [JishnuMadav/mech-royale](https://github.com/JishnuMadav/mech-royale), commit
 `2054a5bb27fdd36c8b8f63eebddbcf145737694e`. Copyright (c) 2026 JishnuMadav.
 The complete license is retained in [sentinel/LICENSE](sentinel/LICENSE).
-The author reports 5.85 (BB-7097A598); our adaptation has no official score.
+The author reports 5.85 (BB-7097A598); our V13 adaptation scored **5.79**, receipt BB-EDE179C7.
 
 `bot.py`, `survivor.py`, `navigation.py`, `combat.py` and the organizer's
 `mechfight.py` wrapper are preserved. Imports become package-relative to avoid
@@ -17,7 +43,7 @@ transformations and verify every original SHA-256 and Git blob ID against
 [the manifest](docs/sentinel_manifest.json). The source's 13 scenario tests
 are retained with import and local fixture paths adapted.
 
-The active image copies only `sentinel/`. The `pilot/` experiments below are
+The archived V13 image copied only `sentinel/`. The `pilot/` experiments below are
 historical diagnostics and do not run in the competition image. V13 source
 selection, local comparisons and limitations are in
 [the diagnosis](docs/V13_DIAGNOSIS.md).
@@ -48,7 +74,7 @@ those modules. The author's reported score is not a score for this repository.
 
 ## NumPy
 
-The container installs NumPy 2.5.5, matching the upstream Docker pin. NumPy is
+The Python audit container installs NumPy 2.5.5, matching the upstream Docker pin. NumPy is
 BSD licensed; its distribution includes its license notices.
 Source: [NumPy v2.5.5](https://github.com/numpy/numpy/releases/tag/v2.5.5).
 

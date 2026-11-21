@@ -1,7 +1,15 @@
-FROM python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
-ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PYTHONHASHSEED=0
-RUN pip install --no-cache-dir --disable-pip-version-check numpy==2.5.5
-WORKDIR /app
-COPY sentinel/ /app/sentinel/
+FROM rust:1.95@sha256:f49565f188ee00bc2a18dd418183f2c5f23ef7d6e691890517ed341a598f67c3 AS build
+WORKDIR /src
+COPY automata/ .
+RUN cargo build --release --locked \
+ && install -m 0755 target/release/automata /automata
+
+FROM debian:trixie-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2
+COPY --from=build --chmod=0755 /automata /usr/local/bin/automata
+COPY --from=build --chmod=0644 /src/bot.json /bot.json
+COPY --from=build --chmod=0644 /src/LICENSE /usr/share/doc/automata/LICENSE
+COPY --chmod=0644 RUST_LICENSES.txt /usr/share/doc/automata/DEPENDENCIES.txt
+ENV MECH_PARAMS=/bot.json
 USER 65534:65534
-ENTRYPOINT ["python3", "-B", "-u", "-m", "sentinel.main"]
+WORKDIR /tmp
+ENTRYPOINT ["/usr/local/bin/automata"]

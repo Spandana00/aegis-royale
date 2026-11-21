@@ -74,23 +74,35 @@ def main():
               'pilot/state.py','pilot/threats.py','pilot/navbake.npz']:
         if (ROOT/p).read_bytes()!=read(BASE,p):
             raise SystemExit(f'Unexpected change outside documented policy: {p}')
-    active=json.loads((ROOT/'docs/sentinel_manifest.json').read_text())
+    sentinel=json.loads((ROOT/'docs/sentinel_manifest.json').read_text())
+    for entry in sentinel['files']:
+        if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
+            raise SystemExit(f'Historical V13 source changed: {entry["path"]}')
+    active=json.loads((ROOT/'docs/automata_manifest.json').read_text())
     for entry in active['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
-            raise SystemExit(f'Active source changed: {entry["path"]}')
+            raise SystemExit(f"Active Rust source changed: {entry['path']}")
+    for path, expected in active['packaging_sha256'].items():
+        if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=expected:
+            raise SystemExit(f"Active packaging changed: {path}")
+    history=json.loads((ROOT/'docs/v14_official_history.json').read_text())
+    rows.append({'version':'v13','commit':history['baseline']['commit'],
+                 'user_reported_scores':[5.79], 'receipt':'BB-EDE179C7',
+                 'runtime_sha256':{e['path']:e['sha256'] for e in sentinel['files']}})
     print(json.dumps({
         'kind':'source provenance and reported scores; not a local scorer',
         'score_source':'user-supplied submission screenshots and follow-up score reports',
-        'reference_commit':BASE,'reference_score':5.33,'matches_per_run':48,
-        'minimum_extra_integer_placement_points_to_reach_5_50':8,
-        'minimum_extra_integer_placement_points_to_reach_6_00':32,
-        'runs':rows,
-        'candidate':{'name':'AEGIS v13','official_score':None,
-                     'active_entrypoint':'python3 -B -u -m sentinel.main','legacy_v9_source_preserved':True,
-                     'policy_source':active['upstream_repository'],'policy_commit':active['upstream_commit'],
-                     'reported_upstream_best':active['reported_official_score'],
-                     'upstream_score_independently_verified':False,'only_source_edits':active['allowed_changes'],
-                     'retained_pilot_experiments_active_in_image':False}
+        'reference_commit':history['baseline']['commit'],'reference_score':5.79,
+        'matches_per_run':48,'minimum_extra_integer_placement_points_to_reach_6_20':20,
+        'minimum_displayed_score_at_or_above_6_20':6.21,'runs':rows,
+        'candidate':{'name':'AEGIS v14','official_score':None,
+                     'active_entrypoint':'/usr/local/bin/automata',
+                     'policy_source':active['upstream_repository'],
+                     'policy_commit':active['upstream_commit'],
+                     'published_board_evidence':active['published_board_evidence'],
+                     'exact_scored_commit_independently_verified':False,
+                     'only_source_edits':active['allowed_changes'],
+                     'historical_policies_active_in_image':False}
     },indent=2))
 
 

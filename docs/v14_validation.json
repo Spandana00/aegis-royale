@@ -1,0 +1,32 @@
+{
+  "candidate": "AEGIS v14",
+  "policy_commit": "f114d641a0de0c565dc057e342b4305b8cfe6d53",
+  "official_score": null,
+  "python_tests": {
+    "passed": 111
+  },
+  "rust_tests": {
+    "passed": 19,
+    "ignored_upstream_optional": 1,
+    "fixtures": "actual campus arena, recorded stream, NAV_MAP, MECH_MAP and MECH_STREAM set",
+    "includes": "recorded 300-observation regression, 400-observation synthetic stress, map geometry and navigation tests"
+  },
+  "native_conformance": {
+    "observations": 300,
+    "on_time": 300,
+    "late": 0,
+    "dropped": 0,
+    "wrong_tick": 0,
+    "bad_lines": 0,
+    "ready_ms": 399,
+    "p50_ms": 0.3,
+    "p90_ms": 0.5,
+    "p99_ms": 5.6,
+    "max_ms": 12.8,
+    "limits": "Unrestricted host, not the single-CPU competition container."
+  },
+  "diagnostic_matches": 368,
+  "diagnostic_late_replies": 0,
+  "diagnostic_tracebacks": 0,
+  "container_validation": "GitHub Actions runs the actual final image with 1 CPU, 512 MiB, no network and read-only filesystem; see checks on the submitted commit."
+}

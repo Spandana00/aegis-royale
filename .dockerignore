@@ -1,4 +1,6 @@
 *
-!sentinel/
-!sentinel/**
+!automata/
+!automata/**
+automata/target/
 !Dockerfile
+!RUST_LICENSES.txt

@@ -1,0 +1,62 @@
+{
+  "matches_per_practice": 48,
+  "target_mean_at_least": 6.2,
+  "minimum_integer_total": 298,
+  "minimum_displayed_score": 6.21,
+  "baseline": {
+    "version": "v13",
+    "commit": "5cf4fe8b8bf0992517575fe76ed35abb21f9ecc1",
+    "score": 5.79,
+    "receipt": "BB-EDE179C7",
+    "integer_total": 278,
+    "source": "user screenshot image(3).png"
+  },
+  "extra_total_placement_points_needed": 20,
+  "past_user_reported": {
+    "v1": [
+      3.75
+    ],
+    "v2": [
+      4.5
+    ],
+    "v3": [
+      3.96
+    ],
+    "v4": [
+      4.4
+    ],
+    "v5": [
+      4.17,
+      4.15
+    ],
+    "v6": [
+      4.46
+    ],
+    "v7": [
+      4.6,
+      4.52
+    ],
+    "v8": [
+      4.6
+    ],
+    "v9": [
+      4.77
+    ],
+    "v10": [
+      5.33
+    ],
+    "v11": [
+      5.25
+    ],
+    "v12": [
+      5.02
+    ],
+    "v13": [
+      5.79
+    ]
+  },
+  "limits": [
+    "Aggregate official scores do not identify individual-match causes.",
+    "Our V13 receipt is verified from the supplied screenshot; other teams exact scored commit mappings require published records."
+  ]
+}

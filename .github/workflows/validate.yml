@@ -3,20 +3,39 @@ on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
+  source-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Build pinned Python audit environment
+        run: docker build -f check/Dockerfile.audit -t aegis-audit check
+      - name: Source provenance and retained policy regression tests
+        run: >-
+          docker run --rm --network none --cpus 1 --memory 512m
+          --memory-swap 512m --pids-limit 128 --cap-drop ALL --read-only
+          --tmpfs /tmp:rw,size=64m --user 65534:65534
+          -v "$PWD:/source:ro" -w /source aegis-audit
+          -m unittest discover -s tests -v
   validate:
     runs-on: ubuntu-24.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
-      - name: Build linux/amd64 image
-        run: docker build --platform linux/amd64 -t aegis-royale .
-      - name: Policy provenance and regression tests in the pinned image
-        run: >-
-          docker run --rm --network none --cpus 1 --memory 512m
-          --memory-swap 512m --pids-limit 128 --cap-drop ALL --read-only
-          --tmpfs /tmp:rw,size=64m --user 65534:65534
-          -v "$PWD:/source:ro" -w /source --entrypoint python3 aegis-royale
-          -B -m unittest discover -s tests -v
+      - name: Build linux/amd64 competition and test images
+        run: |
+          docker build --platform linux/amd64 --target build -t aegis-rust-build .
+          docker build --platform linux/amd64 -t aegis-royale .
+      - name: Native Rust tests with actual map and recorded observations
+        run: |
+          python3 -c "import gzip,pathlib; pathlib.Path('check/stream.jsonl').write_bytes(gzip.open('check/stream.jsonl.gz','rb').read())"
+          docker run --rm --network none \
+            -v "$PWD/arena:/kit/arena:ro" \
+            -v "$PWD/check/stream.jsonl:/stream.jsonl:ro" \
+            -e MECH_MAP=/kit/arena -e NAV_MAP=/kit/arena \
+            -e MECH_STREAM=/stream.jsonl -e MECH_PARAMS=/src/bot.json \
+            --entrypoint cargo aegis-rust-build \
+            test --release --locked --offline -- --test-threads=1
       - name: Official conformance check in the competition sandbox
         run: >-
           python3 check/check.py --map-dir /arena --

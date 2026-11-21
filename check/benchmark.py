@@ -20,7 +20,7 @@ from check import Schema
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--policy',choices=('v9','pilot','active'),default='active')
+    parser.add_argument('--policy',choices=('v9','pilot','sentinel'),required=True)
     args=parser.parse_args()
     with gzip.open(ROOT / 'check/stream.jsonl.gz', 'rt') as f:
         messages = [json.loads(line) for line in f]
@@ -192,11 +192,11 @@ def main():
                       process_deadline_guard_tested=False)
         if bot.policy.errors:
             failures.append({'module_errors':bot.policy.errors})
-    elif args.policy=='active':
+    elif args.policy=='sentinel':
         report.pop('observations_with_learned_aim')
         report.pop('observations_with_tactical_collection')
         report.update(mode_counts=dict(modes), module_errors={},
-                      active_package='sentinel', process_deadline_guard_tested=False)
+                      historical_package='sentinel', process_deadline_guard_tested=False)
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:
         sys.exit(1)

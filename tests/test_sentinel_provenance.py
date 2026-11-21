@@ -26,10 +26,10 @@ class SentinelProvenanceTests(unittest.TestCase):
             self.assertEqual(hashlib.sha1(blob).hexdigest(), entry['source_git_blob'], entry['path'])
 
     def test_competition_image_runs_the_audited_policy(self):
-        docker = (ROOT / 'Dockerfile').read_text()
+        docker = (ROOT / 'Dockerfile.v13').read_text()
         self.assertIn('COPY sentinel/ /app/sentinel/', docker)
         self.assertIn('"-m", "sentinel.main"', docker)
-        ignore = (ROOT / '.dockerignore').read_text()
+        ignore = (ROOT / '.dockerignore.v13').read_text()
         self.assertIn('!sentinel/**', ignore)
         manifest = json.loads((ROOT / 'docs/sentinel_manifest.json').read_text())
         for filename, expected in manifest['packaging_sha256'].items():
