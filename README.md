@@ -1,6 +1,7 @@
 # AEGIS Royale
 
-Current candidate: **AEGIS v2**. See [the v2 changes and validation](docs/V2.md).
+Current candidate: **AEGIS v3**. See [the survival policy changes](docs/V3.md).
+The previous v2 submission remains available for comparison.
 
 A Python bot for Builders Mech Royale. No API keys, paid services, runtime
 network calls, or third-party Python dependencies.

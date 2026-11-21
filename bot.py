@@ -52,7 +52,7 @@ def future_zone(zone, now, ahead):
 
 
 class Bot:
-    name = 'AEGIS v2'
+    name = 'AEGIS v3'
 
     def __init__(self, hello):
         self.config = hello['config']
@@ -80,6 +80,11 @@ class Bot:
         self.loot_blacklist = {}
         self.scan_yaw = None
         self.direct_ids = set()
+        self.recovering = False
+        self.pressured = False
+        self.recent_damage = deque()
+        self.last_attacker = None
+        self.last_attack_yaw = None
 
     def reachable_cell(self, pos, goal):
         start = self.nav.nearest(*pos[:2])
@@ -88,6 +93,9 @@ class Bot:
 
     def remember(self, obs):
         now, me = obs['t'], obs['self']
+        while self.recent_damage and now - self.recent_damage[0][0] > 2.:
+            self.recent_damage.popleft()
+        worst_hit = None
         for group, saved in self.items.items():
             seen = {item['id'] for item in obs.get(group, [])}
             for item in obs.get(group, []):
@@ -103,6 +111,10 @@ class Bot:
         for event in obs.get('events', []):
             if event['type'] == 'damaged' and event.get('weapon') != 'zone':
                 self.last_harm = now
+                amount = max(0., event.get('amount', 0.))
+                self.recent_damage.append((now, amount))
+                if worst_hit is None or amount > worst_hit.get('amount', 0):
+                    worst_hit = event
             if event['type'] in ('hit', 'damaged'):
                 self.last_combat = now
             if event['type'] == 'took':
@@ -114,6 +126,9 @@ class Bot:
                     item['hp'] = item.get('hp', 300) - event['amount']
                     if item['hp'] <= 0:
                         self.items['crates'].pop(event['target'], None)
+        if worst_hit is not None:
+            self.last_attacker = worst_hit.get('by')
+            self.last_attack_yaw = worst_hit.get('bearing')
         for enemy in obs.get('mechs', []):
             self.enemies[enemy['id']] = (enemy, now)
         self.enemies = {i: v for i, v in self.enemies.items() if now - v[1] < 5.1}
@@ -209,12 +224,58 @@ class Bot:
         distance = math.dist(pos[:2], center)
         safe = max(0., radius - max(12., obs['self']['stats'].get('radius', 2.5) + 6.))
         urgent = distance > safe
+        # A building detour can take longer than a fixed 12-second look-ahead.
+        # Reserve travel time to the next circle before its shrink completes.
+        next_safe = max(0., zone['next_radius'] - max(18., obs['self']['stats'].get('radius', 2.5) + 10.))
+        next_distance = math.dist(pos[:2], zone['next_center'])
+        travel_distance = max(0., next_distance - next_safe)
+        travel_time = 1.5 * travel_distance / max(8., obs['self']['stats']['walk_speed']) + 9.
+        if travel_distance > 12 and zone['shrink_end'] - now < travel_time + 6.:
+            ux, uy = unit(pos[0] - zone['next_center'][0], pos[1] - zone['next_center'][1])
+            inset = max(0., next_safe - 20.)
+            return [zone['next_center'][0] + ux * inset, zone['next_center'][1] + uy * inset], True
         if urgent:
             # Move well inside, avoiding repeated stops exactly on the edge.
             inset = max(0., safe - 28.)
             ux, uy = unit(pos[0] - center[0], pos[1] - center[1])
             return [center[0] + ux * inset, center[1] + uy * inset], True
         return center, False
+
+    def healing_drop(self, obs, enemies):
+        """Finish a safe near-complete capture or use a nearby uncontested repair."""
+        me, now = obs['self'], obs['t']
+        incoming = sum(amount for t, amount in self.recent_damage) / 2.
+        best, chosen = -1., None
+        for drop in obs.get('drops', []):
+            p = drop['pos']
+            d = math.dist(me['pos'][:2], p[:2])
+            if abs(p[2] - me['pos'][2]) > 4. or d > 55.:
+                continue
+            holding = drop['holder'] == me['id'] and d < drop['radius']
+            remaining = max(0., drop['capture_s'] - (drop['progress'] if holding else 0.))
+            finishing = holding and drop['lands_in'] <= 0 and remaining <= 1.3
+            if not finishing and me['hp'] > me['max_hp'] * .72:
+                continue
+            walk_time = max(0., d - drop['radius'] + 2.) / max(8., me['stats']['walk_speed'])
+            if drop['lands_in'] > walk_time + 1.:
+                continue
+            needed = max(walk_time, drop['lands_in']) + remaining
+            center, radius = future_zone(obs['zone'], now, needed + .8)
+            if math.dist(p[:2], center) > radius - me['stats'].get('radius', 2.5) - 2.:
+                continue
+            contested = False
+            for enemy in enemies:
+                ed = math.dist(enemy['pos'][:2], p[:2])
+                eta = max(0., ed - drop['radius'] - 5.) / max(10., self.config['mech']['boost_speed'])
+                if eta < needed + .5:
+                    contested = True
+                    break
+            if contested or (incoming > 0 and me['hp'] < incoming * needed * 1.25 + 35.):
+                continue
+            value = (1000. if finishing else me['max_hp'] - me['hp']) / (needed + 1.)
+            if value > best:
+                best, chosen = value, drop
+        return chosen
 
     def loot_score(self, obs, p, value, enemies):
         me, zone = obs['self'], obs['zone']
@@ -224,7 +285,13 @@ class Bot:
         c, r = future_zone(zone, obs['t'], d / max(8., me['stats']['walk_speed']) + 7.)
         if math.dist(p[:2], c) > r - 6:
             return -1.
-        danger = sum(max(0., 1 - math.dist(p[:2], e['pos'][:2]) / 65.) for e in enemies)
+        danger = 0.
+        for e in enemies[:4]:
+            here = math.dist(me['pos'][:2], e['pos'][:2])
+            there = math.dist(p[:2], e['pos'][:2])
+            danger += max(0., 1 - there / 100.)
+            if me['hp'] < me['max_hp'] * .85 and there < 110 and there + 10 < here:
+                return -1.
         return value / (d + 16.) - danger * 2.5
 
     def choose_goal(self, obs, enemies, target, solutions):
@@ -234,26 +301,51 @@ class Bot:
         ratio = me['hp'] / me['max_hp']
         exposed = [e for e in enemies if e['id'] in self.direct_ids]
         close = [e for e in exposed if math.dist(pos[:2], e['pos'][:2]) < 115]
-        # Stay in recovery until substantially healed. The old policy resumed
-        # firing at half health and repeatedly reset its own regeneration.
-        recovering = (ratio < .5 or (self.mode == 'recover' and ratio < .88)
-                      or (ratio < .72 and len(close) > 1))
-        if target and len(close) <= 1 and target.get('hp', 1400) < min(220., me['hp'] * .3):
-            recovering = False
+        attackers = []
+        for e in exposed:
+            d = math.dist(pos[:2], e['pos'][:2])
+            toward = math.atan2(pos[1] - e['pos'][1], pos[0] - e['pos'][0])
+            facing = abs(angle(toward - e.get('aim', [toward, 0])[0])) < .65
+            if d < 90 or (d < 180 and facing):
+                attackers.append(e)
+        self.pressured = len(attackers) >= 2
+        burst = sum(amount for t, amount in self.recent_damage)
+        high_burst = burst > me['max_hp'] * .22 and ratio < .85
+        was_recovering = self.recovering or self.mode == 'recover'
+        self.recovering = bool(ratio < .55 or (was_recovering and ratio < .90)
+                               or high_burst or (self.pressured and ratio < .82))
+        # A close, nearly finished opponent can end incoming fire promptly;
+        # a distant low-HP target is not a reason to cancel healing.
+        if (target and target.get('kind') == 'mech' and len(attackers) <= 1
+                and not high_burst and ratio > .35
+                and target.get('hp', 1400) < min(90., me['hp'] * .15)
+                and math.dist(pos[:2], target['pos'][:2]) < 80):
+            self.recovering = False
         if urgent:
             self.mode, self.goal_id = 'zone', None
             return safe
-        if recovering and (enemies or self.mode == 'recover'):
+        repair = self.healing_drop(obs, enemies)
+        if repair is not None:
+            self.mode, self.goal_id = 'drop', repair['id']
+            return repair['pos'][:2]
+        if self.recovering:
             self.mode, self.goal_id = 'recover', None
             if enemies:
                 return self.find_cover(obs, exposed or enemies)
             return me['pos'][:2]
+        if self.pressured and ratio < .92:
+            self.mode, self.goal_id = 'cover', None
+            return self.find_cover(obs, attackers)
         best, goal, gid, mode = .22, None, None, 'explore'
         secondary = next((w for w in me['weapons'] if w and w['kind'] != 'gun'), None)
         for iid, (item, last) in self.items['cubes'].items():
             if self.loot_blacklist.get(iid, 0) > now:
                 continue
-            value = 105. if me.get('cubes', 0) < 10 else 50.
+            count = me.get('cubes', 0)
+            cap = self.config['cubes'].get('stat_cap', 10)
+            value = 105. if count < cap else (65. if count + 1 in self.config['cubes'].get('upgrade_thresholds', []) else 0.)
+            if value <= 0:
+                continue
             score = self.loot_score(obs, item['pos'], value, close)
             if self.goal_id == iid:
                 score *= 1.16
@@ -278,11 +370,7 @@ class Bot:
             score = self.loot_score(obs, drop['pos'], value, close)
             if score > best:
                 best, goal, gid, mode = score, drop['pos'], drop['id'], 'drop'
-        if ratio < .48 and enemies and min(math.dist(e['pos'][:2], me['pos'][:2]) for e in enemies) < 155:
-            if mode != 'drop' or goal is None or math.dist(me['pos'][:2], goal[:2]) > 18:
-                self.mode, self.goal_id = 'recover', None
-                return self.find_cover(obs, enemies)
-        if not close and ratio > .72:
+        if not close and ratio > .72 and (me.get('cubes', 0) < self.config['cubes'].get('stat_cap', 10) or secondary is None):
             for iid, (item, last) in self.items['crates'].items():
                 if self.loot_blacklist.get(iid, 0) > now:
                     continue
@@ -292,7 +380,7 @@ class Bot:
         # A lone pursuer is an opportunity; preserve distance from groups.
         if target and target['kind'] == 'mech' and solutions:
             d = math.dist(pos[:2], target['pos'][:2])
-            if len(close) <= 1 and ratio > .5 and (goal is None or d < 65 or best < 1.1):
+            if len(close) <= 1 and not self.pressured and ratio > .55 and (goal is None or d < 65 or best < 1.1):
                 self.mode, self.goal_id = 'fight', target['id']
                 return target['pos'][:2]
         if target and target['kind'] == 'npc' and not close and ratio > .72:
@@ -325,9 +413,10 @@ class Bot:
         center, radius = future_zone(obs['zone'], now, 12)
         best, goal = float('inf'), list(center)
         closest = sorted(enemies, key=lambda e: math.dist(e['pos'][:2], pos[:2]))[:3]
-        for i in range(16):
-            a = i * TAU / 16
-            p = [pos[0] + 37. * math.cos(a), pos[1] + 37. * math.sin(a)]
+        for i in range(24):
+            a = (i % 12) * TAU / 12
+            search_radius = 25. if i < 12 else 60.
+            p = [pos[0] + search_radius * math.cos(a), pos[1] + search_radius * math.sin(a)]
             k = self.reachable_cell(pos, p)
             if k is None:
                 continue
@@ -339,7 +428,9 @@ class Bot:
             for e in closest:
                 dist = math.dist(p, e['pos'][:2])
                 cost += 100. / (dist + 5.)
-                if self.world.clear_ray(self.enemy_center(e), [p[0], p[1], h + me['stats'].get('height', 9) * .7]):
+                enemy_scale = 1 + self.config['cubes'].get('size_per_cube', .05) * e.get('cubes', 0)
+                source = [e['pos'][0], e['pos'][1], e['pos'][2] + self.config['mech']['muzzle_height'] * enemy_scale]
+                if self.world.clear_ray(source, [p[0], p[1], h + me['stats'].get('height', 9) * .9]):
                     cost += 9. * max(.15, 1 - dist / 250.)
             if cost < best:
                 best, goal = cost, p
@@ -350,8 +441,11 @@ class Bot:
         me, now = obs['self'], obs['t']
         enemies = [e for e in obs['mechs'] if e['kind'] == 'mech']
         candidates = enemies[:]
-        if not enemies and me['hp'] > me['max_hp'] * .65:
-            candidates += [e for e in obs['mechs'] if e['kind'] == 'npc' and math.dist(e['pos'][:2], me['pos'][:2]) < 75]
+        if not enemies and not self.recovering and me['hp'] > me['max_hp'] * .75:
+            candidates += [e for e in obs['mechs'] if e['kind'] == 'npc'
+                           and math.dist(e['pos'][:2], me['pos'][:2]) < 75
+                           and (me.get('cubes', 0) < self.config['cubes'].get('stat_cap', 10)
+                                or math.dist(e['pos'][:2], me['pos'][:2]) < 45)]
         candidates.sort(key=lambda e: math.dist(e['pos'][:2], me['pos'][:2]))
         best, target, solutions = -1., None, {}
         self.direct_ids = set()
@@ -372,6 +466,8 @@ class Bot:
             score = 1500 / (hp + 300) + 75. / (d + 30)
             if e['id'] == self.target_id:
                 score += .6
+            if e['id'] == self.last_attacker and now - self.last_harm < 1.:
+                score += .8
             if e.get('charging'):
                 score += .5
             if e['kind'] == 'npc':
@@ -392,7 +488,9 @@ class Bot:
         elif secondary and secondary['kind'] == 'lightning':
             # Commit to the short-range weapon against an isolated opponent;
             # keep gun distance while outnumbered or short of energy.
-            if len(self.direct_ids) <= 1 and me['energy'] > 20 and me['hp'] > .58 * me['max_hp']:
+            easy_finish = target is not None and target.get('hp', 1400) < me['hp'] * .35
+            healthy_commit = me['hp'] > .86 * me['max_hp'] and me['energy'] > 45
+            if len(self.direct_ids) <= 1 and not self.pressured and not self.recovering and me['energy'] > 30 and (healthy_commit or easy_finish):
                 preferred = secondary['stats']['range'] * .82
             else:
                 preferred = 92.
@@ -595,8 +693,8 @@ class Bot:
                 # it at an incompatible hitscan/ballistic aim for an entire clip.
                 compatible = abs(angle(wy - yaw)) < math.atan2(radius, d) + .035 and abs(wp - pitch) < math.atan2(height * .5, d) + .025
                 action['fire'][i] = bool(aligned and compatible and w.get('reload', 0) <= 0 and w.get('ammo', 0) > 0)
-        healing = self.mode == 'recover' or (self.mode == 'cover' and me['hp'] < me['max_hp'] * .7)
-        if healing and obs['t'] - self.last_harm > 1.5:
+        healing = self.recovering or self.mode == 'recover' or (self.mode == 'cover' and me['hp'] < me['max_hp'] * .7)
+        if healing and (target.get('kind') != 'mech' or obs['t'] - self.last_harm > 1.5):
             action['fire'] = [False, False]
 
     def act(self, obs):
@@ -647,6 +745,13 @@ class Bot:
                 else:
                     self.scan_yaw = angle((self.scan_yaw if self.scan_yaw is not None else me['aim'][0]) + .14)
                 action['aim'] = [self.scan_yaw, 0.]
+        # While withdrawing, face the latest substantial incoming hit instead
+        # of exposing rear armor to pursue a different target's low HP.
+        if (self.recovering and self.last_attack_yaw is not None
+                and now - self.last_harm < 1.2
+                and (target is None or target.get('id') != self.last_attacker)):
+            action['aim'] = [self.last_attack_yaw, 0.]
+            action['fire'] = [False, False]
         for w in slots:
             if w and w['kind'] == 'gun' and w.get('reload', 0) == 0:
                 magazine = w['stats']['mag']

@@ -72,6 +72,20 @@ class TacticsTests(unittest.TestCase):
         o['zone'].update(center=self.start[:2], next_center=self.start[:2],radius=300,next_radius=200)
         return o
 
+    def setUp(self):
+        # Each tactical scenario starts independently; retain only static map data.
+        b=self.bot
+        b.mode='explore';b.goal=None;b.goal_id=None;b.target_id=None
+        b.last_harm=-100.;b.last_combat=-100.;b.last_move=(0.,0.)
+        b.direct_ids=set();b.history.clear();b.cover_goal=None;b.cover_time=-100.
+        b.escaping_until=-100.;b.loot_blacklist={}
+        b.items={key:{} for key in ('crates','cubes','pickups')}
+        b.enemies={}
+        if hasattr(b,'recovering'):
+            b.recovering=False;b.pressured=False
+            b.recent_damage.clear()
+            b.last_attacker=None;b.last_attack_yaw=None
+
     def enemy(self, o, distance=80, **kwargs):
         x,y,z = o['self']['pos']
         e = {'id':5,'kind':'mech','pos':[x+distance,y,self.bot.world.ground(x+distance,y)],
@@ -238,6 +252,67 @@ class TacticsTests(unittest.TestCase):
         a=self.bot.act(o)
         self.assertTrue(a['fire'][0])
         self.assertFalse(a['fire'][1])
+
+    def test_healing_suppresses_fire_during_zone_rotation(self):
+        o=self.scenario();o['self']['hp']=730;e=self.enemy(o);o['mechs']=[e]
+        self.bot.mode='recover';self.bot.last_harm=-3.
+        x,y,z=o['self']['pos']
+        o['zone'].update(center=[x-80,y],radius=100,next_center=[x-80,y],next_radius=25,shrink_start=0,shrink_end=20)
+        sol=self.bot.firing_solution(o['self'],e,o['self']['weapons'][0]);o['self']['aim']=list(sol[:2])
+        a=self.bot.act(o)
+        self.assertEqual(self.bot.mode,'zone')
+        self.assertEqual(a['fire'],[False,False])
+
+    def test_large_damage_burst_triggers_early_recovery(self):
+        o=self.scenario();o['self']['hp']=1000;o['mechs']=[self.enemy(o)]
+        o['events']=[{'type':'damaged','amount':400,'weapon':'laser','bearing':0.,'by':5}]
+        self.bot.act(o)
+        self.assertEqual(self.bot.mode,'recover')
+
+    def test_does_not_chase_into_lightning_range_while_depleted(self):
+        o=self.scenario();o['self']['hp']=900;o['self']['energy']=80
+        o['self']['weapons'][1]=self.weapon('lightning')
+        e=self.enemy(o);self.bot.direct_ids={e['id']}
+        self.assertGreaterEqual(self.bot.engagement_distance(o,e),75)
+
+    def test_finishes_imminent_safe_supply_drop_before_retreat(self):
+        o=self.scenario();o['self']['hp']=300;o['mechs']=[self.enemy(o,distance=100)]
+        o['drops']=[{'id':20000,'pos':o['self']['pos'][:],'radius':8,'lands_in':0,'capture_s':4,'progress':3.8,'holder':o['self']['id']}]
+        self.bot.act(o)
+        self.assertEqual(self.bot.mode,'drop')
+        self.assertEqual(self.bot.goal_id,20000)
+
+    def test_does_not_seek_more_cubes_at_stat_cap(self):
+        o=self.scenario();o['self']['cubes']=10;x,y,z=o['self']['pos']
+        o['cubes']=[{'id':5001,'pos':[x+20,y,z]}]
+        self.bot.act(o)
+        self.assertNotEqual(self.bot.goal_id,5001)
+
+    def test_rotates_early_for_a_long_zone_crossing(self):
+        o=self.scenario();x,y,z=o['self']['pos']
+        o['zone'].update(center=[x,y],radius=400,next_center=[x-220,y],next_radius=100,shrink_start=10,shrink_end=25)
+        goal,urgent=self.bot.safe_goal(o)
+        self.assertTrue(urgent)
+        self.assertLess(goal[0],x-100)
+
+    def test_seeks_cover_beyond_the_old_nearby_search(self):
+        o=self.scenario();e=self.enemy(o);x,y,z=o['self']['pos']
+        with patch.object(self.bot.world,'clear_ray',side_effect=lambda a,b:b[1] <= y+42):
+            goal=self.bot.find_cover(o,[e])
+        self.assertGreater(goal[1],y+42)
+
+    def test_does_not_wait_on_a_contested_healing_drop(self):
+        o=self.scenario();o['self']['hp']=300;o['mechs']=[self.enemy(o,distance=4)]
+        o['drops']=[{'id':20000,'pos':o['self']['pos'][:],'radius':8,'lands_in':0,'capture_s':4,'progress':3.8,'holder':o['self']['id']}]
+        self.bot.act(o)
+        self.assertNotEqual(self.bot.mode,'drop')
+
+    def test_protects_rear_armor_while_withdrawing_from_unseen_attacker(self):
+        o=self.scenario();o['self']['hp']=500;o['mechs']=[self.enemy(o)]
+        o['events']=[{'type':'damaged','amount':100,'weapon':'gun','bearing':math.pi,'by':9,'rear':True}]
+        a=self.bot.act(o)
+        self.assertAlmostEqual(abs(a['aim'][0]),math.pi)
+        self.assertEqual(a['fire'],[False,False])
 
 
 if __name__=='__main__':
