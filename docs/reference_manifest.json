@@ -123,7 +123,8 @@
       "inventory",
       "summary"
     ],
-    "protected_brain_ast_sha256": "0211daee496effc6563a3b4f1e2b0201f3ac4884bcb0ea6e0ea3b761d3f4e489",
-    "numeric_guard": "their_ttk = max(ehp, 1.0) / inc"
+    "protected_brain_ast_sha256": "489aff22980b548c4e83018c0c22fe9efe0490f1fcb42178b7a7dea802c8b82e",
+    "numeric_guard": "their_ttk = max(ehp, 1.0) / inc",
+    "fingerprint_format": "Canonical JSON of AST types and named fields, excluding optional None fields"
   }
 }

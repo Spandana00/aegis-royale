@@ -9,6 +9,7 @@ import unittest
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT))
+from source_fingerprint import stable_ast_dump
 
 
 class ProvenanceTests(unittest.TestCase):
@@ -41,7 +42,7 @@ class ProvenanceTests(unittest.TestCase):
         module=ast.parse(text)
         module.body=[n for n in module.body if not(isinstance(n,ast.FunctionDef)
                      and n.name in scope['modified_functions'])]
-        digest=hashlib.sha256(ast.dump(module,include_attributes=False).encode()).hexdigest()
+        digest=hashlib.sha256(stable_ast_dump(module).encode()).hexdigest()
         self.assertEqual(digest,scope['protected_brain_ast_sha256'])
 
 

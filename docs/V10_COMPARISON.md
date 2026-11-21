@@ -61,8 +61,8 @@ the retained V9 implementation, not the active image.
 
 The image matches upstream's pinned Python base and NumPy 2.5.5 dependency.
 The arena is mounted read-only at `/arena`; the route cache is packaged.
-Our local host uses Python 3.11 / NumPy 2.3.5, so CI additionally tests the
-actual pinned image rather than assuming native tests establish compatibility.
+The local host's Python environment differs from the pinned image, so CI also
+tests that image rather than assuming native checks establish compatibility.
 
 The active policy passes all 300 organizer stream observations with no late
 answers. Its 840-observation direct-policy stress check has zero invalid

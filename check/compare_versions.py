@@ -4,8 +4,11 @@ import hashlib
 import json
 from pathlib import Path
 import subprocess
+import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT))
+from source_fingerprint import stable_ast_dump
 BASE='d75253a91ccb4d199d4374c076ee0d58c383e590'
 VERSIONS=[
     ('v1','cf2994318977d241b5c65b16eea33a4163cb0be8',[3.75]),
@@ -27,7 +30,7 @@ def read(ref,path):
 
 def methods(source):
     cls=next(n for n in ast.parse(source).body if isinstance(n,ast.ClassDef) and n.name=='Bot')
-    return {n.name:ast.dump(n,include_attributes=False) for n in cls.body if isinstance(n,ast.FunctionDef)}
+    return {n.name:stable_ast_dump(n) for n in cls.body if isinstance(n,ast.FunctionDef)}
 
 
 def main():
@@ -61,7 +64,7 @@ def main():
     module=ast.parse(brain_text)
     scope=manifest['tactical_scope']
     module.body=[n for n in module.body if not(isinstance(n,ast.FunctionDef) and n.name in scope['modified_functions'])]
-    if hashlib.sha256(ast.dump(module,include_attributes=False).encode()).hexdigest()!=scope['protected_brain_ast_sha256']:
+    if hashlib.sha256(stable_ast_dump(module).encode()).hexdigest()!=scope['protected_brain_ast_sha256']:
         raise SystemExit('Brain changed outside the documented armament functions')
     for p in ['pilot/arena.py','pilot/navigate.py','pilot/navigate3.py','pilot/combat.py','pilot/ballistics.py',
               'pilot/state.py','pilot/threats.py','pilot/navbake.npz','Dockerfile','.dockerignore']:
