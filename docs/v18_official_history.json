@@ -1,0 +1,117 @@
+{
+  "matches_per_practice": 48,
+  "minimum_integer_total": 317,
+  "minimum_displayed_score": 6.6,
+  "baseline": {
+    "version": "v17",
+    "commit": "e45e734215354fc4f938af15c984a666f446a426",
+    "score": 6.27,
+    "receipt": "BB-961EADA2",
+    "integer_total": 301,
+    "source": "User screenshot image(8).png, commit prefix e4; corresponds to the handed-off V17 commit. Displayed 6.27 is 301/48, rounded."
+  },
+  "extra_total_placement_points_needed": 16,
+  "past_user_reported": {
+    "v1": [
+      3.75
+    ],
+    "v2": [
+      4.5
+    ],
+    "v3": [
+      3.96
+    ],
+    "v4": [
+      4.4
+    ],
+    "v5": [
+      4.17,
+      4.15
+    ],
+    "v6": [
+      4.46
+    ],
+    "v7": [
+      4.6,
+      4.52
+    ],
+    "v8": [
+      4.6
+    ],
+    "v9": [
+      4.77
+    ],
+    "v10": [
+      5.33
+    ],
+    "v11": [
+      5.25
+    ],
+    "v12": [
+      5.02
+    ],
+    "v13": [
+      5.79
+    ],
+    "v14": [
+      6.19
+    ],
+    "v15": [
+      6.15
+    ],
+    "v16": [
+      6.25
+    ],
+    "v17": [
+      6.27
+    ]
+  },
+  "limits": [
+    "Aggregate official scores do not identify individual-match causes.",
+    "Scores are rounded to two decimals; placement totals assume the published 48-game integer placement scoring.",
+    "The public leaderboard does not expose the 6.58 entry repository or commit."
+  ],
+  "target_mean_greater_than": 6.58,
+  "verified_public_leader": {
+    "score": 6.58,
+    "integer_total": 316,
+    "teams": [
+      "2696"
+    ],
+    "source": "https://www.joinbuilders.org/buildathon/standings/builders",
+    "snapshot": "v18_public_standings.json",
+    "exact_scored_repository_and_commit": null
+  },
+  "latest_regression": {
+    "version": "v15",
+    "commit": "be6c83e043e7f604aa95d7f9c4f2e2f52c556f85",
+    "score": 6.15,
+    "receipt": "BB-05A9CC68",
+    "integer_total": 295,
+    "difference_from_v14_total": -2,
+    "source": "user-supplied screenshot image(6).png",
+    "attribution_limit": "Aggregate only; the separate changes were not officially ablated."
+  },
+  "deadline": {
+    "cutoff_at": "2026-11-22T16:00:00+00:00",
+    "local": "2026-11-22 11:00 America/New_York",
+    "source": "https://www.joinbuilders.org/buildathon/standings/builders"
+  },
+  "previous_champions": [
+    {
+      "version": "v16",
+      "commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+      "score": 6.25,
+      "receipt": "BB-0E038934",
+      "integer_total": 300,
+      "source": "User screenshot image(7).png, commit prefix 6e; corresponds to the handed-off V16 commit."
+    },
+    {
+      "version": "v14",
+      "commit": "3f08bd1311f93bde3696a2f5a295fd603e9e9fa0",
+      "score": 6.19,
+      "receipt": "BB-A804A35A",
+      "integer_total": 297
+    }
+  ]
+}

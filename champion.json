@@ -1,13 +1,13 @@
 {
-  "version": "v16",
-  "official_score": 6.25,
-  "placement_total": 300,
+  "version": "v17",
+  "official_score": 6.27,
+  "placement_total": 301,
   "matches": 48,
-  "receipt": "BB-0E038934",
-  "commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+  "receipt": "BB-961EADA2",
+  "commit": "e45e734215354fc4f938af15c984a666f446a426",
   "image_entrypoint": "/usr/local/bin/automata",
   "range_laser": 200,
-  "source_manifest": "docs/v16_manifest.json",
+  "source_manifest": "docs/v17_manifest.json",
   "promotion_rule": "Replace only after a higher official practice result with an exact public commit and successful container checks. Keep the previous scored commit available.",
-  "passed_exact_commit_ci": "https://github.com/Spandana00/aegis-royale/actions/runs/44970549705"
+  "passed_exact_commit_ci": "https://github.com/Spandana00/aegis-royale/actions/runs/44976821615"
 }

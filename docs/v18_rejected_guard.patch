@@ -1,0 +1,102 @@
+diff --git a/automata/src/brain/gear.rs b/automata/src/brain/gear.rs
+index f7d3854..b930462 100644
+--- a/automata/src/brain/gear.rs
++++ b/automata/src/brain/gear.rs
+@@ -245,7 +245,14 @@ impl Brain {
+         }
+         let d = dist(tr.pos_at(obs.t), obs.me.pos);
+         if self.gear_harmless(tr, obs.t, d) && !tr.has(WeaponKind::Laser) {
+-            pref.min(self.p.gear_easy_range)
++            let close = pref.min(self.p.gear_easy_range);
++            // Keep the anti-Lightning floor when the easy-target approach takes over.
++            // A Lightning loadout of our own still uses its existing rush distance.
++            if self.p.gear_lightning_guard && tr.has(WeaponKind::Lightning) && !Self::has_kind(obs, WeaponKind::Lightning) {
++                close.max(self.p.range_vs_lightning)
++            } else {
++                close
++            }
+         } else {
+             pref
+         }
+@@ -307,3 +314,61 @@ impl Brain {
+         None
+     }
+ }
++
++#[cfg(test)]
++mod range_tests {
++    use super::*;
++    use super::super::{memory::Track, Params};
++    use crate::{nav, proto, world, Shared};
++    use std::sync::Arc;
++
++    fn fixture(guard: bool, own: WeaponKind, enemy: WeaponKind) -> (Brain, Obs, Track) {
++        let hello = proto::Hello::default();
++        let world = world::World::empty();
++        let shared = Arc::new(Shared { nav: nav::Nav::build(&world, &hello.config.mech), world });
++        let p = Params { gear_on: 1.0, gear_easy_range: 55.0, gear_lightning_guard: guard, ..Params::default() };
++        let brain = Brain::with_params(&hello, shared, p);
++        let mut obs = Obs::default();
++        obs.me.weapons = [Some(proto::WeaponObs { kind: WeaponKind::Gun, ..Default::default() }),
++                         Some(proto::WeaponObs { kind: own, ..Default::default() })];
++        let tr = Track { id: 2, kind: ActorKind::Mech, pos: [60.0, 0.0, 0.0], vel: [0.0; 3],
++            acc: [0.0; 3], aim: [0.0; 2], hp: 1400.0, max_hp: 1400.0, cubes: 0.0,
++            weapons: vec![WeaponKind::Gun, enemy], charging: false, charge_since: 0.0,
++            last_seen: 0.0, dmg_to_us: 0.0, last_dmg_t: -1000.0 };
++        (brain, obs, tr)
++    }
++
++    #[test]
++    fn preserves_lightning_spacing_after_easy_approach() {
++        let (b, o, tr) = fixture(true, WeaponKind::Laser, WeaponKind::Lightning);
++        assert!(b.gear_harmless(&tr, o.t, 60.0));
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 70.0);
++        assert_eq!(b.gear_range(&o, &tr, 85.0), 70.0);
++    }
++
++    #[test]
++    fn disabled_guard_reproduces_previous_approach() {
++        let (b, o, tr) = fixture(false, WeaponKind::Laser, WeaponKind::Lightning);
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 55.0);
++    }
++
++    #[test]
++    fn preserves_weak_gun_approach_and_own_lightning_rush() {
++        let (b, o, tr) = fixture(true, WeaponKind::Laser, WeaponKind::Gun);
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 55.0);
++        let (b, o, tr) = fixture(true, WeaponKind::Lightning, WeaponKind::Lightning);
++        assert_eq!(b.gear_range(&o, &tr, 30.0), 30.0);
++    }
++
++    #[test]
++    fn preserves_laser_duel_and_inactive_gear_ranges() {
++        let (mut b, o, mut tr) = fixture(true, WeaponKind::Laser, WeaponKind::Laser);
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 200.0);
++        tr.weapons = vec![WeaponKind::Gun, WeaponKind::Lightning];
++        Arc::make_mut(&mut b.p).gear_on = 0.0;
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 200.0);
++        Arc::make_mut(&mut b.p).gear_on = 1.0;
++        Arc::make_mut(&mut b.p).gear_easy_range = 0.0;
++        assert_eq!(b.gear_range(&o, &tr, 200.0), 200.0);
++    }
++}
+diff --git a/automata/src/brain/params.rs b/automata/src/brain/params.rs
+index fb69c07..7edeb76 100644
+--- a/automata/src/brain/params.rs
++++ b/automata/src/brain/params.rs
+@@ -219,6 +219,7 @@ pub struct Params {
+     pub gear_farm: f64,
+     pub gear_farm_far: f64,
+     pub gear_easy_range: f64,
++    pub gear_lightning_guard: bool,
+     pub gear_boost_e: f64,
+     pub gear_sweep_every: f64,
+     pub gear_sweep_mech_r: f64,
+@@ -590,6 +591,7 @@ impl Default for Params {
+             gear_farm: 1.0,
+             gear_farm_far: 110.0,
+             gear_easy_range: 75.0,
++            gear_lightning_guard: false,
+             gear_boost_e: 60.0,
+             gear_sweep_every: 15.0,
+             gear_sweep_mech_r: 150.0,

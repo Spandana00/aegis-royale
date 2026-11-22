@@ -1,0 +1,24 @@
+{
+  "kind": "Replay associations, not independent causal effects or official statistics.",
+  "cohort": "80 fresh+holdout matches per arm",
+  "results": {
+    "control": {
+      "live_frames": 95509,
+      "incoming_gun_damage": 159967.89999999997,
+      "incoming_gun_damage_per_live_second": 16.748987006460123,
+      "close_nonlaser_fraction": 0.32542482907369985,
+      "laser_ever": 69,
+      "laser_by30": 46,
+      "short_events": 7
+    },
+    "spacing70": {
+      "live_frames": 110450,
+      "incoming_gun_damage": 187041.69999999995,
+      "incoming_gun_damage_per_live_second": 16.93451335445903,
+      "close_nonlaser_fraction": 0.33550022634676324,
+      "laser_ever": 69,
+      "laser_by30": 48,
+      "short_events": 13
+    }
+  }
+}

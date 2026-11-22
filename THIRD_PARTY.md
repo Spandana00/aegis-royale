@@ -1,5 +1,21 @@
 # Third-party software
 
+## Active V18 adaptation
+
+V17's official 6.27 champion is pinned at
+`e45e734215354fc4f938af15c984a666f446a426` (BB-961EADA2).
+V18 retains the complete MIT Automata foundation credited below, its 200 m
+laser range and V17 charge-first upgrade priority. It changes only the
+`gear_easy_range` configuration from 55 to 70 metres and the display name.
+No new third-party runtime code is imported. All original Rust algorithms
+remain intact; [the V18 manifest](docs/v18_manifest.json) records reversible
+configuration/name transformations for every original source blob.
+
+The independently written Lightning guard was rejected in diagnostics and
+removed from active source; its patch is archived outside the container.
+Public experiment logs were used as hypothesis evidence, with their claims
+and limits recorded in [the research ledger](docs/v18_research.json).
+
 ## V14 foundation and V15 adaptation
 
 The `automata/` tree is adapted from the MIT-licensed policy in

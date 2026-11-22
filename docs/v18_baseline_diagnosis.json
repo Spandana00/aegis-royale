@@ -1,0 +1,53 @@
+{
+  "kind": "V17 reconstructed replay diagnosis; no official match replay available.",
+  "matches": 80,
+  "scope": "80 V17 charge-priority fresh/holdout seeds, excluding development and FFA.",
+  "incoming_hit_damage": {
+    "gun": 172831.4999999993,
+    "mortar": 11997.100000000002,
+    "laser": 25098.400000000005,
+    "npc": 949.0,
+    "lightning": 911.6
+  },
+  "incoming_hits": {
+    "gun": 3530,
+    "mortar": 66,
+    "laser": 82,
+    "npc": 31,
+    "lightning": 15
+  },
+  "matches_affected": {
+    "gun": 79,
+    "laser": 40,
+    "mortar": 30,
+    "lightning": 6,
+    "npc": 9
+  },
+  "incoming_gun_damage_by_distance_metres": {
+    "<150": 28035.299999999974,
+    "<70": 55590.100000000115,
+    "<100": 70295.90000000011,
+    "<45": 16350.300000000001,
+    ">=150": 2559.900000000001
+  },
+  "incoming_gun_damage_by_attacker_loadout": {
+    "gun": 113040.70000000001,
+    "gun+laser": 15759.899999999958,
+    "gun+mortar": 14284.699999999984,
+    "gun+lightning": 29746.19999999997
+  },
+  "incoming_gun_damage_by_own_loadout": {
+    "gun": 7617.0000000000055,
+    "gun+laser": 143341.89999999985,
+    "gun+mortar": 3307.5999999999995,
+    "gun+lightning": 18564.999999999978
+  },
+  "laser_short_events": 10,
+  "laser_ever": 68,
+  "laser_by_30s": 49,
+  "limitations": [
+    "Distances use nearest saved two-tick replay frame; geometry only, not bot visibility.",
+    "Simulator opponents and escalation differ from the official squad.",
+    "Damage totals depend on survival and encounters."
+  ]
+}

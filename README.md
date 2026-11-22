@@ -1,83 +1,84 @@
 # AEGIS Royale
 
-**Selected official champion: V16, 6.25 (BB-0E038934), commit
-`6e6dd1310d32e79c45117b86dea00601eccf1e5e`. V17 is an unscored candidate.**
+**Selected official champion: V17, 6.27 (BB-961EADA2), commit
+`e45e734215354fc4f938af15c984a666f446a426`. V18 is an unscored candidate.**
 
-V17 preserves the champion's 200 m laser spacing and complete Rust algorithms.
-Its only strategy change is upgrade order: choose **Fast capacitors
-(`laser_charge`) after plating, armor and nanites**, ahead of the combat upgrades
-that previously preceded it. All other priority relationships remain intact.
-Weapon upgrades are offered only for weapons held when the offer is drawn, so
-the gun-only opening choices are preserved.
+V18 changes one strategy setting: **`gear_easy_range` 55 → 70 metres**.
+This is the approach distance used against opponents the equipment policy
+classifies as harmless and that do not hold a laser. The previous close-in
+override could pull a laser-equipped bot down to 55 m despite its 200 m laser
+preference. A 70 m setting won our comparisons; 85 m was less consistent.
+These are preferred distances, not guaranteed separation from every opponent.
 
-The image runs `/usr/local/bin/automata` with `MECH_PARAMS=/bot.json`.
-The MIT-licensed foundation is Automata
-`f114d641a0de0c565dc057e342b4305b8cfe6d53`.
-The [manifest](docs/v17_manifest.json) pins every original source blob and proves
-that only the display name and configuration differ from V16. Existing aim,
-firing, equipment, harvesting, recovery, movement and seed rules are retained.
+V17's complete upgrade order, including charge priority after plating, armor
+and nanites, is retained. Laser duel spacing remains 200 m. All Rust algorithms,
+firing, acquisition, harvesting, recovery and seed rules are unchanged.
+The [manifest](docs/v18_manifest.json) reverses the display-name and configuration
+edits to reproduce every original Automata source blob.
 
-## Comparison
+## Evidence
 
-**288 new diagnostic policy matches** compare individual and combined upgrade
-priorities, fresh opponent settings, a reserved holdout and a separate FFA
-sanity cohort. These use a reconstructed simulator, not the official house squad.
+The official history is **V14 6.19 → V15 6.15 → V16 6.25 → V17 6.27**.
+Aggregate scores alone cannot isolate every match-level cause. The exact scored
+champion and its successful container checks are pinned in [champion.json](champion.json).
 
-| Charge-priority comparison | V16 | V17 configuration | Difference |
+**288 new diagnostic policy matches** compare the champion, a Lightning-only
+guard, and 70/85 m approach settings. These use a reconstructed simulator,
+not the official squad or a forecast of the next submission.
+
+| Comparison | V17 setting | V18 setting | Difference |
 | --- | ---: | ---: | ---: |
-| Fresh moderate pursuit, 24 seeds | 5.5417 | 6.0000 | +0.4583 |
-| Fresh faster pursuit, 24 seeds | 4.6250 | 4.3750 | −0.2500 |
-| Reserved intermediate pursuit, 32 seeds | 4.87500 | 5.15625 | +0.28125 |
-| Pooled validation, 80 seeds per policy | 5.000 | 5.175 | +0.175 |
+| Fresh moderate pursuit, 24 seeds | 6.0417 | 6.0417 | 0.0000 |
+| Fresh faster pursuit, 24 seeds | 4.3333 | 5.7917 | +1.4583 |
+| Reserved intermediate pursuit, 32 seeds | 5.40625 | 6.15625 | +0.75000 |
+| Pooled validation, 80 seeds per policy | 5.2750 | 6.0125 | +0.7375 |
+| Separate FFA sanity cohort, 8 seeds | 10.125 | 11.500 | +1.375 |
 
-The effect is mixed across opponent settings. The pooled 95% sampling interval
-[−0.15, +0.5125] includes zero and does not account for simulator error or
-feature selection. This is a controlled next official experiment, not a proven
-improvement or a 6.44+ forecast. Prioritizing laser damage and charge together
-looked strongest on the initial screen but regressed on fresh comparisons, so
-that combination is rejected.
+The pooled 95% sampling interval is [+0.1125, +1.3875]; it excludes model error
+and feature-selection uncertainty. The reserved comparison's interval includes
+zero. Every diagnostic match had zero late replies and zero tracebacks. Some
+individual seeds regress; this is evidence for a controlled official experiment.
 
-The refreshed GitHub search enumerated 287 repositories, retrieved 282 trees
-and reviewed 176 new or changed README/result files. Five genuine Aegis-labelled
-peer sources did not substantiate 6.20+ official averages. A new author-documented
-6.25 Go implementation attributes gains to safe supply drops; our bot already
-has that feature. The [full diagnosis](docs/V17_DIAGNOSIS.md) separates public
-claims, verified receipts, source equality and local diagnostic results.
+The Lightning-only guard scored −0.125 on development seeds and was removed.
+The 85 m option scored only +0.0417 across fresh comparisons. The retained
+70 m setting is the only behavioral change. No combination is assumed additive.
 
-## Preserve the champion
+## Public research
 
-[champion.json](champion.json) keeps the exact 6.25 commit and receipt. Promotion
-requires a higher official result, an exact public commit and passing container
-checks. Local simulations cannot promote an unscored candidate. Keep the selected
-6.25 entry while testing V17, and use the same rule after exceeding 6.44.
+The previous audit enumerated 287 repositories and reviewed 176 new or changed
+README/result files. This refresh checked 15 recently updated repositories,
+their available trees and new experiment logs. Public authors report gains
+from laser access, sensible spacing and safe supply drops; they also report
+regressions from wider loot collection, earlier hiding and controller rewrites.
+Several repositories share an implementation, so they are not independent
+evidence for every feature.
 
-Beating 6.44 requires 310 placement points across 48 games, displayed 6.46:
-ten more than V16. The saved official cutoff is **11:00 AM Eastern on Sunday,
-November 22, 2026**.
+The live board confirms **team 2696 at 6.58**. It does not publish that entry's
+repository or commit, and our searches did not identify one. We cannot attribute
+6.58 to a particular public feature. See the pinned
+[research ledger](docs/v18_research.json) and [diagnosis](docs/V18_DIAGNOSIS.md).
 
 ## Validation and submission
 
-[Validation](docs/v17_validation.json) records the native checks and their scope.
-The [workflow](.github/workflows/validate.yml) builds and checks the actual
-linux/amd64 image under one CPU, 512 MiB, no network, a read-only filesystem and
-an unprivileged user. Require green checks on the exact public commit.
+The image runs `/usr/local/bin/automata` with `MECH_PARAMS=/bot.json`.
+The MIT-licensed foundation is Automata
+`f114d641a0de0c565dc057e342b4305b8cfe6d53`; see [attribution](THIRD_PARTY.md).
 
-```sh
-python3 -B -m unittest discover -s tests -v
-python3 -B check/compare_versions.py
-docker build --platform linux/amd64 -t aegis-royale .
-python3 check/check.py --map-dir /arena -- docker run --rm -i \
-  --network none --cpus 1 --memory 512m --memory-swap 512m \
-  --pids-limit 128 --cap-drop ALL --read-only \
-  --tmpfs /tmp:rw,size=64m --user 65534:65534 \
-  -v "$PWD/arena:/arena:ro" aegis-royale
-```
+[Native checks](docs/v18_validation.json): 112 Python tests, 19 Rust tests with
+one optional test ignored, 300/300 protocol replies on time, and 840 stress
+observations without invalid or late actions. The
+[workflow](.github/workflows/validate.yml) builds and checks the actual
+linux/amd64 container under one CPU, 512 MiB, no network, a read-only filesystem
+and an unprivileged user. Require successful checks on the exact public commit.
 
 Submit [Spandana00/aegis-royale](https://github.com/Spandana00/aegis-royale) with
-the exact public V17 commit whose checks passed. Its official result remains
-unknown until the organizer evaluates it.
+the exact V18 commit whose checks passed. **Keep the selected 6.27 entry until
+a higher official result.** The candidate's official score remains unknown.
 
-[Analysis](docs/V17_DIAGNOSIS.md) · [All match rows](docs/v17_matches.jsonl.gz) ·
-[Summaries](docs/v17_experiments.json) · [Settings and hashes](docs/v17_match_sources.json) ·
-[Research](docs/v17_research.json) · [History](docs/v17_official_history.json) ·
-[Attribution](THIRD_PARTY.md)
+Beating 6.58 requires at least **317 placement points in 48 games**, displayed
+6.60: 16 more than V17. The saved official cutoff is **11:00 AM Eastern on
+Sunday, November 22, 2026**.
+
+[Match rows](docs/v18_matches.jsonl.gz) · [Results](docs/v18_experiments.json) ·
+[Settings and hashes](docs/v18_match_sources.json) ·
+[Selection](docs/v18_selection.json) · [Official history](docs/v18_official_history.json)

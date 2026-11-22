@@ -1,0 +1,1040 @@
+{
+  "kind": "Reconstructed simulation diagnostics; not an official score or forecast.",
+  "matches": 288,
+  "selected_arm": "spacing70",
+  "baseline": "V17, official 6.27, commit e45e734215354fc4f938af15c984a666f446a426",
+  "stages": {
+    "v18-fresh-moderate": {
+      "control": {
+        "n": 24,
+        "proxy_mean": 6.041666666666667,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.208333333333334,
+        "mean_damage_dealt": 13356.416666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 24,
+        "proxy_mean": 6.041666666666667,
+        "paired_bootstrap_95_percent": [
+          -0.9583333333333334,
+          0.9583333333333334
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.125,
+        "mean_damage_dealt": 13631.708333333334,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing85": {
+        "n": 24,
+        "proxy_mean": 5.541666666666667,
+        "paired_bootstrap_95_percent": [
+          -1.375,
+          0.4166666666666667
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.125,
+        "mean_damage_dealt": 12714.416666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.5
+      }
+    },
+    "v18-fresh-fast": {
+      "control": {
+        "n": 24,
+        "proxy_mean": 4.333333333333333,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.958333333333333,
+        "mean_damage_dealt": 9959.916666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 24,
+        "proxy_mean": 5.791666666666667,
+        "paired_bootstrap_95_percent": [
+          0.5416666666666666,
+          2.625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.375,
+        "mean_damage_dealt": 13460.708333333334,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 1.4583333333333333
+      },
+      "spacing85": {
+        "n": 24,
+        "proxy_mean": 4.916666666666667,
+        "paired_bootstrap_95_percent": [
+          -0.08333333333333333,
+          1.3333333333333333
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.625,
+        "mean_damage_dealt": 11592.041666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.5833333333333334
+      }
+    },
+    "v18-holdout": {
+      "control": {
+        "n": 32,
+        "proxy_mean": 5.40625,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.53125,
+        "mean_damage_dealt": 10878.3125,
+        "mean_zone_damage": 52.59375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 32,
+        "proxy_mean": 6.15625,
+        "paired_bootstrap_95_percent": [
+          -0.25,
+          1.875
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.15625,
+        "mean_damage_dealt": 13476.90625,
+        "mean_zone_damage": 53.625,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.75
+      }
+    },
+    "v18-ffa": {
+      "control": {
+        "n": 8,
+        "proxy_mean": 10.125,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.625,
+        "mean_damage_dealt": 3350.625,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 3,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 8,
+        "proxy_mean": 11.5,
+        "paired_bootstrap_95_percent": [
+          0,
+          4.125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.625,
+        "mean_damage_dealt": 3748.625,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 2,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 1.375
+      }
+    }
+  },
+  "pooled": {
+    "screen": {
+      "control": {
+        "n": 16,
+        "proxy_mean": 5.125,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.4375,
+        "mean_damage_dealt": 10701.0625,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "guard": {
+        "n": 16,
+        "proxy_mean": 5,
+        "paired_bootstrap_95_percent": [
+          -0.8125,
+          0.75
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.3125,
+        "mean_damage_dealt": 11428,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.125
+      },
+      "spacing70": {
+        "n": 16,
+        "proxy_mean": 5.9375,
+        "paired_bootstrap_95_percent": [
+          -0.3125,
+          2.0625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 9.6875,
+        "mean_damage_dealt": 13259.125,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.8125
+      },
+      "spacing85": {
+        "n": 16,
+        "proxy_mean": 5.5,
+        "paired_bootstrap_95_percent": [
+          -0.8125,
+          1.5625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.4375,
+        "mean_damage_dealt": 12599.625,
+        "mean_zone_damage": 87.625,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.375
+      }
+    },
+    "fresh": {
+      "control": {
+        "n": 48,
+        "proxy_mean": 5.1875,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.083333333333333,
+        "mean_damage_dealt": 11658.166666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 48,
+        "proxy_mean": 5.916666666666667,
+        "paired_bootstrap_95_percent": [
+          0.020833333333333332,
+          1.4791666666666667
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.75,
+        "mean_damage_dealt": 13546.208333333334,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.7291666666666666
+      },
+      "spacing85": {
+        "n": 48,
+        "proxy_mean": 5.229166666666667,
+        "paired_bootstrap_95_percent": [
+          -0.5625,
+          0.625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.375,
+        "mean_damage_dealt": 12153.229166666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.041666666666666664
+      }
+    },
+    "holdout": {
+      "control": {
+        "n": 32,
+        "proxy_mean": 5.40625,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.53125,
+        "mean_damage_dealt": 10878.3125,
+        "mean_zone_damage": 52.59375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 32,
+        "proxy_mean": 6.15625,
+        "paired_bootstrap_95_percent": [
+          -0.25,
+          1.875
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 8.15625,
+        "mean_damage_dealt": 13476.90625,
+        "mean_zone_damage": 53.625,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.75
+      }
+    },
+    "ffa": {
+      "control": {
+        "n": 8,
+        "proxy_mean": 10.125,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.625,
+        "mean_damage_dealt": 3350.625,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 3,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 8,
+        "proxy_mean": 11.5,
+        "paired_bootstrap_95_percent": [
+          0,
+          4.125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.625,
+        "mean_damage_dealt": 3748.625,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 2,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 1.375
+      }
+    },
+    "selected_validation": {
+      "control": {
+        "n": 80,
+        "proxy_mean": 5.275,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.8625,
+        "mean_damage_dealt": 11346.225,
+        "mean_zone_damage": 21.0375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "spacing70": {
+        "n": 80,
+        "proxy_mean": 6.0125,
+        "paired_bootstrap_95_percent": [
+          0.1125,
+          1.3875
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.9125,
+        "mean_damage_dealt": 13518.4875,
+        "mean_zone_damage": 21.45,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.7375
+      }
+    }
+  },
+  "trace_data": {
+    "v18-screen": {
+      "control": {
+        "n": 16,
+        "damage_taken": {
+          "gun": 33763.200000000004,
+          "laser": 2855.2,
+          "mortar": 1474.1,
+          "npc": 245.0
+        },
+        "hits_taken": {
+          "gun": 705,
+          "laser": 8,
+          "mortar": 11,
+          "npc": 9
+        },
+        "live_frames": 17884,
+        "charging_frames": 1440,
+        "frames_nonlaser_opponent_within70": 7211,
+        "short_events": 0,
+        "laser_ever": 9,
+        "laser_by30": 6,
+        "trace_hashes": {
+          "12000": "5ffd2ff642649282b8c59e8f8ac25f5c840eae6d47db5cabbe996d3b783024e4",
+          "12001": "ab49104382a7772820fffc230d780386329b9b1fadc171a9e19a34ee3cb58e5f",
+          "12002": "241fc82d9f8dc661efa305a02eb1053401533ec5b8a9c8f58e54fce18cd2f893",
+          "12003": "490096fd3910fdf2e5247df8a0c15cdb96a9d2e4f78817588387147e01fb7416",
+          "12004": "3f340006d4a8b6fd4002a3f2e575d03d46f17fbcb0694e52253f8a857403ac1a",
+          "12005": "c177d78373629383c238bbb9554763062273feffd1729100c6d89d59dc4341d9",
+          "12006": "4175203431e1816a33a4f7274c08f5e601919adac52760597628609a005b5684",
+          "12007": "cb5dcddf9956eb4d9798f867634d321d64719173031ca1e1824527664c85a286",
+          "12008": "8047804385a26a79636ab9971c6e19e52e423364f5bad00934bac883ab12a872",
+          "12009": "bcb22e6b8000cf5c4637b5562785f0649f9e2806773ce4758d2c7aa7e5e550e8",
+          "12010": "12bee407b9f289a5acaf7949fa6ca8cad243cd0a5eab2ed30e20c67c7eeeb02f",
+          "12011": "a4f1f25138a84990031c9022ad90eb5e6128a45e63d9727339989208285e1d99",
+          "12012": "dc41adc87b8e167608cc6105d1c7d8f9d2754a20df9300836622266176201c4d",
+          "12013": "a79dab2203372b3351cae30205cdb2aca45a547f65288bc1736a4c7e63947fea",
+          "12014": "c3a696417353b5c4989c4579702dd3ab14260f725fdcb25d43f803c1da32fd90",
+          "12015": "2833c365749eca929f4de5d81b01e75d874bd5dbff9a06ac0047c929527657dc"
+        }
+      },
+      "guard": {
+        "n": 16,
+        "damage_taken": {
+          "gun": 35529.0,
+          "laser": 3793.0,
+          "lightning": 353.5,
+          "npc": 245.0,
+          "mortar": 1390.6999999999998
+        },
+        "hits_taken": {
+          "gun": 729,
+          "laser": 12,
+          "lightning": 5,
+          "npc": 9,
+          "mortar": 10
+        },
+        "live_frames": 19893,
+        "charging_frames": 1700,
+        "frames_nonlaser_opponent_within70": 8492,
+        "short_events": 5,
+        "laser_ever": 10,
+        "laser_by30": 6,
+        "trace_hashes": {
+          "12000": "9fce2939f944ffccacfd68de46519fee933c9e1d569175f6fee46242d4fc46da",
+          "12001": "e5c49986bb9b88727b8b1d05dec7fbcd2806e20ab5fa048245bc6ef1bb1bee05",
+          "12002": "2941020c8ab9b6336fa93d04db7b99596e9a6fa2eccf03365e9e92203dfbe69c",
+          "12003": "3007271cc8fb076b353e3dd1882aa992fb2496e920b99c1336f661ab7636771b",
+          "12004": "1a8283aafa31a6b70130d3826adee1199d59a373830b62a1c0777d61b346a2bb",
+          "12005": "2bb4475bb541d4ad21795d45038a42f1797869d708d1302fe89d55316a16e302",
+          "12006": "1277eb73734fd142d01b4be31092b9c48d4e3a5119020143085e142dcb8beb87",
+          "12007": "ca169b6dc06db97f9ffa66d45404626b5f1921576cb242d11ac76a24512e2b7d",
+          "12008": "d37ac0033a718cca848a765c6c73a8f08325860822a4e3e3047dc5a61add918d",
+          "12009": "f1b8ab91b94c647c7e263e32f71789c78f39247965f9883c75968e2f0f7bb5f7",
+          "12010": "f84b2aa780c5964cbce4bfa95dc23ceeeda13bf3d36b0de9df65f1bb49f2f2be",
+          "12011": "9d642b4110347246263264116effe48782efeec815cee459592a0c55e19a0a3e",
+          "12012": "62afe66423bb6c32ce9ec704594604035cbb4a8984f609af0dfebf95bb26959f",
+          "12013": "8e376019fb5db8254ae2e69bc5ee019a538009da865d36b2a12bb541eec82c6e",
+          "12014": "cffce6481272cc173f76b9de05b8744c76fcf6e44890c1d04a156c71ae6075c7",
+          "12015": "ac6d63570445d0fb1af1e57b06159fcdfb34750c1f1c1623ee125e09c7dbeab1"
+        }
+      }
+    },
+    "v18-spacing-screen": {
+      "spacing70": {
+        "n": 16,
+        "damage_taken": {
+          "gun": 41244.700000000004,
+          "laser": 4855.200000000001,
+          "lightning": 636.3000000000001,
+          "mortar": 1576.1999999999998,
+          "npc": 245.0
+        },
+        "hits_taken": {
+          "gun": 842,
+          "laser": 14,
+          "lightning": 9,
+          "mortar": 13,
+          "npc": 9
+        },
+        "live_frames": 21826,
+        "charging_frames": 2000,
+        "frames_nonlaser_opponent_within70": 9165,
+        "short_events": 9,
+        "laser_ever": 11,
+        "laser_by30": 5,
+        "trace_hashes": {
+          "12000": "43543769470220b39023e9584c2d2436c60fd883b61405e7828ff1e0729f343b",
+          "12001": "b7b85c07370a26be61e5f13c250396bb086cc6ef93987cdc1c7b068f8ad5bc18",
+          "12002": "ffa689cdbdc0ccb19c8c7621362bd39d205d3a1563473558615d2244e5996045",
+          "12003": "280cc6640e6aa202d2a41019ec1e2ac755ef0ce436a48d35fef150c556ca87b0",
+          "12004": "53e073efe7982126d261e36df42b47be32cccfc965daaa4885c6cdd1737c8b54",
+          "12005": "9eb91ca0e270d1605594808634be454145433d44320da01966e046b1a40adbc7",
+          "12006": "608fb27f0aa6c36a40931b242510a808479e173a407e7e53788ae717c0095be7",
+          "12007": "80f9744ac64b3d65461edd6d6936f79908c5796946701946bca6fac771ce4f3b",
+          "12008": "84274d2f21d87f034307139d0f064076259e7b900da95dccb9e4a5fcff106647",
+          "12009": "509c33994644d9c92e1f2d18b4012f6a1635cd5dc6b5abc093340cc63a30a65b",
+          "12010": "a65f469bb93d7b1f55209634f3ffb6b1a667982aac536df3d7627a736e03e55f",
+          "12011": "04c47048e0ea85447de0fcad7688dccbee52a653316cb1bedb19e7f9f22d5fa6",
+          "12012": "f54312e2bb91a19c7e60d45a99bf220545acd225e555858d78b67e08bc5defa0",
+          "12013": "871f391b1067f1160cdd8d0ba92a8f7144c4b1ab71609ade0c8d4007916859c8",
+          "12014": "0603e9a446b9621a1c5c19bf11f2211641ac537f1931fa3d74d52948360c46e6",
+          "12015": "0eaad2c97fc35f4858e14b6fda8f76201648fc79202df12046fd73f7f505cece"
+        }
+      },
+      "spacing85": {
+        "n": 16,
+        "damage_taken": {
+          "gun": 37539.8,
+          "mortar": 2591.1,
+          "laser": 5952.2,
+          "npc": 245.0,
+          "lightning": 660.0
+        },
+        "hits_taken": {
+          "gun": 757,
+          "mortar": 16,
+          "laser": 17,
+          "npc": 9,
+          "lightning": 11
+        },
+        "live_frames": 22218,
+        "charging_frames": 1940,
+        "frames_nonlaser_opponent_within70": 7715,
+        "short_events": 11,
+        "laser_ever": 10,
+        "laser_by30": 5,
+        "trace_hashes": {
+          "12000": "0c0beb8dbdbaca768abdbe4776967cb63ce7f126212e737c525368f221bf9f90",
+          "12001": "2fdbbd3d920c653d2248367aba4c544042ee6a65543a3f9c2ceb3b6242f90a94",
+          "12002": "85935fcf4da5e16607e6e4b7d97d138b9d35f6ecfc6fe5007f36a466a2ace35a",
+          "12003": "54e4eaa81f43c5c2746444dd32d19dfe5c871bca8ed05abd26d17676e0c080eb",
+          "12004": "c57f241dc33268d55db16f3455534be021e7bf50d9ccfc02013fd9c9b7ee3512",
+          "12005": "8a4c9f46ddcb302a234feaf75e65bc707e3853fc0818d2c19d9020d98a6b2fda",
+          "12006": "ac477e7950306c78e44b3f6cb819f33f3ba501c2aa583fe9dbd0f11201d7bd49",
+          "12007": "330b6325dd2072d05376a19252d5408aa6fee7fa2202b2b45bad957982eb37bc",
+          "12008": "164683f58910a45565bb6b3e64eb485756415b6d961756300086219479446a17",
+          "12009": "b76e63393d50c4fa58019ad72523e1b2ac267f6661bb6292398cc7a6b5ca8f7f",
+          "12010": "41099a2009add4b03de964e49f97b53f3078272486f824c334d6895a2e20f66f",
+          "12011": "c9198e0a3387b529fc0609e4f1e74af36ecf24317c7b586b3891d0d06aff942b",
+          "12012": "8bd0410598649253f3022d066c01281a08f786d4b2d1e405634d002f2350d695",
+          "12013": "6711c84ec4d723fb191b510f8e17eabde1e94c8221250e6bfd70f61c495276dc",
+          "12014": "509496b462bfe4016a724169e8d0989cde2ab545c625e671965a4bba25f3adef",
+          "12015": "fe89992f394a3835050192aa6a77508949af2665cc54647ee4c1ca4fd4c54c39"
+        }
+      }
+    },
+    "v18-fresh-moderate": {
+      "control": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 51035.49999999999,
+          "laser": 8006.400000000001,
+          "mortar": 1289.8,
+          "npc": 235.5
+        },
+        "hits_taken": {
+          "gun": 1060,
+          "laser": 22,
+          "mortar": 7,
+          "npc": 9
+        },
+        "live_frames": 30113,
+        "charging_frames": 2816,
+        "frames_nonlaser_opponent_within70": 11165,
+        "short_events": 0,
+        "laser_ever": 17,
+        "laser_by30": 12,
+        "trace_hashes": {
+          "12100": "c3b53e2460c7133530e4574c26b0518b9223b61f38da1a054881cb06d2958a7b",
+          "12101": "767267ffb1868d9d34ec4b841785d501964c25b6a3aa1e5df01e91f08acdaea1",
+          "12102": "0b6a95e74f89c6da13906316c00bac1ad6f198ba6b4bbb0ebaf265feaa675fc7",
+          "12103": "2524c8b246a2f16eddbfe1a71561eb140237d164581d50f235eab1e83b5d29fb",
+          "12104": "6517971a21a60d6e5cebc23123da000a99da8bccb903d15feaf9f8fd2874faa1",
+          "12105": "9af0c513181a0f8971ff5d465899ee1126819570ebaf5498e27aae2c7809c7f3",
+          "12106": "ee641b6060122ec6f31acf1f7e08ff3716e39e5522ae2a274c650ba32acbb09e",
+          "12107": "aef1e9131285a87249f21cacee54f4222d951520059dc8e43c3d4a72f9eeb75f",
+          "12108": "70e439947326ad8dc8f9f9341ef8943c372a3eed5f56c319af803fe06c57ac13",
+          "12109": "3617925df30c44ebaed982c42c27ff836403ae7de2cab0de4dd5ece771cbda5d",
+          "12110": "ab980024b45120a02532713bedbd114a56ae10d18a1897f75226574e06512799",
+          "12111": "a70a769dfab3685a7c08b6180201b8ce4fd7b83b131c82ad0ec3c53a2541cd21",
+          "12112": "6d0040a804a0208dc1880e1b436b8ae434742bc8b6d4546aa58d1df416e796a9",
+          "12113": "620f0b7a6eb0b2e7ea0817d9297924edb7409b2a49f9000c5900b1a67a2b44e7",
+          "12114": "058b77bd8be026e312621350ef83d907217337af39527ef95d273922f16d7999",
+          "12115": "86d03c6443e1abe53169a1fd012ff26d53c6688ec7a7e520fdb9294fea59da22",
+          "12116": "7acf3cea202ee0c3779499cdde19443cca237e5cecad778609e6e8a6bed7fd51",
+          "12117": "c58db1d2c5e74837d974cfab78d36c7a69a564d351cff396340adf07b0692e33",
+          "12118": "64ba97acc5bf7cd229497bc06f8265d82411a5277fde2d53a53e101138ea18cd",
+          "12119": "04c127fd02e99eeabf4a17859f3ddc3a846230116671d6ecd6081557cc5c4112",
+          "12120": "72c87df0e60458f13aea2f2546714a87f38dcb26ddc15e20c93c1e766d094aa3",
+          "12121": "67716ca5580671a7c55e6c19ac72214c8d70f0c3fe0e4cd3aab7aedc01cff8ad",
+          "12122": "b3888e141a2c2bf14cb605ef2940dfaa28274c7e912e08853f2f2816de8e762f",
+          "12123": "2d7973692d484b326e8ebe1a932d73006bd64ea86a2de8f92220c2d86a542c87"
+        }
+      },
+      "spacing70": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 53146.5,
+          "mortar": 3596.0,
+          "laser": 7412.0999999999985,
+          "npc": 223.0,
+          "lightning": 62.4
+        },
+        "hits_taken": {
+          "gun": 1108,
+          "mortar": 21,
+          "laser": 22,
+          "npc": 8,
+          "lightning": 1
+        },
+        "live_frames": 33113,
+        "charging_frames": 3375,
+        "frames_nonlaser_opponent_within70": 12603,
+        "short_events": 1,
+        "laser_ever": 18,
+        "laser_by30": 12,
+        "trace_hashes": {
+          "12100": "67b297e3702d3269075779f71b399f4064c2afad48e83a54100c15c1ee5a6050",
+          "12101": "4dfcc49183f1cd9e7fb6bae6aa6e83f0c0b31f36b3acaa1b83a9742399f24c00",
+          "12102": "501d5c5933c0a7c895d4672a453d0f34ce2e3475470c552d57bb36ad219a87b3",
+          "12103": "46378fd0d0ee329e142b1ed36ab62d8b8c8f5851d39bec91c3ae3108a10d7adf",
+          "12104": "1892b8a3cbe3f01872c8681b56058b714771e5c1a0917404436ad3e99929da55",
+          "12105": "dbe398f1f7800f44e73940984aee7ee29588a35379aea7bf31de66be7979cd7c",
+          "12106": "f8fdd29bbd07430095b086076a8dc60bd802eada0ea1bf385bb7ca2b060da191",
+          "12107": "f2eafc90a9f93c4c06f3964f39159934c2a0566f38944d34e31c77c009117644",
+          "12108": "7b689aba92d1ceee645af9a075c25c97283a16b475303be5a9b8fa3fd970899d",
+          "12109": "8c3f519f0aac24179d5b177d8ff457a526dc7b5dfa747d73652bd30843498c9e",
+          "12110": "c3b5d3335c577a1d401ee7a5a8a7baa83d73c2eead352cee374ae81bd5eff37b",
+          "12111": "27440c8ed1a286780f7726282d48aadded6e673d5edb8daeaebd228883f6ef10",
+          "12112": "43350a97f7f163ba57496124ba107d0d97df33419930795af610a68c7c6ce437",
+          "12113": "fc6e29d4e82254ec6bd6b3a463064914d5f2c570370b1adcd2e1cffafb903d02",
+          "12114": "a56c48397d7e0b6944e10fe72e4982cc921c0585f433361165dad125a8e92c86",
+          "12115": "ae7db77e182cfae8d052937d35552ae2837ba55963dd642eb5114447ef460274",
+          "12116": "0b6dc24f01277d4dab3db164571de0d06ba267edfa67f0b96cf2c81d9b395a04",
+          "12117": "c755aaeaf7db124d8e48add378f9fb22f63ae7e1a7d4242b3e93fd0390582417",
+          "12118": "6046cd667340b0e6415ed8ab20724105be947eb3b792cf4716abcc0dbf601d0a",
+          "12119": "bd1ca369ecab0c660b7deca2d1be25f5afec070fb6e9315c255ffa4b2cf555db",
+          "12120": "1e20ada30498650cb9c33fee21128e1c09ead60d0b0ae649a3912da46796c150",
+          "12121": "cede61cdb9e4f86558d53be9e3291046dcac7c9bd1f011d2a1a113951362786f",
+          "12122": "7d5e0bd9b190b4851aeeacc0daf98cefcab934fba081fc03ae5240c0feae5612",
+          "12123": "24512003481d882e58b5870c4542720527b2f3ba96fecdf120a20f4630583f82"
+        }
+      },
+      "spacing85": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 52303.2,
+          "laser": 8012.200000000001,
+          "mortar": 1357.1999999999998,
+          "npc": 298.0,
+          "lightning": 60.5
+        },
+        "hits_taken": {
+          "gun": 1073,
+          "laser": 23,
+          "mortar": 8,
+          "npc": 11,
+          "lightning": 1
+        },
+        "live_frames": 29271,
+        "charging_frames": 2908,
+        "frames_nonlaser_opponent_within70": 10956,
+        "short_events": 1,
+        "laser_ever": 16,
+        "laser_by30": 12,
+        "trace_hashes": {
+          "12100": "091800c4a9788940d06a6cac47c1bb8efe239ee6ea14b07d08ecbffca4a40ab2",
+          "12101": "df38beb8aefb1b82944de1506ff3a253f1216fa80421a15e7edfad3b30b0e31d",
+          "12102": "e68304af423bdbf1528352440e3b5890810fb19293c4459fc5fd5b7cebfdd5d4",
+          "12103": "dd9a6995e086a3c219138e05a6833cc4b11d2e36f71ab210c223db365e579d22",
+          "12104": "a5478a8022b35fef546896d30374cac1cc40ae6624b3b3e8d5ee90332c286c7b",
+          "12105": "955cc8f893cfc9df53af43b9eab9cc0ccc67f44bff7091994291f765d498cfa9",
+          "12106": "2ff00823eb161997c3392984bc2f6580393a3463a31706c4f7e4591e8b58e4d9",
+          "12107": "054d3e572d1c2b5633067c5c039ad784c6d6b5cb5bb5a24b86985169732106d8",
+          "12108": "55ac3de5184d37ed7b62ff9ae9483079d01d31890634998e842a1e3d996fac3d",
+          "12109": "4b017f2ee5423f3525168983f087dd6b3fd079ca3417c03fec9c0bc04d1c0351",
+          "12110": "846f2ca9b90f9347d104c81d789cf9ccad9d43cfe96ffe1109d96fc6b1d878e1",
+          "12111": "c4557d4c6944f1bd015fccf32592387efd94d24fe2f5d5e96ee334ca7e569277",
+          "12112": "4638a26da29ec81e057b6dc82b95be617fb21062a4d81aee993da4f37322ec91",
+          "12113": "c8f37919254ac9446d18997ce52c928942449cd62c0e8e86bf2fa8be01e4b39d",
+          "12114": "d29d6b0259866cad1b5680f1ca56f553252f265e3fe16c76dbad6e6fd455ab0a",
+          "12115": "f3187adf1a078e4ba38a0211c6dd8f2d81c9b9f89f215db7eb8c9dbbde62f16f",
+          "12116": "00d7291588b9f406376589b8b039bda78c44538bd46ee92d65dfcee4d12d3a2a",
+          "12117": "6eaf710784f8851f6cd353ad2ccd04ffd67ad7412a60c53f2f3c4f3173a612b2",
+          "12118": "ac9c1bf275bac7f532204e8784e0add03a8270101b95527b991a24b77674a925",
+          "12119": "d7710cad6256a84e71faf9e47e0db4a763e29e9355115e4364baa5cde0b40568",
+          "12120": "f81193b98630cf92d2de45bc53effb1a5be95b589176586200fa43c7a8b3c139",
+          "12121": "1ccaeadf78afb2c0a3af99a02b6f7299806269a8b4508c4bf5f4b46c66490ccf",
+          "12122": "e66aede4362442f310fb528a8634db76a217e035db1ac3e914682dbdd56219bf",
+          "12123": "aa17e064ae5816a2c9b7e8b40deb34a7f30a4f2dc590877eced1a7d8264e2f5f"
+        }
+      }
+    },
+    "v18-fresh-fast": {
+      "control": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 50800.59999999999,
+          "npc": 398.0,
+          "lightning": 114.8,
+          "laser": 3455.4000000000005,
+          "mortar": 4154.1
+        },
+        "hits_taken": {
+          "gun": 1058,
+          "npc": 15,
+          "lightning": 2,
+          "laser": 11,
+          "mortar": 27
+        },
+        "live_frames": 29947,
+        "charging_frames": 2864,
+        "frames_nonlaser_opponent_within70": 9880,
+        "short_events": 2,
+        "laser_ever": 22,
+        "laser_by30": 14,
+        "trace_hashes": {
+          "12200": "8e19c5a6aa03caf2f9bb496e77b43d991f24d38dd884014e19850e7950d0f2f0",
+          "12201": "8d553d2bc36290c998e988537c3fc602ba834dfd3cb7cc9bae0e86e094823095",
+          "12202": "957d4352e55cb7305ac15a7d0fe55551962bb05a25dee838ce11923b9da4e9de",
+          "12203": "911400e83e784ac8b09bfe2f9bffaf78b67014aeece1d85323f4a00195bf2ef3",
+          "12204": "1bd24bc59c1939cdfeb8b0188b9680a5366d9267e4f5020836c590ac810db812",
+          "12205": "0ee2841deb866bce080eda843bc7c8b3fa29241bdba65a960b866b89175c365d",
+          "12206": "650518aa1f7f5431295cf85437df6a85393ba7615c90a0f72773520be22fc761",
+          "12207": "4222333465fd409d511b4a3eb0b4506f5072fd5ee543eb5743bc3d707472add5",
+          "12208": "b8298d8f9c3b2200bf41592897db50369775477cd0ccd996448a4fff96798817",
+          "12209": "e78be000f5b98fd1289ed1b84840d037e44ae7fe5a57e5926df7c706cca61763",
+          "12210": "70e51c076a2a6897b2768b51b1eed934a68ee80273e245934e33e03590ea4c62",
+          "12211": "7a7d9c746176d4d05de1b5a45147d1388006b8b9e5db79994af1af9a679f5489",
+          "12212": "fe05bfc563b252cc823993ebc430b3152d6f4ea67b0e7a7474cc2cedf0f793ec",
+          "12213": "cc5956c38492e78497ea4c5311bc5d4d573e2bd6252f24593075d42ee60cbf82",
+          "12214": "0ba278caebe4ec12e105ef6e6d3f81f341d4101a4a50a23e47605f414ec0dbe6",
+          "12215": "3c23b632b7866bfa4ecacfc2056b433d158190ca6f6e2e58db65a30798e36ce9",
+          "12216": "268b59ccfecdfa0b713d6806d877c0a3ae4924a35c9d8898d3a968e82a30033c",
+          "12217": "286264142b6039acbe7c95b8506d9e1cb94a6f94575f8a24c45bf74d03bdc640",
+          "12218": "8b88534786b9e70521ce32108279e3749a866e35aea3c8d93d1d088809d86507",
+          "12219": "c3dc47dca2d1e37cc2fd329c835c18cf23ff34dbd40b746277dbae2eb56c51f8",
+          "12220": "d948e83df73ad9d5266448887feef501e9e36e313b151bc1a2dbbc6ec061d92c",
+          "12221": "2be8785ff68f293fe121bd54aa4db08a1b67106d152641ce5faaaf23c7073986",
+          "12222": "1940bcbfc9e7a824ad3c502630956a15d7f05177eed61f39c70c4631cb9e28d2",
+          "12223": "b4c4185a88b69a094dc3c586f808d03b69194c222935d93f33f554e4e28b5c05"
+        }
+      },
+      "spacing70": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 57003.899999999994,
+          "mortar": 6457.200000000001,
+          "npc": 375.0,
+          "laser": 6023.499999999999
+        },
+        "hits_taken": {
+          "gun": 1212,
+          "mortar": 42,
+          "npc": 14,
+          "laser": 21
+        },
+        "live_frames": 34710,
+        "charging_frames": 3882,
+        "frames_nonlaser_opponent_within70": 10395,
+        "short_events": 0,
+        "laser_ever": 22,
+        "laser_by30": 14,
+        "trace_hashes": {
+          "12200": "8f608e8fa89f18f024e0f7d1dca23474e7680b45749f252f5466f35d7b1f2123",
+          "12201": "fe3deea29025e1856e2eb2f50b48945e2157b8f61c419f36d3f064fc484c1749",
+          "12202": "dc7eb5c935662d9f15a23e1e408ade4dbf3463070d8ca25c0548762e854b6962",
+          "12203": "13e3b435032c103927e1700d3bc4e5f86aa7922c5ff569ea606eda55422efcc8",
+          "12204": "3515610c756708caa5dd0ff9a06ac95deb9c00462d3697d3a868f985eecea104",
+          "12205": "95c74357fd923bf1141e39b612080684063606f171f1904b5e0e6169fdaa0a15",
+          "12206": "37ae4a0e3f3b4205c3b797c534912db678f20d2d851cdc8c364602885671e56c",
+          "12207": "21446866cd9711f795b5e10f6dc6f031186a2d2b002b85080cf36b4fa03861ac",
+          "12208": "140096c4f53d8d1e6efe84a79caa105354bfe47d2a49aee355166db17f0286e3",
+          "12209": "5f9ad2c4a45d62b1660585e9f044ddf7e3fe7bc11569a247874e8bb91edcaa0a",
+          "12210": "ae555ccb52de194459facdabdb0169a8bbb23d36f2f4a13af0fb3db1f154822a",
+          "12211": "92c5363bfe509fb604e66a84ff88e05e5003df190ecac3828d3978dcd249ffb4",
+          "12212": "8d944d2cdfd6bec1048c4379f4f7d571d56308adf6816e09ca14306017862073",
+          "12213": "f414007fe271b150b8a557383b530a68afb15685c5f774ca082896e1bac17b32",
+          "12214": "7564310cd5d5624cafe31dab60a3e4276ed8a3c514a2b1edb59bf67c9900397a",
+          "12215": "f3f659ec8b72f9d17ace0331efca894f2da8d8e6a692f7b82a3f94d39a00e8c0",
+          "12216": "c95272fc1f270808f990c1a2e5b161e66692e647cec815a4bc86e3b78856e755",
+          "12217": "6adcc7033fa31b95cc2e27a0cd57b66a5c35dbebce2694526cbca5b9380298e7",
+          "12218": "16b5cce96ae1a8594eea03a9159021c7dcfe6799ba18095d3c76b2b895ebd742",
+          "12219": "47e6e5e03eb7d560ba84a7e371490541b9a4ab9e0f3528970d56de5aa87a5e41",
+          "12220": "f76d3561b9659a2a884c3b807d03d173c6bd97a220db9d90d69adab7d26353c8",
+          "12221": "484055dad4c048cf3ed49f2f8edcfd81c4d5bb32135c7131e363fd01e436a09b",
+          "12222": "35b8fb4bf0627582636e8ac11c19141b852f705e19a6e5d5d42797084945b579",
+          "12223": "1d70c89a232bb4e334a76e479f04c5e6551fa949e7f02704627d25a4d73fbc02"
+        }
+      },
+      "spacing85": {
+        "n": 24,
+        "damage_taken": {
+          "gun": 50783.70000000001,
+          "npc": 603.0,
+          "lightning": 624.8,
+          "mortar": 4216.1,
+          "laser": 6860.800000000001
+        },
+        "hits_taken": {
+          "gun": 1074,
+          "npc": 22,
+          "lightning": 11,
+          "mortar": 24,
+          "laser": 23
+        },
+        "live_frames": 29076,
+        "charging_frames": 3268,
+        "frames_nonlaser_opponent_within70": 10144,
+        "short_events": 11,
+        "laser_ever": 21,
+        "laser_by30": 14,
+        "trace_hashes": {
+          "12200": "d4b92c449944bbd54b44d9dae808031dc64ecabafbe71033b368ec86b81fd9ea",
+          "12201": "588ccd6393ab2cf56b1e7de76898fa4e495a55d5d466a7d52a95e537c3ad57c0",
+          "12202": "65b27436cf8c4f5d1470b78fa25c37c80375528134ff86ce70937547989cdca4",
+          "12203": "9e9083f5015318421e5c519c90e575fa8a1d4bfa061572589beb88b1571c2a90",
+          "12204": "5d4d17de4dac39a700f37efd8a069e74552015be56e0e383b258512e4506635b",
+          "12205": "f14c4f81d4f9befc023acbfc5a747e2011b6f58ad47e7b47fff3345638a2fd59",
+          "12206": "acb7cfd15aa66e648d3175238c90575e42c033a6e66647510b718ed2309c160b",
+          "12207": "54202a95023a475d4173f641bcd309103cc1657204974bbd0c5d51ca9f707245",
+          "12208": "365b64499a7604aabd76379336786d48e0d1533af4ca85cdf5c2a068f78da465",
+          "12209": "9300c855bb6a8e3d5b7a226cb7ed3000f4d0283dd4157424637908bf22ae060f",
+          "12210": "e622140e7bb8dc60f3a48cabe2b3c17b38e5462e5286601edffe3c82977beb8f",
+          "12211": "738c6043f28827959444201db98d6a9ac0c38ced8fc82cd312ef12771b1107be",
+          "12212": "7dd7844054a70453b457dc42e5e4175acaac43339eb1ddb87651873290af2361",
+          "12213": "f60f5b6c33a3c15aefaf2bfed1fe8cf35dc04f8c0c8b9817e3f42e5ad3d0724c",
+          "12214": "6cc7da849f9cb0459f35b4eca0031d67d1fdb6f92fe95ad34d76e605690c3236",
+          "12215": "57ffcea884b029ec1209e93cc3f57a05096171430033f32c6dc4b27e1949782c",
+          "12216": "6ba412a85db7ad38b9fe7502fe7da9bbed0e207d10826cc01911ccd65fdb1cfc",
+          "12217": "a929c4b25382682737a9c2518dbab568795b51e0fbc255f97cdf33a6b3405c8c",
+          "12218": "ea4bf733a9f234c6190c568ab6f3912cf0374e4b7506cf9b7565c4f5f5103928",
+          "12219": "b634b094f58c7a0f0fdd0558377b5ffbdac9fcacdd04593f39a602cb1d6bce3f",
+          "12220": "01ae674469fe98aa7c14236eda9a18a1232e710ad047436a750c42fbbd9baa8c",
+          "12221": "ae8b3aa594f9561d46818961efcbab9810362e23912297a9c119515ca5194d49",
+          "12222": "b9c8304956948a9285b798d25e49b9dec555fa7b23062f0b13a457e5def122ea",
+          "12223": "cbdf5289d46fc41be8fc55e6ce2cecee41149f32f06a5d3e5514ae3d71e01d91"
+        }
+      }
+    },
+    "v18-holdout": {
+      "control": {
+        "n": 32,
+        "damage_taken": {
+          "gun": 58131.79999999999,
+          "npc": 648.0,
+          "laser": 10570.6,
+          "mortar": 5355.099999999999,
+          "lightning": 328.20000000000005
+        },
+        "hits_taken": {
+          "gun": 1232,
+          "npc": 22,
+          "laser": 31,
+          "mortar": 33,
+          "lightning": 5
+        },
+        "live_frames": 35449,
+        "charging_frames": 3751,
+        "frames_nonlaser_opponent_within70": 10036,
+        "short_events": 5,
+        "laser_ever": 30,
+        "laser_by30": 20,
+        "trace_hashes": {
+          "12300": "711125abcceab96dd53b867f94c473703e6d322f48788d590d41fc599cbd2582",
+          "12301": "c66b411f0116e9a6abe5adaea9ae0ef818802d402823d56702bb176674a5848c",
+          "12302": "e0e1efb8fffa56dce60477455b3ddafeb55d3074ecad92917ee88259cb8c27b2",
+          "12303": "284ade9ea5fee3673027e2908e5778ed4a7ca65705e796aa90c699ba4f2903cd",
+          "12304": "322954493b91827be54efa70eebf0834c7adf5b86d03ae6b02cf3a7dba3087c9",
+          "12305": "667986e755d81a2f9fa7858c69f0ce562ef679bc22bb60053d8a8dcbb7eb3123",
+          "12306": "feddf337f4ee78c31836f160b94f6bb3f9336a4cf86e16a708b75a6bb2ce3946",
+          "12307": "d0cc6a5aeb187da1f9a6565a8de31751cb5d2195541f62abbbd8b17b3b91e28b",
+          "12308": "fe165020e8966bf409ea3fc2e7746a46958b3db2b3416a7feb587d017fa9d16c",
+          "12309": "f2f577d1b1490a3507bb287ab9b1a78eb47efa3e0c08bba71f07e54c8cea1cb8",
+          "12310": "51a98f73a8f745eb1e7e4fbdcf90586dc86abc9837f67c06ccf0953c22961cf4",
+          "12311": "33458159413a81936b92c171f2ed13c8198c4dcdbff6c6b7a26d1f41d9026b7f",
+          "12312": "b547df41de413cbe72d17cfe3e9815f0e81c4934807f0ee4c044e8267af32b8b",
+          "12313": "7f0e4e7a8ffff13fb2bfc508ef51bbe1a8207d88ef6f00becfb48c9355168144",
+          "12314": "013dc07cba7ea51c23863ac9802077bbdf537614b08e29587922f69af0770f62",
+          "12315": "d989f3f2da4db46d916c998c6abbf24cb44c500254407c2f624548c67103bd08",
+          "12316": "3f7fa72a83c99e1fadc9854f27481f3edf0e419455e9eafd7f19af6bae018031",
+          "12317": "1b02bbfe41552adcc131cfe85aae276d17912c3b41096c22202cc52446450478",
+          "12318": "f81d966f34b9689cf7e4f9816bed4df8a0ab0784f01fc85228683721d154efcd",
+          "12319": "e7a88a9d32a0fd533d0e260c8e25b4c5c2052988067d1767df7996cdb27be6f2",
+          "12320": "4e9ade2819909fb22777eb5147bdccd933462a6ce2210b0a622a396d3eba3592",
+          "12321": "41f362468c3228dfac52e6bc8bca7b9c978d0d30464528aeba2255b59feaa705",
+          "12322": "108f400d226bf59d9fa0caed5d8c47be6fb04570c8d5f9a3d8113225c2dc97a2",
+          "12323": "d2636043f9d74646530fb5488beac7558a3da6fb6c79cd9447d7f4b60a93b5b2",
+          "12324": "716ce34e9353f4a6f3b8fd37abf2d0625135b53d32bfffb9553e70d3d038a198",
+          "12325": "0c38246b39a8478b489d72ccdc0fc07d12e53b0d76bf65b1465e6a32f11879ea",
+          "12326": "35d851dfc3c12aa439c62fe84325f3694757b0027d2dd9f1e6133d30ad56802e",
+          "12327": "7296efbd3d35406681b2b2e2f3cda08936112b29aab352ff37b79b746f78f3a1",
+          "12328": "342785c3998d31a78341db0cf7befadf72e91d261459efc916c474fef6b87c9f",
+          "12329": "5c89430a8b3183546b6a836a37dc6ff0de1b0cc0fbf1063a2b55826eb9e1170d",
+          "12330": "55fea3043a9e3ad114a9a3729fc9ecd54b0e32e907d9584969e6325fbbd90717",
+          "12331": "a7b6ddea86cb3367e56c7e7f746f373ceebbdcc3dde42d015f7e753faade2d49"
+        }
+      },
+      "spacing70": {
+        "n": 32,
+        "damage_taken": {
+          "gun": 76891.29999999996,
+          "npc": 660.5,
+          "mortar": 7123.7,
+          "laser": 8306.6,
+          "lightning": 738.5999999999999
+        },
+        "hits_taken": {
+          "gun": 1637,
+          "npc": 22,
+          "mortar": 41,
+          "laser": 25,
+          "lightning": 12
+        },
+        "live_frames": 42627,
+        "charging_frames": 5071,
+        "frames_nonlaser_opponent_within70": 14058,
+        "short_events": 12,
+        "laser_ever": 29,
+        "laser_by30": 22,
+        "trace_hashes": {
+          "12300": "8421ac28c9b41ed5909e6269665c05fb10bca0c3a3687bb115e8ecdf86ef7e99",
+          "12301": "a404d88ab750d879f12e5ddb11c6b582bd7b6b008b9d2b45bd1598a53ccee97f",
+          "12302": "8f53da4e082fcb8323401eb209e9879adef3b0e08535ab8a1f7961317cd9cae8",
+          "12303": "d3964d2d2d1dc122ab9dfb3a744f042830278cefdb770208b1bbadfac37f98b7",
+          "12304": "a46fe23eff26793bb68d3676ef6769955843c2caa5cdfa9aa25da01a6029f140",
+          "12305": "c45fcff1b550dcbcb811a7d08b19fb48fe1e3dcaaf991a338de66d5b08bf6172",
+          "12306": "61da9fcfdc2520df4eec362ecfb254cd1e4b5c551605042974f8102ed0e5c68e",
+          "12307": "ec0084595dfe402d165c2d4249b1bd66a3690a9942ebfc810aed8fbf1e09d996",
+          "12308": "c6c6b3b7e088336c8e8bce4f979e41a8a7ba6bf2514ff6153ba76ff8fe82269e",
+          "12309": "21d53ca8576ccb0523e01df2cd72b62c56e66a95c4ec5459a2f55041c167eefd",
+          "12310": "c99360e677c84f8d1bcf0e7d331718d6296c9aa8059adb24a7e773353fe53bf3",
+          "12311": "985a2851e50e74f9f6676c9c2332a94af53e14a6e6caad5f50560ba3761b1171",
+          "12312": "31be5c9f577e5b1f19c424588b50fb1572a391612b31530c7ebd6c63f0c715fe",
+          "12313": "2388d5432f09abd21fa7deae65374efb2f589f9f29864f7d683998256d8df86e",
+          "12314": "7a04a143ae15647b6f2c7315dee23d7f5261524465ebe4d7a4cd228a0f057d01",
+          "12315": "e4f670dbc3fd352b6c88a3d2f3171041031b6dd7292febfdb1e1a3bc7bc657ac",
+          "12316": "e162646ed81645997560b46f527399247aaf894910a3455b9ccf907776f3df8e",
+          "12317": "c7211fb223ca8209887391bee79b8e17fdf99a565c6910729ea569a2ca5e655b",
+          "12318": "cce50fb8c950a3b83c2e611089c3c1eb7767418185b2ce1bb24fd203a3d2dfc0",
+          "12319": "d946835be9615d9483e515ebb9ed51e206f78d33ed4186dce4c48f24b8bc38a7",
+          "12320": "68d8265bfb6f3cafeaa18113122229166a45a2d0ce80383258574b968ef1f9b5",
+          "12321": "95013c145b24d68e49ac8f068fa8219a6ec4cb1b3d37cc11b406a50b70607b2b",
+          "12322": "b27972bb13504372dd02ab717444b8bcfb086698cba52ea50353c14cdcb46219",
+          "12323": "634d20fca705b0972cb8c09a113daebe1aa09ed1892df9ccc6ce188e9bd955e3",
+          "12324": "b2256ea8ca520bb5b790c67b83d6ec13a33f23b5a70090acf0740f4650e41849",
+          "12325": "452e0b38fe2401f8b5fc3dfff0b9b1aaa13eceb9a1f8bfb2b5d7ca18d09dd335",
+          "12326": "a858a6cdf306b074f384bf6bf15dd61f1dedcf63a832cb34c0f87c270959abbf",
+          "12327": "97ed7e4fbd4036498ac33925ca69b0c3e7c91fdbe798ede6c3159defdebc3b6e",
+          "12328": "a8fb1149419d033f74aa3a93514f064fd864854474db4cd81a5daa2434d6e20b",
+          "12329": "4a44f4feafcbdca6230c8fbc3d86bdc6065b830b371aa84ef1e2bf5dc33180af",
+          "12330": "1103ec57a79cf723916c43e31640d18b1fe54115e94ded1fe766e95f5d2bbaff",
+          "12331": "791147ed205bcd72fd59ac05a87a3a13c59c0afe71e379ba3d6a9da1ae920d54"
+        }
+      }
+    },
+    "v18-ffa": {
+      "control": {
+        "n": 8,
+        "damage_taken": {
+          "gun": 6525.400000000001,
+          "mortar": 110.0,
+          "laser": 1870.3
+        },
+        "hits_taken": {
+          "gun": 134,
+          "mortar": 1,
+          "laser": 6
+        },
+        "live_frames": 2373,
+        "charging_frames": 154,
+        "frames_nonlaser_opponent_within70": 103,
+        "short_events": 0,
+        "laser_ever": 4,
+        "laser_by30": 4,
+        "trace_hashes": {
+          "12400": "89f720403c30ac7a698f2d4bcd0b586af2cc528be549d0a285d763c0117f3232",
+          "12401": "bda4ccd5cbe6a66ab7f294c7fe150d7eed96841ddd75d0bdf5956ff96d1181ec",
+          "12402": "4193ab7b58afa0c3245a53fcd44c73b88033dbe934c45432ad869f886695fa6a",
+          "12403": "113c99e583ca593ddfc193cd1f94ec59d0dbe7e300d64fc91db8beed410de485",
+          "12404": "f2f17c4ef9286b0a9482ce1c015fb8020052725cd4f2f43ffaf17638070cc2d7",
+          "12405": "5b8629d52b318f6a8de6fd07277f05ca9554944a1552c7ad3cadf346cdf810c4",
+          "12406": "fe4acad2ee50f8eda0e7f60ffdafc2ba413ac527fd1a3f69b4f609517cbe2170",
+          "12407": "33ab0527ef21469d41e2ff2ec391789d0bf36e562bfdd880abd674862e7493b0"
+        }
+      },
+      "spacing70": {
+        "n": 8,
+        "damage_taken": {
+          "gun": 8235.400000000001,
+          "mortar": 110.0,
+          "laser": 1908.0
+        },
+        "hits_taken": {
+          "gun": 157,
+          "mortar": 1,
+          "laser": 6
+        },
+        "live_frames": 3178,
+        "charging_frames": 143,
+        "frames_nonlaser_opponent_within70": 154,
+        "short_events": 0,
+        "laser_ever": 4,
+        "laser_by30": 4,
+        "trace_hashes": {
+          "12400": "0b75ed58edb829948d1d3e997dae16339fc43b50e1f921384b62ce47f0550712",
+          "12401": "e83aa3308afe904d2c508e01d8d37dec6b5d222863584a06a8f2e8bcab19f879",
+          "12402": "771273e033c76ed670c0da497511e66efaebadb35a04bcb71210eccabbcbb31d",
+          "12403": "34aa2adba9d9de0b2f1fb3c0340908187593a322dfe294b88a7ca8cf3cfca9c4",
+          "12404": "719f87330af5f82df4edb4df12665409e953a8f3fa92860441284be8a844bc17",
+          "12405": "b2d4d14f3ffd08871a0061af0993286c32eda5586b52cfafad6bff09c5c3b22c",
+          "12406": "da947f784f057ee1cab5814429ffc8cc521e771f4fe33ba2c8a110a2277ffffd",
+          "12407": "e6770523332e683b1b52e3a01e8d6a331945e404f03fd7a70eefdc0b623cdaf3"
+        }
+      }
+    }
+  },
+  "limits": [
+    "Opponent behavior and escalation are reconstructed.",
+    "Sampling intervals exclude model error and feature selection.",
+    "Replay distance is geometric, without a visibility guarantee.",
+    "Damage and weapon counts also depend on survival and encounters."
+  ]
+}

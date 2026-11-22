@@ -1,0 +1,25 @@
+{
+  "baseline_commit": "e45e734215354fc4f938af15c984a666f446a426",
+  "baseline_official_score": 6.27,
+  "selected_arm": "spacing70",
+  "selected_at": "2026-11-22T03:02:41.097840+00:00",
+  "behavior_change": "Increase gear_easy_range from55 to70 metres; all other V17 parameters and algorithms retained.",
+  "selection_evidence": {
+    "development_delta": 0.8125,
+    "fresh_moderate_delta": 0.0,
+    "fresh_fast_delta": 1.458333333333334,
+    "fresh_pooled_delta": 0.729166666666667,
+    "paired_fresh_seeds": 48
+  },
+  "rejected": {
+    "guard": "Only Lightning spacing floor: -0.125 on16 development seeds; removed from active source.",
+    "spacing85": "Fresh moderate -0.5, faster +0.583333; pooled +0.041667 vs +0.729167 for70. Greater distance does not monotonically improve performance."
+  },
+  "reserved_holdout": {
+    "seeds": "12300-12331",
+    "join_per_loss": 0.8,
+    "result_seen_at_selection": false,
+    "criterion": "Nonnegative matched score point estimate, no late/invalid replies or tracebacks."
+  },
+  "limits": "Simulation comparisons do not establish official strength. Official champion remains V17 until a higher official result."
+}

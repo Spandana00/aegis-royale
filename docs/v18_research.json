@@ -1,0 +1,182 @@
+{
+  "kind": "V18 public-source refresh; repository claims and organizer scores are separate evidence.",
+  "carried_forward_inventory": "docs/v17_repository_inventory.json",
+  "carried_forward_scan": "docs/v17_repository_scan.json",
+  "carried_forward_review": "docs/v17_peer_file_review.json",
+  "leaderboard": {
+    "url": "https://www.joinbuilders.org/buildathon/standings/builders",
+    "team": "2696",
+    "score": 6.58,
+    "exact_repository": null,
+    "exact_commit": null
+  },
+  "searches": [
+    "2696 mech in:readme",
+    "2696 buildathon in:readme",
+    "6.58 mechfight in:readme",
+    "6.58 royale in:readme",
+    "\"mech royale\" in:name,description,readme pushed:>2026-11-22T02:20:00Z",
+    "Global GitHub code search for 6.58/mech and 2696/royale"
+  ],
+  "recent_repositories": [
+    {
+      "repository": "SandeepMadhavarapu/BattleRoyale",
+      "tree_sha": "45e788b45be7cd59910f7a8149976806a78906b1",
+      "tree_available": true,
+      "files": 23,
+      "readme_sha": "b813c0d62292b77dca7b75ceee1098507c2907c4",
+      "verified_head_commit": "45e788b45be7cd59910f7a8149976806a78906b1"
+    },
+    {
+      "repository": "Russell-Day/builders-mech-royale",
+      "tree_sha": null,
+      "tree_available": false,
+      "files": 0,
+      "readme_sha": "146466f175a9fe4e0c1e037966f2091b4d685afc"
+    },
+    {
+      "repository": "ismachaudhary/mech-royale-bot",
+      "tree_sha": "bb763bef1bf03ebed739f9341d8d574c974a93c0",
+      "tree_available": true,
+      "files": 4,
+      "readme_sha": "a6a4daa44cf5b1f0df098dc891d26678523e318e"
+    },
+    {
+      "repository": "zerennn8/mech-royale-bot",
+      "tree_sha": "339c94449aee791415471417f84ee76fb3005e86",
+      "tree_available": true,
+      "files": 10,
+      "readme_sha": "05864d7f3c7ba7d03494bc3f64ab6513f667cbfe"
+    },
+    {
+      "repository": "h-ardy/buildathon-mech-royale",
+      "tree_sha": "c8eb53902c90b068a060052657e6387d08547740",
+      "tree_available": true,
+      "files": 21,
+      "readme_sha": "84cba8cd4eee946f38a1db54ec589b86021d5efa"
+    },
+    {
+      "repository": "CyberCoder-bit/mech-royale-bot",
+      "tree_sha": "8c9453fe99ed986a1cfe6c07683885ea345b59ab",
+      "tree_available": true,
+      "files": 67,
+      "readme_sha": null
+    },
+    {
+      "repository": "blanc-team/try_again",
+      "tree_sha": "3e8972be5cf8d1add6d2b18c1d2af0714a73c123",
+      "tree_available": true,
+      "files": 27,
+      "readme_sha": "2908bbd4fd7008ff03f052316e60d17716a4868e"
+    },
+    {
+      "repository": "arw008-droid/my-th-mechRoyale",
+      "tree_sha": null,
+      "tree_available": false,
+      "files": 0,
+      "readme_sha": null
+    },
+    {
+      "repository": "c-c-c-c-c-o/shooter_bot",
+      "tree_sha": "6417e2f478fd27508f823b8a569e1656c36467c7",
+      "tree_available": true,
+      "files": 13,
+      "readme_sha": "d62f25cf785b07d871a695bbedfb56490288a743"
+    },
+    {
+      "repository": "shaunkar1/sim-runs",
+      "tree_sha": "2363010d388f15b77e06bfddee89cf6f6345cffc",
+      "tree_available": true,
+      "files": 1214,
+      "readme_sha": "da30b511656142edbd6e5ac90c3521b05e122b47"
+    },
+    {
+      "repository": "loveconnor/mech-royale-bot",
+      "tree_sha": "b8f61564e5af698b4fd6ca26299c64bf6d73ecc2",
+      "tree_available": true,
+      "files": 23,
+      "readme_sha": "f303d2a13a4663866af762e4c50d25b4f57471d2"
+    },
+    {
+      "repository": "lukejwaszyn/mech-royale",
+      "tree_sha": "0300cee44419a942c1606fdc2d6ae259f312486e",
+      "tree_available": true,
+      "files": 70,
+      "readme_sha": "d954db1f04d6329433b40563739b85ddb5cc72e7",
+      "verified_head_commit": "0300cee44419a942c1606fdc2d6ae259f312486e"
+    },
+    {
+      "repository": "MVai-Builders/mech-royale",
+      "tree_sha": "d73fad66b89e4ffcfcc48eb0f1fe0f47ae4addc5",
+      "tree_available": true,
+      "files": 19,
+      "readme_sha": null
+    },
+    {
+      "repository": "RagsNPaul/Mech_Royale",
+      "tree_sha": "80240a16c83526e4f24fc95b967d82156b7fc348",
+      "tree_available": true,
+      "files": 64,
+      "readme_sha": "6de44b2d5a7e4d3c68d334875df55ba625bb1dd0"
+    },
+    {
+      "repository": "merlette/mech-royale-bot",
+      "tree_sha": null,
+      "tree_available": false,
+      "files": 0,
+      "readme_sha": null
+    }
+  ],
+  "strongest_new_claims": [
+    {
+      "repository": "sonalrajapaksha/recursive-builders",
+      "path": "EXPERIMENTS.md",
+      "blob": "028b184b7001b739cb55b40f4637e8de54bdb2d1",
+      "commit": "0e4ee97191f449cd1fe98ead19e2a71cfd03fb16",
+      "claims": [
+        "dv600 best 6.25, larger priorities 6.23 or no change",
+        "Wider loot radius 6.06 vs 6.25",
+        "Hiding profile 5.23 vs 6.25",
+        "Predictive-controller rewrites 5.15/5.35 vs 6.10",
+        "Kill regeneration 6.25 tie; retreat toward landing drop 6.19 vs 6.25"
+      ],
+      "status": "Author-reported official outcomes; exact run receipts partly published, independently not in our account."
+    },
+    {
+      "repository": "SandeepMadhavarapu/BattleRoyale",
+      "path": "TUNING.md",
+      "blob": "bae4ee1df2c7bba999cb535065cf20b8ea83381a",
+      "claims": [
+        "Baseline 6.19; added sound awareness 5.73 twice",
+        "Late hide switch at circle140 reached6.25; earlier circle240 switch5.83",
+        "Combining best hide switch with supply-drop hiding6.21"
+      ],
+      "status": "Author-reported official outcomes. These code changes are not imported."
+    },
+    {
+      "repository": "ahmad-ovh/Buildathon",
+      "path": "docs/EXPERIMENTS.md",
+      "blob": "f86e862df735ebd6475bddfb0471de592d5908f4",
+      "claims": [
+        "Anti-Lightning local ablation +0.34 over96 modeled matches",
+        "Compiled Go bundle has local gains, no verified6.58 official result"
+      ],
+      "status": "Mechanism hypothesis only; our guarded pilot must stand on its own."
+    }
+  ],
+  "findings": [
+    "No verified repository/commit mapping for leader2696 at6.58.",
+    "Common publicly supported ingredients: laser acquisition, defensible range, armor/health, combat and resource collection coordinated without large rewrites.",
+    "Features are not additive; tested public combinations sometimes regress. Our full official history and fresh ablations take precedence over feature counts."
+  ],
+  "pinned_file_checks": {
+    "lukejwaszyn/mech-royale/README.md": {
+      "commit": "0300cee44419a942c1606fdc2d6ae259f312486e",
+      "blob": "d954db1f04d6329433b40563739b85ddb5cc72e7"
+    },
+    "SandeepMadhavarapu/BattleRoyale/TUNING.md": {
+      "commit": "45e788b45be7cd59910f7a8149976806a78906b1",
+      "blob": "bae4ee1df2c7bba999cb535065cf20b8ea83381a"
+    }
+  }
+}
