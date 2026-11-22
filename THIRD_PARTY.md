@@ -1,22 +1,35 @@
 # Third-party software
 
-## V14 active policy
+## V14 foundation and V15 adaptation
 
-The `automata/` tree reproduces the MIT-licensed policy from
+The `automata/` tree is adapted from the MIT-licensed policy in
 [jason-scheffel/automata](https://github.com/jason-scheffel/automata), commit
 `f114d641a0de0c565dc057e342b4305b8cfe6d53`.
 Copyright (c) 2026 Jason Scheffel. The complete license is retained in
 [automata/LICENSE](automata/LICENSE) and the final container.
 
-The only implementation change is the display name, from `automata` to
-`AEGIS v14`. All 35 original source, configuration, lock and license files are
-verified against [their source hashes and Git blob IDs](docs/automata_manifest.json).
-The original configuration is preserved in full. Packaging and research scripts
-are outside that implementation. No Go or historical Python policy is mixed into it.
+V14 changed only the display name to AEGIS v14 and scored **6.19** under receipt
+BB-A804A35A. Its original 35-file manifest remains in
+[docs/automata_manifest.json](docs/automata_manifest.json).
 
-The public GMUNVIS repository identifies Automata f114d64 as its source;
-normalizing line endings and the name reproduces its runtime tree. The official
-board shows GMUNVIS at 6.23 and Team 67 at 6.29. The board does not disclose their
+V15 makes scoped firing changes: cube-aware laser damage with an armor bound
+from earned upgrade offers, and central laser/gun aim sharing with an explicit
+map sightline check. A disabled own-motion hypothesis is retained for research.
+New regression scenarios and packaging/research tools are outside the original
+implementation. The [V15 manifest](docs/v15_manifest.json) records line reversals
+that reconstruct every original upstream SHA-256 and Git blob ID. Movement,
+equipment priorities, harvesting and recovery retain the V14 foundation.
+
+Conservative laser-release ideas were compared with the retained MIT Sentinel
+implementation credited below. A later MIT Automata aim-arbitration experiment
+at d4c72b4bd8e724b97966631a1a5e449cc0ed8175 was inspected; V15 uses a bounded
+central-window intersection and explicit sightline guard. No Go implementation
+or historical Python policy runs in the V15 image.
+
+The GMUNVIS tree inspected at 553516f5d4742878c555a282eab60c9223d137b2
+identifies Automata f114d64 as its source; normalizing line endings and the name
+reproduces that runtime tree. The recorded board snapshot shows GMUNVIS at 6.23
+and Team 67 at 6.29. The board does not disclose their
 submitted commit IDs, so these are corroborating source-family results, not
 verified exact-commit scores or a prediction for V14.
 

@@ -1,0 +1,1623 @@
+{
+  "date": "2026-11-21",
+  "repositories_checked": 225,
+  "readmes_found": 171,
+  "scope": "Refreshed V14 repository set plus newly discovered repositories; public README claims do not independently establish official scores.",
+  "records": [
+    {
+      "repository": "coolerputt01/Mecha-Royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ela57/Builders-Royale",
+      "readme_found": true,
+      "readme_blob": "da946647f28fcf691332b09b71945c00407ef10a",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "shreypatel1/quokka-lattice-7f3k",
+      "readme_found": true,
+      "readme_blob": "0818c32711939fb336130489c034d64d51bafe77",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "kpfarn/osuhackathon",
+      "readme_found": true,
+      "readme_blob": "ffda7f38b218947d0e08f08b3c2599e7263686b3",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "sphugne/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "eb0c9067908e85911eb23fcf10e70cb05646d651",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "uykheangchhour/builders-Hackathon",
+      "readme_found": true,
+      "readme_blob": "770b3fb6b913f41795f9be4758baeb938dc79d4d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "anurag11satpathy/mech-royale2026",
+      "readme_found": true,
+      "readme_blob": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "amoorgy/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "2f430330f350eec3b8ecab25f695fc8d904739ea",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Yiyang-Jin/mech-royale",
+      "readme_found": true,
+      "readme_blob": "27a9c381926b73de71eae4e5447dc0ac487ad598",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "enkyuan/aquarius",
+      "readme_found": true,
+      "readme_blob": "ee1cf9bec8842d4be9bb5ccb83bd29ee63378e58",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Visalth/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Specz04/hus-hus",
+      "readme_found": true,
+      "readme_blob": "47c616273c35b6bc231f04ae95c80509a54ab8a9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "alexwilldev/mechroyale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ErikUmble/buildathon-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "himagna16/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Leahie/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "76cc6ce602f30b363c84068be7269c13873f731b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "pnp6113/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "5a096946794005d42366f02b33a8c010685db73b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "volcanoboy3/mech-royale",
+      "readme_found": true,
+      "readme_blob": "9c7e94c8e8ec110486d55fb114f0deea4f88d0e3",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "EvanDamron/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "b62f3583555cf0f3ca5684fd0f89e94dd67a1952",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jmonked/monked-mech-royale",
+      "readme_found": true,
+      "readme_blob": "52c2a811658340eda2f99e28e8b913c7fb51b761",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "hatimwen/builders-mech-royale-2026",
+      "readme_found": true,
+      "readme_blob": "0e5c76e47b67ee39fb8d013c027f51eba8aad06f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "hansen-cao/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "766859454e9fc2d5c0630316289090f6858c4949",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "youraverageguy-123/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "78e7c8f2c5d72b26750ce78e2bf8a1b812adedeb",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jpw942/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "45ac8386ec6d3e40c4d42189322b5877962e424d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "0629owen-del/mechfight-early",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "SuperHuyGaming/mech-royale",
+      "readme_found": true,
+      "readme_blob": "5fe08bc07ff30a40810347a25dc1eb66def2f82b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "amoorgy/mech-royale-bot-b",
+      "readme_found": true,
+      "readme_blob": "2f430330f350eec3b8ecab25f695fc8d904739ea",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "micah-andelman/mech-royale",
+      "readme_found": true,
+      "readme_blob": "40cc428bb56c9c3d2ade16fa7f76f6e7a98e2a4c",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "CtrlZGau/strat-game",
+      "readme_found": true,
+      "readme_blob": "7354eca9890f163c9f0bff0edc820fa57ac1c4c1",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "erlenchik01/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "viktor-lorentz/mech-royale-overcooked",
+      "readme_found": true,
+      "readme_blob": "e714661d4d30c133695a1f510f49e303dc6e0641",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "alex-vizn/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "97c9c7c0bede0e2d03e1b80914b5eaad3a25439f",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "JosiahAklog/nexus-mech-royale",
+      "readme_found": true,
+      "readme_blob": "f5caf57f7c6a4174cadac9a44f82638c392d94ce",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hassene26/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "atharvatripathi2026/gtgoats_mech_royale",
+      "readme_found": true,
+      "readme_blob": "6b55bc56f7a3e6dd8f686535edb309522f80e537",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "MarwanMoh11/mech-royale",
+      "readme_found": true,
+      "readme_blob": "82ba5784223a40b5ff81878eb7ad9ad3917afd2f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "niranjankumarnk/mech-royale",
+      "readme_found": true,
+      "readme_blob": "38a757c6fae039aa0eee0b7a011aa2c254d4bd7d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Sibongile613/lone-33new",
+      "readme_found": true,
+      "readme_blob": "94ed5664cb32e83540da0d89b4705e0a2b87d30a",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "MahnoorKhan-1/phantom-survivor",
+      "readme_found": true,
+      "readme_blob": "d2e0e15d8787d91b46bf86da5b2cfeadd4762220",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Krisha052/mech-royale",
+      "readme_found": true,
+      "readme_blob": "14cfd3a3e58ebea3741172a38238e456038d0a99",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Adi848-dotcom/adi-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Warrior-hound/mech-royale",
+      "readme_found": true,
+      "readme_blob": "f8aa316b37b951e209f65160b3542e0a18568a2d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "suresh-vlsi/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "ec3f374666dcd9f5dcf94bd702e5d2dfbfa33823",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jackbalseca/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "0dfe806e16a9c21db19b29497f79db32c6e22398",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "anthonyteti/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "daf6984ed22da4c2b1af21fcfed31fdf3e4ed342",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "nshuai808/mech-royale",
+      "readme_found": true,
+      "readme_blob": "3c76137f5420a021d8b5690e2441be7e17a2fa64",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Rohanasudani/edgewise-mech-royale",
+      "readme_found": true,
+      "readme_blob": "ba9b97d1359dc38802e0936bcda4d01e8d66321d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ianarce/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "FDS-Dark/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "f417efe3cc573be0971a58403ac90a2171e5e4d1",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "suvathikannan17/mech-royale",
+      "readme_found": true,
+      "readme_blob": "5fa73fe9bbb4557bdebae76e5efcacbc099e9286",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "nitik1998/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "9d6dc4b4dc543e6a51afe0f36add66c30ac21092",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Kyt0V0/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "02ece646638d5c1b010e650c0b7cbf0f86c8b10c",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Tanish-Dhankhar/Mech-royale",
+      "readme_found": true,
+      "readme_blob": "4a519db84525d667485a85e1aecb91859b2ad1be",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "richardlin05/mech_royale",
+      "readme_found": true,
+      "readme_blob": "35b4f5d61a1e461b66626071a93269a916b8dd42",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "afiapoks/mech-royale",
+      "readme_found": true,
+      "readme_blob": "3f08d5de12568d8a804fd4fcec17129a22987e79",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Borovail/builders-mech-royale",
+      "readme_found": true,
+      "readme_blob": "6d1789884565690fd0b624861bca9ebbd669f04f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "NecritsSoup/mech-royale-buildathon-2026",
+      "readme_found": true,
+      "readme_blob": "07ed8ed855843e689a92af6075064a048d15ac24",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Tobiloba014/mech_royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "creationofuniverse/mech-royale",
+      "readme_found": true,
+      "readme_blob": "ed501d61b64a7da8beefd7770492e0bdb11194a3",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ParishruthiGanesh/mech-royale",
+      "readme_found": true,
+      "readme_blob": "e47cfe6c1b5050d055eb024a0b917bddc9ad788f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "nullat0m7/mech-royale",
+      "readme_found": true,
+      "readme_blob": "31203ed220c99a80822181a7c034b644d4c05dea",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "vngthin/Mech_Royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Britogus7/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "e4d0453dd6201febe37fbe04674c220888de1be7",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "RagsNPaul/Mech_Royale",
+      "readme_found": true,
+      "readme_blob": "6de44b2d5a7e4d3c68d334875df55ba625bb1dd0",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "akshayagg18/mech-royale",
+      "readme_found": true,
+      "readme_blob": "06530ac1973dbc62648b48b7b52cd231612f6431",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "LuBolin/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "caitlinthaeler/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Achintya-Lakshmanan/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "bdf8b4e832449370f5bcae882d42ea60e5982823",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "JishnuMadav/mech-royale",
+      "readme_found": true,
+      "readme_blob": "263869790b0708864033ec6ebbffe75782ad0d16",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "6.31"
+      ]
+    },
+    {
+      "repository": "nelsonwong506-lang/mech-royale",
+      "readme_found": true,
+      "readme_blob": "a5fe3c3990e6782c1adecdd74809ba0c01b2bedb",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "bsrikumar855-dot/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "9c329c2923300ff947016c769f0e6e0827467b3d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Sharmileer/mech-royale",
+      "readme_found": true,
+      "readme_blob": "eb032174b8d54385e9c8a2fb4fa51401f9d29a2e",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "1.15",
+        "2.58"
+      ]
+    },
+    {
+      "repository": "sarbzcode/mech-royale",
+      "readme_found": true,
+      "readme_blob": "83c474361237806d4b501ad1d5603fde83100e9d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "OliverTTran123/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "charliescull/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "d81cc8a53006898d094c31b6eab9d52f8999c995",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "strobor/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "CeciG24/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "280427f808afdbc32cbe64670d880e893ffbbcf9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "blanc-team/mech_royale",
+      "readme_found": true,
+      "readme_blob": "46f2980c89ee07014db47696df93b355729d2661",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "MVai-Builders/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "fariha0178/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "6e2513163ada3548eccce8c087bff81ac3d756ab",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "joealfonso/RustbucketRoyale",
+      "readme_found": true,
+      "readme_blob": "355d88905e4a32d7888ca0c5c52f4df17e22c081",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "sntin/mech-royale",
+      "readme_found": true,
+      "readme_blob": "df95aa4f7f65e74c5895b0152bfe3608ec71afb6",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Not-Ethan/oval-ghost-mech",
+      "readme_found": true,
+      "readme_blob": "d4c7c820ff54be1f8e581d192287aebe4514efdd",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ShenoyVaradaraya/mech-royale",
+      "readme_found": true,
+      "readme_blob": "8441c088839bb38ca8b4eb83b37d18d21d3f58aa",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "LanceHuang245/mech-royale",
+      "readme_found": true,
+      "readme_blob": "f764d3cb87e03c2931fd33d7041394a76b3294d8",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "radioheadfan123/mech-royale",
+      "readme_found": true,
+      "readme_blob": "b05d3fef9a47874e581b8b47c50ea50aa2444c8b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Azula19-b/mech-royale",
+      "readme_found": true,
+      "readme_blob": "c9da6e61e566f5ee689c385c3c362c6be1aab712",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "6.31"
+      ]
+    },
+    {
+      "repository": "atharv109/mech-royale",
+      "readme_found": true,
+      "readme_blob": "ca51c0d227d373862c7f529125d50b91fcf5b46d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "cyanwingsbird/Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "7eb235efb9d85a7870d20f21d35d806f2abafe61",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Arnav8452/mech-royale",
+      "readme_found": true,
+      "readme_blob": "63ed32918dc6f32db60518f28600527acfee7c16",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "VenujaRH/mech-royale",
+      "readme_found": true,
+      "readme_blob": "7496ea2f139cab1f34213d49d3276fe68ccc8f19",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "aymanm31/Builders-MechRoyale",
+      "readme_found": true,
+      "readme_blob": "52841574698e3c80a80a7d9fd9bee0de160e7cfb",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "pcetner/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mbaglo/MechRoyale-Agent",
+      "readme_found": true,
+      "readme_blob": "6290caaddb73e01e04d7ef6fa63e227cf5e94340",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "TheJ10/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "bluedev-52/mech-royale-bot-test",
+      "readme_found": true,
+      "readme_blob": "e57f80a99e5ca79c60c441862e524a327b7d6750",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jklein07/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "fae5e4ac18a0435c2dc5c8c00c9d4865c4561773",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Th3r0n/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "bf2a6212083ca0997d5357b2306be267754f6356",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "WasilahAbdulHameed/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "7345be1c0b2431f2701e6c58d08a06b35c436a3d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "JasonR-code/switchback-mech-royale",
+      "readme_found": true,
+      "readme_blob": "f9db1516c9865d15552e6bffd9cc52fd9d9609d6",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "4.27"
+      ]
+    },
+    {
+      "repository": "ruizmic0100/mechfighter3000",
+      "readme_found": true,
+      "readme_blob": "2488f66ab9f873c882df11c6127c035312b1fc1c",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "krishramesh191207-design/mechfight",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mahathio/mechfight",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hung21108/mechfight",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "caioplcerda/oval-pilot",
+      "readme_found": true,
+      "readme_blob": "65faa1636466d1701a9e41e1fa63e04bdef91da7",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "gunnermanx/mechfight",
+      "readme_found": true,
+      "readme_blob": "ceaf2f6a363b92f7c36a370d24d5cd261910565f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Rishab-Gupta24/mechfight",
+      "readme_found": true,
+      "readme_blob": "94787536eaeddd3117ded142b300ad9e4d505406",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "F0RF31T/Mechfight",
+      "readme_found": true,
+      "readme_blob": "45db602d69416115e07e2e98d8ec834fd3551a7c",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "muhammadaliafzal205/mechfight",
+      "readme_found": true,
+      "readme_blob": "dbe7279a890e975e75f1d588204d477111d04108",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Medici357/AllQuietOnTheFrontalLobe",
+      "readme_found": true,
+      "readme_blob": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "nguyenphuquang1234567/kestrel",
+      "readme_found": true,
+      "readme_blob": "6fc50eda631fbb8828033024333aa4844be0b10b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "abi05-jpg/oval-survivor-bot",
+      "readme_found": true,
+      "readme_blob": "0af4ccc79d35394e5ad067394739f4179d856bed",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "OHc99/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "0344bd2c09c3a6242847db2d86db19462c42f995",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "chair1842/MechFightingGame",
+      "readme_found": true,
+      "readme_blob": "be9ab3ef6dd9b99d439e0fef5f1f425443ef3066",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "riscvul/MechaVR",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Bows3r/MechFight",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "krishramesh191207-design/mechfight-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "bhattyuvraj22/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "026f1310e749be0623dce255a65381396ee260d7",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Bows3r/MechFight-V2",
+      "readme_found": true,
+      "readme_blob": "9d9144b08d2fe0b5192b71f08a61147ecd88efc7",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "brycehcmcgrath/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "58f5d9ae58c9d58f9545e3d14983785d8eba6c59",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "5.98"
+      ]
+    },
+    {
+      "repository": "muhammadaliafzal205/mechfight-bot",
+      "readme_found": true,
+      "readme_blob": "94c52941cecfbdbd788eb0cc781c114fb1388095",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "OHc99/mechfight-bot1",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "tentechle/mechfight-survivor",
+      "readme_found": true,
+      "readme_blob": "0103c58b3c834bcb14af8336e98abb9afacc7c7f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Meows3s/mechfight-cpp",
+      "readme_found": true,
+      "readme_blob": "95abb853fe89384e47138118339a9267051df886",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Tayleron/MechFightsXtreme",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Tayleron/PS-MechFights",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Epicepicdemic/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "e36f57f658e6f64de74778f2e572f5e9ae3e68a1",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "kundansai-138/eb2fa572b66ac424838ab550566bdd16",
+      "readme_found": true,
+      "readme_blob": "c57cbc6d14b35503b3c6590ed25ac93ce4e6bd4f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "pedduvedcharan/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "c9cc781413638f5afb64a2e1e7ed5967ff22d29a",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "waiprotein/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "230797ea5cd6a40b5b52df625df50693769ef2e4",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "VivekRnx/bob-the-builder-2026",
+      "readme_found": true,
+      "readme_blob": "80f43d41d382684f6343d4855a9c7fa604d90520",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "6.33",
+        "7.5",
+        "8.67"
+      ]
+    },
+    {
+      "repository": "Nadipalli-Sandeep/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "479b8ebba10d4067e35c8686062875cb6d92b1b3",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "NhatUndeath/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Avilekha/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "egeiran/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "408d59bfba1cf6f3e7d60e3f9b26f77c75d414cb",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "wzardomri/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "cd421fd19380addbb793a08d7d719df3b4ff54a1",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "AkChetti06/aegis-mech-royale",
+      "readme_found": true,
+      "readme_blob": "0e42506864cd86640547bb5f03bb7fdafaec41c9",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "1.15",
+        "1.4",
+        "1.9",
+        "2.9",
+        "3.1"
+      ]
+    },
+    {
+      "repository": "BIGBIGBIGJoJo/labubu-mech-royale",
+      "readme_found": true,
+      "readme_blob": "462ef3d639b51a097c448d71c0bf88d2d8018869",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hoangchuyenanh/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Rizwanzaman70/Bizz01-MechRoyale",
+      "readme_found": true,
+      "readme_blob": "64086f18f6f3b2f2544ab5a4bc3268b1ee113772",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jasonsoohoo/MechRoyaleHackathonChallenge",
+      "readme_found": true,
+      "readme_blob": "229c779739079bcb85971d6702e8e909c8759daf",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Rxd5816/Builders---Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "b7115ab965ecedd3cc1ae69f29319bc80ad3e354",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hiresh2007/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "b0e3d53f4d03808cb833222bd0572c2f4f9c32e2",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "10.25",
+        "19.3",
+        "4.63",
+        "4.69",
+        "9.99"
+      ]
+    },
+    {
+      "repository": "Nurzhic/SteadySurvivor-MechRoyale",
+      "readme_found": true,
+      "readme_blob": "b12c6acace69cb782d3ce1ab19382e0f14933e6d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "GuilleHoardings/mechanized-royale",
+      "readme_found": true,
+      "readme_blob": "24a4b4996e5cfde9377282fa9eee3cf17775909d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "teetham-t/mech-royale-pocket-comet",
+      "readme_found": true,
+      "readme_blob": "3d195c7500b1c7aa254c568a23e099e9e9a6db22",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "arnabxero/xero-mech-royale",
+      "readme_found": true,
+      "readme_blob": "a6b8f3e19ca94ddd2a6c12a4c235a9ed1ed1f133",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "varadanvk/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "200e928e9543a06be79190174fceb727e4957904",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Evans-Kwashie/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "7acf7fc8331b86e0b0d33ba41fad2492672f8458",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Goku634/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "muhammadsoban-01/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "himanshu-thalor/apexmech-buildathon",
+      "readme_found": true,
+      "readme_blob": "5f14e4bf3d7615ffc29d0200d9a3917f85d156e9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "yahya3867/buildathon-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ejensODU/oval-circuit-mech",
+      "readme_found": true,
+      "readme_blob": "7075e5f6b7732257b2e0347b392e08e6d9485648",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "sarah29006/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "b2b3bf7e65b387a88b8374a9686a046e1e45a6dc",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "MeeksonJr/builders-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "whyMiso/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "2f4dab582c92853b5123ee01c92989d5db4df791",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hutamaa/mech-royale-agent",
+      "readme_found": true,
+      "readme_blob": "9c32f0a74573f5884fac6ab4f524b084bd1a834a",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "koillea/mech-royale-goonies",
+      "readme_found": true,
+      "readme_blob": "8163be89ae507c811ebb7636075d57e3bddcd066",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "froggiewins/ScrapMechRoyale",
+      "readme_found": true,
+      "readme_blob": "93b664dadca16ffce282bc92d896cec4fee1f33c",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "NurdauletZhalgas/Mech-Royale-Bot",
+      "readme_found": true,
+      "readme_blob": "294540b4be9cb54595c856360586510066e76b41",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "TEMOtkesh/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "900e468ccd77aa4349d1e88ce7f1a44801f87c00",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jerrywang255-spec/Mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "766859454e9fc2d5c0630316289090f6858c4949",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jacobcorbett/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "122b26e37614c172ee00538d086158ae6fe20f7f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "praggybhat/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "874b3a0b15b7f073971e7a7a2428a44dd36d6fa4",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Arnav8452/mech-royale-rust",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Arnav-M10/BuildersMechRoyale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "AbhirajTiwari12/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "317f2cb646c3f52bf280d2c85ee860acb7119870",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "joonk7809/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "georgegcal1-arch/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "akshatlall/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ricky-he2006/Builders---Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "0b7f39ee84811d007d7e09f2f6388d2281a818a6",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Neom10/highveld-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Arfan301/Mecha-battle-royale",
+      "readme_found": true,
+      "readme_blob": "b8b531b55834abb550df3247fbb151c6d5302074",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "emptybook11/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "0344bd2c09c3a6242847db2d86db19462c42f995",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "h-ardy/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "09d086a9a7fa30d3f7659244171cb798b7fc808d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "JuanQuenga/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "c155baf23245c9c4a956f0fad711c64a4e64c59d",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "trompeterm/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "5511f0dea6ecd6ccbfe74987ad16ea61cb306f42",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "beckimron1/ict-mech-royale",
+      "readme_found": true,
+      "readme_blob": "571b5679802db2eab926557e5147b8e670157e28",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "dilkshhh/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "c735f99570412f1512c5d934568c2ab4588b7655",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "LeeYongLiangGit/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "orbitautomation/buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "b257a0c342594ad435eb14ff5764f36bb5152d54",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "SunnyChanPolyU/BuildersMechRoyale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "KaushikNNN/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mike200004/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "6393032dbaf0f796965fdd07be59d84d198b48da",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "LAPR17/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "648578f51790b517e166377b13cba443c49c390b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "SaiGaneshRachamadugu/BattleRoyale-mechanism",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "lollito-ai/Mecha-Champions-Royale",
+      "readme_found": true,
+      "readme_blob": "54e9df8537dc9d861a1b86346f0aee63dd8db5dd",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "lollito-ai/mecha-royale-client",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Jaelucard/joinbuilders-mech-royale",
+      "readme_found": true,
+      "readme_blob": "1f8bea5c6f29fe9b315274217669a8a46fa32243",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "viren711/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Hermes-25/builders-mech-royale",
+      "readme_found": true,
+      "readme_blob": "b0a5d3ae90359fbcacaaa5123b2bac489b255eba",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ZaryabAhsan15/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "2ff705eeb886729ca81013550f459132ee2e5cd7",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Rebecca922/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "dfcb81fec9398d69de9015dfeb0c0c191e1b82e2",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ppetit8/mech-royale_bot",
+      "readme_found": true,
+      "readme_blob": "26c87c2c6860dccda510f6fa35fb67c437d35889",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "prishalala/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mepedrol/mech-royale-bot",
+      "readme_found": true,
+      "readme_blob": "4c4998821961b85bdd28ea84f075baed288bd75b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "SaiyamNShah/mech-royale-builders",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "fariha0178/mech-royale-repo",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Anurisha-Dunuwila/mech-royale-bot",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "ilyash3/mech-royale-fixed",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "KennethLei1492/Builder-Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "f24241e731ff3c845dca44b17028f4ce00767b97",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Arnav3657/mech-royale-submit",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mliao0128/fraun-ringkeeper",
+      "readme_found": true,
+      "readme_blob": "54c089fa99832ee4060ef4d8a46348c4777009dc",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "13shreyansh/ohio-buildathon-mech-royale",
+      "readme_found": true,
+      "readme_blob": "e8376d474ccc7aca1263729fd6e48b849c5c6d4f",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "f20230006-sketch/oval-vector-mech-royale",
+      "readme_found": true,
+      "readme_blob": "f1f468d22c7152248620c583f6334aa09d2d473a",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Koodsu/BuildersHackathonMechRoyale",
+      "readme_found": true,
+      "readme_blob": "f4d736841c53901414f876ef9a5f57c88412ba40",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "shanmukha-here/eagle-eye-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "mjawadforogh2005-ship-it/frogh-ai-mech-royale",
+      "readme_found": true,
+      "readme_blob": "67e4305276c43db7876b573b2a36a5d37f565ff8",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "andrew-zhouu/builders-mech-royale-2026",
+      "readme_found": true,
+      "readme_blob": "c532d5381d1ef09163aee05fb33f2933523e7a35",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Infamustdev/BuildersBuildMechRoyale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Osca-K/builders-buildit-mech-royale",
+      "readme_found": true,
+      "readme_blob": "cb36e6220d8c4d977dfa24eef0bd9a46b09fe633",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "devakchow/team-kanyaraasi-mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "dmclaughlin-bit/mech-bot",
+      "readme_found": true,
+      "readme_blob": "c5063f6916285a76d85eb04f2b0c42b4b4d5830b",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "NhatUndeath/mech-royale-bot-l150",
+      "readme_found": true,
+      "readme_blob": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "readme_found": true,
+      "readme_blob": "c6877cce9c44bcc5806f539c8a7cf715be95732e",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "1.67",
+        "2.67",
+        "6.67",
+        "9.00"
+      ]
+    },
+    {
+      "repository": "anjarwibowo31/Learning-ClashRoyaleBasicMechanics",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "martin-danggg/hcmut-tmt-p1-mech-royale",
+      "readme_found": true,
+      "readme_blob": "dcd7caff8e23563cc6901d2048d37ce93d87ab52",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "1vkd1/OSU-hackathon-2026-builders-mechroyale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Muallim718/oval-sentinel",
+      "readme_found": true,
+      "readme_blob": "d4e9678aded4cfa3c0e016c75eac26ef995f4112",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "acaptainb/Mech_Royale",
+      "readme_found": true,
+      "readme_blob": "b4ea9e5d7ef2cb729bae4fd8a08380d9f1f7d3e2",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "jvenkumahanthi-coder/segfault-mech-royale",
+      "readme_found": true,
+      "readme_blob": "dba6a4fa80db96bb5210295bd5ba50e345ada3d4",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "Tanish-Dhankhar/mech-royale-combined",
+      "readme_found": true,
+      "readme_blob": "92bae6a6493074296bcea14c224f52100d093ef8",
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "NadulaG/mech-royale",
+      "readme_found": false,
+      "readme_blob": null,
+      "contains_score_or_leader_terms": false,
+      "decimal_candidates": []
+    },
+    {
+      "repository": "lmaccart/mech-royale",
+      "readme_found": true,
+      "readme_blob": "c9519f4e7581e901213649b2c8c762dca0cf1d08",
+      "contains_score_or_leader_terms": true,
+      "decimal_candidates": [
+        "6.38"
+      ]
+    }
+  ],
+  "verification_notes": [
+    "The new lmaccart README mentions 6.38 as the board leader, not its own official result.",
+    "No verified public repository-to-submission mapping was found for the 6.38 leaders.",
+    "Automata has newer experimental commits, but several deliberately halt the bot or leave new features disabled; newer does not mean stronger.",
+    "The selected V14 has our own 6.19 receipt; source-family claims no longer substitute for this baseline."
+  ]
+}

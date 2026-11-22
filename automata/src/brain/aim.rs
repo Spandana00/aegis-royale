@@ -13,6 +13,7 @@ pub(crate) struct AimTarget {
     pub height: f64,
     pub hp: f64,
     pub fixed: bool,
+    pub beam_mult: f64,
 }
 
 pub(crate) struct FireOut {
@@ -24,6 +25,21 @@ pub(crate) struct FireOut {
     pub charging: bool,
 }
 
+/// Intersect the gun's aim window with the central half of the laser window.
+/// Returning None keeps the original center-of-target laser command.
+fn shared_aim(laser: V2, gun: V2, ty: f64, tp: f64) -> Option<V2> {
+    let dy = adiff(gun[0], laser[0]);
+    let dp = gun[1] - laser[1];
+    let ly = 0.5 * ty / laser[1].cos().max(0.2);
+    let gy = 0.95 * ty / gun[1].cos().max(0.2);
+    let lo_y = (-ly).max(dy - gy);
+    let hi_y = ly.min(dy + gy);
+    let lo_p = (-0.5 * tp).max(dp - 0.95 * tp);
+    let hi_p = (0.5 * tp).min(dp + 0.95 * tp);
+    if lo_y > hi_y || lo_p > hi_p { return None; }
+    Some([wrap(laser[0] + dy.clamp(lo_y, hi_y)), laser[1] + dp.clamp(lo_p, hi_p)])
+}
+
 impl Brain {
     pub(crate) fn aim_target(&self, tr: &Track) -> AimTarget {
         let (radius, height) = if tr.kind == ActorKind::Npc {
@@ -32,7 +48,20 @@ impl Brain {
             let s = 1.0 + self.cfg.cubes.size_per_cube * tr.cubes.max(0.0);
             (self.cfg.mech.radius * s, self.cfg.mech.height * s)
         };
-        AimTarget { feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false }
+        let beam_mult = if self.p.beam_damage_fix && tr.kind == ActorKind::Mech {
+            // Enemy upgrades are hidden. Use the maximum armor permitted by
+            // this match's configuration, without assuming a rear-armor hit.
+            let earned = if self.p.beam_armor_budget {
+                self.cfg.cubes.upgrade_thresholds.iter().filter(|&&n| tr.cubes >= n).count() as f64
+            } else { f64::INFINITY };
+            let armor = self.cfg.mech.armor + self.cfg.upgrades.iter().map(|u| {
+                u.effects.iter().filter(|e| e.path == "mech.armor")
+                    .map(|e| e.add.unwrap_or(0.0).max(0.0) * u.max.max(0.0).min(earned)).sum::<f64>()
+            }).sum::<f64>();
+            let cookoff = if tr.has(WeaponKind::Mortar) { 1.0 + self.cfg.weapons.laser.cookoff } else { 1.0 };
+            (1.0 - armor).clamp(0.0, 1.0) * cookoff
+        } else { 1.0 };
+        AimTarget { feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false, beam_mult }
     }
 
     fn idle_aim(&self, obs: &Obs) -> V2 {
@@ -181,7 +210,7 @@ impl Brain {
             if bc.as_ref().map_or(true, |b| s > b.0) && rays < 8 {
                 rays += 1;
                 if world.ray(muzzle, c).is_none() {
-                    let at = AimTarget { feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true };
+                    let at = AimTarget { feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true, beam_mult: 1.0 };
                     bc = Some((s, at));
                 }
             }
@@ -308,7 +337,8 @@ impl Brain {
         let c = up(tg.feet, tg.height * 0.5);
         let rel = sub(c, muzzle);
         let d = len(rel).max(0.1);
-        let direct = dir_to_aim(add(rel, scale(tg.vel, p.laser_latency)));
+        let origin_shift = if p.aim_motion_fix { scale(me.vel, p.laser_latency) } else { [0.0; 3] };
+        let direct = dir_to_aim(add(sub(rel, origin_shift), scale(tg.vel, p.laser_latency)));
         let los = world.ray(muzzle, c).is_none();
         let tol_y = (tg.radius * p.aim_tol).atan2(d);
         let tol_p = (tg.height * 0.5 * p.aim_tol).atan2(d);
@@ -324,14 +354,17 @@ impl Brain {
                     let acc = if tg.fixed { [0.0; 3] } else { tg.acc };
                     let zon = p.aimz_on > 0.0 && !tg.fixed;
                     let lg = if zon { 0.0 } else { p.acc_gain };
-                    if let Some((mut pt, tf)) = lead(rel, tg.vel, acc, w.stats.speed.max(1.0), p.latency, lg, p.acc_time) {
+                    // Project the firing origin over command latency only;
+                    // bullets do not inherit the shooter's velocity.
+                    let gun_rel = if p.aim_motion_fix { sub(rel, scale(me.vel, p.latency)) } else { rel };
+                    if let Some((mut pt, tf)) = lead(gun_rel, tg.vel, acc, w.stats.speed.max(1.0), p.latency, lg, p.acc_time) {
                         let mut pz_ok = true;
                         if zon {
                             let hl = pt[0].hypot(pt[1]).max(0.1);
                             let nn = [-pt[1] / hl, pt[0] / hl];
                             let hw = tg.radius + self.cfg.projectile.gun_radius;
                             if let Some((lat, pr)) = self.aimz.query(t, tg.feet, tf + p.latency, nn, hw, p.aimz_shrink, p.aimz_min_n.max(3.0) as usize, p.aimz_shot_min.max(0.0) as usize, p.aimz_gshot > 0.0) {
-                                let cur = (pt[0] - rel[0]) * nn[0] + (pt[1] - rel[1]) * nn[1];
+                                let cur = (pt[0] - gun_rel[0]) * nn[0] + (pt[1] - gun_rel[1]) * nn[1];
                                 pt[0] += nn[0] * (lat - cur);
                                 pt[1] += nn[1] * (lat - cur);
                                 pz_ok = pr >= p.aimz_pmin;
@@ -369,6 +402,18 @@ impl Brain {
             if laser_charging && w.charge >= full - 0.2 {
                 cmd = direct;
                 laser_final = true;
+                if p.aim_share {
+                    if let Some((i, gun_aim, true)) = gun {
+                        if me.weapons[i].as_ref().map_or(false, |g| g.ammo > 0.0 && g.reload <= 0.0 && g.cooldown <= 0.051) {
+                            if let Some(common) = shared_aim(direct, gun_aim, tol_y, tol_p) {
+                                let end = add(muzzle, scale(aim_dir(common[0], common[1]), d + tg.radius));
+                                if world.ray(muzzle, end).is_none() {
+                                    cmd = common;
+                                }
+                            }
+                        }
+                    }
+                }
             } else if !gun_ok && (laser_charging || laser_in) {
                 cmd = direct;
             }
@@ -424,7 +469,12 @@ impl Brain {
                 let ready = w.charge >= full - 0.051;
                 let aligned = on(direct, tol_y, tol_p);
                 let part = w.stats.damage * (w.stats.min_frac + (1.0 - w.stats.min_frac) * (w.charge / full).clamp(0.0, 1.0));
-                let lethal = w.charge >= w.stats.min_charge && tg.hp > 0.0 && part >= tg.hp * 1.05;
+                let lethal = if p.beam_damage_fix {
+                    let cubes = 1.0 + self.cfg.cubes.damage_per_cube * me.cubes.max(0.0).min(self.cfg.cubes.stat_cap);
+                    w.charge >= w.stats.min_charge && tg.hp > 0.0 && part * cubes * tg.beam_mult >= tg.hp + 15.0
+                } else {
+                    w.charge >= w.stats.min_charge && tg.hp > 0.0 && part >= tg.hp * 1.05
+                };
                 let release = (ready || lethal) && aligned && laser_in;
                 let give_up = !laser_in && w.charge >= full + (w.stats.hold_s - 0.4).max(0.0);
                 out.fire[i] = !(release || give_up);

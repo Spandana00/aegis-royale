@@ -1,0 +1,16 @@
+{
+  "sim_commit": "b50b794522c134d9eb54cc2e9bc4782f4f4a3da9",
+  "reported_competitor_bug": "Arnav custom simulator retained commanded horizontal velocity when blocked.",
+  "ours": "Juan simulator already zeros blocked horizontal velocity in _move.",
+  "probe": {
+    "ticks": 20,
+    "x": -0.01,
+    "velocity": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "passed": true
+  },
+  "config_equals_official": true
+}

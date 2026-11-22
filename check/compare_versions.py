@@ -44,10 +44,14 @@ def main():
         hashes={p:hashlib.sha256(read(ref,p)).hexdigest()
                 for p in ['bot.py','world.py','navigation.py','mechfight.py','Dockerfile']}
         rows.append({'version':name,'commit':ref,'user_reported_scores':scores,
-                     'deltas_from_best':[round(s-5.33,2) for s in scores],
-                     'changed_bot_methods_vs_reference':changes,
-                     'removed_bot_methods_vs_reference':[n for n in baseline if n not in current],
-                     'runtime_sha256':hashes})
+                     'deltas_from_v10':[round(s-5.33,2) for s in scores],
+                     'changed_retained_root_bot_methods_vs_v10':changes,
+                     'removed_retained_root_bot_methods_vs_v10':[n for n in baseline if n not in current],
+                     'retained_root_files_sha256':hashes,
+                     'active_entrypoint':read(ref,'Dockerfile').decode().split('ENTRYPOINT',1)[-1].strip(),
+                     'runtime_sha256':{p:hashlib.sha256(read(ref,p)).hexdigest() for p in
+                         subprocess.check_output(['git','ls-tree','-r','--name-only',ref],cwd=ROOT,text=True).splitlines()
+                         if (p.startswith('pilot/') and (p.endswith('.py') or p.endswith('.npz'))) or p=='Dockerfile' or ((p in hashes or p=='aiming.py') and b'pilot/' not in read(ref,'Dockerfile'))}})
     current=methods((ROOT/'bot.py').read_bytes())
     changed=[n for n in current if current[n]!=baseline.get(n)]
     allowed=set()
@@ -78,29 +82,34 @@ def main():
     for entry in sentinel['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f'Historical V13 source changed: {entry["path"]}')
-    active=json.loads((ROOT/'docs/automata_manifest.json').read_text())
+    active=json.loads((ROOT/'docs/v15_manifest.json').read_text())
     for entry in active['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f"Active Rust source changed: {entry['path']}")
     for path, expected in active['packaging_sha256'].items():
         if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=expected:
             raise SystemExit(f"Active packaging changed: {path}")
-    history=json.loads((ROOT/'docs/v14_official_history.json').read_text())
-    rows.append({'version':'v13','commit':history['baseline']['commit'],
+    history=json.loads((ROOT/'docs/v15_official_history.json').read_text())
+    rows.append({'version':'v13','commit':'5cf4fe8b8bf0992517575fe76ed35abb21f9ecc1',
                  'user_reported_scores':[5.79], 'receipt':'BB-EDE179C7',
                  'runtime_sha256':{e['path']:e['sha256'] for e in sentinel['files']}})
+    v14=json.loads(read(history['baseline']['commit'],'docs/automata_manifest.json'))
+    rows.append({'version':'v14','commit':history['baseline']['commit'],
+                 'user_reported_scores':[6.19], 'receipt':'BB-A804A35A',
+                 'runtime_sha256':{e['path']:e['sha256'] for e in v14['files']}})
     print(json.dumps({
         'kind':'source provenance and reported scores; not a local scorer',
         'score_source':'user-supplied submission screenshots and follow-up score reports',
-        'reference_commit':history['baseline']['commit'],'reference_score':5.79,
-        'matches_per_run':48,'minimum_extra_integer_placement_points_to_reach_6_20':20,
-        'minimum_displayed_score_at_or_above_6_20':6.21,'runs':rows,
-        'candidate':{'name':'AEGIS v14','official_score':None,
+        'reference_commit':history['baseline']['commit'],'reference_score':6.19,
+        'retained_python_source_reference_commit':BASE,
+        'matches_per_run':48,'minimum_extra_integer_placement_points_to_exceed_6_38':10,
+        'minimum_displayed_score_above_6_38':6.40,'runs':rows,
+        'candidate':{'name':'AEGIS v15','official_score':None,
                      'active_entrypoint':'/usr/local/bin/automata',
                      'policy_source':active['upstream_repository'],
                      'policy_commit':active['upstream_commit'],
-                     'published_board_evidence':active['published_board_evidence'],
-                     'exact_scored_commit_independently_verified':False,
+                     'official_baseline':active['baseline'],
+                     'baseline_receipt_verified_from_user_screenshot':True,
                      'only_source_edits':active['allowed_changes'],
                      'historical_policies_active_in_image':False}
     },indent=2))

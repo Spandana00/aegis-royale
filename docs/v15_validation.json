@@ -1,0 +1,42 @@
+{
+  "candidate": "AEGIS v15",
+  "official_score": null,
+  "baseline_score": 6.19,
+  "python_tests_passed": 111,
+  "rust_tests_passed": 27,
+  "rust_tests_ignored_upstream_optional": 1,
+  "rust_fixtures": "actual campus arena, decompressed official stream, MECH_MAP and NAV_MAP set",
+  "native_conformance": {
+    "observations": 300,
+    "on_time": 300,
+    "late": 0,
+    "dropped": 0,
+    "wrong_tick": 0,
+    "bad_lines": 0,
+    "ready_ms": 270,
+    "p99_ms": 4.1,
+    "max_ms": 11.2
+  },
+  "configured_policy_stress": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "automata",
+    "startup_ms": 263.38,
+    "observations": 840,
+    "p50_ms": 0.271,
+    "p99_ms": 14.992,
+    "max_ms": 43.122,
+    "over_50_ms": 0,
+    "invalid_actions": [],
+    "native_stderr": "",
+    "harness_max_rss_mib": 34.41,
+    "launched_process_max_rss_mib": 89.53,
+    "memory_scope": "Direct launched process; a Docker client measurement excludes container RSS.",
+    "active_package": "automata"
+  },
+  "diagnostic_matches": 992,
+  "diagnostic_late_replies_all_arms": 2,
+  "diagnostic_tracebacks_all_arms": 0,
+  "final_candidate_cases": 48,
+  "final_candidate_late_replies": 0,
+  "container_validation": "See successful GitHub Actions checks on the exact public candidate commit: image conformance plus the 840-observation process benchmark, both at one CPU, 512 MiB, no network and read-only filesystem."
+}

@@ -1,0 +1,247 @@
+--- a/automata/src/brain/aim.rs
++++ b/automata/src/brain/aim.rs
+@@ -13,6 +13,7 @@
+     pub height: f64,
+     pub hp: f64,
+     pub fixed: bool,
++    pub beam_mult: f64,
+ }
+ 
+ pub(crate) struct FireOut {
+@@ -32,7 +33,20 @@
+             let s = 1.0 + self.cfg.cubes.size_per_cube * tr.cubes.max(0.0);
+             (self.cfg.mech.radius * s, self.cfg.mech.height * s)
+         };
+-        AimTarget { feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false }
++        let beam_mult = if self.p.beam_damage_fix && tr.kind == ActorKind::Mech {
++            // Enemy upgrades are hidden. Use the maximum armor permitted by
++            // this match's configuration, without assuming a rear-armor hit.
++            let earned = if self.p.beam_armor_budget {
++                self.cfg.cubes.upgrade_thresholds.iter().filter(|&&n| tr.cubes >= n).count() as f64
++            } else { f64::INFINITY };
++            let armor = self.cfg.mech.armor + self.cfg.upgrades.iter().map(|u| {
++                u.effects.iter().filter(|e| e.path == "mech.armor")
++                    .map(|e| e.add.unwrap_or(0.0).max(0.0) * u.max.max(0.0).min(earned)).sum::<f64>()
++            }).sum::<f64>();
++            let cookoff = if tr.has(WeaponKind::Mortar) { 1.0 + self.cfg.weapons.laser.cookoff } else { 1.0 };
++            (1.0 - armor).clamp(0.0, 1.0) * cookoff
++        } else { 1.0 };
++        AimTarget { feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false, beam_mult }
+     }
+ 
+     fn idle_aim(&self, obs: &Obs) -> V2 {
+@@ -181,7 +195,7 @@
+             if bc.as_ref().map_or(true, |b| s > b.0) && rays < 8 {
+                 rays += 1;
+                 if world.ray(muzzle, c).is_none() {
+-                    let at = AimTarget { feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true };
++                    let at = AimTarget { feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true, beam_mult: 1.0 };
+                     bc = Some((s, at));
+                 }
+             }
+@@ -308,7 +322,8 @@
+         let c = up(tg.feet, tg.height * 0.5);
+         let rel = sub(c, muzzle);
+         let d = len(rel).max(0.1);
+-        let direct = dir_to_aim(add(rel, scale(tg.vel, p.laser_latency)));
++        let origin_shift = if p.aim_motion_fix { scale(me.vel, p.laser_latency) } else { [0.0; 3] };
++        let direct = dir_to_aim(add(sub(rel, origin_shift), scale(tg.vel, p.laser_latency)));
+         let los = world.ray(muzzle, c).is_none();
+         let tol_y = (tg.radius * p.aim_tol).atan2(d);
+         let tol_p = (tg.height * 0.5 * p.aim_tol).atan2(d);
+@@ -324,14 +339,17 @@
+                     let acc = if tg.fixed { [0.0; 3] } else { tg.acc };
+                     let zon = p.aimz_on > 0.0 && !tg.fixed;
+                     let lg = if zon { 0.0 } else { p.acc_gain };
+-                    if let Some((mut pt, tf)) = lead(rel, tg.vel, acc, w.stats.speed.max(1.0), p.latency, lg, p.acc_time) {
++                    // Project the firing origin over command latency only;
++                    // bullets do not inherit the shooter's velocity.
++                    let gun_rel = if p.aim_motion_fix { sub(rel, scale(me.vel, p.latency)) } else { rel };
++                    if let Some((mut pt, tf)) = lead(gun_rel, tg.vel, acc, w.stats.speed.max(1.0), p.latency, lg, p.acc_time) {
+                         let mut pz_ok = true;
+                         if zon {
+                             let hl = pt[0].hypot(pt[1]).max(0.1);
+                             let nn = [-pt[1] / hl, pt[0] / hl];
+                             let hw = tg.radius + self.cfg.projectile.gun_radius;
+                             if let Some((lat, pr)) = self.aimz.query(t, tg.feet, tf + p.latency, nn, hw, p.aimz_shrink, p.aimz_min_n.max(3.0) as usize, p.aimz_shot_min.max(0.0) as usize, p.aimz_gshot > 0.0) {
+-                                let cur = (pt[0] - rel[0]) * nn[0] + (pt[1] - rel[1]) * nn[1];
++                                let cur = (pt[0] - gun_rel[0]) * nn[0] + (pt[1] - gun_rel[1]) * nn[1];
+                                 pt[0] += nn[0] * (lat - cur);
+                                 pt[1] += nn[1] * (lat - cur);
+                                 pz_ok = pr >= p.aimz_pmin;
+@@ -424,7 +442,12 @@
+                 let ready = w.charge >= full - 0.051;
+                 let aligned = on(direct, tol_y, tol_p);
+                 let part = w.stats.damage * (w.stats.min_frac + (1.0 - w.stats.min_frac) * (w.charge / full).clamp(0.0, 1.0));
+-                let lethal = w.charge >= w.stats.min_charge && tg.hp > 0.0 && part >= tg.hp * 1.05;
++                let lethal = if p.beam_damage_fix {
++                    let cubes = 1.0 + self.cfg.cubes.damage_per_cube * me.cubes.max(0.0).min(self.cfg.cubes.stat_cap);
++                    w.charge >= w.stats.min_charge && tg.hp > 0.0 && part * cubes * tg.beam_mult >= tg.hp + 15.0
++                } else {
++                    w.charge >= w.stats.min_charge && tg.hp > 0.0 && part >= tg.hp * 1.05
++                };
+                 let release = (ready || lethal) && aligned && laser_in;
+                 let give_up = !laser_in && w.charge >= full + (w.stats.hold_s - 0.4).max(0.0);
+                 out.fire[i] = !(release || give_up);
+--- a/automata/src/brain/mod.rs
++++ b/automata/src/brain/mod.rs
+@@ -19,6 +19,8 @@
+ mod tele;
+ #[cfg(test)]
+ mod tests;
++#[cfg(test)]
++mod optimization_tests;
+ mod wave;
+ 
+ pub use params::Params;
+--- /dev/null
++++ b/automata/src/brain/optimization_tests.rs
+@@ -0,0 +1,126 @@
++use super::*;
++use crate::proto::{ActorKind, ActorObs, Obs, UpgradeDef, WeaponObs};
++
++fn scenario(beam: bool, motion: bool, cubes: f64, hp: f64, mortar: bool) -> (Brain, Obs) {
++    let mut hello = proto::Hello::default();
++    hello.config.upgrades = vec![serde_json::from_str::<UpgradeDef>(
++        r#"{"id":"armor","max":3,"effects":[{"path":"mech.armor","add":0.08}]}"#,
++    ).unwrap()];
++    let world = crate::world::World::empty();
++    let nav = crate::nav::Nav::build(&world, &hello.config.mech);
++    let shared = Arc::new(Shared { world, nav });
++    let mut p = Params::default();
++    p.beam_damage_fix = beam;
++    p.aim_motion_fix = motion;
++    let mut b = Brain::with_params(&hello, shared, p);
++    b.mode = Mode::Fight;
++    b.target = Tgt::Mech(2);
++    let mut o = Obs::default();
++    o.tick = 1000;
++    o.t = 50.0;
++    o.alive = 16;
++    o.me.id = 1;
++    o.me.pos = [0.0; 3];
++    o.me.hp = 1400.0;
++    o.me.max_hp = 1400.0;
++    o.me.energy = 100.0;
++    o.me.max_energy = 100.0;
++    o.me.in_zone = true;
++    o.me.grounded = true;
++    o.me.cubes = cubes;
++    o.me.stats = hello.config.mech.clone();
++    o.me.aim = [0.0, (-2.5f64).atan2(80.0)];
++    o.me.weapons = [None, Some(WeaponObs { kind: WeaponKind::Laser, charge: 0.15,
++        stats: hello.config.weapons.laser.clone(), ..Default::default() })];
++    o.mechs.push(ActorObs { id: 2, kind: ActorKind::Mech, pos: [80.0,0.0,0.0],
++        vel: [0.0;3], aim: [std::f64::consts::PI,0.0], hp: Some(hp), max_hp: Some(1400.0),
++        cubes: 6.0, weapons: if mortar { vec![WeaponKind::Gun,WeaponKind::Mortar] } else { vec![WeaponKind::Gun] },
++        charging: false });
++    b.mem.update(&o, &b.shared.world, &b.cfg);
++    (b, o)
++}
++
++fn fire(b: &mut Brain, o: &Obs) -> super::aim::FireOut {
++    let shared = b.shared.clone();
++    b.fire_control(o, &shared.world)
++}
++
++#[test]
++fn partial_beam_does_not_claim_a_kill_that_hidden_armor_prevents() {
++    // 0.15 s gives 151.2 raw damage but only 114.912 after three armor stacks.
++    let (mut old, o) = scenario(false, false, 0.0, 130.0, false);
++    assert!(!fire(&mut old, &o).fire[1]);
++    let (mut fixed, o) = scenario(true, false, 0.0, 130.0, false);
++    assert!(fire(&mut fixed, &o).fire[1], "hold: the 130-HP target survives this partial beam");
++}
++
++#[test]
++fn cube_damage_and_cookoff_allow_conservative_early_finishes() {
++    let (mut old, o) = scenario(false, false, 10.0, 145.0, false);
++    assert!(fire(&mut old, &o).fire[1]);
++    let (mut cubes, o) = scenario(true, false, 10.0, 145.0, false);
++    assert!(!fire(&mut cubes, &o).fire[1], "160.8768 effective damage covers HP plus 15");
++    let (mut cookoff, o) = scenario(true, false, 0.0, 160.0, true);
++    assert!(!fire(&mut cookoff, &o).fire[1], "mortar cookoff covers HP plus 15");
++}
++
++#[test]
++fn rounded_full_charge_releases_even_when_partial_damage_is_not_lethal() {
++    let (mut b, mut o) = scenario(true, false, 0.0, 1300.0, false);
++    let w = o.me.weapons[1].as_mut().unwrap();
++    w.stats.charge = 0.5625;
++    w.charge = 0.56;
++    assert!(!fire(&mut b, &o).fire[1]);
++}
++
++#[test]
++fn translating_laser_duel_aims_at_relative_motion() {
++    let (mut b, mut o) = scenario(false, true, 0.0, 1300.0, false);
++    o.me.vel = [0.0,11.7,0.0];
++    o.mechs[0].vel = o.me.vel;
++    o.me.weapons[1].as_mut().unwrap().charge = 0.70;
++    b.mem.update(&o, &b.shared.world, &b.cfg);
++    let fc = fire(&mut b, &o);
++    assert!(fc.aim[0].abs() < 1e-12, "equal lateral velocities cancel during command latency");
++}
++
++#[test]
++fn gun_projects_the_origin_for_latency_without_inheriting_shooter_velocity() {
++    let (mut b, mut o) = scenario(false, true, 0.0, 1300.0, false);
++    o.me.vel = [0.0,11.7,0.0];
++    o.me.weapons = [Some(WeaponObs { kind: WeaponKind::Gun, ammo: 12.0,
++        stats: b.cfg.weapons.gun.clone(), ..Default::default() }),None];
++    let fc = fire(&mut b, &o);
++    let expected = (-11.7 * 0.05f64).atan2(80.0);
++    assert!((fc.aim[0]-expected).abs() < 1e-10);
++}
++
++#[test]
++fn cube_budget_does_not_invent_armor_for_a_zero_cube_hunter() {
++    let (mut b, mut o) = scenario(true, false, 0.0, 130.0, false);
++    o.mechs[0].cubes = 0.0;
++    b.mem.update(&o, &b.shared.world, &b.cfg);
++    assert!(fire(&mut b, &o).fire[1], "unbounded estimate holds unnecessarily");
++    Arc::make_mut(&mut b.p).beam_armor_budget = true;
++    assert!(!fire(&mut b, &o).fire[1], "zero cubes cannot have earned an armor offer");
++    o.mechs[0].cubes = 1.0;
++    b.mem.update(&o, &b.shared.world, &b.cfg);
++    assert!(fire(&mut b, &o).fire[1], "one earned armor stack can prevent the finish");
++}
++
++#[test]
++fn cube_bounded_estimate_is_safe_for_every_legal_armor_stack_count() {
++    let (mut b, mut o) = scenario(true, false, 0.0, 130.0, false);
++    Arc::make_mut(&mut b.p).beam_armor_budget = true;
++    for cubes in 0..22 {
++        o.mechs[0].cubes = cubes as f64;
++        b.mem.update(&o, &b.shared.world, &b.cfg);
++        let tr = b.mem.tracks.iter().find(|tr| tr.id == 2).unwrap();
++        let lower = b.aim_target(tr).beam_mult;
++        let offers = b.cfg.cubes.upgrade_thresholds.iter().filter(|&&n| n <= cubes as f64).count();
++        for armor_stacks in 0..=offers.min(3) {
++            let actual = 1.0 - 0.08 * armor_stacks as f64;
++            assert!(lower <= actual + 1e-12, "{cubes} cubes and {armor_stacks} armor stacks");
++        }
++    }
++}
+--- a/automata/src/brain/params.rs
++++ b/automata/src/brain/params.rs
+@@ -139,6 +139,9 @@
+     pub pref_lightning: f64,
+     pub pref_mortar: f64,
+     // fire control
++    pub beam_armor_budget: bool,
++    pub beam_damage_fix: bool,
++    pub aim_motion_fix: bool,
+     pub latency: f64,
+     pub laser_latency: f64,
+     pub acc_gain: f64,
+@@ -485,6 +488,9 @@
+             pref_laser: 3.0,
+             pref_lightning: 3.0,
+             pref_mortar: 1.0,
++            beam_armor_budget: false,
++            beam_damage_fix: false,
++            aim_motion_fix: false,
+             latency: 0.05,
+             laser_latency: 0.05,
+             acc_gain: 0.5,

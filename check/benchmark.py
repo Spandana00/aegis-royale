@@ -5,10 +5,12 @@ from collections import Counter
 import gzip
 import json
 import math
+import os
 from pathlib import Path
 import random
 import resource
 import statistics
+import subprocess
 import sys
 import time
 
@@ -20,14 +22,49 @@ from check import Schema
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--policy',choices=('v9','pilot','sentinel'),required=True)
+    parser.add_argument('--policy',choices=('v9','pilot','sentinel','automata'),required=True)
+    parser.add_argument('--executable',type=Path)
+    parser.add_argument('--command',nargs=argparse.REMAINDER)
     args=parser.parse_args()
     with gzip.open(ROOT / 'check/stream.jsonl.gz', 'rt') as f:
         messages = [json.loads(line) for line in f]
     hello = messages[0]
     hello['map']['dir'] = str(ROOT / 'arena')
     start = time.perf_counter()
-    if args.policy=='v9':
+    if args.policy=='automata':
+        if not args.command and args.executable is None:
+            parser.error('--policy automata requires --executable or --command')
+        from world import World
+        import tempfile
+        class RustCandidate:
+            mode='native'
+            def __init__(self):
+                self.world=World(hello['map']['dir'])
+                self.stderr=tempfile.TemporaryFile(mode='w+t')
+                env=dict(os.environ,MECH_PARAMS=str(ROOT/'automata/bot.json'))
+                command=args.command or [str(args.executable.resolve())]
+                self.proc=subprocess.Popen(command,stdin=subprocess.PIPE,
+                    stdout=subprocess.PIPE,stderr=self.stderr,text=True,env=env)
+                self.proc.stdin.write(json.dumps(hello)+'\n');self.proc.stdin.flush()
+                ready=json.loads(self.proc.stdout.readline())
+                if ready.get('type')!='ready':
+                    raise RuntimeError(f'Invalid ready: {ready}')
+            def act(self,obs):
+                self.proc.stdin.write(json.dumps(obs)+'\n');self.proc.stdin.flush()
+                line=self.proc.stdout.readline()
+                if not line:
+                    raise RuntimeError('Native policy exited before replying')
+                return json.loads(line)
+            def close(self):
+                self.proc.stdin.close();self.proc.wait(timeout=5)
+                self.stderr.seek(0)
+                log=self.stderr.read()
+                self.stderr.close()
+                if self.proc.returncode or 'panic' in log.lower():
+                    raise RuntimeError(f'Native policy failed: {log[:2000]}')
+                return log
+        bot=RustCandidate()
+    elif args.policy=='v9':
         bot=Bot(hello)
     elif args.policy=='pilot':
         from pilot.main import Pilot
@@ -197,6 +234,14 @@ def main():
         report.pop('observations_with_tactical_collection')
         report.update(mode_counts=dict(modes), module_errors={},
                       historical_package='sentinel', process_deadline_guard_tested=False)
+    elif args.policy=='automata':
+        report.pop('observations_with_learned_aim')
+        report.pop('observations_with_tactical_collection')
+        report['native_stderr']=bot.close()[-2000:]
+        report['harness_max_rss_mib']=report.pop('max_rss_mib')
+        report['launched_process_max_rss_mib']=round(resource.getrusage(resource.RUSAGE_CHILDREN).ru_maxrss/1024,2)
+        report['memory_scope']='Direct launched process; a Docker client measurement excludes container RSS.'
+        report['active_package']='automata'
     print(json.dumps(report,indent=2))
     if failures or report['over_50_ms']:
         sys.exit(1)

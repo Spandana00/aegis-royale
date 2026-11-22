@@ -1,0 +1,9 @@
+{
+  "kind": "recorded decision comparison, not match scoring",
+  "observations": 300,
+  "identical": 300,
+  "differing_indices": [],
+  "flags": "all new flags false; exact original V14 config",
+  "baseline_binary_sha256": "7d2ca9820ba97edf2b4af939cd91b11b34e5f600d394e14d48b22ca2331c707e",
+  "experiment_binary_sha256": "8f8312d498da74857a4d13c51fed092411edfe08b21f43f4edd7102354524257"
+}

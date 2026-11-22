@@ -1,0 +1,8 @@
+{
+  "gun_cooldown_hypothesis": {
+    "decision": "rejected on source inspection",
+    "reason": "The scored V14 already holds the gun trigger when aligned, in range, loaded and not reloading; it does not wait for a zero cooldown.",
+    "source": "3f08bd1311f93bde3696a2f5a295fd603e9e9fa0:automata/src/brain/aim.rs",
+    "cadence_probe": "Synthetic comparison of alternate firing predicates, not a V14-versus-candidate improvement."
+  }
+}

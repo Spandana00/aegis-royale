@@ -9,13 +9,20 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class AutomataProvenanceTests(unittest.TestCase):
     def test_all_runtime_sources_match_the_manifest_and_original_git_blobs(self):
-        m = json.loads((ROOT/'docs/automata_manifest.json').read_text())
+        m = json.loads((ROOT/'docs/v15_manifest.json').read_text())
         for e in m['files']:
             data = (ROOT/e['path']).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), e['sha256'], e['path'])
             self.assertEqual(len(data), e['size_bytes'], e['path'])
-            original = data.replace(b'pub const BOT_NAME: &str = "AEGIS v14";',
-                                    b'pub const BOT_NAME: &str = "automata";') if e['source_path']=='src/runtime.rs' else data
+            if e['source_path'] is None:
+                continue
+            lines = data.decode().splitlines(keepends=True)
+            for change in reversed(e['reverse_transformations']):
+                start, end = change['adapted_start_line'], change['adapted_end_line']
+                segment = ''.join(lines[start:end]).encode()
+                self.assertEqual(hashlib.sha256(segment).hexdigest(), change['adapted_sha256'])
+                lines[start:end] = change['original_lines']
+            original = ''.join(lines).encode()
             self.assertEqual(hashlib.sha256(original).hexdigest(), e['source_sha256'], e['path'])
             self.assertEqual(hashlib.sha1(b'blob '+str(len(original)).encode()+b'\0'+original).hexdigest(),
                              e['source_git_blob'], e['path'])
@@ -38,7 +45,7 @@ class AutomataProvenanceTests(unittest.TestCase):
         self.assertIn('ENTRYPOINT ["/usr/local/bin/automata"]', docker)
         self.assertIn('!automata/**', ignore)
         self.assertNotIn('!sentinel/', ignore)
-        manifest = json.loads((ROOT/'docs/automata_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v15_manifest.json').read_text())
         for path, expected in manifest['packaging_sha256'].items():
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected, path)
 

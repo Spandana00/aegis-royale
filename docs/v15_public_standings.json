@@ -1,0 +1,330 @@
+{
+  "key": "builders",
+  "open": true,
+  "unit": "",
+  "final": null,
+  "title": "Builders - Mech Royale",
+  "closed": false,
+  "metric": "Placement points",
+  "paused": false,
+  "sealed": false,
+  "opens_at": "2026-11-20T23:00:00+00:00",
+  "tie_rule": "Equal scores rank the earlier submission first.",
+  "cutoff_at": "2026-11-22T16:00:00+00:00",
+  "direction": "higher",
+  "locked_at": null,
+  "max_bytes": 20000000,
+  "standings": [
+    {
+      "at": "2026-11-21T21:55:08.467161+00:00",
+      "rank": 1,
+      "team": "IT_Professionals",
+      "score": 6.38
+    },
+    {
+      "at": "2026-11-21T23:01:21.143387+00:00",
+      "rank": 2,
+      "team": "tigerbyte",
+      "score": 6.38
+    },
+    {
+      "at": "2026-11-21T22:51:11.765508+00:00",
+      "rank": 3,
+      "team": "Vice City Vibecoders",
+      "score": 6.33
+    },
+    {
+      "at": "2026-11-21T14:38:46.667845+00:00",
+      "rank": 4,
+      "team": "kyoto-max",
+      "score": 6.31
+    },
+    {
+      "at": "2026-11-21T20:22:47.713003+00:00",
+      "rank": 5,
+      "team": "67",
+      "score": 6.29
+    },
+    {
+      "at": "2026-11-21T22:46:27.87736+00:00",
+      "rank": 6,
+      "team": "TigerTown27",
+      "score": 6.29
+    },
+    {
+      "at": "2026-11-21T23:20:18.756823+00:00",
+      "rank": 7,
+      "team": "314159265",
+      "score": 6.29
+    },
+    {
+      "at": "2026-11-21T20:44:05.850962+00:00",
+      "rank": 8,
+      "team": "not even close",
+      "score": 6.25
+    },
+    {
+      "at": "2026-11-21T21:03:56.2918+00:00",
+      "rank": 9,
+      "team": "RailTazers",
+      "score": 6.25
+    },
+    {
+      "at": "2026-11-21T21:45:48.847824+00:00",
+      "rank": 10,
+      "team": "BITS and Peaces",
+      "score": 6.25
+    },
+    {
+      "at": "2026-11-21T23:36:15.910531+00:00",
+      "rank": 11,
+      "team": "hamsters",
+      "score": 6.25
+    },
+    {
+      "at": "2026-11-21T18:54:52.39645+00:00",
+      "rank": 12,
+      "team": "4141",
+      "score": 6.23
+    },
+    {
+      "at": "2026-11-21T20:01:02.897799+00:00",
+      "rank": 13,
+      "team": "azing",
+      "score": 6.23
+    },
+    {
+      "at": "2026-11-21T21:18:37.791464+00:00",
+      "rank": 14,
+      "team": "@GMUNVIS",
+      "score": 6.23
+    },
+    {
+      "at": "2026-11-21T23:33:17.483581+00:00",
+      "rank": 15,
+      "team": "1212",
+      "score": 6.21
+    },
+    {
+      "at": "2026-11-21T16:51:18.405461+00:00",
+      "rank": 16,
+      "team": "giddygiddyboy",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T16:53:25.743258+00:00",
+      "rank": 17,
+      "team": "W squad",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T17:16:32.021025+00:00",
+      "rank": 18,
+      "team": "Seven Duce",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T17:23:48.919637+00:00",
+      "rank": 19,
+      "team": "doni",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T18:04:34.395817+00:00",
+      "rank": 20,
+      "team": "2.3%",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T19:21:26.78224+00:00",
+      "rank": 21,
+      "team": "Wai and Jai",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T20:27:02.952741+00:00",
+      "rank": 22,
+      "team": "Buildmaxx",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T21:45:49.486689+00:00",
+      "rank": 23,
+      "team": "Kentucky Fried Evan",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T23:29:38.9757+00:00",
+      "rank": 24,
+      "team": "Tyke",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T23:33:28.822569+00:00",
+      "rank": 25,
+      "team": "who dey",
+      "score": 6.19
+    },
+    {
+      "at": "2026-11-21T17:17:55.549561+00:00",
+      "rank": 26,
+      "team": "Kanyaraasi",
+      "score": 6.17
+    },
+    {
+      "at": "2026-11-21T20:18:59.090221+00:00",
+      "rank": 27,
+      "team": "ImagineLosing",
+      "score": 6.17
+    },
+    {
+      "at": "2026-11-21T21:04:54.376053+00:00",
+      "rank": 28,
+      "team": "Larpers",
+      "score": 6.17
+    },
+    {
+      "at": "2026-11-21T22:36:48.444784+00:00",
+      "rank": 29,
+      "team": "Antalos",
+      "score": 6.15
+    },
+    {
+      "at": "2026-11-21T18:25:32.310239+00:00",
+      "rank": 30,
+      "team": "Team-Xero",
+      "score": 6.13
+    },
+    {
+      "at": "2026-11-21T19:01:51.670315+00:00",
+      "rank": 31,
+      "team": "recursive",
+      "score": 6.1
+    },
+    {
+      "at": "2026-11-21T20:20:39.190257+00:00",
+      "rank": 32,
+      "team": "whatever",
+      "score": 6.1
+    },
+    {
+      "at": "2026-11-21T19:10:08.746444+00:00",
+      "rank": 33,
+      "team": "2696",
+      "score": 6.04
+    },
+    {
+      "at": "2026-11-21T16:09:52.99465+00:00",
+      "rank": 34,
+      "team": "onepizzateam",
+      "score": 6
+    },
+    {
+      "at": "2026-11-21T14:45:11.231512+00:00",
+      "rank": 35,
+      "team": "sonion",
+      "score": 5.98
+    },
+    {
+      "at": "2026-11-21T17:02:49.123511+00:00",
+      "rank": 36,
+      "team": "BackwardsDeployeds",
+      "score": 5.98
+    },
+    {
+      "at": "2026-11-21T23:33:48.811016+00:00",
+      "rank": 37,
+      "team": "Gradient Zero",
+      "score": 5.96
+    },
+    {
+      "at": "2026-11-21T21:31:19.948872+00:00",
+      "rank": 38,
+      "team": "N4n0byt3",
+      "score": 5.94
+    },
+    {
+      "at": "2026-11-21T23:06:58.380006+00:00",
+      "rank": 39,
+      "team": "Kuki",
+      "score": 5.92
+    },
+    {
+      "at": "2026-11-21T22:03:52.186681+00:00",
+      "rank": 40,
+      "team": "Hidden Test Cases",
+      "score": 5.9
+    },
+    {
+      "at": "2026-11-21T18:14:08.771282+00:00",
+      "rank": 41,
+      "team": "benchmaster",
+      "score": 5.85
+    },
+    {
+      "at": "2026-11-21T19:09:24.582639+00:00",
+      "rank": 42,
+      "team": "JISHNU",
+      "score": 5.85
+    },
+    {
+      "at": "2026-11-21T20:00:13.613406+00:00",
+      "rank": 43,
+      "team": "Hacktoolz",
+      "score": 5.83
+    },
+    {
+      "at": "2026-11-21T10:20:16.41213+00:00",
+      "rank": 44,
+      "team": "A-bot LLC",
+      "score": 5.81
+    },
+    {
+      "at": "2026-11-21T18:30:54.204489+00:00",
+      "rank": 45,
+      "team": "WuWuWaWaWuWa",
+      "score": 5.79
+    },
+    {
+      "at": "2026-11-21T21:55:25.452872+00:00",
+      "rank": 46,
+      "team": "ND",
+      "score": 5.79
+    },
+    {
+      "at": "2026-11-21T22:55:13.206755+00:00",
+      "rank": 47,
+      "team": "Mahalas",
+      "score": 5.77
+    },
+    {
+      "at": "2026-11-21T21:21:53.08849+00:00",
+      "rank": 48,
+      "team": "low tide",
+      "score": 5.75
+    },
+    {
+      "at": "2026-11-21T12:22:37.841699+00:00",
+      "rank": 49,
+      "team": "r1ver",
+      "score": 5.73
+    },
+    {
+      "at": "2026-11-21T23:14:49.311911+00:00",
+      "rank": 50,
+      "team": "2567",
+      "score": 5.73
+    }
+  ],
+  "team_count": 313,
+  "final_count": null,
+  "queue_depth": 0,
+  "published_at": null,
+  "active_workers": 24,
+  "baseline_score": 1.15,
+  "final_progress": null,
+  "practice_limit": 6,
+  "scorer_version": "builders-3",
+  "max_queue_depth": 1000,
+  "submission_kind": "repo"
+}
