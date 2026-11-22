@@ -1,0 +1,67 @@
+{
+  "scope": "Public source evidence, not independent official scoring of other teams.",
+  "aegis_repositories": [
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "reported": "Local 2.9–3.1; no official 6.20+ evidence.",
+      "readme_blob": "0e42506864cd86640547bb5f03bb7fdafaec41c9"
+    },
+    {
+      "repo": "Rizwanzaman70/Bizz01-MechRoyale",
+      "reported": "Explicitly does not claim a verified leaderboard improvement.",
+      "readme_blob": "64086f18f6f3b2f2544ab5a4bc3268b1ee113772"
+    },
+    {
+      "repo": "Osca-K/builders-buildit-mech-royale",
+      "reported": "Published best baseline 4.25; subsequent variants 4.23, 4.15, 3.85.",
+      "readme_blob": "cb36e6220d8c4d977dfa24eef0bd9a46b09fe633"
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "reported": "Aegis V14 design; published baseline V8 official 3.56.",
+      "readme_blob": "6b7fc243fcea00f54dd47db80e8f9d3f7d4e2596"
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "reported": "Published official V3 3.69, V6 2.13; local gains did not transfer.",
+      "readme_blob": "bff92fb444457428c0e00842b694c5393c2a44bf"
+    }
+  ],
+  "broad_search": {
+    "trees_requested": 225,
+    "trees_available": 218,
+    "experiment_files_reviewed": 44,
+    "scan": "v16_repository_scan.json",
+    "no_substantiated_aegis_6_20_plus": true
+  },
+  "stronger_source_families": [
+    {
+      "repo": "jason-scheffel/automata",
+      "pinned_runtime": "f114d641a0de0c565dc057e342b4305b8cfe6d53",
+      "evidence": "Our exact-runtime V14 scores 6.19; the linked GMUNVIS family is 6.23 on the public board. Team 67 6.29 source mapping is inferred from source attribution and timing, not an exposed scored commit.",
+      "new_config_commit": "c337f1e5bcd12d3f67a0cb4c80b17edb2738d5dc",
+      "new_hypotheses": {
+        "range_laser": 200,
+        "gear_late_s": 120
+      },
+      "new_config_score_verified": false
+    },
+    {
+      "repo": "SuperHuyGaming/mech-royale",
+      "source_commit": "553516f5d4742878c555a282eab60c9223d137b2",
+      "evidence": "Active Docker image runs Automata; old Go and Python directories are not the entrypoint. See V14 source-file equivalence audit."
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "source_commit": "3ec3a382f256e55519f0fd05baad489af7b429ec",
+      "reported_official": 6.17,
+      "evidence": "Published receipt BB-F0805900 and ledger; not a 6.20+ policy average. Salt changes vary widely. Go-619 transplant reported 6.08."
+    }
+  ],
+  "rejected_inferences": [
+    "Public standings expose no scored repository/commit mapping; no algorithm is attributed to tigerbyte's 6.44.",
+    "6.2–6.5 in many repositories denotes local simulation, timing, target score or another team's result.",
+    "Latest upstream bu_dodge=1 is gated by bu_break, whose default is 0; copying the standalone knob would not activate it.",
+    "Latest upstream contains async field services and unscored experiments; V16 retains the known scored runtime."
+  ]
+}

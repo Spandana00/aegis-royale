@@ -1,0 +1,55 @@
+{
+  "reason": "User requested an exact V15 rerun after its official 6.15 result.",
+  "commit": "be6c83e043e7f604aa95d7f9c4f2e2f52c556f85",
+  "executable_sha256": "8f8312d498da74857a4d13c51fed092411edfe08b21f43f4edd7102354524257",
+  "configuration": "The exact V15 automata/bot.json, not Params defaults.",
+  "native_recorded_check": {
+    "observations": 300,
+    "answered_in_time": 300,
+    "late": 0,
+    "bad_lines": 0,
+    "wrong_tick": 0,
+    "maximum_ms": 17.4,
+    "scope": "Native development machine; not the competition CPU limit."
+  },
+  "native_stress_check": {
+    "observations": 840,
+    "invalid_actions": 0,
+    "over_50_ms": 0,
+    "p99_ms": 15.014,
+    "maximum_ms": 17.497
+  },
+  "existing_container_ci_rechecked": {
+    "run": "https://github.com/Spandana00/aegis-royale/actions/runs/44966716742",
+    "head_sha": "be6c83e043e7f604aa95d7f9c4f2e2f52c556f85",
+    "conclusion": "success",
+    "new_ci_run_requested": false
+  },
+  "fresh_diagnostics": {
+    "kind": "Reconstructed simulator; not an official rerun or score forecast.",
+    "matched_seeds_per_policy": 32,
+    "total_matches": 64,
+    "moderate": {
+      "seeds": "8800-8815",
+      "join_per_loss": 0.6,
+      "v14_proxy_mean": 6.5625,
+      "v15_proxy_mean": 5.5
+    },
+    "faster": {
+      "seeds": "8820-8835",
+      "join_per_loss": 1.0,
+      "v14_proxy_mean": 4.875,
+      "v15_proxy_mean": 5.375
+    },
+    "pooled_v14_proxy_mean": 5.71875,
+    "pooled_v15_proxy_mean": 5.4375,
+    "paired_delta": -0.28125,
+    "paired_bootstrap_95_percent": [-0.875, 0.25],
+    "late_replies": 0,
+    "tracebacks": 0,
+    "interpretation": "The effect reverses between opponent settings. This repeat does not establish V15 superiority or isolate an official causal feature."
+  },
+  "official_submission_made": false,
+  "official_score_remains": 6.15,
+  "selected_best_official_score": 6.19
+}

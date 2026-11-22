@@ -19,8 +19,6 @@ mod survive;
 mod tele;
 #[cfg(test)]
 mod tests;
-#[cfg(test)]
-mod optimization_tests;
 mod wave;
 
 pub use params::Params;

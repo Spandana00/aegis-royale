@@ -1,0 +1,87 @@
+{
+  "kind": "Configured native correctness/timing and source checks; not an official placement score.",
+  "policy": "AEGIS v16",
+  "configuration": {
+    "gear_cube_fight_r": 50,
+    "gear_easy_range": 55,
+    "gear_grab_r": 40,
+    "gear_jet_scan": 90,
+    "gear_on": 1,
+    "gear_pursuit_s": 12,
+    "gear_site_r": 130,
+    "gear_sweep_nolaser": 6,
+    "harvest_on": true,
+    "harvest_site_s": 40,
+    "loot_swap_max": 250,
+    "loot_weapon_max": 400,
+    "lz_scan_s": 3,
+    "lz_seek": 300,
+    "lz_seek_fight": 70,
+    "pref_laser": 9,
+    "pref_lightning": 1.5,
+    "pref_mortar": 0.5,
+    "range_laser": 200
+  },
+  "executable_sha256": "792d7ef93528b12f597bb8d8e751ad6842334f6caf1fe527f9e4fa8e30ad56c8",
+  "source_manifest": "v16_manifest.json",
+  "source_scope_vs_v14": [
+    "Display name in runtime.rs",
+    "range_laser=200 in bot.json"
+  ],
+  "python_tests": {
+    "passed": 111,
+    "failed": 0
+  },
+  "rust_tests": {
+    "passed": 19,
+    "ignored": 1,
+    "failed": 0,
+    "toolchain": "Rust 1.95.0",
+    "locked_offline": true,
+    "actual_map_and_stream": true
+  },
+  "native_conformance": {
+    "observations": 300,
+    "answered_in_time": 300,
+    "late": 0,
+    "bad_lines": 0,
+    "wrong_ticks": 0,
+    "dropped": 0,
+    "max_ms": 10.8
+  },
+  "native_benchmark": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "automata",
+    "startup_ms": 386.74,
+    "observations": 840,
+    "p50_ms": 0.247,
+    "p99_ms": 11.874,
+    "max_ms": 19.917,
+    "over_50_ms": 0,
+    "invalid_actions": [],
+    "native_stderr": "",
+    "harness_max_rss_mib": 34.41,
+    "launched_process_max_rss_mib": 89.64,
+    "memory_scope": "Direct launched process; a Docker client measurement excludes container RSS.",
+    "active_package": "automata"
+  },
+  "simulation_diagnostics": {
+    "total_policy_matches": 336,
+    "selected_validation_seeds": 64,
+    "holdout_seeds": 32,
+    "selected_validation_late_replies": 0,
+    "exploratory_spacing_screen_late_replies": 1,
+    "exploratory_late_seed": 9009,
+    "exploratory_late_ms": 67.09,
+    "official_score_forecast": null
+  },
+  "container_validation": {
+    "workflow": ".github/workflows/validate.yml",
+    "requires_exact_public_commit": true,
+    "must_pass_before_handing_off_commit": true,
+    "native_docker_engine_available": false,
+    "status_in_this_file": "See GitHub Actions on the exact submitted commit; local timing is not container timing."
+  },
+  "official_v16_score": null,
+  "best_selected_official_score": 6.19
+}

@@ -1,5 +1,9 @@
 # V15: improve the firing combination while preserving V14
 
+> Subsequent official result: V15 scored 6.15 and did not replace V14's 6.19.
+> The original pre-submission analysis below is historical. See [V16](V16_DIAGNOSIS.md)
+> for the regression review and the requested exact-build rerun.
+
 V14 scored **6.19**, receipt **BB-A804A35A**, at public commit
 `3f08bd1311f93bde3696a2f5a295fd603e9e9fa0`. The supplied screenshot shows that
 entry selected. V15 is unscored. The live public standings checked during this

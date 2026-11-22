@@ -1,0 +1,1735 @@
+{
+  "scope": "Public GitHub search, 225 repository trees, candidate experiment/score ledgers; not all GitHub and not official replay verification",
+  "retrieved_at": "2026-11-22T00:54:09.813Z",
+  "trees_checked": [
+    {
+      "repo": "coolerputt01/Mecha-Royale",
+      "tree_sha": "a249da9778a40dbaa36b89130a8883b7041014ac",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ela57/Builders-Royale",
+      "tree_sha": "a59d5cf597efdb2327d165dbf9f68f5964acc704",
+      "score_file_paths": []
+    },
+    {
+      "repo": "shreypatel1/quokka-lattice-7f3k",
+      "tree_sha": "c56e4afa920f5f3495f29407fa718fca9b4fba62",
+      "score_file_paths": []
+    },
+    {
+      "repo": "kpfarn/osuhackathon",
+      "tree_sha": "a6facc5aefe9d4127d69a0274cc07806167be6e1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "sphugne/mech-royale-bot",
+      "tree_sha": "3018b5d8996e71c1cf0c0f824e545f4cb0b6ff33",
+      "score_file_paths": []
+    },
+    {
+      "repo": "uykheangchhour/builders-Hackathon",
+      "tree_sha": "612f52e958605f83baedd03f5019d473979e278d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "anurag11satpathy/mech-royale2026",
+      "tree_sha": "449bea8355192d236d2fcc83abf21111af8c8a7d",
+      "score_file_paths": [
+        "experiments.csv"
+      ]
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot",
+      "tree_sha": "8f4f369130f7f80f7b820d79d6b2ac42e4613c5c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Yiyang-Jin/mech-royale",
+      "tree_sha": "8de229c17e8409b28b912e84978e30853b42e53f",
+      "score_file_paths": []
+    },
+    {
+      "repo": "enkyuan/aquarius",
+      "tree_sha": "a6b3cd27a698c8bc6ccf2444a3806027b86e3837",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Visalth/mech-royale-bot",
+      "tree_sha": "2af0905175d6f0fe328f275aaaf08938f6f52035",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Specz04/hus-hus",
+      "tree_sha": "2468c688321c20d68f7f2ef52127848284dac9fc",
+      "score_file_paths": []
+    },
+    {
+      "repo": "alexwilldev/mechroyale-bot",
+      "tree_sha": "01bfad33f931153fcf9c2806328a939d1995949b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ErikUmble/buildathon-mech-royale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "himagna16/mech-royale-bot",
+      "tree_sha": "c1808d140b51eb9928b9ea2dae3384932da50d80",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Leahie/mechfight-bot",
+      "tree_sha": "fbc1842f98bd7ede535697acda23b13f150315a8",
+      "score_file_paths": []
+    },
+    {
+      "repo": "pnp6113/mech-royale-bot",
+      "tree_sha": "ec18871d4e85821f53387a263890cc34d25d449b",
+      "score_file_paths": [
+        "docs/EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "volcanoboy3/mech-royale",
+      "tree_sha": "94f5a06e645269ae045417481d1dcde63a447205",
+      "score_file_paths": []
+    },
+    {
+      "repo": "EvanDamron/mech-royale-bot",
+      "tree_sha": "6f47f0eea1925c417e6e1352b8910dcb791f5ff7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jmonked/monked-mech-royale",
+      "tree_sha": "c8e98e18b1471388bdeee6f2e090568393af446b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "hatimwen/builders-mech-royale-2026",
+      "tree_sha": "4939aef711adabf245b72063c33fa2e9dbf58cc2",
+      "score_file_paths": []
+    },
+    {
+      "repo": "hansen-cao/mech-royale-bot",
+      "tree_sha": "f8901da64e88c340401055c2fa8698b3399217eb",
+      "score_file_paths": []
+    },
+    {
+      "repo": "youraverageguy-123/mechfight-bot",
+      "tree_sha": "b5a7ef25fcadfa6a9a79004b95db529f92987fc2",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jpw942/mech-royale-bot",
+      "tree_sha": "c79a2fea86a7908dfcca802dc21d7cf3867fba76",
+      "score_file_paths": []
+    },
+    {
+      "repo": "0629owen-del/mechfight-early",
+      "tree_sha": "fb303986de4bd131a0648927326a4f39352439a2",
+      "score_file_paths": []
+    },
+    {
+      "repo": "SuperHuyGaming/mech-royale",
+      "tree_sha": "320f3134bb15cbfdaea00a2c2b13d7eebc8e9a42",
+      "score_file_paths": []
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot-b",
+      "tree_sha": "8f4f369130f7f80f7b820d79d6b2ac42e4613c5c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "micah-andelman/mech-royale",
+      "tree_sha": "7fb9a15f50ac6ec3a4480d8367ce5f485522d6de",
+      "score_file_paths": []
+    },
+    {
+      "repo": "CtrlZGau/strat-game",
+      "tree_sha": "88e57a8cd06f6116052fa8e4090264411b323d26",
+      "score_file_paths": []
+    },
+    {
+      "repo": "erlenchik01/mech-royale-bot",
+      "tree_sha": "45b021584089e9303c0f603ccc58a27fa19fc5ba",
+      "score_file_paths": []
+    },
+    {
+      "repo": "viktor-lorentz/mech-royale-overcooked",
+      "tree_sha": "b7f3c9441cd39a60cbece9a7474e640655323ccc",
+      "score_file_paths": []
+    },
+    {
+      "repo": "alex-vizn/mech-royale-bot",
+      "tree_sha": "d0a374762d952d5cefda71eb8b91f1a6f844ba6c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "JosiahAklog/nexus-mech-royale",
+      "tree_sha": "d0a1b4ba86339c68e9f526c345861b353714e1b7",
+      "score_file_paths": [
+        "CHECK_RESULTS.txt"
+      ]
+    },
+    {
+      "repo": "Hassene26/mech-royale-bot",
+      "tree_sha": "cea337dee8bfc8c67b59897055bb71d15fd09737",
+      "score_file_paths": []
+    },
+    {
+      "repo": "atharvatripathi2026/gtgoats_mech_royale",
+      "tree_sha": "ad3ffbb4e16e501790d5fbe5ca68dbd8497421d3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "MarwanMoh11/mech-royale",
+      "tree_sha": "ba0b80aaf8a1c590cd6f36befaf2d5a2ec5316a3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "niranjankumarnk/mech-royale",
+      "tree_sha": "1d04c65c73f4d0dcaf8735951024aaf00b9d753d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Sibongile613/lone-33new",
+      "tree_sha": "b0b8e7515e6b4f40cd5d1aba24d8bad2a2dcae30",
+      "score_file_paths": []
+    },
+    {
+      "repo": "MahnoorKhan-1/phantom-survivor",
+      "tree_sha": "a311a4fb0b8d3066a63bf3a4e9a22b055d6f1c6e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Krisha052/mech-royale",
+      "tree_sha": "a44ec965b97bbcbaf18f029d36dbfd62cc2d7db1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Adi848-dotcom/adi-mech-royale",
+      "tree_sha": "c04351f5474b629387deeee7b365ec02175a11ad",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Warrior-hound/mech-royale",
+      "tree_sha": "c35061924570055e45fabd5bd11c2ba4740927b5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "suresh-vlsi/mech-royale-bot",
+      "tree_sha": "079e4d05be713f5281b377c25325478de736c9c1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jackbalseca/mech-royale-bot",
+      "tree_sha": "286c29aaf91d9cc4cffe26f58142ff66e73e762b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "anthonyteti/buildathon-mech-royale",
+      "tree_sha": "6ac0899659cb064ddca1bcbe7e88a4753b6f7dd5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "nshuai808/mech-royale",
+      "tree_sha": "a2d0541d944199ae29e49eb83b5b1e6479fc528f",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Rohanasudani/edgewise-mech-royale",
+      "tree_sha": "3435e7a91b0dc1933e246cc5a48a644bf24993e0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ianarce/mech-royale-bot",
+      "tree_sha": "fab08268806c7ec7c1122c71f5a1056944ffb890",
+      "score_file_paths": []
+    },
+    {
+      "repo": "FDS-Dark/buildathon-mech-royale",
+      "tree_sha": "0d3574fb4efac353663023e896c9ee26b235d968",
+      "score_file_paths": []
+    },
+    {
+      "repo": "suvathikannan17/mech-royale",
+      "tree_sha": "3242460627a19860c2585a29e2110c79472ac913",
+      "score_file_paths": []
+    },
+    {
+      "repo": "nitik1998/buildathon-mech-royale",
+      "tree_sha": "c87f855b9058ac905c849e0244b0028426526c30",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Kyt0V0/Mech-Royale",
+      "tree_sha": "113194691eb57ce903c8ef4af89e275f25fc36d4",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Tanish-Dhankhar/Mech-royale",
+      "tree_sha": "229fa34e2fd30419a1d55382886bdc298cdc29ae",
+      "score_file_paths": []
+    },
+    {
+      "repo": "richardlin05/mech_royale",
+      "tree_sha": "9222d2df10f7586391e594b6665061df110c7f65",
+      "score_file_paths": []
+    },
+    {
+      "repo": "afiapoks/mech-royale",
+      "tree_sha": "b6b9a8bdfe3967cad5c6df5ed7a49d4d5f108c1a",
+      "score_file_paths": [
+        "RESULTS.md"
+      ]
+    },
+    {
+      "repo": "Borovail/builders-mech-royale",
+      "tree_sha": "e13dc1a0ee70aa49a74836016fe5687a7b8c5319",
+      "score_file_paths": [
+        "results/score-forecast-backtest.csv"
+      ]
+    },
+    {
+      "repo": "NecritsSoup/mech-royale-buildathon-2026",
+      "tree_sha": "cb5163b994f959c58ef74966d453d30008ec1ac3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Tobiloba014/mech_royale",
+      "tree_sha": "3a36d71f96b0e75738632d5aaf63d0b241dfd2e3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "creationofuniverse/mech-royale",
+      "tree_sha": "e8c00751fd350851494ccb5a20aa14919e69523f",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ParishruthiGanesh/mech-royale",
+      "tree_sha": "ad1f69c781ab0e9522f8e8dec2ebe799aa9da113",
+      "score_file_paths": []
+    },
+    {
+      "repo": "nullat0m7/mech-royale",
+      "tree_sha": "22101754b125382991edb16196b866a43a52f418",
+      "score_file_paths": []
+    },
+    {
+      "repo": "vngthin/Mech_Royale",
+      "tree_sha": "26d0369d806be3af705b9903f0b5675d40220e39",
+      "score_file_paths": [
+        "experiments.md"
+      ]
+    },
+    {
+      "repo": "Britogus7/Mech-Royale",
+      "tree_sha": "d197670e0f7de658b51936097f7523c6338eb27a",
+      "score_file_paths": []
+    },
+    {
+      "repo": "RagsNPaul/Mech_Royale",
+      "tree_sha": "ba669fd2f3ab4eace7612e5cdc1f18587416f7da",
+      "score_file_paths": []
+    },
+    {
+      "repo": "akshayagg18/mech-royale",
+      "tree_sha": "87ce14836942e035ec3509b02d0be4a659370010",
+      "score_file_paths": [
+        "experiments/LEDGER.md",
+        "experiments/sim_results.md"
+      ]
+    },
+    {
+      "repo": "LuBolin/mech-royale",
+      "tree_sha": "168750e9f68dc4ebd87e41bb25b922d4e79a4abd",
+      "score_file_paths": []
+    },
+    {
+      "repo": "caitlinthaeler/mech-royale",
+      "tree_sha": "d6f5c288e532d34b3085e593a4cb7eacf3ffecfd",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Achintya-Lakshmanan/mech-royale-bot",
+      "tree_sha": "902a16ec08488ca4e2fbc3da115d82355f10df2d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "JishnuMadav/mech-royale",
+      "tree_sha": "33754a59c75ca598d579092fb75cce23a4816818",
+      "score_file_paths": [
+        "results.json"
+      ]
+    },
+    {
+      "repo": "nelsonwong506-lang/mech-royale",
+      "tree_sha": "82e4bf535af9ae285c7da3a39ca737aa47a88446",
+      "score_file_paths": []
+    },
+    {
+      "repo": "bsrikumar855-dot/Mech-Royale",
+      "tree_sha": "a4e8f7fcad93fac9a63cea778a04a988b9bcbd3b",
+      "score_file_paths": [
+        "EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "Sharmileer/mech-royale",
+      "tree_sha": "b3067c0bf49ef217c206cfb283ec0c03450de392",
+      "score_file_paths": [
+        "EXPERIMENTS.csv"
+      ]
+    },
+    {
+      "repo": "sarbzcode/mech-royale",
+      "tree_sha": "343c70792a6e3668fed12b446c65bac4961f991c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "OliverTTran123/mech-royale",
+      "tree_sha": "47a4bbb8c76a91f488e2cbbb71bc7abc0cb7a154",
+      "score_file_paths": []
+    },
+    {
+      "repo": "charliescull/mech-royale-bot",
+      "tree_sha": "8a9e660a26ec95bc683847e11d032bcc0c11887d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "strobor/mech-royale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "tree_sha": "30e023c556b1e88c3c23ab40a8749bdcd6a0ee2d",
+      "score_file_paths": [
+        "REVIEW.txt"
+      ]
+    },
+    {
+      "repo": "blanc-team/mech_royale",
+      "tree_sha": "788b6f9bc0220a8c750af2b5985838e626db7a59",
+      "score_file_paths": []
+    },
+    {
+      "repo": "MVai-Builders/mech-royale",
+      "tree_sha": "6437e57dfa5a17977b7858275f9c81452f470181",
+      "score_file_paths": []
+    },
+    {
+      "repo": "fariha0178/Mech-Royale",
+      "tree_sha": "2031037eaeafd3792d76f0d4bda57d522841cbdb",
+      "score_file_paths": []
+    },
+    {
+      "repo": "joealfonso/RustbucketRoyale",
+      "tree_sha": "b5e6f83ace7e6b6296d8128f4420599049bd9225",
+      "score_file_paths": []
+    },
+    {
+      "repo": "sntin/mech-royale",
+      "tree_sha": "18dd18e555f0ddb5ae1281ccdf3c0068ba3882be",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Not-Ethan/oval-ghost-mech",
+      "tree_sha": "0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ShenoyVaradaraya/mech-royale",
+      "tree_sha": "18155643381fdc47aa9ecb9b85f2aa02c953b211",
+      "score_file_paths": [
+        "sim/strategy-results.json"
+      ]
+    },
+    {
+      "repo": "LanceHuang245/mech-royale",
+      "tree_sha": "e239c7be542ee5a2b6f4d81f8630a64c632ccaad",
+      "score_file_paths": []
+    },
+    {
+      "repo": "radioheadfan123/mech-royale",
+      "tree_sha": "e08afbf2f7c095f86dfade0eec78c1f4d85804d5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Azula19-b/mech-royale",
+      "tree_sha": "b4dc38dce41ada2753074ded1a2de0f6295f1ab9",
+      "score_file_paths": []
+    },
+    {
+      "repo": "atharv109/mech-royale",
+      "tree_sha": "fec0e45ec1f8f5158819c956af09065a3dd49a13",
+      "score_file_paths": []
+    },
+    {
+      "repo": "cyanwingsbird/Mech-Royale",
+      "tree_sha": "c10f454b60a124e02e04e1b878c1936e1d40834e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Arnav8452/mech-royale",
+      "tree_sha": "f7cd058cf98883a851a33b78d6965cc73a53e35a",
+      "score_file_paths": []
+    },
+    {
+      "repo": "VenujaRH/mech-royale",
+      "tree_sha": "2ea827187644641db5863f48615decd2a0e1c127",
+      "score_file_paths": []
+    },
+    {
+      "repo": "aymanm31/Builders-MechRoyale",
+      "tree_sha": "c67dfbf2778c8fec1bf48307c9b863ff97fe31a9",
+      "score_file_paths": []
+    },
+    {
+      "repo": "pcetner/mech-royale-bot",
+      "tree_sha": "0e2af0de4b8e659f1bcb799d89385c8a87a5724e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "mbaglo/MechRoyale-Agent",
+      "tree_sha": "8a87e8a467dde525d25fcf9cb5181087c6e55fd7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "TheJ10/mech-royale-bot",
+      "tree_sha": "14a4d1ef8a8dd0d8d37170b74f4feb95bb554991",
+      "score_file_paths": []
+    },
+    {
+      "repo": "bluedev-52/mech-royale-bot-test",
+      "tree_sha": "fc3966f7d68ea1ba67200ced56e3f14f5b7c8299",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jklein07/mech-royale-bot",
+      "tree_sha": "4fb47fe5e800a93bc0a089477d63ff2c4374c09b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Th3r0n/mech-royale-bot",
+      "tree_sha": "a6f3191761e352be42371ce473ddbe054413694e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "WasilahAbdulHameed/mech-royale-bot",
+      "tree_sha": "f5608d8e1b18252d501254b88919303d5cf9aaf5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "JasonR-code/switchback-mech-royale",
+      "tree_sha": "d6dc1c62ba78e3cf3d40ec2e594b6ab83b81ce7b",
+      "score_file_paths": [
+        "validation/RESULTS.md"
+      ]
+    },
+    {
+      "repo": "ruizmic0100/mechfighter3000",
+      "tree_sha": "822a52fec33908dcc40d95e4420497eb9076235d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "krishramesh191207-design/mechfight",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "mahathio/mechfight",
+      "tree_sha": "497f4647b978ec649d22a22cd3d06b7eabbd41d1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Hung21108/mechfight",
+      "tree_sha": "ca549417b7e2154135a2293d9eb27b18ef1a72f6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "caioplcerda/oval-pilot",
+      "tree_sha": "5b018c72a050d46b57dd111fc08d9eca8c29bdad",
+      "score_file_paths": []
+    },
+    {
+      "repo": "gunnermanx/mechfight",
+      "tree_sha": "81a59c72a5778fdf2c9477cec70dc20dd582d469",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Rishab-Gupta24/mechfight",
+      "tree_sha": "2be27372320ab98dae95b1627a155906ea4640b4",
+      "score_file_paths": []
+    },
+    {
+      "repo": "F0RF31T/Mechfight",
+      "tree_sha": "20d870bfe421b7ca0c82c30beae92b61e76c6ca4",
+      "score_file_paths": []
+    },
+    {
+      "repo": "muhammadaliafzal205/mechfight",
+      "tree_sha": "b72ad63d7cec26894329b04459437701667c3312",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Medici357/AllQuietOnTheFrontalLobe",
+      "tree_sha": "aee6a25a0f5df24315e0d36fb2fb0ff089333d43",
+      "score_file_paths": []
+    },
+    {
+      "repo": "nguyenphuquang1234567/kestrel",
+      "tree_sha": "4ce3d69d2b19f26cca34a64d5c39e9021ceca4aa",
+      "score_file_paths": []
+    },
+    {
+      "repo": "abi05-jpg/oval-survivor-bot",
+      "tree_sha": "293b100163d2949159dbdf6fffb00888f3e073dc",
+      "score_file_paths": []
+    },
+    {
+      "repo": "OHc99/mechfight-bot",
+      "tree_sha": "8ade0812878937abe749f57281018cb4429addd0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "chair1842/MechFightingGame",
+      "tree_sha": "7dc1d9e6bb7468363fe0ac7ce00c421d22f035a0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "riscvul/MechaVR",
+      "tree_sha": "478be5a95ae48dd866143035f0f2324d75b739a9",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Bows3r/MechFight",
+      "tree_sha": "d3477f038b4c25200bd3fbb51f4003dee520179f",
+      "score_file_paths": []
+    },
+    {
+      "repo": "krishramesh191207-design/mechfight-bot",
+      "tree_sha": "878d7b2c4a40e32b9e1d6852305ad87c7d02e7dd",
+      "score_file_paths": []
+    },
+    {
+      "repo": "bhattyuvraj22/mechfight-bot",
+      "tree_sha": "47797a367233135623e42600664f48748cbfa0a4",
+      "score_file_paths": [
+        "EXPERIMENT_FIXED60.md"
+      ]
+    },
+    {
+      "repo": "Bows3r/MechFight-V2",
+      "tree_sha": "659b4864e2014608340c3accd4253bda9ef3c1f8",
+      "score_file_paths": []
+    },
+    {
+      "repo": "brycehcmcgrath/mechfight-bot",
+      "tree_sha": "46b9cb3ddd43369188682137522786c2bad5a95c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "muhammadaliafzal205/mechfight-bot",
+      "tree_sha": "50dafcdcc9fc7c84268761c273e537ea5a5c590b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "OHc99/mechfight-bot1",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "tentechle/mechfight-survivor",
+      "tree_sha": "efbe8ad9787d01adb3374d265fd450c8ef03346b",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Meows3s/mechfight-cpp",
+      "tree_sha": "1b3dcd6b4c74f2686b9409262691929ad39ef29a",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Tayleron/MechFightsXtreme",
+      "tree_sha": "746f636eb2e3c075055f4a67db7898348ad85e33",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Tayleron/PS-MechFights",
+      "tree_sha": "d1cb8d35a0eb7a37dbe4b57db3c8faa1b19713cb",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Epicepicdemic/buildathon-mech-royale",
+      "tree_sha": "70e4ba904c2b71917fc89ce0a4b1b40707ae21ae",
+      "score_file_paths": []
+    },
+    {
+      "repo": "kundansai-138/eb2fa572b66ac424838ab550566bdd16",
+      "tree_sha": "6c2ba8691ffc37f8122a742758380ba6e0eb6743",
+      "score_file_paths": []
+    },
+    {
+      "repo": "pedduvedcharan/mech-royale-bot",
+      "tree_sha": "f0c71889b73451c0480bce206695941db6edd9bf",
+      "score_file_paths": []
+    },
+    {
+      "repo": "waiprotein/mech-royale-bot",
+      "tree_sha": "977203f49c064f0c3abe87d57ebb99ce4dd7b7aa",
+      "score_file_paths": []
+    },
+    {
+      "repo": "VivekRnx/bob-the-builder-2026",
+      "tree_sha": "9972328609dc6ad5c1fe8c48458c01ea9f801cf7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Nadipalli-Sandeep/mech-royale-bot",
+      "tree_sha": "c90d760fe46905e373eac476927c0a7e30560e4e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot",
+      "tree_sha": "cef26d9a3b80de8c50b138ca3163b22c910957aa",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Avilekha/mech-royale-bot",
+      "tree_sha": "248f662087a83545f9f1e63ac264d194cf782bc4",
+      "score_file_paths": []
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "tree_sha": "d334bb0b1ddb2700a55beece1e85044951ef7588",
+      "score_file_paths": []
+    },
+    {
+      "repo": "wzardomri/buildathon-mech-royale",
+      "tree_sha": "c5c56f17517632785390d0168fd8a8fd24a6cdc6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "tree_sha": "e95252362b401f7e4794ab5b6ea11380d8c10dc6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "BIGBIGBIGJoJo/labubu-mech-royale",
+      "tree_sha": "39b6d509af8e82b0ceb9e1c430dd964674d7488e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Hoangchuyenanh/mech-royale-bot",
+      "tree_sha": "b6829a65d26da967a7dfb3f47aa0273e7ae99e65",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Rizwanzaman70/Bizz01-MechRoyale",
+      "tree_sha": "9f4b05032da4eece4fc1fa45cbf4e9aa9f757fa0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jasonsoohoo/MechRoyaleHackathonChallenge",
+      "tree_sha": "c6314a17fb6bae6529447b99f4723409367a16d4",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Rxd5816/Builders---Mech-Royale",
+      "tree_sha": "249715dbd5ce930e8bd500d291000491b943d3d0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Hiresh2007/buildathon-mech-royale",
+      "tree_sha": "0aad6a6e86d3cf8f144e0e3f47e19a5caf87d5a2",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Nurzhic/SteadySurvivor-MechRoyale",
+      "tree_sha": "de1347490fc8483b107cf8e640805311aea6a4bd",
+      "score_file_paths": []
+    },
+    {
+      "repo": "GuilleHoardings/mechanized-royale",
+      "tree_sha": "d161b4afeb093345e21be6e1f82053c6669d7506",
+      "score_file_paths": []
+    },
+    {
+      "repo": "teetham-t/mech-royale-pocket-comet",
+      "tree_sha": "ffeed722d75831ee47e8dc70b62eda65e53b1371",
+      "score_file_paths": []
+    },
+    {
+      "repo": "arnabxero/xero-mech-royale",
+      "tree_sha": "0c39d72a481f549692fde866a82391c1f742d724",
+      "score_file_paths": []
+    },
+    {
+      "repo": "varadanvk/mech-royale-bot",
+      "tree_sha": "f9326166d98f1c987dfef2228e757c71cfc365b6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Evans-Kwashie/mech-royale-bot",
+      "tree_sha": "8e3673e26e555a31fa479e751b69d9740f0025e1",
+      "score_file_paths": [
+        "docs/EXPERIMENT-6-POINT-2026-11-21.md",
+        "docs/EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "Goku634/mech-royale-bot",
+      "tree_sha": "295f8a12abf7771a997ee156ea5874e9202d50c6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "muhammadsoban-01/mech-royale-bot",
+      "tree_sha": "621b632b42e5a20075101167db33281ccce3e309",
+      "score_file_paths": []
+    },
+    {
+      "repo": "himanshu-thalor/apexmech-buildathon",
+      "tree_sha": "e8ada7210df7e5ee9a15d58e1a3b7f7c3d4aa040",
+      "score_file_paths": []
+    },
+    {
+      "repo": "yahya3867/buildathon-mech-royale",
+      "tree_sha": "227cad7b782a3fd612cf8a1d16d4e36fb447b0ea",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ejensODU/oval-circuit-mech",
+      "tree_sha": "8a6e78a72df4a9040f8017c45d5ccaecd264babf",
+      "score_file_paths": []
+    },
+    {
+      "repo": "sarah29006/mech-royale-bot",
+      "tree_sha": "5a8599d81a20480abadff89385209c651d09d1a5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "MeeksonJr/builders-mech-royale",
+      "tree_sha": "b27d76228ed5d02cb440ac8abde4a4d1042746d1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "whyMiso/buildathon-mech-royale",
+      "tree_sha": "eaea6fe236c5ed57476822e7aa8f6ae37e69b0e6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Hutamaa/mech-royale-agent",
+      "tree_sha": "afdebff5e4fe11f599071392d8fd14f73890c217",
+      "score_file_paths": []
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "tree_sha": "b7534dd35243a5877a4dfd43bb1562ce74ea7734",
+      "score_file_paths": [
+        "EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "froggiewins/ScrapMechRoyale",
+      "tree_sha": "448e00e54d94cbfa14ad5af741e803bda61b4b96",
+      "score_file_paths": []
+    },
+    {
+      "repo": "NurdauletZhalgas/Mech-Royale-Bot",
+      "tree_sha": "0335be4994a1e4a78242c73dddc263b2771d401e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "TEMOtkesh/mech-royale-bot",
+      "tree_sha": "b500fc2a652c68f8863a5023a4afdf4ac28424f0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "jerrywang255-spec/Mech-royale-bot",
+      "tree_sha": "47a4966e7333371bbbc75cffa390b5c43d9d1baa",
+      "score_file_paths": [
+        "docs/EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "jacobcorbett/buildathon-mech-royale",
+      "tree_sha": "116a0b81a03c589f1d9398f64c7a14bf26165579",
+      "score_file_paths": []
+    },
+    {
+      "repo": "praggybhat/mech-royale-bot",
+      "tree_sha": "842a593c3da757632e92ae496a3b3c011da298dc",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Arnav8452/mech-royale-rust",
+      "tree_sha": "8602f69338f0356f7f749f1cf5055535a482d6e3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "tree_sha": "fdac8413e69d10212b074f888af4af94ced1689a",
+      "score_file_paths": [
+        "dev/OVERNIGHT.md",
+        "dev/REVIEW_CODEX.md"
+      ]
+    },
+    {
+      "repo": "AbhirajTiwari12/mech-royale-bot",
+      "tree_sha": "045c647249cf42707b8e9fe6d50ecba5e912bcc5",
+      "score_file_paths": []
+    },
+    {
+      "repo": "joonk7809/mech-royale-bot",
+      "tree_sha": "edbc0cc5b73ed123e3f6883a8a572a692acd2410",
+      "score_file_paths": []
+    },
+    {
+      "repo": "georgegcal1-arch/mech-royale-bot",
+      "tree_sha": "663cf6f4ed050b71557f028f3a3c77898873512e",
+      "score_file_paths": [
+        "scores.txt"
+      ]
+    },
+    {
+      "repo": "akshatlall/mech-royale-bot",
+      "tree_sha": "1a6ff6a9f9a5b95897d8351240334e567c9773f3",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ricky-he2006/Builders---Mech-Royale",
+      "tree_sha": "e2ddcf8ec7904e1bb97e16b3de9eeb8872ab1eca",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Neom10/highveld-mech-royale",
+      "tree_sha": "f5e041a6d9040ebef86ae45f883802f592c4684c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Arfan301/Mecha-battle-royale"
+    },
+    {
+      "repo": "emptybook11/mech-royale-bot",
+      "tree_sha": "c4d2defb229b9329d7efbbc14e6d72e743f7414d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "h-ardy/buildathon-mech-royale",
+      "tree_sha": "6f96c14d544f558d961b2660fe09d475d1d04a39",
+      "score_file_paths": []
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "tree_sha": "6e69ce9cdbb7bf90e439e7d08a798d89bb1540b9",
+      "score_file_paths": [
+        "docs/REVIEW.md",
+        "eval/RESULTS.md"
+      ]
+    },
+    {
+      "repo": "trompeterm/buildathon-mech-royale",
+      "tree_sha": "f47288a1267d7ef97c1eb8c8c9f2da6fbdaab064",
+      "score_file_paths": []
+    },
+    {
+      "repo": "beckimron1/ict-mech-royale",
+      "tree_sha": "77af5d3235b6d94af35d024488fb51886a89d502",
+      "score_file_paths": []
+    },
+    {
+      "repo": "dilkshhh/mech-royale-bot",
+      "tree_sha": "b256ac9ddccc63306580d87dbf0b602140986745",
+      "score_file_paths": []
+    },
+    {
+      "repo": "LeeYongLiangGit/mech-royale-bot",
+      "tree_sha": "04f4f422498fcda2e2ccfe49587b5ee68119afe7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "orbitautomation/buildathon-mech-royale",
+      "tree_sha": "b8cd9fea38dde197926e1760786cf29fdc4df476",
+      "score_file_paths": []
+    },
+    {
+      "repo": "SunnyChanPolyU/BuildersMechRoyale",
+      "tree_sha": "cfda800df9338d5033d63c3a52ccfa6e651b563e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "KaushikNNN/mech-royale-bot",
+      "tree_sha": "1a609aba340bb96aa82de4119fcad14a19b89da7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "mike200004/mech-royale-bot",
+      "tree_sha": "7e3cbee392a930f5baa4ea83be74b4a576f9477e",
+      "score_file_paths": []
+    },
+    {
+      "repo": "LAPR17/mech-royale-bot",
+      "tree_sha": "7dd8cfff25c8009d9189dc6093354a2498b2e4a2",
+      "score_file_paths": []
+    },
+    {
+      "repo": "SaiGaneshRachamadugu/BattleRoyale-mechanism",
+      "tree_sha": "c3b169371e30e0933c21f66630f098aba1d75a0d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "lollito-ai/Mecha-Champions-Royale",
+      "tree_sha": "f3270965e34071567b03d894fe37f22f26922266",
+      "score_file_paths": []
+    },
+    {
+      "repo": "lollito-ai/mecha-royale-client",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "tree_sha": "91962e86fe1b565816dd886f856c0ae63d937ed5",
+      "score_file_paths": [
+        "research/evaluation/scored-canopy-only.json",
+        "research/evaluation/scored-comparison.json",
+        "research/evaluation/scored-terrain-only.json",
+        "research/evaluation/scored-v3-manifest.json",
+        "research/evaluation/scored-v3.json",
+        "research/evaluation/scored-v4.json",
+        "research/experiments/RESULTS.md",
+        "research/implementation-results.md",
+        "research/scored-revision-investigation.md",
+        "research/v3-v4-canopy-audit/result.json",
+        "research/v3-v4-terrain-audit/results.json"
+      ]
+    },
+    {
+      "repo": "viren711/mech-royale-bot",
+      "tree_sha": "2778d7e02575dac99674c0973bf873390534b9c1",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Hermes-25/builders-mech-royale",
+      "tree_sha": "5bee336c0d7c03f5ba809a30d088e038948ed440",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ZaryabAhsan15/mech-royale-bot",
+      "tree_sha": "8b300c94cb523a70774b63e98f3a2375a59f7313",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Rebecca922/mech-royale-bot",
+      "tree_sha": "0b316086a711580e678efa5a74a521994b7dd3a6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "tree_sha": "3e177f347264b584b1e4e4b4b9b70e38457bc6a0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "prishalala/mech-royale-bot",
+      "tree_sha": "60769ba19a07f0ecacd0a76044b8be19086717b8",
+      "score_file_paths": []
+    },
+    {
+      "repo": "mepedrol/mech-royale-bot",
+      "tree_sha": "0c5e4b66f7d2a088fbd0b4e55a50f6494abc8368",
+      "score_file_paths": []
+    },
+    {
+      "repo": "SaiyamNShah/mech-royale-builders",
+      "tree_sha": "6fc71e6c57cba0fe060437164ccb670a60b6db71",
+      "score_file_paths": []
+    },
+    {
+      "repo": "fariha0178/mech-royale-repo",
+      "tree_sha": "acd615048e17d253f4b6e52d609ef8ed15207e19",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Anurisha-Dunuwila/mech-royale-bot",
+      "tree_sha": "47a60fef6687f28c043c81e434082bae472a2a71",
+      "score_file_paths": []
+    },
+    {
+      "repo": "ilyash3/mech-royale-fixed",
+      "tree_sha": "e3adfd6758f1a7c90357033da6bbecfadd512a68",
+      "score_file_paths": []
+    },
+    {
+      "repo": "KennethLei1492/Builder-Mech-Royale",
+      "tree_sha": "2943051627c4c9601b1066b79ddac19930ba4511",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Arnav3657/mech-royale-submit",
+      "tree_sha": "be57aed5006b7eed0d1de67d4b1e73e11fe9e4a6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "mliao0128/fraun-ringkeeper",
+      "tree_sha": "641867fec0abba7e1141a50a81053794d6949b8d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "13shreyansh/ohio-buildathon-mech-royale",
+      "tree_sha": "2a3f2e8cf753a084c883384c7a90d94d62b8139c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "f20230006-sketch/oval-vector-mech-royale",
+      "tree_sha": "fef5d09e4e95b9560c59776459d538671644c5c7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Koodsu/BuildersHackathonMechRoyale",
+      "tree_sha": "72113b5ce91c24bab90ef90b258af4445287757d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "shanmukha-here/eagle-eye-mech-royale",
+      "tree_sha": "e322ffe872a52ef83a89ab194b6500edc0da36df",
+      "score_file_paths": []
+    },
+    {
+      "repo": "mjawadforogh2005-ship-it/frogh-ai-mech-royale",
+      "tree_sha": "a61f9cb1474d872244659711d3cd0dea94ee3708",
+      "score_file_paths": []
+    },
+    {
+      "repo": "andrew-zhouu/builders-mech-royale-2026",
+      "tree_sha": "69c517c67ff18f8a56fc46dc58a274f9dcd131c7",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Infamustdev/BuildersBuildMechRoyale",
+      "tree_sha": "829978d63549385b45aa3e4fe6da85dfc2aba46c",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Osca-K/builders-buildit-mech-royale",
+      "tree_sha": "166a5ab8a5a193a2e293dbac4e4f76bdf9bfc096",
+      "score_file_paths": []
+    },
+    {
+      "repo": "devakchow/team-kanyaraasi-mech-royale",
+      "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"404\"}"
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "tree_sha": "8f0bcb84705e1b92176ed84ef192cfbef620d943",
+      "score_file_paths": [
+        "EXPERIMENTS.md",
+        "coord/data/ready_ledger.md",
+        "coord/data/site_results.csv",
+        "coord/grok-review-code-audit-2026-11-21.md",
+        "pipeline/schemas/codex_review.json",
+        "pipeline/schemas/experiment_result.json",
+        "research/intake/diego-experiments-1129.csv"
+      ]
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot-l150",
+      "tree_sha": "c8c9f06daef49ce2b0ecdf6de7b0681dcfe50fa9",
+      "score_file_paths": []
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "tree_sha": "3c78c0026987b68b78ef59f01b5793ff2d5497dc",
+      "score_file_paths": [
+        "models/squad-experiment.json"
+      ]
+    },
+    {
+      "repo": "anjarwibowo31/Learning-ClashRoyaleBasicMechanics",
+      "tree_sha": "083ebb2f2ef16e10c278f9ad6e1ac76b3623fd48",
+      "score_file_paths": []
+    },
+    {
+      "repo": "martin-danggg/hcmut-tmt-p1-mech-royale",
+      "tree_sha": "c62d06725244998689a887b6b01b7ff274a14ee0",
+      "score_file_paths": []
+    },
+    {
+      "repo": "1vkd1/OSU-hackathon-2026-builders-mechroyale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Muallim718/oval-sentinel",
+      "tree_sha": "b45194edf6f134aa5fc985add4f1d2616a7de1b6",
+      "score_file_paths": []
+    },
+    {
+      "repo": "acaptainb/Mech_Royale",
+      "tree_sha": "13840dc2be1c5b1406176179763f0739f281a279",
+      "score_file_paths": [
+        "EXPERIMENTS.md"
+      ]
+    },
+    {
+      "repo": "jvenkumahanthi-coder/segfault-mech-royale",
+      "tree_sha": "07273235805b87d5dfddfc92b2bd49aa21984850",
+      "score_file_paths": []
+    },
+    {
+      "repo": "Tanish-Dhankhar/mech-royale-combined",
+      "tree_sha": "bd794054dc5bf9b3382d3882182b594d8af70357",
+      "score_file_paths": []
+    },
+    {
+      "repo": "NadulaG/mech-royale",
+      "tree_sha": "dfe35d4dd949d0f58b98af3f2686c751c260706d",
+      "score_file_paths": []
+    },
+    {
+      "repo": "lmaccart/mech-royale",
+      "tree_sha": "292aa4742605fdddcb2c7f3fd63eaf9efe72c040",
+      "score_file_paths": []
+    }
+  ],
+  "files_reviewed": [
+    {
+      "repo": "anurag11satpathy/mech-royale2026",
+      "path": "experiments.csv",
+      "blob_sha": "025a42ee70dce4b65682e4483220c2d426a812f5",
+      "numeric_hits": [
+        {
+          "line": 7,
+          "observed_values": [
+            "6.49"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "pnp6113/mech-royale-bot",
+      "path": "docs/EXPERIMENTS.md",
+      "blob_sha": "b24c1ed9f9e1f5425f6924a17632bf834fd85bf8",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JosiahAklog/nexus-mech-royale",
+      "path": "CHECK_RESULTS.txt",
+      "blob_sha": "409b6ab93f4b7452fcd545a317d99ccf90273976",
+      "numeric_hits": []
+    },
+    {
+      "repo": "afiapoks/mech-royale",
+      "path": "RESULTS.md",
+      "blob_sha": "1c24b0868cec174f42b21c4ae1a5015e25478826",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Borovail/builders-mech-royale",
+      "path": "results/score-forecast-backtest.csv",
+      "blob_sha": "bc581a0fdf503b1930461a325c2aecf42ffd3624",
+      "numeric_hits": []
+    },
+    {
+      "repo": "vngthin/Mech_Royale",
+      "path": "experiments.md",
+      "blob_sha": "c2b0b8eb2992ca181c14a3c82817195459306bbb",
+      "numeric_hits": []
+    },
+    {
+      "repo": "akshayagg18/mech-royale",
+      "path": "experiments/LEDGER.md",
+      "blob_sha": "9a42938931fec3af394361fb3d05eedde0ed4cf4",
+      "numeric_hits": []
+    },
+    {
+      "repo": "akshayagg18/mech-royale",
+      "path": "experiments/sim_results.md",
+      "blob_sha": "af23dbf034211a1e4320b9f57078398b465d8564",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JishnuMadav/mech-royale",
+      "path": "results.json",
+      "blob_sha": "92cacc091d72faa10a873d27364b077e1252dc74",
+      "numeric_hits": [
+        {
+          "line": 3,
+          "observed_values": [
+            "6.31"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "bsrikumar855-dot/Mech-Royale",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "d5c5f0ac855ea6666fd065ce0f29640b5bdf275e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Sharmileer/mech-royale",
+      "path": "EXPERIMENTS.csv",
+      "blob_sha": "165f5452f0c1da2718d0b64a67c35b7e5dfb6389",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "path": "REVIEW.txt",
+      "blob_sha": "b8ddb1011e2965af955b3421fadd5397b82ce15c",
+      "numeric_hits": [
+        {
+          "line": 5,
+          "observed_values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 94,
+          "observed_values": [
+            "6.31"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "ShenoyVaradaraya/mech-royale",
+      "path": "sim/strategy-results.json",
+      "blob_sha": "92522a2bd35d1a37e4f39fdf40888867cd5d50da",
+      "numeric_hits": [
+        {
+          "line": 134,
+          "observed_values": [
+            "6.25"
+          ]
+        },
+        {
+          "line": 439,
+          "observed_values": [
+            "6.2"
+          ]
+        },
+        {
+          "line": 1069,
+          "observed_values": [
+            "6.35"
+          ]
+        },
+        {
+          "line": 1181,
+          "observed_values": [
+            "6.3"
+          ]
+        },
+        {
+          "line": 2654,
+          "observed_values": [
+            "6.21"
+          ]
+        },
+        {
+          "line": 2773,
+          "observed_values": [
+            "6.46"
+          ]
+        },
+        {
+          "line": 3253,
+          "observed_values": [
+            "6.49"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "JasonR-code/switchback-mech-royale",
+      "path": "validation/RESULTS.md",
+      "blob_sha": "173c001bf0acf065050d30fac5f7bfdf502d7d92",
+      "numeric_hits": []
+    },
+    {
+      "repo": "bhattyuvraj22/mechfight-bot",
+      "path": "EXPERIMENT_FIXED60.md",
+      "blob_sha": "5683f507c419b0b819edada74d32bbab42420506",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Evans-Kwashie/mech-royale-bot",
+      "path": "docs/EXPERIMENT-6-POINT-2026-11-21.md",
+      "blob_sha": "bf8403d590733b72ac0114d1042b791cb494b269",
+      "numeric_hits": [
+        {
+          "line": 21,
+          "observed_values": [
+            "6.50"
+          ]
+        },
+        {
+          "line": 22,
+          "observed_values": [
+            "6.69",
+            "6.94"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "Evans-Kwashie/mech-royale-bot",
+      "path": "docs/EXPERIMENTS.md",
+      "blob_sha": "35dd83df5dd7ea5546b7a68c84c7f9d59a6ecf84",
+      "numeric_hits": [
+        {
+          "line": 26,
+          "observed_values": [
+            "6.63"
+          ]
+        },
+        {
+          "line": 27,
+          "observed_values": [
+            "6.94"
+          ]
+        },
+        {
+          "line": 28,
+          "observed_values": [
+            "6.81"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "15fdd60940243780368cc0a1b9f3f76a64f278f2",
+      "numeric_hits": [
+        {
+          "line": 221,
+          "observed_values": [
+            "6.4"
+          ]
+        },
+        {
+          "line": 239,
+          "observed_values": [
+            "6.5"
+          ]
+        },
+        {
+          "line": 299,
+          "observed_values": [
+            "6.4"
+          ]
+        },
+        {
+          "line": 300,
+          "observed_values": [
+            "6.2"
+          ]
+        },
+        {
+          "line": 301,
+          "observed_values": [
+            "6.3",
+            "6.28",
+            "6.6"
+          ]
+        },
+        {
+          "line": 302,
+          "observed_values": [
+            "6.8"
+          ]
+        },
+        {
+          "line": 303,
+          "observed_values": [
+            "6.20"
+          ]
+        },
+        {
+          "line": 305,
+          "observed_values": [
+            "6.4"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "jerrywang255-spec/Mech-royale-bot",
+      "path": "docs/EXPERIMENTS.md",
+      "blob_sha": "ede110831f3bad41c21593141b6ed71083c1583c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "path": "dev/OVERNIGHT.md",
+      "blob_sha": "b1d0667d664ee985fa5a4c32291dc8c1082a5836",
+      "numeric_hits": [
+        {
+          "line": 178,
+          "observed_values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 249,
+          "observed_values": [
+            "6.41"
+          ]
+        },
+        {
+          "line": 252,
+          "observed_values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 253,
+          "observed_values": [
+            "6.41",
+            "6.31",
+            "6.34"
+          ]
+        },
+        {
+          "line": 293,
+          "observed_values": [
+            "6.92"
+          ]
+        },
+        {
+          "line": 294,
+          "observed_values": [
+            "6.28"
+          ]
+        },
+        {
+          "line": 296,
+          "observed_values": [
+            "6.42",
+            "6.2"
+          ]
+        },
+        {
+          "line": 297,
+          "observed_values": [
+            "6.23"
+          ]
+        },
+        {
+          "line": 302,
+          "observed_values": [
+            "6.82"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "path": "dev/REVIEW_CODEX.md",
+      "blob_sha": "c4348ec0b524ab3066e89d839f94dc17d4d72830",
+      "numeric_hits": []
+    },
+    {
+      "repo": "georgegcal1-arch/mech-royale-bot",
+      "path": "scores.txt",
+      "blob_sha": "ae0d139e3579f9e9f64bd4e5f5508b7a86e30a40",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "path": "docs/REVIEW.md",
+      "blob_sha": "370087f408459fb74ec48050f888a364fd073ecf",
+      "numeric_hits": [
+        {
+          "line": 5,
+          "observed_values": [
+            "6.33"
+          ]
+        },
+        {
+          "line": 116,
+          "observed_values": [
+            "6.9"
+          ]
+        },
+        {
+          "line": 129,
+          "observed_values": [
+            "6.9",
+            "6.3",
+            "6.9"
+          ]
+        },
+        {
+          "line": 132,
+          "observed_values": [
+            "6.8",
+            "6.2"
+          ]
+        },
+        {
+          "line": 133,
+          "observed_values": [
+            "6.9"
+          ]
+        },
+        {
+          "line": 145,
+          "observed_values": [
+            "6.7"
+          ]
+        },
+        {
+          "line": 151,
+          "observed_values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 306,
+          "observed_values": [
+            "6.3"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "path": "eval/RESULTS.md",
+      "blob_sha": "e1ae5b572ec6b8e95df0ce2d99240095924b154e",
+      "numeric_hits": [
+        {
+          "line": 69,
+          "observed_values": [
+            "6.7"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-canopy-only.json",
+      "blob_sha": "c0cd19969116ae0550c94fc5a69211206a0b63ea",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-comparison.json",
+      "blob_sha": "b304ee005ac0117ff734f28cf8fb288ae024d32d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-terrain-only.json",
+      "blob_sha": "ce1f583e9242d3dd4aaaae4218e2fb4c5611020a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-v3-manifest.json",
+      "blob_sha": "74e9e67b8f7e66b9580a64ea686d9bc9b5907fe4",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-v3.json",
+      "blob_sha": "f21697b3adbdf03de1e34fddd0efb2d474946f5d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/evaluation/scored-v4.json",
+      "blob_sha": "8ecaa5d194e65edd0541ddb595425922ef42524c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/experiments/RESULTS.md",
+      "blob_sha": "041b413fc79339ecabb2c48d772dc438f0818eab",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/implementation-results.md",
+      "blob_sha": "3f3135b424a48c0165adaf96c1928ec3b50ccd71",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/scored-revision-investigation.md",
+      "blob_sha": "17982424d1cd3a1c622212535c88d0e1e1e99596",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/v3-v4-canopy-audit/result.json",
+      "blob_sha": "a26f540ddfdd068c7054326bbb4bdf71c36c077c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/v3-v4-terrain-audit/results.json",
+      "blob_sha": "cc52c576291af05322925aa2bf25b12a2f7556e3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "6a637955017226f287831878735c9da72313cc07",
+      "numeric_hits": [
+        {
+          "line": 17,
+          "observed_values": [
+            "6.2"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/ready_ledger.md",
+      "blob_sha": "1d0bc2b5b5fc264b1ddf34fab248ede0ef4038fb",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/site_results.csv",
+      "blob_sha": "062262aabbd94557ad72da69b84307b59a245630",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/grok-review-code-audit-2026-11-21.md",
+      "blob_sha": "c90928f32d0f97ae564541afc34206d027a159ce",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "pipeline/schemas/codex_review.json",
+      "blob_sha": "5e280c32358396bd78896fac129c554093e3edfd",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "pipeline/schemas/experiment_result.json",
+      "blob_sha": "cc6902cfb4cb1bd6d0fd26d4b1321d2653ae507e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "research/intake/diego-experiments-1129.csv",
+      "blob_sha": "77e95d0b6f704c15cf0f20d5a9818007ec4f6824",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "path": "models/squad-experiment.json",
+      "blob_sha": "44b7b7de798d24eb52dc448f603e8decad05a509",
+      "numeric_hits": []
+    },
+    {
+      "repo": "acaptainb/Mech_Royale",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "6747fcfd577146ac5d03e48601af20cf185f03cb",
+      "numeric_hits": []
+    }
+  ],
+  "conclusion": "No new Aegis-labelled source establishes an official 6.20+ score. Decimal hits include targets, timing, proxy scores and other teams' scores. Prior Automata/GMUNVIS family linkage remains the strongest source-family evidence, with unverified exact scored commits."
+}

@@ -1,0 +1,22 @@
+{
+  "scope": "Trace observations from 16 matched reconstructed squad seeds; consequences of changed encounters as well as firing decisions. Not official causal attribution.",
+  "method": "Count entrant laser events and whether the event lists any mech among its hit IDs. This is not a conditional hit rate restricted to mech-aimed beams.",
+  "by_arm": {
+    "candidate": {
+      "laser_releases": 317,
+      "releases_hitting_mechs": 228,
+      "fraction_hitting_mechs": 0.7192429022082019,
+      "damage_laser_to_mechs": 101181.6,
+      "gun_shots": 1824,
+      "damage_gun_to_mechs": 81677.90000000001
+    },
+    "control": {
+      "laser_releases": 367,
+      "releases_hitting_mechs": 280,
+      "fraction_hitting_mechs": 0.7629427792915532,
+      "damage_laser_to_mechs": 127424.70000000001,
+      "gun_shots": 2020,
+      "damage_gun_to_mechs": 94393.5
+    }
+  }
+}

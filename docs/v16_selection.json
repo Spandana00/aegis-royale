@@ -1,0 +1,27 @@
+{
+  "selection_basis": "Single strategy parameter from the public source family; V15 firing changes removed.",
+  "chosen_arm": "spacing",
+  "selected_config_difference_from_v14": {
+    "range_laser": 200
+  },
+  "selection_diagnostics": {
+    "moderate_delta": 0.5,
+    "fast_delta": 0.5625,
+    "paired_seeds": 32
+  },
+  "reserved_holdout": {
+    "seeds": "9300-9331",
+    "join_per_loss": 0.8,
+    "arms": [
+      "control",
+      "spacing"
+    ],
+    "result_seen_at_selection": false
+  },
+  "rules": [
+    "Report the held-out cohort separately.",
+    "Do not retune the parameter on these reserved seeds.",
+    "Simulator gains do not forecast an official 6.44+ result."
+  ],
+  "official_candidate_score": null
+}
