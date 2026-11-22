@@ -1,0 +1,689 @@
+{
+  "kind": "source provenance and reported scores; not a local scorer",
+  "score_source": "user-supplied submission screenshots and follow-up score reports",
+  "reference_commit": "e45e734215354fc4f938af15c984a666f446a426",
+  "reference_score": 6.27,
+  "retained_python_source_reference_commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+  "matches_per_run": 48,
+  "minimum_extra_integer_placement_points_to_exceed_6_58": 16,
+  "minimum_displayed_score_above_6_58": 6.6,
+  "runs": [
+    {
+      "version": "v1",
+      "commit": "cf2994318977d241b5c65b16eea33a4163cb0be8",
+      "user_reported_scores": [
+        3.75
+      ],
+      "deltas_from_v10": [
+        -1.58
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_upgrade",
+        "choose_goal",
+        "choose_target",
+        "steer",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range",
+        "engagement_distance",
+        "engage"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "5cf68273712368bc646912cc06fa7412d1ad7de44487cc697df8062458d06e30",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "5cf68273712368bc646912cc06fa7412d1ad7de44487cc697df8062458d06e30",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v2",
+      "commit": "5209875b7f6f512de87b0411b6c44258cd113fbb",
+      "user_reported_scores": [
+        4.5
+      ],
+      "deltas_from_v10": [
+        -0.83
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "82c66d54686871f5350ffc083d7e54dcbf26012cce0098787353ca65215b62d2",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "82c66d54686871f5350ffc083d7e54dcbf26012cce0098787353ca65215b62d2",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v3",
+      "commit": "790c32ab40d011a827ec370ace67c2972e6375b5",
+      "user_reported_scores": [
+        3.96
+      ],
+      "deltas_from_v10": [
+        -1.37
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "safe_goal",
+        "healing_drop",
+        "loot_score",
+        "choose_goal",
+        "find_cover",
+        "choose_target",
+        "engagement_distance",
+        "steer",
+        "engage",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "1cd44f67366140300e92a01e72534aea56eac1ec5d3dc0a5d9299ae7ea1c1669",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "1cd44f67366140300e92a01e72534aea56eac1ec5d3dc0a5d9299ae7ea1c1669",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v4",
+      "commit": "463d65d15c11fb26057e1fec22000f9708455fbe",
+      "user_reported_scores": [
+        4.4
+      ],
+      "deltas_from_v10": [
+        -0.93
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "dodge_cost",
+        "steer",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "4f191fcf8c7e863fcf075f4714da35f25132e3616f72e5ac304b4c6abb5a88a9",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "4f191fcf8c7e863fcf075f4714da35f25132e3616f72e5ac304b4c6abb5a88a9",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v5",
+      "commit": "1fa9554ef876770d36badc949bdf130fd9270156",
+      "user_reported_scores": [
+        4.17,
+        4.15
+      ],
+      "deltas_from_v10": [
+        -1.16,
+        -1.18
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "reload_cover",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "f94b40af017dc70330b73b823726f2689d9740a4ac5fdbb19c1dbb04c7d066d7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "f94b40af017dc70330b73b823726f2689d9740a4ac5fdbb19c1dbb04c7d066d7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v6",
+      "commit": "be9c963d0bb180c781984d85d50fb5896e07a6c2",
+      "user_reported_scores": [
+        4.46
+      ],
+      "deltas_from_v10": [
+        -0.87
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "predict_falling_target",
+        "firing_solution",
+        "choose_goal",
+        "engagement_distance",
+        "steer",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal",
+        "enemy_lightning_range"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "500c314e994c92e795cc55595e0fcbe977fdc6e96e97a6420e6cfd4c8165a4d3",
+        "world.py": "3c068f288721cbb2f9a93ce63abddb22194d4351e06d27f4660bc1a91d7d4e2d",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "500c314e994c92e795cc55595e0fcbe977fdc6e96e97a6420e6cfd4c8165a4d3",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "3c068f288721cbb2f9a93ce63abddb22194d4351e06d27f4660bc1a91d7d4e2d"
+      }
+    },
+    {
+      "version": "v7",
+      "commit": "acec27de854684d8e9853c2adcc610411701f11d",
+      "user_reported_scores": [
+        4.6,
+        4.52
+      ],
+      "deltas_from_v10": [
+        -0.73,
+        -0.81
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "firing_solution",
+        "choose_goal",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "1937807266c5d5d578a0cdbccfb2099c07f153db6276955d62e93bc692238ac8",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "40fb19f7bcd985c01e42e770dcf12214911afe2088d25bf6f658b6d637acc2b6",
+        "bot.py": "1937807266c5d5d578a0cdbccfb2099c07f153db6276955d62e93bc692238ac8",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v8",
+      "commit": "46d8cb1965a7a3c513ac705c588d34164292276d",
+      "user_reported_scores": [
+        4.6
+      ],
+      "deltas_from_v10": [
+        -0.73
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [
+        "__init__",
+        "remember",
+        "choose_goal",
+        "act"
+      ],
+      "removed_retained_root_bot_methods_vs_v10": [
+        "weapon_preferences",
+        "tactical_resource_goal"
+      ],
+      "retained_root_files_sha256": {
+        "bot.py": "99c934f6f5e036353a20882f2d1ffdcb37a9ef5d7a9f3142794b49e7a5e98147",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08",
+        "aiming.py": "136669c67605546b5f972f6106517ef5b1be19a74c229e4495b0fa292079efa2",
+        "bot.py": "99c934f6f5e036353a20882f2d1ffdcb37a9ef5d7a9f3142794b49e7a5e98147",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v9",
+      "commit": "585ac9b06b7d9f6f5317ad52d1a3ab15c2656fa6",
+      "user_reported_scores": [
+        4.77
+      ],
+      "deltas_from_v10": [
+        -0.56
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [],
+      "removed_retained_root_bot_methods_vs_v10": [],
+      "retained_root_files_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/bot/bot.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "73dd0947f610bf737d79ab977e14b08d5e657d3f69ee92fe5807548fda3d1b08",
+        "aiming.py": "136669c67605546b5f972f6106517ef5b1be19a74c229e4495b0fa292079efa2",
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd"
+      }
+    },
+    {
+      "version": "v10",
+      "commit": "d75253a91ccb4d199d4374c076ee0d58c383e590",
+      "user_reported_scores": [
+        5.33
+      ],
+      "deltas_from_v10": [
+        0.0
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [],
+      "removed_retained_root_bot_methods_vs_v10": [],
+      "retained_root_files_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/app/pilot/main.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32",
+        "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+        "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+        "pilot/brain.py": "099fa5a17b1e5c29fb6ad00fad147040572769d2891597cb6a02f4f68d758714",
+        "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+        "pilot/main.py": "efcbb3662aefb885e5f2494bd4811d4696dbc74e3ef010e3e54461a80e487fac",
+        "pilot/navbake.npz": "57068ba333029d2df090d20fa193860d51c5ece75e53755bd34c5e7daeb17517",
+        "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+        "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+        "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+        "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+      }
+    },
+    {
+      "version": "v11",
+      "commit": "be5f383d11735740a283aa730d0a66344b496e85",
+      "user_reported_scores": [
+        5.25
+      ],
+      "deltas_from_v10": [
+        -0.08
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [],
+      "removed_retained_root_bot_methods_vs_v10": [],
+      "retained_root_files_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/app/pilot/main.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32",
+        "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+        "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+        "pilot/brain.py": "7bd61d2787b0cdd499c33778161d6a812170a252a998cb2c3d3d05a8f2576304",
+        "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+        "pilot/main.py": "2d6c4630619579169b190eaf187a6c1b428196c5ca6148fd9058c90997a023f5",
+        "pilot/navbake.npz": "57068ba333029d2df090d20fa193860d51c5ece75e53755bd34c5e7daeb17517",
+        "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+        "pilot/navigate3.py": "2a4790bded734615289e3a716a16aefe5781d348c541882b54b069bacf36f666",
+        "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+        "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+      }
+    },
+    {
+      "version": "v12",
+      "commit": "9001f5d9bbbf076b65e815e29ed3d1b488ff3a2f",
+      "user_reported_scores": [
+        5.02
+      ],
+      "deltas_from_v10": [
+        -0.31
+      ],
+      "changed_retained_root_bot_methods_vs_v10": [],
+      "removed_retained_root_bot_methods_vs_v10": [],
+      "retained_root_files_sha256": {
+        "bot.py": "b09303cdb2c619391f60ddaed17ef54662506cf865014f1ed928bc5a76cbc7ae",
+        "world.py": "116e504896ad1e85631fdf5b4198e6bbeece80c0bd0972cc7de3e37fa32e14bd",
+        "navigation.py": "77c0b1f68bfa3401b88bcd94221664711ce4eb3292158d26ec8c268b922cc2c7",
+        "mechfight.py": "62fbcc3eeb63a64baeebcba0a8b101ca9f520c6100061b54147a5b62f45e2719",
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32"
+      },
+      "active_entrypoint": "[\"python3\", \"-B\", \"-u\", \"/app/pilot/main.py\"]",
+      "runtime_sha256": {
+        "Dockerfile": "5333abea94f87a45d207613eeb9c379253ad7a0b38330db17ba79267331f6d32",
+        "pilot/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "pilot/arena.py": "9771c2521480dfa5db61ddfdd1cc391bdce328d85c716590371400dbc3e85fc7",
+        "pilot/ballistics.py": "cb7bdaf1382d230cb36ae20847636391d76d8f50c9766e27a588324b6607ca07",
+        "pilot/brain.py": "d4ac5138845ba0625c113cd02d85919c337bef9fddccb68c0683f31c03fe76be",
+        "pilot/combat.py": "aa170d0a9166a045cd8e8012d18f272ba14676357f8da521bca2d1fe534bb449",
+        "pilot/local_motion.py": "1ade931d525247660d57aea24acdd82853578e18b0041c83ebb692568f6eb95c",
+        "pilot/main.py": "5293dcd9bffe12a89dabb8518aa5ff448dc0befac9d28ada8263f6207a005cca",
+        "pilot/navbake.npz": "57068ba333029d2df090d20fa193860d51c5ece75e53755bd34c5e7daeb17517",
+        "pilot/navigate.py": "c3967c5dd64cd471e9c15ccaa69fd9347442147d9b1b693ddbde7d4c09329709",
+        "pilot/navigate3.py": "af158fc637e323902364692bd9bf0524363dd4b8fa6bacfb397f8436195d85c4",
+        "pilot/state.py": "105468513bc9a4afd6624c8c4f7a5f329108d10cc054e7d74398894634936ea7",
+        "pilot/threats.py": "f322eb03b3b62025b991070dd406052000611ad325bbae019a0b2bba0d590696"
+      }
+    },
+    {
+      "version": "v13",
+      "commit": "5cf4fe8b8bf0992517575fe76ed35abb21f9ecc1",
+      "user_reported_scores": [
+        5.79
+      ],
+      "receipt": "BB-EDE179C7",
+      "runtime_sha256": {
+        "sentinel/bot.py": "71b14c5e9c6a6c8e503f59a91c3f27e87b010a211ab4014fe94a6a934f294148",
+        "sentinel/survivor.py": "90c652ec7ef328ab2915b1c35403711028fa3f17acb719421b3ce939225f9451",
+        "sentinel/navigation.py": "61c0b9dccff8067ffdbea7e54e693427134d7214e00a5de5ce71da1411aee392",
+        "sentinel/combat.py": "3b8d9b592349dcb90bdc23cd9a552d8cdb42df703c959323ae7cce39114d4e1b",
+        "sentinel/mechfight.py": "02f9803bd65eab602356fc3b7c98a769bc40715bbc61274cdfac7b440342991c",
+        "sentinel/LICENSE": "7deeaf37462114403831c1322e6bbcde64a58390aa5ce21d078065779a749c6a"
+      }
+    },
+    {
+      "version": "v14",
+      "commit": "3f08bd1311f93bde3696a2f5a295fd603e9e9fa0",
+      "user_reported_scores": [
+        6.19
+      ],
+      "receipt": "BB-A804A35A",
+      "runtime_sha256": {
+        "automata/Cargo.lock": "57735c71426a773fa996df7a7b0ffd5509de7e1f95dd9bbee7c2623ccee77c1c",
+        "automata/Cargo.toml": "f3f7c85f08c0425c539f3be69e9b1af809f6da953fe20124b82bfeead0ead9e2",
+        "automata/LICENSE": "0a19baa3462fd09d7b59553932d606d6c87a9ccab827ae34bd84601534c94009",
+        "automata/bot.json": "60970d637c12031480f38424adfff5d265340cf3c39c8ad0bf51e5f6164c77f5",
+        "automata/src/brain/aim.rs": "fd3025ee6fc698a90b78856dc145504e8fdc23611acb2e8e9328e449a27dfffc",
+        "automata/src/brain/aimz.rs": "50c4a389492db4e9fe36378bb04dd890062f6968f3132cea4fc47f1d6fe5e92b",
+        "automata/src/brain/econ.rs": "056f3f46bd322d7897694cdcecede90e0f1cb851f685281720998b80cafe0ed9",
+        "automata/src/brain/ffa.rs": "c80039634fc3ff4bea491a4c942e95d68793da61fefefc387a278e82259b1e4d",
+        "automata/src/brain/gear.rs": "1b5548443cad377bf8f708dcab166cbdd2e8b4432428a63e34cdfa69b5b8cc3a",
+        "automata/src/brain/keep.rs": "4e6be519a33edfb7c015926e79b6a8db9e379a6629327d26050ed53947745637",
+        "automata/src/brain/kill.rs": "eb4cae95030887d77d159140ad5715cdcb650aea3887d4f4b190bea8aa8b1391",
+        "automata/src/brain/laser.rs": "46c4fefb64cb18165101705dfd825fa3b0a90c9882cffb35c2c73dcd034e2656",
+        "automata/src/brain/math.rs": "d4c002f8ebbb63782a9c64d4a1c89c5f468c8dd328627f67d2cd579ed801b95f",
+        "automata/src/brain/memory.rs": "467d8727b97edee51b91f71c92acea1fe07a6219b7015d6e314e80f50df33808",
+        "automata/src/brain/mod.rs": "a6d892e27aacbf56ae31be98eaff83e5c70bc1875cdadeff3f749342d03b8ee8",
+        "automata/src/brain/order.rs": "8e99774af05f1259544adf75e9133a9309f316659be28407708c385396eafdde",
+        "automata/src/brain/params.rs": "4fa0ad2f5409a520abd48b8441adba7ef7e3e6f5c0ac3f3609482b102ef0937f",
+        "automata/src/brain/plan.rs": "355874cbeb9c1e54a5efe4beec1422be41fd1aec525f984d31181aab8dea9c5e",
+        "automata/src/brain/roof.rs": "c607d5e0a6621cdeb668466bf93e2f110a3c35e4e31bd70a36044e49758529a1",
+        "automata/src/brain/safety.rs": "87cb7ad57ee4981e4cbf83e886eefd1495b0bd70f842d9ef9fadb77267586de5",
+        "automata/src/brain/squad.rs": "6b5a991aa2419473b72bf52b68efda15ab65bce6f8e4d1b426eca5d9819b73bf",
+        "automata/src/brain/strategy.rs": "b9526dd9fec1a62c485ca79c6f5977f0ee9b4b8d432b9451a8b1e5f330c0b2be",
+        "automata/src/brain/survive.rs": "09e937870ffa61ce5c3c7298397df759e10814346405d9dfbc04c334cbe0cf0b",
+        "automata/src/brain/tele.rs": "6a209dc17dadaf86a6cfa09f603d9c1f9142d4dfd565ea5a2eb37309fa45a3bd",
+        "automata/src/brain/tests.rs": "c2d519ec3c0c4dcd526c146f72f10e81d426779d37c0aa6221e1c684b32b1d69",
+        "automata/src/brain/wave.rs": "9e1acc46c9ee9bfe6193e073bf2391c442ec9e71a931d0d61f2187cf78974268",
+        "automata/src/lib.rs": "c7ca21cffddde7f591c1705ee4ab2d110c00eee31faad82c570b8df2586c84fe",
+        "automata/src/main.rs": "0ea320d2e9b27aca6f8df5fd56595d1752cfc2a83d4a7d42dca33222145aba04",
+        "automata/src/nav/mod.rs": "a69f0694aab9ebc3dd82a6d7d80cdb4c55a7e528912e4d586e0540985ba70323",
+        "automata/src/nav/tests.rs": "a53956e2e11228d604a732272e91114ebdda72934762b50b0fa50436731e7caf",
+        "automata/src/physics.rs": "e81fa7c2d166f8d8dcfa0beb7e268c0926ee1bd59c8d42581e589fe9402f9345",
+        "automata/src/proto.rs": "fb8df95d9b788e73b8ddca8ddc4c5fc6c596c878e7ee34827fccb8e3676dcd83",
+        "automata/src/runtime.rs": "477112b30644ce9e4844125940f18cd8ea50347c185fc70e509e28879e43a041",
+        "automata/src/world.rs": "8ceb244cb7c99f0baf0c47aa2c06cb164b35274744d9aaeb93075465eafbebdc",
+        "automata/tests/world_tests.rs": "31e9c491edf9b1815018b1202e7022f5a3159ab9943bcea448353760f85627d6"
+      }
+    },
+    {
+      "version": "v15",
+      "commit": "be6c83e043e7f604aa95d7f9c4f2e2f52c556f85",
+      "user_reported_scores": [
+        6.15
+      ],
+      "receipt": "BB-05A9CC68",
+      "runtime_sha256": {
+        "automata/Cargo.lock": "57735c71426a773fa996df7a7b0ffd5509de7e1f95dd9bbee7c2623ccee77c1c",
+        "automata/Cargo.toml": "f3f7c85f08c0425c539f3be69e9b1af809f6da953fe20124b82bfeead0ead9e2",
+        "automata/LICENSE": "0a19baa3462fd09d7b59553932d606d6c87a9ccab827ae34bd84601534c94009",
+        "automata/bot.json": "a88c5639dc372c8feb73fa71b624ee46a0d6cb92ad5e38b75cd2efce04b7c93d",
+        "automata/src/brain/aim.rs": "a8851cf668325b194f5973e029a72dcf088e962b132bc3dbc5724baf2737dba0",
+        "automata/src/brain/aimz.rs": "50c4a389492db4e9fe36378bb04dd890062f6968f3132cea4fc47f1d6fe5e92b",
+        "automata/src/brain/econ.rs": "056f3f46bd322d7897694cdcecede90e0f1cb851f685281720998b80cafe0ed9",
+        "automata/src/brain/ffa.rs": "c80039634fc3ff4bea491a4c942e95d68793da61fefefc387a278e82259b1e4d",
+        "automata/src/brain/gear.rs": "1b5548443cad377bf8f708dcab166cbdd2e8b4432428a63e34cdfa69b5b8cc3a",
+        "automata/src/brain/keep.rs": "4e6be519a33edfb7c015926e79b6a8db9e379a6629327d26050ed53947745637",
+        "automata/src/brain/kill.rs": "eb4cae95030887d77d159140ad5715cdcb650aea3887d4f4b190bea8aa8b1391",
+        "automata/src/brain/laser.rs": "46c4fefb64cb18165101705dfd825fa3b0a90c9882cffb35c2c73dcd034e2656",
+        "automata/src/brain/math.rs": "d4c002f8ebbb63782a9c64d4a1c89c5f468c8dd328627f67d2cd579ed801b95f",
+        "automata/src/brain/memory.rs": "467d8727b97edee51b91f71c92acea1fe07a6219b7015d6e314e80f50df33808",
+        "automata/src/brain/mod.rs": "5be7918092b0eac3735cfc53d881a9b4211f79ecedb44790b75cd9435587fb1c",
+        "automata/src/brain/order.rs": "8e99774af05f1259544adf75e9133a9309f316659be28407708c385396eafdde",
+        "automata/src/brain/params.rs": "f62bd6476889339482e3a4fe606ccdeef3b506a3d850fb2700d32d7ff9572299",
+        "automata/src/brain/plan.rs": "355874cbeb9c1e54a5efe4beec1422be41fd1aec525f984d31181aab8dea9c5e",
+        "automata/src/brain/roof.rs": "c607d5e0a6621cdeb668466bf93e2f110a3c35e4e31bd70a36044e49758529a1",
+        "automata/src/brain/safety.rs": "87cb7ad57ee4981e4cbf83e886eefd1495b0bd70f842d9ef9fadb77267586de5",
+        "automata/src/brain/squad.rs": "6b5a991aa2419473b72bf52b68efda15ab65bce6f8e4d1b426eca5d9819b73bf",
+        "automata/src/brain/strategy.rs": "b9526dd9fec1a62c485ca79c6f5977f0ee9b4b8d432b9451a8b1e5f330c0b2be",
+        "automata/src/brain/survive.rs": "09e937870ffa61ce5c3c7298397df759e10814346405d9dfbc04c334cbe0cf0b",
+        "automata/src/brain/tele.rs": "6a209dc17dadaf86a6cfa09f603d9c1f9142d4dfd565ea5a2eb37309fa45a3bd",
+        "automata/src/brain/tests.rs": "c2d519ec3c0c4dcd526c146f72f10e81d426779d37c0aa6221e1c684b32b1d69",
+        "automata/src/brain/wave.rs": "9e1acc46c9ee9bfe6193e073bf2391c442ec9e71a931d0d61f2187cf78974268",
+        "automata/src/lib.rs": "c7ca21cffddde7f591c1705ee4ab2d110c00eee31faad82c570b8df2586c84fe",
+        "automata/src/main.rs": "0ea320d2e9b27aca6f8df5fd56595d1752cfc2a83d4a7d42dca33222145aba04",
+        "automata/src/nav/mod.rs": "a69f0694aab9ebc3dd82a6d7d80cdb4c55a7e528912e4d586e0540985ba70323",
+        "automata/src/nav/tests.rs": "a53956e2e11228d604a732272e91114ebdda72934762b50b0fa50436731e7caf",
+        "automata/src/physics.rs": "e81fa7c2d166f8d8dcfa0beb7e268c0926ee1bd59c8d42581e589fe9402f9345",
+        "automata/src/proto.rs": "fb8df95d9b788e73b8ddca8ddc4c5fc6c596c878e7ee34827fccb8e3676dcd83",
+        "automata/src/runtime.rs": "6e768e5092a02ee46597989872f11b84591dbb3ac95162ae1248a6955c5faa21",
+        "automata/src/world.rs": "8ceb244cb7c99f0baf0c47aa2c06cb164b35274744d9aaeb93075465eafbebdc",
+        "automata/tests/world_tests.rs": "31e9c491edf9b1815018b1202e7022f5a3159ab9943bcea448353760f85627d6",
+        "automata/src/brain/optimization_tests.rs": "6f1cda89fcaaa77211421033f5c84eaed560389778875b60c8bc738821a1e49b"
+      }
+    },
+    {
+      "version": "v16",
+      "commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+      "user_reported_scores": [
+        6.25
+      ],
+      "receipt": "BB-0E038934",
+      "runtime_sha256": {
+        "automata/Cargo.lock": "57735c71426a773fa996df7a7b0ffd5509de7e1f95dd9bbee7c2623ccee77c1c",
+        "automata/Cargo.toml": "f3f7c85f08c0425c539f3be69e9b1af809f6da953fe20124b82bfeead0ead9e2",
+        "automata/LICENSE": "0a19baa3462fd09d7b59553932d606d6c87a9ccab827ae34bd84601534c94009",
+        "automata/bot.json": "5d34117659f313315ea53be6d29029bf783dc675a1260f961d70757fceb38c77",
+        "automata/src/brain/aim.rs": "fd3025ee6fc698a90b78856dc145504e8fdc23611acb2e8e9328e449a27dfffc",
+        "automata/src/brain/aimz.rs": "50c4a389492db4e9fe36378bb04dd890062f6968f3132cea4fc47f1d6fe5e92b",
+        "automata/src/brain/econ.rs": "056f3f46bd322d7897694cdcecede90e0f1cb851f685281720998b80cafe0ed9",
+        "automata/src/brain/ffa.rs": "c80039634fc3ff4bea491a4c942e95d68793da61fefefc387a278e82259b1e4d",
+        "automata/src/brain/gear.rs": "1b5548443cad377bf8f708dcab166cbdd2e8b4432428a63e34cdfa69b5b8cc3a",
+        "automata/src/brain/keep.rs": "4e6be519a33edfb7c015926e79b6a8db9e379a6629327d26050ed53947745637",
+        "automata/src/brain/kill.rs": "eb4cae95030887d77d159140ad5715cdcb650aea3887d4f4b190bea8aa8b1391",
+        "automata/src/brain/laser.rs": "46c4fefb64cb18165101705dfd825fa3b0a90c9882cffb35c2c73dcd034e2656",
+        "automata/src/brain/math.rs": "d4c002f8ebbb63782a9c64d4a1c89c5f468c8dd328627f67d2cd579ed801b95f",
+        "automata/src/brain/memory.rs": "467d8727b97edee51b91f71c92acea1fe07a6219b7015d6e314e80f50df33808",
+        "automata/src/brain/mod.rs": "a6d892e27aacbf56ae31be98eaff83e5c70bc1875cdadeff3f749342d03b8ee8",
+        "automata/src/brain/order.rs": "8e99774af05f1259544adf75e9133a9309f316659be28407708c385396eafdde",
+        "automata/src/brain/params.rs": "4fa0ad2f5409a520abd48b8441adba7ef7e3e6f5c0ac3f3609482b102ef0937f",
+        "automata/src/brain/plan.rs": "355874cbeb9c1e54a5efe4beec1422be41fd1aec525f984d31181aab8dea9c5e",
+        "automata/src/brain/roof.rs": "c607d5e0a6621cdeb668466bf93e2f110a3c35e4e31bd70a36044e49758529a1",
+        "automata/src/brain/safety.rs": "87cb7ad57ee4981e4cbf83e886eefd1495b0bd70f842d9ef9fadb77267586de5",
+        "automata/src/brain/squad.rs": "6b5a991aa2419473b72bf52b68efda15ab65bce6f8e4d1b426eca5d9819b73bf",
+        "automata/src/brain/strategy.rs": "b9526dd9fec1a62c485ca79c6f5977f0ee9b4b8d432b9451a8b1e5f330c0b2be",
+        "automata/src/brain/survive.rs": "09e937870ffa61ce5c3c7298397df759e10814346405d9dfbc04c334cbe0cf0b",
+        "automata/src/brain/tele.rs": "6a209dc17dadaf86a6cfa09f603d9c1f9142d4dfd565ea5a2eb37309fa45a3bd",
+        "automata/src/brain/tests.rs": "c2d519ec3c0c4dcd526c146f72f10e81d426779d37c0aa6221e1c684b32b1d69",
+        "automata/src/brain/wave.rs": "9e1acc46c9ee9bfe6193e073bf2391c442ec9e71a931d0d61f2187cf78974268",
+        "automata/src/lib.rs": "c7ca21cffddde7f591c1705ee4ab2d110c00eee31faad82c570b8df2586c84fe",
+        "automata/src/main.rs": "0ea320d2e9b27aca6f8df5fd56595d1752cfc2a83d4a7d42dca33222145aba04",
+        "automata/src/nav/mod.rs": "a69f0694aab9ebc3dd82a6d7d80cdb4c55a7e528912e4d586e0540985ba70323",
+        "automata/src/nav/tests.rs": "a53956e2e11228d604a732272e91114ebdda72934762b50b0fa50436731e7caf",
+        "automata/src/physics.rs": "e81fa7c2d166f8d8dcfa0beb7e268c0926ee1bd59c8d42581e589fe9402f9345",
+        "automata/src/proto.rs": "fb8df95d9b788e73b8ddca8ddc4c5fc6c596c878e7ee34827fccb8e3676dcd83",
+        "automata/src/runtime.rs": "83ddbb1802df0ee4a3f826ce6ed1f699bc447cd84f7153b47d0638ccbe600a3f",
+        "automata/src/world.rs": "8ceb244cb7c99f0baf0c47aa2c06cb164b35274744d9aaeb93075465eafbebdc",
+        "automata/tests/world_tests.rs": "31e9c491edf9b1815018b1202e7022f5a3159ab9943bcea448353760f85627d6"
+      }
+    },
+    {
+      "version": "v17",
+      "commit": "e45e734215354fc4f938af15c984a666f446a426",
+      "user_reported_scores": [
+        6.27
+      ],
+      "receipt": "BB-961EADA2",
+      "runtime_sha256": {
+        "automata/Cargo.lock": "57735c71426a773fa996df7a7b0ffd5509de7e1f95dd9bbee7c2623ccee77c1c",
+        "automata/Cargo.toml": "f3f7c85f08c0425c539f3be69e9b1af809f6da953fe20124b82bfeead0ead9e2",
+        "automata/LICENSE": "0a19baa3462fd09d7b59553932d606d6c87a9ccab827ae34bd84601534c94009",
+        "automata/bot.json": "9fbe7de04c560480e02880276a2f5ec3eb0e5018f5a488b74af835885f05422a",
+        "automata/src/brain/aim.rs": "fd3025ee6fc698a90b78856dc145504e8fdc23611acb2e8e9328e449a27dfffc",
+        "automata/src/brain/aimz.rs": "50c4a389492db4e9fe36378bb04dd890062f6968f3132cea4fc47f1d6fe5e92b",
+        "automata/src/brain/econ.rs": "056f3f46bd322d7897694cdcecede90e0f1cb851f685281720998b80cafe0ed9",
+        "automata/src/brain/ffa.rs": "c80039634fc3ff4bea491a4c942e95d68793da61fefefc387a278e82259b1e4d",
+        "automata/src/brain/gear.rs": "1b5548443cad377bf8f708dcab166cbdd2e8b4432428a63e34cdfa69b5b8cc3a",
+        "automata/src/brain/keep.rs": "4e6be519a33edfb7c015926e79b6a8db9e379a6629327d26050ed53947745637",
+        "automata/src/brain/kill.rs": "eb4cae95030887d77d159140ad5715cdcb650aea3887d4f4b190bea8aa8b1391",
+        "automata/src/brain/laser.rs": "46c4fefb64cb18165101705dfd825fa3b0a90c9882cffb35c2c73dcd034e2656",
+        "automata/src/brain/math.rs": "d4c002f8ebbb63782a9c64d4a1c89c5f468c8dd328627f67d2cd579ed801b95f",
+        "automata/src/brain/memory.rs": "467d8727b97edee51b91f71c92acea1fe07a6219b7015d6e314e80f50df33808",
+        "automata/src/brain/mod.rs": "a6d892e27aacbf56ae31be98eaff83e5c70bc1875cdadeff3f749342d03b8ee8",
+        "automata/src/brain/order.rs": "8e99774af05f1259544adf75e9133a9309f316659be28407708c385396eafdde",
+        "automata/src/brain/params.rs": "4fa0ad2f5409a520abd48b8441adba7ef7e3e6f5c0ac3f3609482b102ef0937f",
+        "automata/src/brain/plan.rs": "355874cbeb9c1e54a5efe4beec1422be41fd1aec525f984d31181aab8dea9c5e",
+        "automata/src/brain/roof.rs": "c607d5e0a6621cdeb668466bf93e2f110a3c35e4e31bd70a36044e49758529a1",
+        "automata/src/brain/safety.rs": "87cb7ad57ee4981e4cbf83e886eefd1495b0bd70f842d9ef9fadb77267586de5",
+        "automata/src/brain/squad.rs": "6b5a991aa2419473b72bf52b68efda15ab65bce6f8e4d1b426eca5d9819b73bf",
+        "automata/src/brain/strategy.rs": "b9526dd9fec1a62c485ca79c6f5977f0ee9b4b8d432b9451a8b1e5f330c0b2be",
+        "automata/src/brain/survive.rs": "09e937870ffa61ce5c3c7298397df759e10814346405d9dfbc04c334cbe0cf0b",
+        "automata/src/brain/tele.rs": "6a209dc17dadaf86a6cfa09f603d9c1f9142d4dfd565ea5a2eb37309fa45a3bd",
+        "automata/src/brain/tests.rs": "c2d519ec3c0c4dcd526c146f72f10e81d426779d37c0aa6221e1c684b32b1d69",
+        "automata/src/brain/wave.rs": "9e1acc46c9ee9bfe6193e073bf2391c442ec9e71a931d0d61f2187cf78974268",
+        "automata/src/lib.rs": "c7ca21cffddde7f591c1705ee4ab2d110c00eee31faad82c570b8df2586c84fe",
+        "automata/src/main.rs": "0ea320d2e9b27aca6f8df5fd56595d1752cfc2a83d4a7d42dca33222145aba04",
+        "automata/src/nav/mod.rs": "a69f0694aab9ebc3dd82a6d7d80cdb4c55a7e528912e4d586e0540985ba70323",
+        "automata/src/nav/tests.rs": "a53956e2e11228d604a732272e91114ebdda72934762b50b0fa50436731e7caf",
+        "automata/src/physics.rs": "e81fa7c2d166f8d8dcfa0beb7e268c0926ee1bd59c8d42581e589fe9402f9345",
+        "automata/src/proto.rs": "fb8df95d9b788e73b8ddca8ddc4c5fc6c596c878e7ee34827fccb8e3676dcd83",
+        "automata/src/runtime.rs": "6e202326eb84cbcd47a3c0ba86bba257b804a6ca08448214d94bcd6b3ab3f43c",
+        "automata/src/world.rs": "8ceb244cb7c99f0baf0c47aa2c06cb164b35274744d9aaeb93075465eafbebdc",
+        "automata/tests/world_tests.rs": "31e9c491edf9b1815018b1202e7022f5a3159ab9943bcea448353760f85627d6"
+      }
+    },
+    {
+      "version": "v18",
+      "commit": "fe6358465da4997e6159ad94d737586db0541d44",
+      "user_reported_scores": [
+        5.94
+      ],
+      "receipt": "BB-9377CE58"
+    }
+  ],
+  "candidate": {
+    "name": "Restored AEGIS v17",
+    "official_score": 6.27,
+    "active_entrypoint": "/usr/local/bin/automata",
+    "policy_source": "https://github.com/jason-scheffel/automata",
+    "policy_commit": "f114d641a0de0c565dc057e342b4305b8cfe6d53",
+    "official_baseline": {
+      "version": "v17",
+      "commit": "e45e734215354fc4f938af15c984a666f446a426",
+      "score": 6.27,
+      "receipt": "BB-961EADA2",
+      "integer_total": 301,
+      "source": "User screenshot image(8).png, commit prefix e4; corresponds to the handed-off V17 commit. Displayed 6.27 is 301/48, rounded."
+    },
+    "baseline_receipt_verified_from_user_screenshot": true,
+    "only_source_edits": [],
+    "restored_exact_champion": true,
+    "historical_policies_active_in_image": false
+  }
+}

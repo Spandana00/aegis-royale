@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class AutomataProvenanceTests(unittest.TestCase):
     def test_all_runtime_sources_match_the_manifest_and_original_git_blobs(self):
-        m = json.loads((ROOT/'docs/v18_manifest.json').read_text())
+        m = json.loads((ROOT/'docs/v17_manifest.json').read_text())
         for e in m['files']:
             data = (ROOT/e['path']).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), e['sha256'], e['path'])
@@ -35,14 +35,10 @@ class AutomataProvenanceTests(unittest.TestCase):
         self.assertEqual(p['lz_seek'], 300)
         self.assertEqual(p['gear_on'], 1)
         self.assertIs(p['harvest_on'], True)
-        manifest = json.loads((ROOT/'docs/v18_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
         self.assertEqual(p['range_laser'], 200)
-        difference = manifest['configuration_difference_from_baseline']
-        self.assertEqual(set(difference), {'gear_easy_range'})
-        self.assertEqual(difference['gear_easy_range']['before'], 55)
-        self.assertEqual(difference['gear_easy_range']['after'], p['gear_easy_range'])
-        self.assertEqual(p['gear_easy_range'], 70)
-        self.assertNotIn('gear_lightning_guard', p)
+        self.assertEqual(p['gear_easy_range'], 55)
+        self.assertEqual(p, manifest['selected_config'])
         self.assertEqual(p['upgrade_priority'][:4], ['plating','armor','nanites','laser_charge'])
         for entry in manifest['files']:
             if entry['path'] not in ('automata/bot.json', 'automata/src/runtime.rs'):
@@ -57,22 +53,20 @@ class AutomataProvenanceTests(unittest.TestCase):
         self.assertIn('ENTRYPOINT ["/usr/local/bin/automata"]', docker)
         self.assertIn('!automata/**', ignore)
         self.assertNotIn('!sentinel/', ignore)
-        manifest = json.loads((ROOT/'docs/v18_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
         for path, expected in manifest['packaging_sha256'].items():
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected, path)
 
     def test_candidate_uses_the_scored_champion_as_its_baseline(self):
         champion = json.loads((ROOT/'champion.json').read_text())
-        manifest = json.loads((ROOT/'docs/v18_manifest.json').read_text())
-        self.assertEqual(champion['commit'], manifest['baseline']['commit'])
+        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
+        self.assertEqual(champion['source_manifest'], 'docs/v17_manifest.json')
         self.assertEqual(champion['official_score'], 6.27)
         self.assertEqual(champion['receipt'], 'BB-961EADA2')
-        self.assertEqual(manifest['baseline']['official_score'], champion['official_score'])
         self.assertEqual(champion['range_laser'], 200)
         scored = json.loads((ROOT/champion['source_manifest']).read_text())['selected_config']
         current = json.loads((ROOT/'automata/bot.json').read_text())
-        self.assertEqual({k:v for k,v in current.items() if k != 'gear_easy_range'},
-                         {k:v for k,v in scored.items() if k != 'gear_easy_range'})
+        self.assertEqual(current, scored)
 
 
 if __name__=='__main__':

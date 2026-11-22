@@ -1,0 +1,198 @@
+{
+  "kind": "Post-V18 research refresh; no score forecast",
+  "repositories": [
+    {
+      "repo": "h-ardy/buildathon-mech-royale",
+      "readme_sha": "87deddc23683508d9289a1f1c9839c3065d3a091",
+      "available": true
+    },
+    {
+      "repo": "SandeepMadhavarapu/BattleRoyale",
+      "readme_sha": "b813c0d62292b77dca7b75ceee1098507c2907c4",
+      "available": true
+    },
+    {
+      "repo": "Th3r0n/mech-royale-bot",
+      "readme_sha": "bf2a6212083ca0997d5357b2306be267754f6356",
+      "available": true
+    },
+    {
+      "repo": "wewillwinteam/automata",
+      "readme_sha": "31ea3609744d937974d46e0e6fa7c1e56d148405",
+      "available": true
+    },
+    {
+      "repo": "trompeterm/buildathon-mech-royale",
+      "readme_sha": "5511f0dea6ecd6ccbfe74987ad16ea61cb306f42",
+      "available": true
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "readme_sha": "c5063f6916285a76d85eb04f2b0c42b4b4d5830b",
+      "available": true
+    },
+    {
+      "repo": "MarwanMoh11/mech-royale",
+      "readme_sha": "82ba5784223a40b5ff81878eb7ad9ad3917afd2f",
+      "available": true
+    },
+    {
+      "repo": "paing95/mech-royale-bot",
+      "readme_sha": "c8e8b2aedb123a306a567ee989bad9545d3fa316",
+      "available": true
+    },
+    {
+      "repo": "wewillwinteam/pybot",
+      "readme_sha": "46f2980c89ee07014db47696df93b355729d2661",
+      "available": true
+    },
+    {
+      "repo": "Lozficizy/MechRoyaleBot",
+      "readme_sha": null,
+      "available": false
+    },
+    {
+      "repo": "lalitaditya/mech-royale-v1",
+      "readme_sha": "f9baaa3bffd8cadf50a7db68db766d9b3a7ac8cf",
+      "available": true
+    },
+    {
+      "repo": "Bryantan65/mech-royale-bot",
+      "readme_sha": "c59190b1bf9c0f0bad26110c0eb65152c47134fc",
+      "available": true
+    },
+    {
+      "repo": "wewillwinteam/try_again",
+      "readme_sha": "2908bbd4fd7008ff03f052316e60d17716a4868e",
+      "available": true
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "readme_sha": "8163be89ae507c811ebb7636075d57e3bddcd066",
+      "available": true
+    },
+    {
+      "repo": "c-c-c-c-c-o/shooter_bot",
+      "readme_sha": "4b5bea226028ef0808cb567bb6f763683bd18315",
+      "available": true
+    },
+    {
+      "repo": "lgoyal6/codec-mech-royale",
+      "readme_sha": "8c6a39dfc73aae1450b28a506b765e0ccca540e2",
+      "available": true
+    },
+    {
+      "repo": "shaunkar1/sim-runs",
+      "readme_sha": "da30b511656142edbd6e5ac90c3521b05e122b47",
+      "available": true
+    },
+    {
+      "repo": "nshuai808/mech-royale",
+      "readme_sha": "4c63c7780a6a1246d904a4c8a0a1093c1d397e7f",
+      "available": true
+    },
+    {
+      "repo": "aqilc/mech-royale",
+      "readme_sha": null,
+      "available": false
+    },
+    {
+      "repo": "fikayoAy/mech-royale-bot",
+      "readme_sha": "ff2756a43648a0ab589e3e903cb05d432938bfd3",
+      "available": true
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "readme_sha": null,
+      "available": false
+    },
+    {
+      "repo": "joonk7809/mech-royale-bot",
+      "readme_sha": null,
+      "available": false
+    },
+    {
+      "repo": "viren711/mech-royale-bot",
+      "readme_sha": null,
+      "available": false
+    },
+    {
+      "repo": "shaunkar1/proj1",
+      "readme_sha": "31e390fee8f39f74a3740bd1d4d902d2a1899085",
+      "available": true
+    },
+    {
+      "repo": "WalterHsieh0713/Mech-Royale",
+      "readme_sha": "108982f50e97d6e150ea025acc62f3c72bb69bf6",
+      "available": true
+    },
+    {
+      "repo": "sonalrajapaksha/recursive-builders",
+      "readme_sha": "5bf9ee09fdb79e9980e83ec1c9d47a39876d72e5",
+      "available": true
+    },
+    {
+      "repo": "bookwormpi/oval-sentinel",
+      "readme_sha": "cb0ac3e3186b70c81e0005d234baf3216aab2282",
+      "available": true
+    }
+  ],
+  "higher_score_searches": [
+    {
+      "query": "\"6.58\" \"mech\" in:readme",
+      "relevant_verified_results": 0
+    },
+    {
+      "query": "\"6.4\" \"mech royale\" in:readme",
+      "matched_repo": "ParishruthiGanesh/mech-royale",
+      "verified_author_claimed_best": 5.25,
+      "conclusion": "Search match was not evidence of a 6.4+ bot."
+    }
+  ],
+  "recent_public_experiments": {
+    "recursive_builders": {
+      "blob": "8cf66593199e2e11eaf4477997704ca74009d78a",
+      "claims": [
+        "pre-drop repositioning 5.71 vs 6.25",
+        "inward late cover 6.19 vs 6.25",
+        "RNG salts 5.65,5.54,5.38 vs 6.25"
+      ],
+      "transfer": "Do not import these changes or assume randomization is an improvement."
+    },
+    "inventors": {
+      "blob": "e47cfe6c1b5050d055eb024a0b917bddc9ad788f",
+      "author_claimed_best": 5.25,
+      "transfer": "No evidence it supersedes our 6.27 baseline."
+    }
+  },
+  "scholar": {
+    "direct_google_scholar_access": "Attempted two scholarly queries; blocked by retrieval service. Read primary publisher and author sources instead.",
+    "papers": [
+      {
+        "title": "An Analysis of Model-Based Heuristic Search Techniques for StarCraft Combat Scenarios",
+        "year": 2017,
+        "url": "https://davechurchill.ca/publications/pdf/aiide17_churchill_facebook.pdf",
+        "scope": "Author-hosted full paper retrieved. Combat-search transfer depends on simulator accuracy; offers closest/weakest-target, cooldown-kiting and no-overkill scripts as bounded comparisons."
+      },
+      {
+        "title": "Safe Policy Improvement with Baseline Bootstrapping",
+        "year": 2019,
+        "url": "https://proceedings.mlr.press/v97/laroche19a/laroche19a.pdf",
+        "scope": "Primary paper read. Preserve baseline where state-action evidence is sparse; theoretical guarantees do not apply to our aggregate-only data."
+      },
+      {
+        "title": "Overcoming the Sim-to-Real Gap",
+        "year": 2024,
+        "url": "https://arxiv.org/html/2410.20254v1",
+        "scope": "Primary full text retrieved. Separate simulator exploration from deployment strength."
+      },
+      {
+        "title": "Portfolio Greedy Search and Simulation for Large-Scale Combat in StarCraft",
+        "year": 2013,
+        "url": "https://davechurchill.ca/publications/pdf/combat13.pdf",
+        "scope": "Author-hosted paper retrieved. Small script portfolios for real-time search; not evidence of Mech Royale score gain."
+      }
+    ]
+  },
+  "decision": "Restore exact V17. Do not manufacture a higher-scoring candidate from uncalibrated simulation. Require official evidence for promotion; shortlist bounded targeting and resource decisions for future isolated probes."
+}

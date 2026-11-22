@@ -1,6 +1,11 @@
 # Third-party software
 
-## Active V18 adaptation
+The active runtime is restored byte-for-byte to scored V17 (6.27). V18
+scored 5.94 and its configuration change is no longer active. All upstream
+licenses below remain retained. No academic or newly inspected repository
+code is imported in this restoration.
+
+## Historical V18 adaptation (rejected)
 
 V17's official 6.27 champion is pinned at
 `e45e734215354fc4f938af15c984a666f446a426` (BB-961EADA2).

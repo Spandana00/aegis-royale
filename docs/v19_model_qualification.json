@@ -1,0 +1,18 @@
+{
+  "qualified_for_strength_forecasts": false,
+  "known_comparison": "V18 versus V17",
+  "official_delta": -0.3333333333333333,
+  "modeled_delta": 0.7375,
+  "direction_agrees": false,
+  "reason": "Known official regression predicted as improvement.",
+  "allowed_uses": [
+    "Protocol and timing checks",
+    "Hypothesis generation",
+    "Mechanistic diagnostics"
+  ],
+  "required_before_forecasting": [
+    "Correctly rank V15/V14, V16/V14, V17/V16 and V18/V17 on matched settings.",
+    "Validate on additional official results not used to tune the simulator.",
+    "Report model discrepancy separately from sampling uncertainty."
+  ]
+}

@@ -13,7 +13,7 @@ use crate::brain::Brain;
 use crate::proto::{Action, Hello, Obs, Ready, ServerMsg};
 use crate::Shared;
 
-pub const BOT_NAME: &str = "AEGIS v18";
+pub const BOT_NAME: &str = "AEGIS v17";
 
 static LOG: AtomicBool = AtomicBool::new(false);
 
