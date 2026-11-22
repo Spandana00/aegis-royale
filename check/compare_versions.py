@@ -82,7 +82,7 @@ def main():
     for entry in sentinel['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f'Historical V13 source changed: {entry["path"]}')
-    active=json.loads((ROOT/'docs/v17_manifest.json').read_text())
+    active=json.loads((ROOT/'docs/v20_manifest.json').read_text())
     for entry in active['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f"Active Rust source changed: {entry['path']}")
@@ -119,13 +119,13 @@ def main():
         'retained_python_source_reference_commit':BASE,
         'matches_per_run':48,'minimum_extra_integer_placement_points_to_exceed_6_58':16,
         'minimum_displayed_score_above_6_58':6.60,'runs':rows,
-        'candidate':{'name':'Restored AEGIS v17','official_score':6.27,
+        'candidate':{'name':'AEGIS v20','official_score':None,
                      'active_entrypoint':'/usr/local/bin/automata',
                      'policy_source':active['upstream_repository'],
                      'policy_commit':active['upstream_commit'],
                      'official_baseline':history['baseline'],
                      'baseline_receipt_verified_from_user_screenshot':True,
-                     'only_source_edits':[], 'restored_exact_champion':True,
+                     'only_source_edits':active['allowed_changes'], 'restored_exact_champion':False,
                      'historical_policies_active_in_image':False}
     },indent=2))
 

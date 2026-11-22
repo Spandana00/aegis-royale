@@ -220,6 +220,13 @@ impl Brain {
             self.econ.resting = false;
         }
         let drop = self.choose_drop(obs, &zi).filter(|_| !held || near_mem > 100.0);
+        let finish = !held && !want_retreat && !avoid && !rest && !zi.urgent && n_att <= 1
+            && self.finish_resource_grace(obs, world, tgt.as_ref());
+        let gearg = gearg.filter(|_| !finish);
+        let harvest = harvest.filter(|_| !finish);
+        let loot = loot.filter(|_| !finish);
+        let drop = drop.filter(|_| !finish);
+        let farm = farm && !finish;
         let z = &obs.zone;
         let endgame = held && z.next_radius <= 0.5 && z.shrink_end - t < 40.0;
         let mut mode;

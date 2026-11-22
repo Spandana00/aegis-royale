@@ -1,9 +1,10 @@
 # Third-party software
 
-The active runtime is restored byte-for-byte to scored V17 (6.27). V18
-scored 5.94 and its configuration change is no longer active. All upstream
-licenses below remain retained. No academic or newly inspected repository
-code is imported in this restoration.
+The active V20 candidate builds on scored V17 (6.27). It adds an independently
+written bounded resource-deferral module and target-identity metadata, retaining
+V17 configuration except the new duration switch. V18's failed range change
+remains reverted. Original licenses below are retained. The V20 source manifest
+reconstructs every original imported Git blob; the new module has separate hashes.
 
 ## Historical V18 adaptation (rejected)
 

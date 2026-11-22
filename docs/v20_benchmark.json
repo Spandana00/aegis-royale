@@ -1,0 +1,16 @@
+{
+  "kind": "local correctness and timing; not a scored match",
+  "policy": "automata",
+  "startup_ms": 400.4,
+  "observations": 840,
+  "p50_ms": 0.269,
+  "p99_ms": 16.764,
+  "max_ms": 21.042,
+  "over_50_ms": 0,
+  "invalid_actions": [],
+  "native_stderr": "",
+  "harness_max_rss_mib": 34.41,
+  "launched_process_max_rss_mib": 89.74,
+  "memory_scope": "Direct launched process; a Docker client measurement excludes container RSS.",
+  "active_package": "automata"
+}

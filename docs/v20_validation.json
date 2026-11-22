@@ -1,0 +1,44 @@
+{
+  "candidate": "AEGIS v20",
+  "official_score": null,
+  "champion_commit": "e45e734215354fc4f938af15c984a666f446a426",
+  "champion_score": 6.27,
+  "scope": "Bounded ready-laser resource deferral; no release, aiming or spacing change.",
+  "python_tests": {
+    "passed": 112,
+    "failed": 0
+  },
+  "rust_tests": {
+    "passed": 24,
+    "ignored": 1,
+    "failed": 0,
+    "focused_finisher_tests": 5,
+    "actual_map_and_recorded_stream": true
+  },
+  "native_conformance": {
+    "observations": 300,
+    "late": 0,
+    "invalid": 0,
+    "log": "local-results/v20-conformance.log"
+  },
+  "native_benchmark": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "automata",
+    "startup_ms": 400.4,
+    "observations": 840,
+    "p50_ms": 0.269,
+    "p99_ms": 16.764,
+    "max_ms": 21.042,
+    "over_50_ms": 0,
+    "invalid_actions": [],
+    "native_stderr": "",
+    "harness_max_rss_mib": 34.41,
+    "launched_process_max_rss_mib": 89.74,
+    "memory_scope": "Direct launched process; a Docker client measurement excludes container RSS.",
+    "active_package": "automata"
+  },
+  "binary_sha256": "97aa7b7ece93e8b89114b5568ee9c3aa10a07e8036eaacacbd0b1889b4919f60",
+  "strength_forecast": null,
+  "promotion_rule": "Only a higher official result may replace the champion.",
+  "container_checks": "Require GitHub Actions success on the exact public commit before submission."
+}

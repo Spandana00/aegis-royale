@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class AutomataProvenanceTests(unittest.TestCase):
     def test_all_runtime_sources_match_the_manifest_and_original_git_blobs(self):
-        m = json.loads((ROOT/'docs/v17_manifest.json').read_text())
+        m = json.loads((ROOT/'docs/v20_manifest.json').read_text())
         for e in m['files']:
             data = (ROOT/e['path']).read_bytes()
             self.assertEqual(hashlib.sha256(data).hexdigest(), e['sha256'], e['path'])
@@ -35,13 +35,14 @@ class AutomataProvenanceTests(unittest.TestCase):
         self.assertEqual(p['lz_seek'], 300)
         self.assertEqual(p['gear_on'], 1)
         self.assertIs(p['harvest_on'], True)
-        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v20_manifest.json').read_text())
         self.assertEqual(p['range_laser'], 200)
         self.assertEqual(p['gear_easy_range'], 55)
         self.assertEqual(p, manifest['selected_config'])
+        self.assertEqual(p['finish_grace_s'], 0.6)
         self.assertEqual(p['upgrade_priority'][:4], ['plating','armor','nanites','laser_charge'])
         for entry in manifest['files']:
-            if entry['path'] not in ('automata/bot.json', 'automata/src/runtime.rs'):
+            if entry['path'] not in manifest['allowed_modified_upstream_paths']:
                 self.assertEqual(entry['reverse_transformations'], [], entry['path'])
 
     def test_packaging_runs_the_rust_policy_with_its_configuration(self):
@@ -53,20 +54,20 @@ class AutomataProvenanceTests(unittest.TestCase):
         self.assertIn('ENTRYPOINT ["/usr/local/bin/automata"]', docker)
         self.assertIn('!automata/**', ignore)
         self.assertNotIn('!sentinel/', ignore)
-        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v20_manifest.json').read_text())
         for path, expected in manifest['packaging_sha256'].items():
             self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected, path)
 
     def test_candidate_uses_the_scored_champion_as_its_baseline(self):
         champion = json.loads((ROOT/'champion.json').read_text())
-        manifest = json.loads((ROOT/'docs/v17_manifest.json').read_text())
+        manifest = json.loads((ROOT/'docs/v20_manifest.json').read_text())
         self.assertEqual(champion['source_manifest'], 'docs/v17_manifest.json')
         self.assertEqual(champion['official_score'], 6.27)
         self.assertEqual(champion['receipt'], 'BB-961EADA2')
         self.assertEqual(champion['range_laser'], 200)
         scored = json.loads((ROOT/champion['source_manifest']).read_text())['selected_config']
         current = json.loads((ROOT/'automata/bot.json').read_text())
-        self.assertEqual(current, scored)
+        self.assertEqual({k:v for k,v in current.items() if k != 'finish_grace_s'}, scored)
 
 
 if __name__=='__main__':

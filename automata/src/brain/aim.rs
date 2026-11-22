@@ -6,6 +6,7 @@ use crate::world::World;
 
 #[derive(Clone, Debug)]
 pub(crate) struct AimTarget {
+    pub id: i64,
     pub feet: V3,
     pub vel: V3,
     pub acc: V3,
@@ -32,7 +33,7 @@ impl Brain {
             let s = 1.0 + self.cfg.cubes.size_per_cube * tr.cubes.max(0.0);
             (self.cfg.mech.radius * s, self.cfg.mech.height * s)
         };
-        AimTarget { feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false }
+        AimTarget { id: tr.id, feet: tr.pos, vel: tr.vel, acc: tr.acc, radius, height, hp: tr.hp, fixed: false }
     }
 
     fn idle_aim(&self, obs: &Obs) -> V2 {
@@ -75,7 +76,7 @@ impl Brain {
         [wrap(base + self.p.scan_amp * ph.sin()), 0.0]
     }
 
-    fn pick_fire_target(&self, obs: &Obs, world: &World, muzzle: V3) -> Option<(AimTarget, bool)> {
+    pub(crate) fn pick_fire_target(&self, obs: &Obs, world: &World, muzzle: V3) -> Option<(AimTarget, bool)> {
         let t = obs.t;
         let me = &obs.me;
         let mut max_range: f64 = 0.0;
@@ -181,7 +182,7 @@ impl Brain {
             if bc.as_ref().map_or(true, |b| s > b.0) && rays < 8 {
                 rays += 1;
                 if world.ray(muzzle, c).is_none() {
-                    let at = AimTarget { feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true };
+                    let at = AimTarget { id: it.id, feet: it.pos, vel: [0.0; 3], acc: [0.0; 3], radius: self.cfg.crates.radius, height: self.cfg.crates.height, hp: it.hp, fixed: true };
                     bc = Some((s, at));
                 }
             }

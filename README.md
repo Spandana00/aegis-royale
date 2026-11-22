@@ -1,43 +1,32 @@
-# AEGIS Royale — restored V17 baseline
+# AEGIS Royale — V20 official experiment
 
-**Active runtime: exact V17, official best 6.27, receipt BB-961EADA2.**
-Scored commit: `e45e734215354fc4f938af15c984a666f446a426`.
-This research revision restores that policy; it is not a new higher-scoring bot.
+Champion: **V17, 6.27, BB-961EADA2**, commit
+`e45e734215354fc4f938af15c984a666f446a426`. Keep it selected until a higher official score.
 
-V18 scored **5.94** (BB-9377CE58), versus V17 **6.27**. Its only behavioral
-change was `gear_easy_range` 55 → 70 m. That change is reverted. The entire
-`automata/` tree now matches V17 exactly, including display name, 55 m approach,
-200 m laser preference, upgrade order, firing, harvesting, recovery and RNG.
+V20 adds one bounded decision change on V17: briefly defer resource goals
+when an already charged laser is aligned with a fresh, visible, low-HP enemy
+that the firing policy also selects. The window lasts at most **0.6 seconds**
+and never renews for the same target. It does not change firing/release logic.
 
-The local simulator predicted +0.7375 points on 80 paired validation seeds;
-the official result lost 16 integer placement points across 48 games. The
-simulator is therefore **unqualified for strength forecasts**. More seeds or
-a sampling interval excluding zero do not correct this model discrepancy.
+The deferral requires target HP at most half the weapon's listed damage,
+full charge, line of sight, weapon range and alignment. This conservative
+estimate is not a guaranteed kill: misses, enemy armor and later state changes
+remain possible. A stale target, unready shot or different firing target rejects
+it. Urgent zone movement, retreat, healing, multiple recent attackers, and an
+active supply-drop capture retain priority. Gun-only behavior is unchanged.
 
-```sh
-python check/model_qualification.py
-# For an automation that requires a qualified strength model:
-python check/model_qualification.py --require-qualified
-# Currently exits 2, intentionally blocking forecast-based promotion.
-```
+V17's 55 m approach, 200 m laser preference, full upgrade order, equipment
+preferences, aim mechanics and randomization are retained. V18's failed 70 m
+setting remains reverted. No model-based score forecast is made; V20 is an
+**unscored official probe**, not a promoted champion.
 
-The refreshed research covers 27 recently updated repositories, a targeted
-search for 6.4+/6.58 score claims, and original academic papers on RTS combat
-and baseline-preserving improvement. No newly verified higher-scoring exact
-implementation was found. Direct Google Scholar retrieval was blocked;
-author-hosted and publisher papers were retrieved instead.
+Five focused Rust scenarios verify actual cube-goal deferral, timer expiry,
+shot readiness, freshness, target agreement, aim, capture, retreat and zone
+priority. Native and container checks additionally exercise the full map,
+recorded protocol and synthetic stress observations.
 
-[Diagnosis and next experiments](docs/V19_DIAGNOSIS.md) ·
-[Research sources](docs/v19_research.json) ·
-[Official history](docs/v19_official_history.json) ·
-[Model qualification](docs/v19_model_qualification.json) ·
-[Source audit](docs/v19_source_audit.json)
+[Manifest](docs/v20_manifest.json) · [Validation](docs/v20_validation.json) ·
+[Source audit](docs/v20_source_audit.json) · [Previous diagnosis](docs/V19_DIAGNOSIS.md)
 
-The existing [container workflow](.github/workflows/validate.yml) and 112 Python
-checks verify the restored source and packaging. Exact-commit GitHub checks
-must pass before handoff. Prior scored V17 checks also remain available at
-https://github.com/Spandana00/aegis-royale/actions/runs/44976821615.
-
-Keep V17 selected as the final entry. V18 remains archived for diagnosis.
-Promote a future candidate only after a higher official result; experimental
-candidates must document uncertainty and preserve the champion.
+Submit the exact V20 commit after its GitHub checks pass. Do not change the
+selected champion merely because compilation and conformance pass.

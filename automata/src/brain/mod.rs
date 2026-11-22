@@ -1,6 +1,7 @@
 mod aim;
 mod aimz;
 mod kill;
+mod finisher;
 mod keep;
 mod laser;
 mod econ;
@@ -81,6 +82,7 @@ pub struct Brain {
     pub(crate) unstick_until: f64,
     pub(crate) unstick_dir: V2,
     pub(crate) last_target_t: f64,
+    pub(crate) finish_window: Option<(i64, f64)>,
     pub(crate) zone_b: bool,
     pub(crate) unstick_count: u32,
     pub(crate) unstick_level: u32,
@@ -156,6 +158,7 @@ impl Brain {
             unstick_until: -1.0,
             unstick_dir: [0.0, 0.0],
             last_target_t: -1e9,
+            finish_window: None,
             zone_b: false,
             unstick_count: 0,
             unstick_level: 0,
