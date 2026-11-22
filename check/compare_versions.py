@@ -82,33 +82,38 @@ def main():
     for entry in sentinel['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f'Historical V13 source changed: {entry["path"]}')
-    active=json.loads((ROOT/'docs/v16_manifest.json').read_text())
+    active=json.loads((ROOT/'docs/v17_manifest.json').read_text())
     for entry in active['files']:
         if hashlib.sha256((ROOT/entry['path']).read_bytes()).hexdigest()!=entry['sha256']:
             raise SystemExit(f"Active Rust source changed: {entry['path']}")
     for path, expected in active['packaging_sha256'].items():
         if hashlib.sha256((ROOT/path).read_bytes()).hexdigest()!=expected:
             raise SystemExit(f"Active packaging changed: {path}")
-    history=json.loads((ROOT/'docs/v16_official_history.json').read_text())
+    history=json.loads((ROOT/'docs/v17_official_history.json').read_text())
     rows.append({'version':'v13','commit':'5cf4fe8b8bf0992517575fe76ed35abb21f9ecc1',
                  'user_reported_scores':[5.79], 'receipt':'BB-EDE179C7',
                  'runtime_sha256':{e['path']:e['sha256'] for e in sentinel['files']}})
-    v14=json.loads(read(history['baseline']['commit'],'docs/automata_manifest.json'))
-    rows.append({'version':'v14','commit':history['baseline']['commit'],
+    v14_commit='3f08bd1311f93bde3696a2f5a295fd603e9e9fa0'
+    v14=json.loads(read(v14_commit,'docs/automata_manifest.json'))
+    rows.append({'version':'v14','commit':v14_commit,
                  'user_reported_scores':[6.19], 'receipt':'BB-A804A35A',
                  'runtime_sha256':{e['path']:e['sha256'] for e in v14['files']}})
     v15=json.loads(read(history['latest_regression']['commit'],'docs/v15_manifest.json'))
     rows.append({'version':'v15','commit':history['latest_regression']['commit'],
                  'user_reported_scores':[6.15], 'receipt':'BB-05A9CC68',
                  'runtime_sha256':{e['path']:e['sha256'] for e in v15['files']}})
+    v16=json.loads(read(history['baseline']['commit'],'docs/v16_manifest.json'))
+    rows.append({'version':'v16','commit':history['baseline']['commit'],
+                 'user_reported_scores':[6.25], 'receipt':'BB-0E038934',
+                 'runtime_sha256':{e['path']:e['sha256'] for e in v16['files']}})
     print(json.dumps({
         'kind':'source provenance and reported scores; not a local scorer',
         'score_source':'user-supplied submission screenshots and follow-up score reports',
-        'reference_commit':history['baseline']['commit'],'reference_score':6.19,
+        'reference_commit':history['baseline']['commit'],'reference_score':6.25,
         'retained_python_source_reference_commit':BASE,
-        'matches_per_run':48,'minimum_extra_integer_placement_points_to_exceed_6_44':13,
+        'matches_per_run':48,'minimum_extra_integer_placement_points_to_exceed_6_44':10,
         'minimum_displayed_score_above_6_44':6.46,'runs':rows,
-        'candidate':{'name':'AEGIS v16','official_score':None,
+        'candidate':{'name':'AEGIS v17','official_score':None,
                      'active_entrypoint':'/usr/local/bin/automata',
                      'policy_source':active['upstream_repository'],
                      'policy_commit':active['upstream_commit'],

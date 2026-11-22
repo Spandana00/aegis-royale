@@ -1,0 +1,123 @@
+{
+  "scope": "Refreshed public repository and author-ledger review. Public scores do not establish exact submitted source mappings.",
+  "aegis_repositories": [
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "reported": "Current renamed README gives no official score. Earlier README reported local 2.9\u20133.1.",
+      "readme_blob": "2dde79da56a9f5ff0070e2137283d2c096e189f3",
+      "readme_path": "README-AEGIS.md"
+    },
+    {
+      "repo": "Rizwanzaman70/Bizz01-MechRoyale",
+      "reported": "Explicitly does not claim a verified leaderboard improvement.",
+      "readme_blob": "64086f18f6f3b2f2544ab5a4bc3268b1ee113772"
+    },
+    {
+      "repo": "Osca-K/builders-buildit-mech-royale",
+      "reported": "Published best baseline 4.25; subsequent variants 4.23, 4.15, 3.85.",
+      "readme_blob": "cb36e6220d8c4d977dfa24eef0bd9a46b09fe633"
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "reported": "Aegis V14 design; published baseline V8 official 3.56.",
+      "readme_blob": "6b7fc243fcea00f54dd47db80e8f9d3f7d4e2596"
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "reported": "Published official V3 3.69, V6 2.13; local gains did not transfer.",
+      "readme_blob": "bff92fb444457428c0e00842b694c5393c2a44bf"
+    }
+  ],
+  "broad_search": {
+    "inventory_repositories": 287,
+    "recursive_trees_available": 282,
+    "new_or_changed_files_reviewed": 176,
+    "score_images_found": 0,
+    "scope": "Three GitHub search pages plus known source families; not guaranteed exhaustive coverage.",
+    "inventory": "v17_repository_inventory.json",
+    "tree_scan": "v17_repository_scan.json",
+    "file_review": "v17_peer_file_review.json",
+    "other_aegis_6_20_plus_substantiated": false
+  },
+  "stronger_source_families": [
+    {
+      "repo": "jason-scheffel/automata",
+      "pinned_runtime": "f114d641a0de0c565dc057e342b4305b8cfe6d53",
+      "evidence": "Our V16 uses this runtime with preferred laser range 200 and now has the user-supplied official 6.25 receipt BB-0E038934. The linked GMUNVIS family is 6.23 on the public board, with its exact scored commit unexposed. Team 67 mapping remains inferred.",
+      "prior_config_commit": "c337f1e5bcd12d3f67a0cb4c80b17edb2738d5dc",
+      "prior_config_hypotheses": {
+        "range_laser": 200,
+        "gear_late_s": 120
+      },
+      "prior_config_score_verified": false
+    },
+    {
+      "repo": "SuperHuyGaming/mech-royale",
+      "source_commit": "553516f5d4742878c555a282eab60c9223d137b2",
+      "evidence": "Active Docker image runs Automata; old Go and Python directories are not the entrypoint. See V14 source-file equivalence audit."
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "source_commit": "3ec3a382f256e55519f0fd05baad489af7b429ec",
+      "reported_official": 6.17,
+      "evidence": "Published receipt BB-F0805900 and ledger; not a 6.20+ policy average. Salt changes vary widely. Go-619 transplant reported 6.08."
+    }
+  ],
+  "rejected_inferences": [
+    "Public standings expose no scored repository/commit mapping; no algorithm is attributed to tigerbyte's 6.44.",
+    "6.2\u20136.5 in many repositories denotes local simulation, timing, target score or another team's result.",
+    "Latest upstream contains async field services and unscored experiments; V16 retains the known scored runtime."
+  ],
+  "new_high_score_evidence": {
+    "repository": "sonalrajapaksha/recursive-builders",
+    "ledger": "EXPERIMENTS.md",
+    "ledger_blob": "08ed09a38e327afda5135f97690b9e3106f8f0d7",
+    "reported_scores": [
+      {
+        "commit": "0984e87ad2b0c297fbac8e9500ef212b6af1b302",
+        "score": 6.21,
+        "change": "Enable safe supply-drop collection on reported 6.10 base."
+      },
+      {
+        "commit": "863fa4e85d7fefb93fec4d0bbaaa8a4b61cad967",
+        "score": 6.25,
+        "change": "Stronger drop value settings; some intervening and later settings tied or regressed."
+      }
+    ],
+    "exact_commit_dockerfile": "Go 1.26.1 static bot at the reported 6.25 commit. Default-branch Dockerfile is older Python and was not treated as the scored implementation.",
+    "score_mapping_limit": "Author-reported exact commits. Public board also shows recursive at 6.25 but exposes no scored commit."
+  },
+  "common_design_themes": [
+    "Acquire a useful second weapon, especially a laser.",
+    "Retain health, armor and repair choices before experimental combat upgrades.",
+    "Turn cubes and safe supply drops into health, energy and upgrade opportunities.",
+    "Coordinate firing, movement, recovery and zone travel; unrelated improvements can interfere."
+  ],
+  "our_measured_opportunity": {
+    "baseline_traced_matches": 64,
+    "gun_upgrade_picks_while_laser_equipped": 22,
+    "laser_upgrade_picks_while_laser_equipped": 17,
+    "interpretation": "Reason to test upgrade priority, not proof that gun upgrades are wasted.",
+    "drop_capture_attempts": 3,
+    "drop_captures_completed": 2,
+    "drop_capture_interruption_count": 1,
+    "drop_hold_rewrite_selected": false
+  },
+  "protocol_facts": {
+    "laser_charge_effect": "25% shorter charge time per stack, max two stacks.",
+    "laser_damage_effect": "18% more beam damage per stack.",
+    "weapon_upgrade_eligibility": "Only weapons held when the offer is drawn.",
+    "health_prefix_retained": [
+      "plating",
+      "armor",
+      "nanites"
+    ],
+    "range_laser_retained": 200
+  },
+  "selected_experiment": "Promote laser_charge only, after the three existing defensive priorities. Damage-only and joint laser-priority arms were retained as diagnostics.",
+  "latest_upstream_not_adopted": {
+    "commit": "49c31922a4b26cc5db525f08f0b9ce6a83132c98",
+    "configuration": "Adds rooftop behavior after four kills and safety settings; no exact official score is verified for it.",
+    "reason": "Preserve the independently scored 6.25 baseline rather than importing an unscored bundle."
+  }
+}

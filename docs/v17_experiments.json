@@ -1,0 +1,859 @@
+{
+  "kind": "Reconstructed simulation diagnostics; not an official score or forecast.",
+  "matches": 288,
+  "baseline": "V16, official 6.25, commit 6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+  "stages": {
+    "v17-upgrade-screen": {
+      "control": {
+        "n": 16,
+        "proxy_mean": 7,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.75,
+        "mean_damage_dealt": 15328,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "damage": {
+        "n": 16,
+        "proxy_mean": 6.8125,
+        "paired_bootstrap_95_percent": [
+          -1,
+          0.5
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.5625,
+        "mean_damage_dealt": 14754.375,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.1875
+      },
+      "charge": {
+        "n": 16,
+        "proxy_mean": 7.0625,
+        "paired_bootstrap_95_percent": [
+          -0.9375,
+          1.25
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.4375,
+        "mean_damage_dealt": 15015.9375,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.0625
+      },
+      "laser": {
+        "n": 16,
+        "proxy_mean": 7.25,
+        "paired_bootstrap_95_percent": [
+          -0.8125,
+          1.4375
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.0625,
+        "mean_damage_dealt": 15649.1875,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.25
+      }
+    },
+    "v17-fresh-moderate": {
+      "control": {
+        "n": 24,
+        "proxy_mean": 5.541666666666667,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.666666666666667,
+        "mean_damage_dealt": 12225.25,
+        "mean_zone_damage": 75.16666666666667,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 24,
+        "proxy_mean": 6,
+        "paired_bootstrap_95_percent": [
+          -0.16666666666666666,
+          1.2916666666666667
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.833333333333333,
+        "mean_damage_dealt": 13395.208333333334,
+        "mean_zone_damage": 75.16666666666667,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.4583333333333333
+      },
+      "laser": {
+        "n": 24,
+        "proxy_mean": 5.541666666666667,
+        "paired_bootstrap_95_percent": [
+          -0.375,
+          0.3333333333333333
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.5,
+        "mean_damage_dealt": 12438.75,
+        "mean_zone_damage": 63,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      }
+    },
+    "v17-fresh-fast": {
+      "control": {
+        "n": 24,
+        "proxy_mean": 4.625,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.5,
+        "mean_damage_dealt": 9905.5,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 24,
+        "proxy_mean": 4.375,
+        "paired_bootstrap_95_percent": [
+          -0.75,
+          0.125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.5,
+        "mean_damage_dealt": 9839.416666666666,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.25
+      },
+      "laser": {
+        "n": 24,
+        "proxy_mean": 4.416666666666667,
+        "paired_bootstrap_95_percent": [
+          -0.5833333333333334,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.625,
+        "mean_damage_dealt": 9633.375,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.20833333333333334
+      }
+    },
+    "v17-holdout": {
+      "control": {
+        "n": 32,
+        "proxy_mean": 4.875,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.71875,
+        "mean_damage_dealt": 11143.03125,
+        "mean_zone_damage": 43.8125,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 32,
+        "proxy_mean": 5.15625,
+        "paired_bootstrap_95_percent": [
+          -0.25,
+          0.8125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.9375,
+        "mean_damage_dealt": 11517.65625,
+        "mean_zone_damage": 43.8125,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.28125
+      }
+    },
+    "v17-ffa-sanity": {
+      "control": {
+        "n": 8,
+        "proxy_mean": 9.5,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.125,
+        "mean_damage_dealt": 3143.5,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 1,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 8,
+        "proxy_mean": 10.625,
+        "paired_bootstrap_95_percent": [
+          0,
+          2.625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.375,
+        "mean_damage_dealt": 3870.875,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 1,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 1.125
+      }
+    }
+  },
+  "pooled": {
+    "screen": {
+      "control": {
+        "n": 16,
+        "proxy_mean": 7,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.75,
+        "mean_damage_dealt": 15328,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "damage": {
+        "n": 16,
+        "proxy_mean": 6.8125,
+        "paired_bootstrap_95_percent": [
+          -1,
+          0.5
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.5625,
+        "mean_damage_dealt": 14754.375,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.1875
+      },
+      "charge": {
+        "n": 16,
+        "proxy_mean": 7.0625,
+        "paired_bootstrap_95_percent": [
+          -0.9375,
+          1.25
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.4375,
+        "mean_damage_dealt": 15015.9375,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.0625
+      },
+      "laser": {
+        "n": 16,
+        "proxy_mean": 7.25,
+        "paired_bootstrap_95_percent": [
+          -0.8125,
+          1.4375
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.0625,
+        "mean_damage_dealt": 15649.1875,
+        "mean_zone_damage": 6.9375,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.25
+      }
+    },
+    "fresh": {
+      "control": {
+        "n": 48,
+        "proxy_mean": 5.083333333333333,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.583333333333333,
+        "mean_damage_dealt": 11065.375,
+        "mean_zone_damage": 37.583333333333336,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 48,
+        "proxy_mean": 5.1875,
+        "paired_bootstrap_95_percent": [
+          -0.2916666666666667,
+          0.5625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.666666666666667,
+        "mean_damage_dealt": 11617.3125,
+        "mean_zone_damage": 37.583333333333336,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.10416666666666667
+      },
+      "laser": {
+        "n": 48,
+        "proxy_mean": 4.979166666666667,
+        "paired_bootstrap_95_percent": [
+          -0.3541666666666667,
+          0.125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.5625,
+        "mean_damage_dealt": 11036.0625,
+        "mean_zone_damage": 31.5,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": -0.10416666666666667
+      }
+    },
+    "holdout": {
+      "control": {
+        "n": 32,
+        "proxy_mean": 4.875,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.71875,
+        "mean_damage_dealt": 11143.03125,
+        "mean_zone_damage": 43.8125,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 32,
+        "proxy_mean": 5.15625,
+        "paired_bootstrap_95_percent": [
+          -0.25,
+          0.8125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 5.9375,
+        "mean_damage_dealt": 11517.65625,
+        "mean_zone_damage": 43.8125,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.28125
+      }
+    },
+    "ffa": {
+      "control": {
+        "n": 8,
+        "proxy_mean": 9.5,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.125,
+        "mean_damage_dealt": 3143.5,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 1,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 8,
+        "proxy_mean": 10.625,
+        "paired_bootstrap_95_percent": [
+          0,
+          2.625
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 7.375,
+        "mean_damage_dealt": 3870.875,
+        "mean_zone_damage": 0,
+        "early_deaths_before_30s": 1,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 1.125
+      }
+    },
+    "charge_validation": {
+      "control": {
+        "n": 80,
+        "proxy_mean": 5,
+        "paired_bootstrap_95_percent": [
+          0,
+          0
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.2375,
+        "mean_damage_dealt": 11096.4375,
+        "mean_zone_damage": 40.075,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0
+      },
+      "charge": {
+        "n": 80,
+        "proxy_mean": 5.175,
+        "paired_bootstrap_95_percent": [
+          -0.15,
+          0.5125
+        ],
+        "sampling_interval_excludes_model_and_selection_error": true,
+        "mean_cubes_at_death_or_finish": 6.375,
+        "mean_damage_dealt": 11577.45,
+        "mean_zone_damage": 40.075,
+        "early_deaths_before_30s": 0,
+        "late_replies": 0,
+        "tracebacks": 0,
+        "matched_difference_from_control": 0.175
+      }
+    }
+  },
+  "trace_data": {
+    "v17-upgrade-screen": {
+      "charge": {
+        "n": 16,
+        "chosen_upgrades": {
+          "nanites": 6,
+          "plating": 9,
+          "gun_damage": 5,
+          "laser_charge": 2,
+          "armor": 11,
+          "laser_damage": 3,
+          "servos": 3,
+          "jets": 1,
+          "reactor": 2,
+          "gun_velocity": 1,
+          "gun_rate": 3
+        },
+        "chosen_while_holding_laser": {
+          "nanites": 6,
+          "plating": 8,
+          "gun_damage": 4,
+          "laser_charge": 2,
+          "armor": 9,
+          "laser_damage": 3,
+          "servos": 2,
+          "reactor": 2,
+          "gun_rate": 2
+        },
+        "live_frames": 24099,
+        "charging_frames": 2876,
+        "laser_releases": 382
+      },
+      "control": {
+        "n": 16,
+        "chosen_upgrades": {
+          "nanites": 6,
+          "plating": 8,
+          "gun_damage": 5,
+          "laser_charge": 2,
+          "armor": 12,
+          "gun_rate": 4,
+          "laser_damage": 3,
+          "servos": 3,
+          "jets": 1,
+          "reactor": 2,
+          "gun_velocity": 1
+        },
+        "chosen_while_holding_laser": {
+          "nanites": 6,
+          "plating": 7,
+          "gun_damage": 4,
+          "laser_charge": 2,
+          "armor": 10,
+          "gun_rate": 3,
+          "laser_damage": 3,
+          "servos": 2,
+          "reactor": 2
+        },
+        "live_frames": 24077,
+        "charging_frames": 3098,
+        "laser_releases": 402
+      },
+      "damage": {
+        "n": 16,
+        "chosen_upgrades": {
+          "armor": 12,
+          "gun_damage": 5,
+          "laser_charge": 2,
+          "plating": 9,
+          "laser_damage": 4,
+          "gun_rate": 3,
+          "servos": 5,
+          "nanites": 2,
+          "jets": 1,
+          "reactor": 2,
+          "gun_velocity": 1,
+          "gun_mag": 1
+        },
+        "chosen_while_holding_laser": {
+          "armor": 10,
+          "gun_damage": 4,
+          "laser_charge": 2,
+          "plating": 8,
+          "laser_damage": 4,
+          "gun_rate": 1,
+          "servos": 4,
+          "nanites": 2,
+          "reactor": 2,
+          "gun_mag": 1
+        },
+        "live_frames": 24346,
+        "charging_frames": 3042,
+        "laser_releases": 382
+      },
+      "laser": {
+        "n": 16,
+        "chosen_upgrades": {
+          "nanites": 5,
+          "plating": 9,
+          "gun_damage": 3,
+          "laser_charge": 2,
+          "armor": 9,
+          "laser_damage": 4,
+          "gun_rate": 4,
+          "servos": 5,
+          "jets": 1,
+          "reactor": 2,
+          "gun_velocity": 1
+        },
+        "chosen_while_holding_laser": {
+          "nanites": 5,
+          "plating": 8,
+          "gun_damage": 2,
+          "laser_charge": 2,
+          "armor": 7,
+          "laser_damage": 4,
+          "gun_rate": 2,
+          "servos": 4,
+          "reactor": 2
+        },
+        "live_frames": 25868,
+        "charging_frames": 3174,
+        "laser_releases": 403
+      }
+    },
+    "v17-fresh-moderate": {
+      "charge": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 18,
+          "gun_damage": 9,
+          "gun_rate": 3,
+          "servos": 3,
+          "armor": 10,
+          "laser_charge": 7,
+          "gyros": 3,
+          "laser_damage": 7,
+          "gun_velocity": 3,
+          "nanites": 4,
+          "lightning_efficiency": 3,
+          "gun_mag": 1
+        },
+        "chosen_while_holding_laser": {
+          "plating": 13,
+          "gun_damage": 6,
+          "armor": 8,
+          "laser_charge": 7,
+          "gyros": 2,
+          "gun_rate": 2,
+          "laser_damage": 7,
+          "gun_velocity": 3,
+          "nanites": 4,
+          "servos": 2
+        },
+        "live_frames": 34761,
+        "charging_frames": 3418,
+        "laser_releases": 445
+      },
+      "control": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 12,
+          "gun_damage": 14,
+          "gun_rate": 7,
+          "servos": 3,
+          "armor": 8,
+          "gyros": 4,
+          "laser_damage": 4,
+          "nanites": 8,
+          "laser_charge": 4,
+          "gun_velocity": 2,
+          "gun_mag": 2,
+          "lightning_efficiency": 3
+        },
+        "chosen_while_holding_laser": {
+          "plating": 7,
+          "gun_damage": 9,
+          "armor": 6,
+          "gun_rate": 6,
+          "gyros": 3,
+          "laser_damage": 4,
+          "nanites": 8,
+          "laser_charge": 4,
+          "servos": 2,
+          "gun_velocity": 2,
+          "gun_mag": 1
+        },
+        "live_frames": 30455,
+        "charging_frames": 3046,
+        "laser_releases": 393
+      },
+      "laser": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 12,
+          "gun_rate": 5,
+          "servos": 3,
+          "armor": 8,
+          "laser_charge": 7,
+          "gun_damage": 8,
+          "gyros": 3,
+          "laser_damage": 8,
+          "gun_velocity": 3,
+          "nanites": 6,
+          "gun_mag": 2,
+          "lightning_efficiency": 3
+        },
+        "chosen_while_holding_laser": {
+          "plating": 7,
+          "armor": 6,
+          "laser_charge": 7,
+          "gun_rate": 4,
+          "gyros": 2,
+          "laser_damage": 8,
+          "gun_velocity": 3,
+          "nanites": 6,
+          "gun_damage": 3,
+          "servos": 2,
+          "gun_mag": 1
+        },
+        "live_frames": 30605,
+        "charging_frames": 3041,
+        "laser_releases": 410
+      }
+    },
+    "v17-fresh-fast": {
+      "charge": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 13,
+          "laser_damage": 6,
+          "gun_rate": 3,
+          "nanites": 8,
+          "laser_charge": 2,
+          "armor": 6,
+          "gyros": 2,
+          "servos": 3,
+          "gun_velocity": 4,
+          "reactor": 1,
+          "capacitor": 1,
+          "gun_damage": 2,
+          "gun_mag": 1
+        },
+        "chosen_while_holding_laser": {
+          "laser_damage": 6,
+          "nanites": 4,
+          "plating": 9,
+          "laser_charge": 2,
+          "armor": 3,
+          "gyros": 1,
+          "servos": 3,
+          "gun_velocity": 4,
+          "reactor": 1,
+          "gun_rate": 1,
+          "gun_damage": 1,
+          "gun_mag": 1
+        },
+        "live_frames": 25820,
+        "charging_frames": 2899,
+        "laser_releases": 361
+      },
+      "control": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 12,
+          "laser_damage": 6,
+          "gun_rate": 5,
+          "nanites": 9,
+          "laser_charge": 3,
+          "armor": 7,
+          "reactor": 1,
+          "gyros": 1,
+          "jets": 1,
+          "gun_velocity": 3,
+          "capacitor": 1,
+          "gun_damage": 3
+        },
+        "chosen_while_holding_laser": {
+          "laser_damage": 6,
+          "nanites": 3,
+          "plating": 8,
+          "laser_charge": 3,
+          "armor": 4,
+          "gun_rate": 3,
+          "reactor": 1,
+          "jets": 1,
+          "gun_velocity": 3,
+          "gun_damage": 2
+        },
+        "live_frames": 25852,
+        "charging_frames": 2902,
+        "laser_releases": 362
+      },
+      "laser": {
+        "n": 24,
+        "chosen_upgrades": {
+          "plating": 14,
+          "laser_damage": 7,
+          "gun_rate": 3,
+          "nanites": 6,
+          "laser_charge": 2,
+          "armor": 9,
+          "reactor": 2,
+          "gyros": 1,
+          "capacitor": 1,
+          "gun_damage": 3,
+          "servos": 2,
+          "gun_velocity": 1
+        },
+        "chosen_while_holding_laser": {
+          "laser_damage": 7,
+          "nanites": 3,
+          "plating": 10,
+          "laser_charge": 2,
+          "armor": 6,
+          "reactor": 2,
+          "gun_rate": 1,
+          "gun_damage": 2,
+          "servos": 2,
+          "gun_velocity": 1
+        },
+        "live_frames": 25092,
+        "charging_frames": 2835,
+        "laser_releases": 363
+      }
+    },
+    "v17-holdout": {
+      "charge": {
+        "n": 32,
+        "chosen_upgrades": {
+          "laser_charge": 10,
+          "gun_rate": 6,
+          "armor": 13,
+          "reactor": 2,
+          "nanites": 13,
+          "laser_damage": 1,
+          "servos": 7,
+          "gun_damage": 6,
+          "plating": 15,
+          "gun_velocity": 1,
+          "gyros": 3
+        },
+        "chosen_while_holding_laser": {
+          "laser_charge": 10,
+          "gun_rate": 4,
+          "armor": 12,
+          "reactor": 2,
+          "nanites": 8,
+          "laser_damage": 1,
+          "servos": 4,
+          "gun_damage": 4,
+          "plating": 7,
+          "gun_velocity": 1,
+          "gyros": 3
+        },
+        "live_frames": 38641,
+        "charging_frames": 4455,
+        "laser_releases": 587
+      },
+      "control": {
+        "n": 32,
+        "chosen_upgrades": {
+          "laser_charge": 4,
+          "gun_rate": 6,
+          "armor": 9,
+          "reactor": 2,
+          "nanites": 13,
+          "laser_damage": 3,
+          "servos": 7,
+          "gun_damage": 11,
+          "plating": 15,
+          "gun_velocity": 1,
+          "gyros": 4
+        },
+        "chosen_while_holding_laser": {
+          "laser_charge": 4,
+          "gun_rate": 4,
+          "armor": 8,
+          "reactor": 2,
+          "nanites": 8,
+          "laser_damage": 3,
+          "servos": 4,
+          "gun_damage": 9,
+          "plating": 6,
+          "gun_velocity": 1,
+          "gyros": 4
+        },
+        "live_frames": 38356,
+        "charging_frames": 4301,
+        "laser_releases": 552
+      }
+    }
+  },
+  "limits": [
+    "Opponent behavior and escalation are reconstructed.",
+    "Sampling intervals do not account for model error or feature selection.",
+    "Upgrade and firing counts also reflect changed lifespans and encounters."
+  ]
+}

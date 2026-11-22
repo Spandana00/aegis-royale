@@ -1,0 +1,3742 @@
+{
+  "scope": "Current GitHub search corpus, recursive tree metadata; source and score claims require separate review.",
+  "repositories": [
+    {
+      "repo": "coolerputt01/Mecha-Royale",
+      "tree_sha": "a249da9778a40dbaa36b89130a8883b7041014ac",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "radioheadfan123/mech-royale",
+      "tree_sha": "e08afbf2f7c095f86dfade0eec78c1f4d85804d5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b05d3fef9a47874e581b8b47c50ea50aa2444c8b",
+          "size": 832
+        }
+      ]
+    },
+    {
+      "repo": "Krisha052/mech-royale",
+      "tree_sha": "a22111ca0743568a46f1b557e584b82e3e4a4948",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "14cfd3a3e58ebea3741172a38238e456038d0a99",
+          "size": 604
+        }
+      ]
+    },
+    {
+      "repo": "h-ardy/buildathon-mech-royale",
+      "tree_sha": "f957c75e816a527bd43c5b6966c43a7388a9a172",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "869129e0f3aa63d6694c971186621136b1b703c9",
+          "size": 780
+        }
+      ]
+    },
+    {
+      "repo": "EvanDamron/mech-royale-bot",
+      "tree_sha": "91ed957ae5df0fb57a65fb89680d57977b513de4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b62f3583555cf0f3ca5684fd0f89e94dd67a1952",
+          "size": 1381
+        }
+      ]
+    },
+    {
+      "repo": "JWHaan/wraith",
+      "tree_sha": "d0a4e6539394f280e4eefd391d38a70b09a77055",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "3c23cd06d7597458d787b63c94a1a82c538a550b",
+          "size": 1118
+        }
+      ]
+    },
+    {
+      "repo": "wzardomri/buildathon-mech-royale",
+      "tree_sha": "c5c56f17517632785390d0168fd8a8fd24a6cdc6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "cd421fd19380addbb793a08d7d719df3b4ff54a1",
+          "size": 653
+        }
+      ]
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "tree_sha": "e44f4d35c8957e3c56b2c4b1133a113a3265c8c1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6827f739577cde887d9ae627ac056ad7699b9c8f",
+          "size": 621
+        },
+        {
+          "path": "bot/README.md",
+          "sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+          "size": 178
+        },
+        {
+          "path": "rivals/giddygiddyboy/README.md",
+          "sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+          "size": 178
+        },
+        {
+          "path": "sim/README.md",
+          "sha": "bd3ee74bd615917ad99f6745f62d4577453eca28",
+          "size": 8583
+        }
+      ]
+    },
+    {
+      "repo": "pedduvedcharan/mech-royale-bot",
+      "tree_sha": "f0c71889b73451c0480bce206695941db6edd9bf",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c9cc781413638f5afb64a2e1e7ed5967ff22d29a",
+          "size": 706
+        }
+      ]
+    },
+    {
+      "repo": "waiprotein/mech-royale-bot",
+      "tree_sha": "42c594fc51f2fecd457c984cb18f0ede9d3cf306",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "be915cb62bd820b981e133eee980a1646662450a",
+          "size": 4282
+        }
+      ]
+    },
+    {
+      "repo": "SandeepMadhavarapu/BattleRoyale",
+      "tree_sha": "511b588e9d72e37b4e11038e71ffffd723136d66",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b813c0d62292b77dca7b75ceee1098507c2907c4",
+          "size": 1510
+        }
+      ]
+    },
+    {
+      "repo": "BIGBIGBIGJoJo/labubu-mech-royale",
+      "tree_sha": "39b6d509af8e82b0ceb9e1c430dd964674d7488e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "462ef3d639b51a097c448d71c0bf88d2d8018869",
+          "size": 2847
+        }
+      ]
+    },
+    {
+      "repo": "WasilahAbdulHameed/mech-royale-bot",
+      "tree_sha": "f5608d8e1b18252d501254b88919303d5cf9aaf5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7345be1c0b2431f2701e6c58d08a06b35c436a3d",
+          "size": 80
+        }
+      ]
+    },
+    {
+      "repo": "bluedev-52/mech-royale-bot-test",
+      "tree_sha": "d8a9cfde79341f9244a67442152595c31e1ff684",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e57f80a99e5ca79c60c441862e524a327b7d6750",
+          "size": 78
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "poyrazyongaci/q3j46btd",
+      "tree_sha": "432a571c4b9f5f16149a5e45fcc76f34b71822c3",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "40da60c4934bdad5b50e0800a788713165e3a718",
+          "size": 110
+        }
+      ]
+    },
+    {
+      "repo": "whyMiso/buildathon-mech-royale",
+      "tree_sha": "eaea6fe236c5ed57476822e7aa8f6ae37e69b0e6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "2f4dab582c92853b5123ee01c92989d5db4df791",
+          "size": 137
+        }
+      ]
+    },
+    {
+      "repo": "Russell-Day/builders-mech-royale",
+      "tree_sha": "492079d38ec00761782d7a3101be37f70fa35006",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "146466f175a9fe4e0c1e037966f2091b4d685afc",
+          "size": 185
+        }
+      ]
+    },
+    {
+      "repo": "micah-andelman/mech-royale",
+      "tree_sha": "7fb9a15f50ac6ec3a4480d8367ce5f485522d6de",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "40cc428bb56c9c3d2ade16fa7f76f6e7a98e2a4c",
+          "size": 2789
+        }
+      ]
+    },
+    {
+      "repo": "youngestbillionaire/billions",
+      "tree_sha": "41f4f77d786e8da27c7ea4f67cba12b5bf284a81",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ca574e651adc2488e8ddb630abe31f9d9a0c702e",
+          "size": 1421
+        }
+      ]
+    },
+    {
+      "repo": "jmonked/monked-mech-royale",
+      "tree_sha": "c8e98e18b1471388bdeee6f2e090568393af446b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "52c2a811658340eda2f99e28e8b913c7fb51b761",
+          "size": 343
+        }
+      ]
+    },
+    {
+      "repo": "viktor-lorentz/mech-royale-overcooked",
+      "tree_sha": "b7f3c9441cd39a60cbece9a7474e640655323ccc",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e714661d4d30c133695a1f510f49e303dc6e0641",
+          "size": 339
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "orbitautomation/buildathon-mech-royale",
+      "tree_sha": "b8cd9fea38dde197926e1760786cf29fdc4df476",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b257a0c342594ad435eb14ff5764f36bb5152d54",
+          "size": 392
+        }
+      ]
+    },
+    {
+      "repo": "gonvaz-nocode/NoCodeHack",
+      "tree_sha": "fd9f3ffae8b0350d3865dac9b8b6845105f3fdd9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "423ef0d855733761ebfc5e0f71ece3ca5b8316a3",
+          "size": 421
+        }
+      ]
+    },
+    {
+      "repo": "TEMOtkesh/mech-royale-bot",
+      "tree_sha": "1cef8fc601961ebfe3377d5097f97f4618c5e7f1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "900e468ccd77aa4349d1e88ce7f1a44801f87c00",
+          "size": 447
+        }
+      ]
+    },
+    {
+      "repo": "cyanwingsbird/Mech-Royale",
+      "tree_sha": "fa90c3e98d7d7e667e85c2c9a5a4f5f75f1de20c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7eb235efb9d85a7870d20f21d35d806f2abafe61",
+          "size": 476
+        }
+      ]
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "tree_sha": "8733a54ce58f00bfb65ceebb786745f8a4eb0f2e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "408d59bfba1cf6f3e7d60e3f9b26f77c75d414cb",
+          "size": 436
+        },
+        {
+          "path": "src/bot/brain/README.md",
+          "sha": "566a7503e792d036fd7a7d7e78d1bf40351109a0",
+          "size": 14163
+        },
+        {
+          "path": "src/bot/cover/README.md",
+          "sha": "d13f0c838db7d3985cde6574c34ba7a96e357bb4",
+          "size": 5811
+        },
+        {
+          "path": "src/bot/tactics/README.md",
+          "sha": "42873366590f9864974fb7c9143dc0d819b8b6d9",
+          "size": 7180
+        },
+        {
+          "path": "src/world/README.md",
+          "sha": "6224c5d2c851c7f8b13cc192a98e72d9cadc28a1",
+          "size": 5024
+        },
+        {
+          "path": "src/world/nav/README.md",
+          "sha": "e5a289fd9a2d4361ed821f255ce3f48005881796",
+          "size": 4807
+        }
+      ]
+    },
+    {
+      "repo": "NurdauletZhalgas/Mech-Royale-Bot",
+      "tree_sha": "0335be4994a1e4a78242c73dddc263b2771d401e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "294540b4be9cb54595c856360586510066e76b41",
+          "size": 3601
+        }
+      ]
+    },
+    {
+      "repo": "Th3r0n/mech-royale-bot",
+      "tree_sha": "480139bc99b120504a5312c1b81f8d48cd136d81",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "bf2a6212083ca0997d5357b2306be267754f6356",
+          "size": 1484
+        }
+      ]
+    },
+    {
+      "repo": "ela57/Builders-Royale",
+      "tree_sha": "a59d5cf597efdb2327d165dbf9f68f5964acc704",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "da946647f28fcf691332b09b71945c00407ef10a",
+          "size": 5521
+        },
+        {
+          "path": "tools/sim/README.md",
+          "sha": "d386c36ee07584b87067b662d5b11eb4d4973f6f",
+          "size": 5518
+        }
+      ]
+    },
+    {
+      "repo": "jasonsoohoo/MechRoyaleHackathonChallenge",
+      "tree_sha": "c6314a17fb6bae6529447b99f4723409367a16d4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "229c779739079bcb85971d6702e8e909c8759daf",
+          "size": 486
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "YangliDeng/fieldline",
+      "tree_sha": "9b335230e4403cade93e508286587b655855d524",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b2b3bf7e65b387a88b8374a9686a046e1e45a6dc",
+          "size": 1628
+        }
+      ]
+    },
+    {
+      "repo": "atharv109/mech-royale",
+      "tree_sha": "08b61731d4a0d21b54648cd30094831b4ba06371",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ca51c0d227d373862c7f529125d50b91fcf5b46d",
+          "size": 449
+        }
+      ]
+    },
+    {
+      "repo": "sntin/mech-royale",
+      "tree_sha": "71778a5d832b983e1fd150c0b30a85f3826f0303",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "df95aa4f7f65e74c5895b0152bfe3608ec71afb6",
+          "size": 509
+        }
+      ]
+    },
+    {
+      "repo": "sarah29006/mech-royale-bot",
+      "tree_sha": "5a8599d81a20480abadff89385209c651d09d1a5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b2b3bf7e65b387a88b8374a9686a046e1e45a6dc",
+          "size": 1628
+        }
+      ]
+    },
+    {
+      "repo": "hatimwen/builders-mech-royale-2026",
+      "tree_sha": "4939aef711adabf245b72063c33fa2e9dbf58cc2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0e5c76e47b67ee39fb8d013c027f51eba8aad06f",
+          "size": 507
+        }
+      ]
+    },
+    {
+      "repo": "nelsonwong506-lang/mech-royale",
+      "tree_sha": "5514574f62a2a895ebe8c78f2ccfebd4d21b0a97",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a5fe3c3990e6782c1adecdd74809ba0c01b2bedb",
+          "size": 2614
+        }
+      ]
+    },
+    {
+      "repo": "shreypatel1/quokka-lattice-7f3k",
+      "tree_sha": "c56e4afa920f5f3495f29407fa718fca9b4fba62",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0818c32711939fb336130489c034d64d51bafe77",
+          "size": 15
+        }
+      ]
+    },
+    {
+      "repo": "CtrlZGau/strat-game",
+      "tree_sha": "88e57a8cd06f6116052fa8e4090264411b323d26",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7354eca9890f163c9f0bff0edc820fa57ac1c4c1",
+          "size": 621
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        },
+        {
+          "path": "sim/README.md",
+          "sha": "05f9276b4ef38f3ab7681fbcf117747f14387f1a",
+          "size": 4842
+        }
+      ]
+    },
+    {
+      "repo": "nwen-cu/buildathon2026",
+      "tree_sha": "9e509683fdfcefdb13790a9ee75103e57c86e2b2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "764c8b7137a6edf3eb8857804c3578158daf85fc",
+          "size": 722
+        }
+      ]
+    },
+    {
+      "repo": "Nadipalli-Sandeep/mech-royale-bot",
+      "tree_sha": "c90d760fe46905e373eac476927c0a7e30560e4e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "479b8ebba10d4067e35c8686062875cb6d92b1b3",
+          "size": 667
+        }
+      ]
+    },
+    {
+      "repo": "kpfarn/osuhackathon",
+      "tree_sha": "a6facc5aefe9d4127d69a0274cc07806167be6e1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ffda7f38b218947d0e08f08b3c2599e7263686b3",
+          "size": 3870
+        }
+      ]
+    },
+    {
+      "repo": "Britogus7/Mech-Royale",
+      "tree_sha": "d197670e0f7de658b51936097f7523c6338eb27a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e4d0453dd6201febe37fbe04674c220888de1be7",
+          "size": 759
+        }
+      ]
+    },
+    {
+      "repo": "bzells11/Mech-Bot-Repo-",
+      "tree_sha": "b1b77da59c3305a32219815c640cf6c4c20ffdc0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "18389b66029ca2a72db5c844c87a99316e1cb31c",
+          "size": 678
+        }
+      ]
+    },
+    {
+      "repo": "Tanish-Dhankhar/Mech-royale",
+      "tree_sha": "229fa34e2fd30419a1d55382886bdc298cdc29ae",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "4a519db84525d667485a85e1aecb91859b2ad1be",
+          "size": 1960
+        }
+      ]
+    },
+    {
+      "repo": "mepedrol/mech-royale-bot",
+      "tree_sha": "0c5e4b66f7d2a088fbd0b4e55a50f6494abc8368",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "4c4998821961b85bdd28ea84f075baed288bd75b",
+          "size": 714
+        }
+      ]
+    },
+    {
+      "repo": "praggybhat/mech-royale-bot",
+      "tree_sha": "842a593c3da757632e92ae496a3b3c011da298dc",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "874b3a0b15b7f073971e7a7a2428a44dd36d6fa4",
+          "size": 701
+        }
+      ]
+    },
+    {
+      "repo": "trompeterm/buildathon-mech-royale",
+      "tree_sha": "e1d9441338c8d6e8c9f5fa6fae09910aa9137486",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5511f0dea6ecd6ccbfe74987ad16ea61cb306f42",
+          "size": 733
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "teetham-t/mech-royale-pocket-comet",
+      "tree_sha": "90b5f7b0ba66a5037bb0950ba01f38d560719973",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e1b6b9abfe9f97af83749ab7006734a577d478d9",
+          "size": 1941
+        }
+      ]
+    },
+    {
+      "repo": "Achintya-Lakshmanan/mech-royale-bot",
+      "tree_sha": "902a16ec08488ca4e2fbc3da115d82355f10df2d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "bdf8b4e832449370f5bcae882d42ea60e5982823",
+          "size": 818
+        }
+      ]
+    },
+    {
+      "repo": "Epicepicdemic/buildathon-mech-royale",
+      "tree_sha": "70e4ba904c2b71917fc89ce0a4b1b40707ae21ae",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e36f57f658e6f64de74778f2e572f5e9ae3e68a1",
+          "size": 3143
+        }
+      ]
+    },
+    {
+      "repo": "Yiyang-Jin/mech-royale",
+      "tree_sha": "8de229c17e8409b28b912e84978e30853b42e53f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "27a9c381926b73de71eae4e5447dc0ac487ad598",
+          "size": 1463
+        }
+      ]
+    },
+    {
+      "repo": "creationofuniverse/mech-royale",
+      "tree_sha": "e8c00751fd350851494ccb5a20aa14919e69523f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ed501d61b64a7da8beefd7770492e0bdb11194a3",
+          "size": 857
+        }
+      ]
+    },
+    {
+      "repo": "lmaccart/mech-royale",
+      "tree_sha": "292aa4742605fdddcb2c7f3fd63eaf9efe72c040",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c9519f4e7581e901213649b2c8c762dca0cf1d08",
+          "size": 3233
+        }
+      ]
+    },
+    {
+      "repo": "hansen-cao/mech-royale-bot",
+      "tree_sha": "f8901da64e88c340401055c2fa8698b3399217eb",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "766859454e9fc2d5c0630316289090f6858c4949",
+          "size": 3164
+        }
+      ]
+    },
+    {
+      "repo": "jerrywang255-spec/Mech-royale-bot",
+      "tree_sha": "47a4966e7333371bbbc75cffa390b5c43d9d1baa",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "766859454e9fc2d5c0630316289090f6858c4949",
+          "size": 3164
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "sha": "ede110831f3bad41c21593141b6ed71083c1583c",
+          "size": 30900
+        }
+      ]
+    },
+    {
+      "repo": "Rohanasudani/edgewise-mech-royale",
+      "tree_sha": "3435e7a91b0dc1933e246cc5a48a644bf24993e0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ba9b97d1359dc38802e0936bcda4d01e8d66321d",
+          "size": 3360
+        }
+      ]
+    },
+    {
+      "repo": "beckimron1/ict-mech-royale",
+      "tree_sha": "77af5d3235b6d94af35d024488fb51886a89d502",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "571b5679802db2eab926557e5147b8e670157e28",
+          "size": 990
+        }
+      ]
+    },
+    {
+      "repo": "martin-danggg/hcmut-tmt-p1-mech-royale",
+      "tree_sha": "c62d06725244998689a887b6b01b7ff274a14ee0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "dcd7caff8e23563cc6901d2048d37ce93d87ab52",
+          "size": 906
+        }
+      ]
+    },
+    {
+      "repo": "zuhayrkabir/unos-mech",
+      "tree_sha": "94369f229f52129f49a833e6d736308a2c3d3e82",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "037cb97f775f067156da7cc69797aedd68f83951",
+          "size": 885
+        }
+      ]
+    },
+    {
+      "repo": "Arnav8452/mech-royale",
+      "tree_sha": "f7cd058cf98883a851a33b78d6965cc73a53e35a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "63ed32918dc6f32db60518f28600527acfee7c16",
+          "size": 879
+        }
+      ]
+    },
+    {
+      "repo": "Seriamyth1/Vmecha",
+      "tree_sha": "e43caa31c9cc5e721dbab6af00b1252d9bca9605",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b03fc298a2d7dcae660d646f8f6cbad040a827d0",
+          "size": 1014
+        }
+      ]
+    },
+    {
+      "repo": "Rizwanzaman70/Bizz01-MechRoyale",
+      "tree_sha": "9f4b05032da4eece4fc1fa45cbf4e9aa9f757fa0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "64086f18f6f3b2f2544ab5a4bc3268b1ee113772",
+          "size": 3901
+        }
+      ]
+    },
+    {
+      "repo": "raunak-choudhary/henka",
+      "tree_sha": "7dedf09f02e39298f4c19a85e4092f60bdfadba5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b6c5551699d155ac13c3338222ddd0c31684b4da",
+          "size": 1154
+        }
+      ]
+    },
+    {
+      "repo": "ricky-he2006/Builders---Mech-Royale",
+      "tree_sha": "e2ddcf8ec7904e1bb97e16b3de9eeb8872ab1eca",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0b7f39ee84811d007d7e09f2f6388d2281a818a6",
+          "size": 1183
+        }
+      ]
+    },
+    {
+      "repo": "anthonyteti/buildathon-mech-royale",
+      "tree_sha": "6ac0899659cb064ddca1bcbe7e88a4753b6f7dd5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "daf6984ed22da4c2b1af21fcfed31fdf3e4ed342",
+          "size": 1112
+        }
+      ]
+    },
+    {
+      "repo": "uykheangchhour/builders-Hackathon",
+      "tree_sha": "612f52e958605f83baedd03f5019d473979e278d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "770b3fb6b913f41795f9be4758baeb938dc79d4d",
+          "size": 1560
+        }
+      ]
+    },
+    {
+      "repo": "sphugne/mech-royale-bot",
+      "tree_sha": "3018b5d8996e71c1cf0c0f824e545f4cb0b6ff33",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "eb0c9067908e85911eb23fcf10e70cb05646d651",
+          "size": 2661
+        }
+      ]
+    },
+    {
+      "repo": "OHc99/mechfight-bot",
+      "tree_sha": "8ade0812878937abe749f57281018cb4429addd0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0344bd2c09c3a6242847db2d86db19462c42f995",
+          "size": 1962
+        }
+      ]
+    },
+    {
+      "repo": "emptybook11/mech-royale-bot",
+      "tree_sha": "c4d2defb229b9329d7efbbc14e6d72e743f7414d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0344bd2c09c3a6242847db2d86db19462c42f995",
+          "size": 1962
+        }
+      ]
+    },
+    {
+      "repo": "f20230006-sketch/oval-vector-mech-royale",
+      "tree_sha": "fef5d09e4e95b9560c59776459d538671644c5c7",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f1f468d22c7152248620c583f6334aa09d2d473a",
+          "size": 1262
+        }
+      ]
+    },
+    {
+      "repo": "MahnoorKhan-1/phantom-survivor",
+      "tree_sha": "a311a4fb0b8d3066a63bf3a4e9a22b055d6f1c6e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d2e0e15d8787d91b46bf86da5b2cfeadd4762220",
+          "size": 1383
+        }
+      ]
+    },
+    {
+      "repo": "NecritsSoup/mech-royale-buildathon-2026",
+      "tree_sha": "cb5163b994f959c58ef74966d453d30008ec1ac3",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "07ed8ed855843e689a92af6075064a048d15ac24",
+          "size": 4317
+        }
+      ]
+    },
+    {
+      "repo": "luffy-taro-106/bt26-m",
+      "tree_sha": "5be8c2d728f69a1255a38483fe6ae72762e6396c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "aa05b801616b08759fe11a11213ce96e59793b6c",
+          "size": 1504
+        }
+      ]
+    },
+    {
+      "repo": "charliescull/mech-royale-bot",
+      "tree_sha": "7337bffd4228c4b042273f5795dff889c918d2f4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "9e2f419d1b73987774fc1c945778bd5bc32486fc",
+          "size": 2718
+        }
+      ]
+    },
+    {
+      "repo": "suzhuhui-hub/oval-warden",
+      "tree_sha": "8951cdaa986e6bf309cbc8e98f1726e355dcdbba",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "38e3185e2b5f78ec4843fa1fcd6989b859dbd2f7",
+          "size": 1396
+        }
+      ]
+    },
+    {
+      "repo": "swan28pande/oval-tools",
+      "tree_sha": "f016299ccf212aede0b60587863d9580cb4c51a7",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "256e4f1bafa36a853cfa55812db0b14872225bdc",
+          "size": 1304
+        }
+      ]
+    },
+    {
+      "repo": "richardlin05/mech_royale",
+      "tree_sha": "96d9ccdaf74cbbc3efa1a29311c9b9ddc91efdfd",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "35b4f5d61a1e461b66626071a93269a916b8dd42",
+          "size": 14
+        }
+      ]
+    },
+    {
+      "repo": "VenujaRH/mech-royale",
+      "tree_sha": "2ea827187644641db5863f48615decd2a0e1c127",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7496ea2f139cab1f34213d49d3276fe68ccc8f19",
+          "size": 1410
+        }
+      ]
+    },
+    {
+      "repo": "nullat0m7/mech-royale",
+      "tree_sha": "22101754b125382991edb16196b866a43a52f418",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "31203ed220c99a80822181a7c034b644d4c05dea",
+          "size": 13
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "bsrikumar855-dot/Mech-Royale",
+      "tree_sha": "a4e8f7fcad93fac9a63cea778a04a988b9bcbd3b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "d5c5f0ac855ea6666fd065ce0f29640b5bdf275e",
+          "size": 46641
+        },
+        {
+          "path": "README.md",
+          "sha": "9c329c2923300ff947016c769f0e6e0827467b3d",
+          "size": 13
+        }
+      ]
+    },
+    {
+      "repo": "mjawadforogh2005-ship-it/frogh-ai-mech-royale",
+      "tree_sha": "a61f9cb1474d872244659711d3cd0dea94ee3708",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "67e4305276c43db7876b573b2a36a5d37f565ff8",
+          "size": 4814
+        }
+      ]
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "tree_sha": "96e6ad80973b49417672b5a4ff174e16d54d5d35",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "6a637955017226f287831878735c9da72313cc07",
+          "size": 13412
+        },
+        {
+          "path": "README.md",
+          "sha": "c5063f6916285a76d85eb04f2b0c42b4b4d5830b",
+          "size": 1405
+        },
+        {
+          "path": "coord/data/README.md",
+          "sha": "1b4aae56fef8764907ce1d312f0c29c57c78d6b0",
+          "size": 5853
+        },
+        {
+          "path": "coord/data/benchmarks/P-D-011-local/README.md",
+          "sha": "81506d4785fe4f33f06d9b587b92258d932dd985",
+          "size": 5871
+        },
+        {
+          "path": "coord/data/ideas/README.md",
+          "sha": "a1aa54222df22ae997ab5166c58872309dd94d8c",
+          "size": 3277
+        },
+        {
+          "path": "coord/data/site_results.csv",
+          "sha": "c2de1c74e8c56d572c69c4ad6b84987e10bc28d6",
+          "size": 29036
+        },
+        {
+          "path": "coord/data/watcher/README.md",
+          "sha": "34c55b6f50348981c4ce5410836fe80de1612315",
+          "size": 4118
+        },
+        {
+          "path": "pipeline/README.md",
+          "sha": "4cdab2efca1c4f905b1e83461436a2e517093f9e",
+          "size": 6351
+        },
+        {
+          "path": "pipeline/schemas/experiment_result.json",
+          "sha": "cc6902cfb4cb1bd6d0fd26d4b1321d2653ae507e",
+          "size": 4743
+        },
+        {
+          "path": "research/intake/README.md",
+          "sha": "3fc9e05bfdfc18a9cad0cfc1a563b60a2870a81e",
+          "size": 5022
+        },
+        {
+          "path": "research/intake/diego-experiments-1129.csv",
+          "sha": "77e95d0b6f704c15cf0f20d5a9818007ec4f6824",
+          "size": 3200
+        }
+      ]
+    },
+    {
+      "repo": "jackbalseca/mech-royale-bot",
+      "tree_sha": "b24e32153906434ef7fec3db8339b4a079b32974",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0dfe806e16a9c21db19b29497f79db32c6e22398",
+          "size": 1573
+        }
+      ]
+    },
+    {
+      "repo": "MarwanMoh11/mech-royale",
+      "tree_sha": "8313dfafeff41577ee1eb4e354b4402e59108972",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "82ba5784223a40b5ff81878eb7ad9ad3917afd2f",
+          "size": 114
+        }
+      ]
+    },
+    {
+      "repo": "jvenkumahanthi-coder/segfault-mech-royale",
+      "tree_sha": "07273235805b87d5dfddfc92b2bd49aa21984850",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "dba6a4fa80db96bb5210295bd5ba50e345ada3d4",
+          "size": 1601
+        }
+      ]
+    },
+    {
+      "repo": "FlicXyz/Mech-Royale",
+      "tree_sha": "593dbe8b6cfa2b41d51accb74ee62a87a11b1f64",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "bd929474a9a97cea64de73f1cbc3a266bc8f97bf",
+          "size": 69
+        }
+      ]
+    },
+    {
+      "repo": "ParishruthiGanesh/mech-royale",
+      "tree_sha": "ad1f69c781ab0e9522f8e8dec2ebe799aa9da113",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e47cfe6c1b5050d055eb024a0b917bddc9ad788f",
+          "size": 5517
+        }
+      ]
+    },
+    {
+      "repo": "paing95/mech-royale-bot",
+      "tree_sha": "d8c4b0e3314a172499f251471258d28bf3552913",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c8e8b2aedb123a306a567ee989bad9545d3fa316",
+          "size": 61
+        }
+      ]
+    },
+    {
+      "repo": "rohaanafzal/mech-bot",
+      "tree_sha": "94c95651b20c8b631d9030930cd9d8eecd8e3134",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e1fc3b099cd6019b7e1d46fae87563d650cc6c62",
+          "size": 84
+        }
+      ]
+    },
+    {
+      "repo": "dilkshhh/mech-royale-bot",
+      "tree_sha": "b256ac9ddccc63306580d87dbf0b602140986745",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c735f99570412f1512c5d934568c2ab4588b7655",
+          "size": 106
+        }
+      ]
+    },
+    {
+      "repo": "JishnuMadav/mech-royale",
+      "tree_sha": "33754a59c75ca598d579092fb75cce23a4816818",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "263869790b0708864033ec6ebbffe75782ad0d16",
+          "size": 6763
+        },
+        {
+          "path": "results.json",
+          "sha": "92cacc091d72faa10a873d27364b077e1252dc74",
+          "size": 4146
+        }
+      ]
+    },
+    {
+      "repo": "Visalth/mech-royale-bot",
+      "tree_sha": "2af0905175d6f0fe328f275aaaf08938f6f52035",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "enkyuan/aquarius",
+      "tree_sha": "a6b3cd27a698c8bc6ccf2444a3806027b86e3837",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ee1cf9bec8842d4be9bb5ccb83bd29ee63378e58",
+          "size": 3712
+        }
+      ]
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Version7",
+      "tree_sha": "edbd6902b57926efcfbac0c2a9261df85bba11ba",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "fac3a7e710a4a0e7f758eacdb8fdcf44513dc421",
+          "size": 1807
+        }
+      ]
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Builders",
+      "tree_sha": "c56f90384e523a6209fffd284d1cd5c882fda882",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a03b0c43079b072b4d2f56e5c8c42ee8317cd57b",
+          "size": 1721
+        }
+      ]
+    },
+    {
+      "repo": "blanc-team/try_again",
+      "tree_sha": "f5bd2dc7677b4b087bf5427dcc0623da6262e346",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+          "size": 178
+        }
+      ]
+    },
+    {
+      "repo": "notBehzad/ApexMech-v1",
+      "tree_sha": "9d2b2cf727f0e9ad8aad5f66b8e26476870d848d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "3e14867d22a0a2a3c77d31e02cc5f02ab903c135",
+          "size": 2043
+        }
+      ]
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-buildersv3",
+      "tree_sha": "2ef65ce365c331d274a0472df462bd075c556338",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a03b0c43079b072b4d2f56e5c8c42ee8317cd57b",
+          "size": 1721
+        }
+      ]
+    },
+    {
+      "repo": "Rxd5816/Builders---Mech-Royale",
+      "tree_sha": "249715dbd5ce930e8bd500d291000491b943d3d0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b7115ab965ecedd3cc1ae69f29319bc80ad3e354",
+          "size": 131
+        }
+      ]
+    },
+    {
+      "repo": "anurag11satpathy/mech-royale2026",
+      "tree_sha": "2df9df563c00de75ce3214ad3bcfc004635be163",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        },
+        {
+          "path": "experiments.csv",
+          "sha": "5f7b4198f3effe2557873e8d4b5cfe2e0c47209a",
+          "size": 1441
+        }
+      ]
+    },
+    {
+      "repo": "caioplcerda/oval-pilot",
+      "tree_sha": "5b018c72a050d46b57dd111fc08d9eca8c29bdad",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "65faa1636466d1701a9e41e1fa63e04bdef91da7",
+          "size": 234
+        }
+      ]
+    },
+    {
+      "repo": "suvathikannan17/mech-royale",
+      "tree_sha": "3242460627a19860c2585a29e2110c79472ac913",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5fa73fe9bbb4557bdebae76e5efcacbc099e9286",
+          "size": 1763
+        }
+      ]
+    },
+    {
+      "repo": "manikandan-pandiyan/projbuildathon",
+      "tree_sha": "30345d790c2e612f3134a782f68f79ab35414930",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b613b587bac4ac18a3404364df6c35b5ebce407a",
+          "size": 1760
+        }
+      ]
+    },
+    {
+      "repo": "blanc-team/mech_royale",
+      "tree_sha": "788b6f9bc0220a8c750af2b5985838e626db7a59",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "46f2980c89ee07014db47696df93b355729d2661",
+          "size": 4727
+        }
+      ]
+    },
+    {
+      "repo": "jklein07/mech-royale-bot",
+      "tree_sha": "4fb47fe5e800a93bc0a089477d63ff2c4374c09b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "fae5e4ac18a0435c2dc5c8c00c9d4865c4561773",
+          "size": 1926
+        }
+      ]
+    },
+    {
+      "repo": "skibidies/yo-john-xie",
+      "tree_sha": "cb7600fb9ba3a5a5625926dd4b6490d7df6e6692",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7dce6091b30ccb73b60528da6192e78a6be5e151",
+          "size": 1773
+        }
+      ]
+    },
+    {
+      "repo": "gokulj-umich/gocool-mech",
+      "tree_sha": "c347ee7d190afc2a69cc4ddbade8e9e4583747a9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "2f061913c17c33c7b9c3ab6cc0e4a6ad44d584af",
+          "size": 220
+        }
+      ]
+    },
+    {
+      "repo": "SuperHuyGaming/mech-royale",
+      "tree_sha": "3a5ec99de3a0e44c32a9ba416a3ae925e08d0ec6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5fe08bc07ff30a40810347a25dc1eb66def2f82b",
+          "size": 228
+        }
+      ]
+    },
+    {
+      "repo": "nshuai808/mech-royale",
+      "tree_sha": "a2d0541d944199ae29e49eb83b5b1e6479fc528f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "3c76137f5420a021d8b5690e2441be7e17a2fa64",
+          "size": 6506
+        }
+      ]
+    },
+    {
+      "repo": "rehaan0108-code/Buildathon-OSU",
+      "tree_sha": "0e54c8eeb468616b443799a6ed7ce8afeaa85883",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "837fb1163257030820db8e061bbd8944f9d2907a",
+          "size": 1954
+        }
+      ]
+    },
+    {
+      "repo": "rgosmano/oval-hopper",
+      "tree_sha": "43abe4540a138b1f8ef43c68104ba879f1cf8fc6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "4dca79c9f17c79d1d131cee322ded3e3175ee303",
+          "size": 2250
+        }
+      ]
+    },
+    {
+      "repo": "worldBlu/mech-royale",
+      "tree_sha": "72b2d2aec9b36d55370a8df4b83696555a92bb2a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d7c056708af67ff237d9442f3b46a38a294ec92d",
+          "size": 2245
+        },
+        {
+          "path": "docs/scoreboard.md",
+          "sha": "fead183e65f58a4d41dedb91b394c2dfccfc7138",
+          "size": 1954
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "lav24fr/builder",
+      "tree_sha": "39fc3cff81800ffd7f1fa7f6f957158e67266000",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "9675a17570e852f30911a80ac039f0b319af1e02",
+          "size": 2126
+        }
+      ]
+    },
+    {
+      "repo": "sarbzcode/mech-royale",
+      "tree_sha": "343c70792a6e3668fed12b446c65bac4961f991c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "83c474361237806d4b501ad1d5603fde83100e9d",
+          "size": 2110
+        }
+      ]
+    },
+    {
+      "repo": "trijalbhagat/mechbot",
+      "tree_sha": "6967261a8d7a511fb0c830ff09a1f722219ac1de",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "797a46ce1f972fb2865d4ea63534837f1fca76c0",
+          "size": 2207
+        }
+      ]
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot",
+      "tree_sha": "cef26d9a3b80de8c50b138ca3163b22c910957aa",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+          "size": 333
+        }
+      ]
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot-l150",
+      "tree_sha": "c8c9f06daef49ce2b0ecdf6de7b0681dcfe50fa9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+          "size": 333
+        }
+      ]
+    },
+    {
+      "repo": "Hoangchuyenanh/mech-royale-bot",
+      "tree_sha": "b6829a65d26da967a7dfb3f47aa0273e7ae99e65",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d6bcd9b3ceab5c32410a2f0fcf7d4f3f7b0fbaa2",
+          "size": 333
+        }
+      ]
+    },
+    {
+      "repo": "onepizzateam/chinatown",
+      "tree_sha": "5e0c571f90233c0611bbfeed7b2d6b8310c15375",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "af2ad20566b9f936f0b7fbb697390f792e750528",
+          "size": 373
+        }
+      ]
+    },
+    {
+      "repo": "ErikUmble/buildathon-mech-royale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Leahie/mechfight-bot",
+      "tree_sha": "f5bd0d02905835d9fe32a04b99a3ebc3579b51ca",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "76cc6ce602f30b363c84068be7269c13873f731b",
+          "size": 508
+        }
+      ]
+    },
+    {
+      "repo": "himagna16/mech-royale-bot",
+      "tree_sha": "219a4c761faf9fbab43305627af1eb31d4ced757",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "aymanm31/Builders-MechRoyale",
+      "tree_sha": "c67dfbf2778c8fec1bf48307c9b863ff97fe31a9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "52841574698e3c80a80a7d9fd9bee0de160e7cfb",
+          "size": 3178
+        }
+      ]
+    },
+    {
+      "repo": "mliao0128/fraun-ringkeeper",
+      "tree_sha": "641867fec0abba7e1141a50a81053794d6949b8d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "54c089fa99832ee4060ef4d8a46348c4777009dc",
+          "size": 2427
+        }
+      ]
+    },
+    {
+      "repo": "CyberCoder-bit/mech-royale-bot",
+      "tree_sha": "b7ab3757787bf63e9ab851d7047b329131380a39",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "mbaglo/MechRoyale-Agent",
+      "tree_sha": "8a87e8a467dde525d25fcf9cb5181087c6e55fd7",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6290caaddb73e01e04d7ef6fa63e227cf5e94340",
+          "size": 6087
+        },
+        {
+          "path": "official/mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "abirthare-ab/mech-royale-bot",
+      "tree_sha": "e0576c7d4c318bf27243c2f0aec071542e181c98",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c5517979a5d320a99b818fb12e32e23f19ee03d7",
+          "size": 437
+        }
+      ]
+    },
+    {
+      "repo": "youraverageguy-123/mechfight-bot",
+      "tree_sha": "683b3795d78bfac76b8549da48bf90c184fc6f3c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "78e7c8f2c5d72b26750ce78e2bf8a1b812adedeb",
+          "size": 724
+        }
+      ]
+    },
+    {
+      "repo": "0629owen-del/mechfight-early",
+      "tree_sha": "fb303986de4bd131a0648927326a4f39352439a2",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "andrew-zhouu/builders-mech-royale-2026",
+      "tree_sha": "43bd102f859f35c2e674f2f8749fd5f1fa0dd2a2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c532d5381d1ef09163aee05fb33f2933523e7a35",
+          "size": 2452
+        }
+      ]
+    },
+    {
+      "repo": "ruiyifan0114-design/OSUhackathon",
+      "tree_sha": "41d8b00d3af49b165a079fc5803b4c0709bc80e3",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "12f8920a7200e1b2bc5cfcb195afc6afd0c3fc4d",
+          "size": 2712
+        }
+      ]
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "tree_sha": "91962e86fe1b565816dd886f856c0ae63d937ed5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "1f8bea5c6f29fe9b315274217669a8a46fa32243",
+          "size": 3136
+        },
+        {
+          "path": "research/evaluation/scored-canopy-only.json",
+          "sha": "c0cd19969116ae0550c94fc5a69211206a0b63ea",
+          "size": 16603
+        },
+        {
+          "path": "research/evaluation/scored-comparison.json",
+          "sha": "b304ee005ac0117ff734f28cf8fb288ae024d32d",
+          "size": 2149
+        },
+        {
+          "path": "research/evaluation/scored-terrain-only.json",
+          "sha": "ce1f583e9242d3dd4aaaae4218e2fb4c5611020a",
+          "size": 16564
+        },
+        {
+          "path": "research/evaluation/scored-v3-manifest.json",
+          "sha": "74e9e67b8f7e66b9580a64ea686d9bc9b5907fe4",
+          "size": 1609
+        },
+        {
+          "path": "research/evaluation/scored-v3.json",
+          "sha": "f21697b3adbdf03de1e34fddd0efb2d474946f5d",
+          "size": 16576
+        },
+        {
+          "path": "research/evaluation/scored-v4.json",
+          "sha": "8ecaa5d194e65edd0541ddb595425922ef42524c",
+          "size": 16545
+        },
+        {
+          "path": "research/experiments/RESULTS.md",
+          "sha": "041b413fc79339ecabb2c48d772dc438f0818eab",
+          "size": 11126
+        },
+        {
+          "path": "research/experiments/brain/README.md",
+          "sha": "01d8b1f88ac8f7e96d063486e99d2c98068fb891",
+          "size": 4079
+        },
+        {
+          "path": "research/experiments/combat/README.md",
+          "sha": "414b28e8304bcf9519815f3a6599c0f7aede3470",
+          "size": 2541
+        },
+        {
+          "path": "research/experiments/navigation/README.md",
+          "sha": "71dc18d72a1abfcd28852b337dd714bd4ed479ae",
+          "size": 2572
+        },
+        {
+          "path": "research/implementation-results.md",
+          "sha": "3f3135b424a48c0165adaf96c1928ec3b50ccd71",
+          "size": 12254
+        },
+        {
+          "path": "research/regression-audit/README.md",
+          "sha": "32689b433c7c1ba5ce4a9046dee9bdf7055a8615",
+          "size": 1199
+        },
+        {
+          "path": "research/scored-revision-investigation.md",
+          "sha": "17982424d1cd3a1c622212535c88d0e1e1e99596",
+          "size": 7364
+        },
+        {
+          "path": "research/v3-v4-canopy-audit/result.json",
+          "sha": "a26f540ddfdd068c7054326bbb4bdf71c36c077c",
+          "size": 7947
+        },
+        {
+          "path": "research/v3-v4-terrain-audit/README.md",
+          "sha": "3d63b745a373d3ff98b6aaf5b615e129b8b730bc",
+          "size": 4858
+        },
+        {
+          "path": "research/v3-v4-terrain-audit/results.json",
+          "sha": "cc52c576291af05322925aa2bf25b12a2f7556e3",
+          "size": 9078
+        }
+      ]
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "tree_sha": "0a212be0f0b8080c733fae8a4f7ef14a3110415a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a81daa884300463fa236f75deb7182b66a10f975",
+          "size": 694
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "tree_sha": "26b30c86be03a740880ddfbab0d411bdf7ce6f2f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0628b39c49b85b8231f6b06829f53cf5145b83a3",
+          "size": 8277
+        },
+        {
+          "path": "app/blastradius/README.md",
+          "sha": "a5375b964a70186969750a373aa4188c2458ce07",
+          "size": 2770
+        },
+        {
+          "path": "practice/builders_mech_royale/README.md",
+          "sha": "c327ee7bb7d340ba0f60b5b2a8e0dcbf48f80707",
+          "size": 1704
+        },
+        {
+          "path": "practice/builders_mech_royale/RESULTS.md",
+          "sha": "b22238030b294fed7a52ecf2ed9ee76e4a472e0a",
+          "size": 1113
+        },
+        {
+          "path": "practice/databricks_shopping_sessions/README.md",
+          "sha": "438cb53cbe2cf225c246cac33b85cf31d4455fbc",
+          "size": 1837
+        },
+        {
+          "path": "practice/databricks_shopping_sessions/RESULTS.md",
+          "sha": "b08b7535a0fadfe7985b01989415640969f0804c",
+          "size": 2045
+        },
+        {
+          "path": "practice/machina_cad_deid/README.md",
+          "sha": "f6afd762051f2824b22f7e49be525a234bf633bd",
+          "size": 2006
+        },
+        {
+          "path": "practice/machina_cad_deid/RESULTS.md",
+          "sha": "e280c4cff0d081edb3658472cc63d349b08dcfb8",
+          "size": 822
+        },
+        {
+          "path": "practice/rwx_blast_radius/README.md",
+          "sha": "129b59e3ce8b216de269eda14dfc9aa23bd90611",
+          "size": 1814
+        },
+        {
+          "path": "practice/rwx_blast_radius/RESULTS.md",
+          "sha": "b55896dcdf8f4818449c85a7531d3db5cde1b170",
+          "size": 847
+        }
+      ]
+    },
+    {
+      "repo": "Nurzhic/SteadySurvivor-MechRoyale",
+      "tree_sha": "de1347490fc8483b107cf8e640805311aea6a4bd",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b12c6acace69cb782d3ce1ab19382e0f14933e6d",
+          "size": 980
+        },
+        {
+          "path": "README_RU.md",
+          "sha": "c3abff7ee75bd1c53b40c2008c6034ffff23e1ab",
+          "size": 1329
+        }
+      ]
+    },
+    {
+      "repo": "jpw942/mech-royale-bot",
+      "tree_sha": "c79a2fea86a7908dfcca802dc21d7cf3867fba76",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "45ac8386ec6d3e40c4d42189322b5877962e424d",
+          "size": 610
+        }
+      ]
+    },
+    {
+      "repo": "pnp6113/mech-royale-bot",
+      "tree_sha": "ec18871d4e85821f53387a263890cc34d25d449b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5a096946794005d42366f02b33a8c010685db73b",
+          "size": 2957
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "sha": "b24c1ed9f9e1f5425f6924a17632bf834fd85bf8",
+          "size": 7265
+        }
+      ]
+    },
+    {
+      "repo": "mvrkarthik07/mechbot",
+      "tree_sha": "1a32db0e1eb8c4b7c8e2a573a73d6373099fecfe",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "1bef4f69aade9e99a4b3b4e078232d9e4e337e18",
+          "size": 14222
+        },
+        {
+          "path": "README.md",
+          "sha": "92a6a43e20616108b8bceb298f0ee198197e294a",
+          "size": 2688
+        }
+      ]
+    },
+    {
+      "repo": "Borovail/builders-mech-royale",
+      "tree_sha": "e13dc1a0ee70aa49a74836016fe5687a7b8c5319",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6d1789884565690fd0b624861bca9ebbd669f04f",
+          "size": 12862
+        },
+        {
+          "path": "results/score-forecast-backtest.csv",
+          "sha": "bc581a0fdf503b1930461a325c2aecf42ffd3624",
+          "size": 6881
+        }
+      ]
+    },
+    {
+      "repo": "varadanvk/mech-royale-bot",
+      "tree_sha": "f9326166d98f1c987dfef2228e757c71cfc365b6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "200e928e9543a06be79190174fceb727e4957904",
+          "size": 741
+        }
+      ]
+    },
+    {
+      "repo": "FDS-Dark/buildathon-mech-royale",
+      "tree_sha": "0d3574fb4efac353663023e896c9ee26b235d968",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f417efe3cc573be0971a58403ac90a2171e5e4d1",
+          "size": 654
+        }
+      ]
+    },
+    {
+      "repo": "erlenchik01/mech-royale-bot",
+      "tree_sha": "45b021584089e9303c0f603ccc58a27fa19fc5ba",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "iamvhk1/mech-build",
+      "tree_sha": "ffc5a9f7a90e6de0c01ed4008d60e5df957082e9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "11673b0ca9d02030aee4316dbd590b9467f29a8c",
+          "size": 3153
+        },
+        {
+          "path": "docs/experiments.md",
+          "sha": "d7dfcbe5db81879811fe8024eec1101a9983752d",
+          "size": 29634
+        }
+      ]
+    },
+    {
+      "repo": "Hassene26/mech-royale-bot",
+      "tree_sha": "cea337dee8bfc8c67b59897055bb71d15fd09737",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Sibongile613/lone-33new",
+      "tree_sha": "b0b8e7515e6b4f40cd5d1aba24d8bad2a2dcae30",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "94ed5664cb32e83540da0d89b4705e0a2b87d30a",
+          "size": 1916
+        }
+      ]
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "tree_sha": "991df867e6565a6cbc0badd4c68fbb58d3e572b7",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "2bde6fccd099bfd597f398b5a7c8b96f8af920f0",
+          "size": 33348
+        },
+        {
+          "path": "README.md",
+          "sha": "8163be89ae507c811ebb7636075d57e3bddcd066",
+          "size": 9112
+        }
+      ]
+    },
+    {
+      "repo": "AlexJawhari/lanternfish",
+      "tree_sha": "d3519a837e261ee9ec2a9e3bb1c9765349cedf99",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "63338fb91fbc626061cc31ec0c3db7f366b12f84",
+          "size": 686
+        }
+      ]
+    },
+    {
+      "repo": "alex-vizn/mech-royale-bot",
+      "tree_sha": "d0a374762d952d5cefda71eb8b91f1a6f844ba6c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "97c9c7c0bede0e2d03e1b80914b5eaad3a25439f",
+          "size": 3800
+        }
+      ]
+    },
+    {
+      "repo": "himanshu-thalor/apexmech-buildathon",
+      "tree_sha": "e8ada7210df7e5ee9a15d58e1a3b7f7c3d4aa040",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5f14e4bf3d7615ffc29d0200d9a3917f85d156e9",
+          "size": 739
+        }
+      ]
+    },
+    {
+      "repo": "Arrya841/aether-zero-aspire",
+      "tree_sha": "9c5192bb462f35e395d78609d6e49b50bcb9225f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "92de387f80c4aea16a85eed51889398f43729cde",
+          "size": 2913
+        }
+      ]
+    },
+    {
+      "repo": "atharvatripathi2026/gtgoats_mech_royale",
+      "tree_sha": "ad3ffbb4e16e501790d5fbe5ca68dbd8497421d3",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6b55bc56f7a3e6dd8f686535edb309522f80e537",
+          "size": 8160
+        }
+      ]
+    },
+    {
+      "repo": "JosiahAklog/nexus-mech-royale",
+      "tree_sha": "d0a1b4ba86339c68e9f526c345861b353714e1b7",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "CHECK_RESULTS.txt",
+          "sha": "409b6ab93f4b7452fcd545a317d99ccf90273976",
+          "size": 1289
+        },
+        {
+          "path": "README.md",
+          "sha": "f5caf57f7c6a4174cadac9a44f82638c392d94ce",
+          "size": 2354
+        }
+      ]
+    },
+    {
+      "repo": "ryan01989/fitzymate-bot",
+      "tree_sha": "4745f186c6feb4ff75fa5cf20d0f1320f98db516",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "85b30455f6ab97ae98681677a040679378d001b5",
+          "size": 5250
+        }
+      ]
+    },
+    {
+      "repo": "suresh-vlsi/mech-royale-bot",
+      "tree_sha": "079e4d05be713f5281b377c25325478de736c9c1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ec3f374666dcd9f5dcf94bd702e5d2dfbfa33823",
+          "size": 788
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "tentechle/mechfight-survivor",
+      "tree_sha": "efbe8ad9787d01adb3374d265fd450c8ef03346b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "0103c58b3c834bcb14af8336e98abb9afacc7c7f",
+          "size": 770
+        }
+      ]
+    },
+    {
+      "repo": "fomole1975/mech-bot",
+      "tree_sha": "a58eac93db2bbd2a01229eddca01c05102b34763",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a476a0d0ff774f319b6ad08af68ae3fd37216180",
+          "size": 782
+        }
+      ]
+    },
+    {
+      "repo": "pucaru/curly-succotash",
+      "tree_sha": "60b5438af4d45af989f63bffcbe0b03250a23ae4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d7eb0ae0ce020098f88f3149dc86e64ea5173811",
+          "size": 3640
+        }
+      ]
+    },
+    {
+      "repo": "MatthewCraddock/Submission-3",
+      "tree_sha": "1621ca3ed34d4fb11e3f248426bdc7219f11876c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a440142342b5619742fbfc37d0808694dc35f568",
+          "size": 803
+        }
+      ]
+    },
+    {
+      "repo": "ralphhaddis/kestrel-7x",
+      "tree_sha": "86f26a23901092ea82c9db59d650eb8624e592d0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5625d616ef565eac72c840e7cd0542164164ce43",
+          "size": 856
+        }
+      ]
+    },
+    {
+      "repo": "AbhirajTiwari12/mech-royale-bot",
+      "tree_sha": "045c647249cf42707b8e9fe6d50ecba5e912bcc5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "317f2cb646c3f52bf280d2c85ee860acb7119870",
+          "size": 875
+        }
+      ]
+    },
+    {
+      "repo": "ZaryabAhsan15/mech-royale-bot",
+      "tree_sha": "8b300c94cb523a70774b63e98f3a2375a59f7313",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "2ff705eeb886729ca81013550f459132ee2e5cd7",
+          "size": 953
+        }
+      ]
+    },
+    {
+      "repo": "jacobcorbett/buildathon-mech-royale",
+      "tree_sha": "116a0b81a03c589f1d9398f64c7a14bf26165579",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "122b26e37614c172ee00538d086158ae6fe20f7f",
+          "size": 1015
+        }
+      ]
+    },
+    {
+      "repo": "loveconnor/mech-royale-bot",
+      "tree_sha": "e400c562c9fd19a65ad3849701c0bd308f993f40",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "8fa90b73c64440208c54bf80731bfbc869534336",
+          "size": 3020
+        }
+      ]
+    },
+    {
+      "repo": "shaunkar1/proj1",
+      "tree_sha": "3df8d7fe3664d29d3f566febb8179d0d700c7f41",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "31e390fee8f39f74a3740bd1d4d902d2a1899085",
+          "size": 1837
+        }
+      ]
+    },
+    {
+      "repo": "Hutamaa/mech-royale-agent",
+      "tree_sha": "afdebff5e4fe11f599071392d8fd14f73890c217",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "9c32f0a74573f5884fac6ab4f524b084bd1a834a",
+          "size": 1016
+        }
+      ]
+    },
+    {
+      "repo": "Vinay-Vimalkumar/cobalt-fern",
+      "tree_sha": "1863eb8b5d8f5376e45ebdf1de8ef36e224931d5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b644bf6aaeea8bf578e08c11ea0e10913f701972",
+          "size": 1064
+        }
+      ]
+    },
+    {
+      "repo": "Adi848-dotcom/adi-mech-royale",
+      "tree_sha": "c04351f5474b629387deeee7b365ec02175a11ad",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Kyt0V0/Mech-Royale",
+      "tree_sha": "113194691eb57ce903c8ef4af89e275f25fc36d4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "02ece646638d5c1b010e650c0b7cbf0f86c8b10c",
+          "size": 1056
+        }
+      ]
+    },
+    {
+      "repo": "Not-Ethan/oval-ghost-mech",
+      "tree_sha": "0d62979a437c9e6f79c0fc2ca3d1fcf9bb96b85a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d4c7c820ff54be1f8e581d192287aebe4514efdd",
+          "size": 9799
+        }
+      ]
+    },
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "tree_sha": "e83b9308961f79be2197be78ef54dc9f4f9abe97",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README-AEGIS.md",
+          "sha": "2dde79da56a9f5ff0070e2137283d2c096e189f3",
+          "size": 1551
+        }
+      ]
+    },
+    {
+      "repo": "dstarnes05/BuildersMech",
+      "tree_sha": "453a2402b457f3fe0527a1f1ba0c2390692a235c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d5335ce3ceb5fe4315351c69ea45c149e920894e",
+          "size": 3876
+        }
+      ]
+    },
+    {
+      "repo": "niranjankumarnk/mech-royale",
+      "tree_sha": "1d04c65c73f4d0dcaf8735951024aaf00b9d753d",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "38a757c6fae039aa0eee0b7a011aa2c254d4bd7d",
+          "size": 4755
+        }
+      ]
+    },
+    {
+      "repo": "NithinAI-10/mech-royale",
+      "tree_sha": "3935d976cb154f72a12fa703f4e49501a89e3632",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b5bd486609535c7fe131f919549d4cb5abc8238f",
+          "size": 1137
+        }
+      ]
+    },
+    {
+      "repo": "Specz04/hus-hus",
+      "tree_sha": "2468c688321c20d68f7f2ef52127848284dac9fc",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "47c616273c35b6bc231f04ae95c80509a54ab8a9",
+          "size": 1974
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "solace4me/Mech_Royale",
+      "tree_sha": "43563599e89a5946f80750456b0b9867ae45c33b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6d1f99477efba6b4f71b7dbc3d2edad641cec7c3",
+          "size": 1025
+        }
+      ]
+    },
+    {
+      "repo": "alexwilldev/mechroyale-bot",
+      "tree_sha": "01bfad33f931153fcf9c2806328a939d1995949b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "13shreyansh/ohio-buildathon-mech-royale",
+      "tree_sha": "2a3f2e8cf753a084c883384c7a90d94d62b8139c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8376d474ccc7aca1263729fd6e48b849c5c6d4f",
+          "size": 1175
+        }
+      ]
+    },
+    {
+      "repo": "rustemayan/mech-sham",
+      "tree_sha": "9b435bb28853ea02c0bd9ce71ce359511c0ab6a2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "35669be3735df5c6757464110a9b4f8b12544bc1",
+          "size": 1238
+        }
+      ]
+    },
+    {
+      "repo": "fernando-ace/Buildathon_Mech_Royal",
+      "tree_sha": "1ddff98c50a134be283c4f760ce55a00960add18",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a6f6fb6a624632e99965ed838ba8cc8b1cef1d92",
+          "size": 1185
+        }
+      ]
+    },
+    {
+      "repo": "bluedev-52/mechtoyale-version-2",
+      "tree_sha": "e8a6c660552811e902cf7254be77ae9ff99aee8f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d53b4ff843ef59cdb692f4da93cac4f7cfe6855d",
+          "size": 1224
+        }
+      ]
+    },
+    {
+      "repo": "raunak2007/mech-royale-bot",
+      "tree_sha": "6c2e816c74544ecc6975c519c70d171a4f04fa54",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d2ab5b41d0281130d9633f72e3fa990db6a94934",
+          "size": 1088
+        }
+      ]
+    },
+    {
+      "repo": "afiapoks/mech-royale",
+      "tree_sha": "b6b9a8bdfe3967cad5c6df5ed7a49d4d5f108c1a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "3f08d5de12568d8a804fd4fcec17129a22987e79",
+          "size": 7246
+        },
+        {
+          "path": "RESULTS.md",
+          "sha": "1c24b0868cec174f42b21c4ae1a5015e25478826",
+          "size": 2532
+        }
+      ]
+    },
+    {
+      "repo": "lukejwaszyn/mech-royale",
+      "tree_sha": "7d48b09290cec37d0805f30c0e069de193beb590",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "714d0b1e1454f79217187386b69bbbfe396ec3f3",
+          "size": 18895
+        },
+        {
+          "path": "crates/sim/README.md",
+          "sha": "a5cf0b857c1f5136985dcb3a9ff8b060451158a6",
+          "size": 18685
+        },
+        {
+          "path": "crates/world/README.md",
+          "sha": "aef026a4dddc1bcb5a9cef9bd655b4de1d7cd69e",
+          "size": 15744
+        }
+      ]
+    },
+    {
+      "repo": "acaptainb/Mech_Royale",
+      "tree_sha": "13840dc2be1c5b1406176179763f0739f281a279",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "6747fcfd577146ac5d03e48601af20cf185f03cb",
+          "size": 11078
+        },
+        {
+          "path": "README.md",
+          "sha": "7069c715011945902b0f1fedcbe4a1f62ee471bc",
+          "size": 6262
+        }
+      ]
+    },
+    {
+      "repo": "vngthin/Mech_Royale",
+      "tree_sha": "26d0369d806be3af705b9903f0b5675d40220e39",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "experiments.md",
+          "sha": "c2b0b8eb2992ca181c14a3c82817195459306bbb",
+          "size": 19339
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "Tobiloba014/mech_royale",
+      "tree_sha": "3a36d71f96b0e75738632d5aaf63d0b241dfd2e3",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "aqilc/mech-royale",
+      "tree_sha": "8c7f7e5112c66485d4b63a45c9dc94726f1d4d57",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "MVai-Builders/mech-royale",
+      "tree_sha": "ce3bf8347ca8428489ec0f8506c1a2d46670bf41",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "akshayagg18/mech-royale",
+      "tree_sha": "87ce14836942e035ec3509b02d0be4a659370010",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "06530ac1973dbc62648b48b7b52cd231612f6431",
+          "size": 4454
+        },
+        {
+          "path": "experiments/sim_results.md",
+          "sha": "af23dbf034211a1e4320b9f57078398b465d8564",
+          "size": 2989
+        }
+      ]
+    },
+    {
+      "repo": "caitlinthaeler/mech-royale",
+      "tree_sha": "d6f5c288e532d34b3085e593a4cb7eacf3ffecfd",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "LuBolin/mech-royale",
+      "tree_sha": "168750e9f68dc4ebd87e41bb25b922d4e79a4abd",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Sharmileer/mech-royale",
+      "tree_sha": "b3067c0bf49ef217c206cfb283ec0c03450de392",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.csv",
+          "sha": "165f5452f0c1da2718d0b64a67c35b7e5dfb6389",
+          "size": 305
+        },
+        {
+          "path": "README.md",
+          "sha": "eb032174b8d54385e9c8a2fb4fa51401f9d29a2e",
+          "size": 9112
+        }
+      ]
+    },
+    {
+      "repo": "OliverTTran123/mech-royale",
+      "tree_sha": "47a4bbb8c76a91f488e2cbbb71bc7abc0cb7a154",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "fariha0178/Mech-Royale",
+      "tree_sha": "2031037eaeafd3792d76f0d4bda57d522841cbdb",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6e2513163ada3548eccce8c087bff81ac3d756ab",
+          "size": 3849
+        }
+      ]
+    },
+    {
+      "repo": "RagsNPaul/Mech_Royale",
+      "tree_sha": "3feea5533a4b3337107a787af6a9d4f02906cd51",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6de44b2d5a7e4d3c68d334875df55ba625bb1dd0",
+          "size": 2833
+        }
+      ]
+    },
+    {
+      "repo": "volcanoboy3/mech-royale",
+      "tree_sha": "94f5a06e645269ae045417481d1dcde63a447205",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "9c7e94c8e8ec110486d55fb114f0deea4f88d0e3",
+          "size": 4969
+        }
+      ]
+    },
+    {
+      "repo": "strobor/mech-royale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Warrior-hound/mech-royale",
+      "tree_sha": "c35061924570055e45fabd5bd11c2ba4740927b5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f8aa316b37b951e209f65160b3542e0a18568a2d",
+          "size": 8296
+        }
+      ]
+    },
+    {
+      "repo": "LanceHuang245/mech-royale",
+      "tree_sha": "885043a55ae18c0e1746d7f76c1cc25f545678c0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f764d3cb87e03c2931fd33d7041394a76b3294d8",
+          "size": 9109
+        }
+      ]
+    },
+    {
+      "repo": "KennethLei1492/Builder-Mech-Royale",
+      "tree_sha": "3825317842c4c0759b720b6901bd64e7e0fe89df",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f24241e731ff3c845dca44b17028f4ce00767b97",
+          "size": 1226
+        }
+      ]
+    },
+    {
+      "repo": "ShenoyVaradaraya/mech-royale",
+      "tree_sha": "18155643381fdc47aa9ecb9b85f2aa02c953b211",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "8441c088839bb38ca8b4eb83b37d18d21d3f58aa",
+          "size": 5754
+        },
+        {
+          "path": "sim/strategy-results.json",
+          "sha": "92522a2bd35d1a37e4f39fdf40888867cd5d50da",
+          "size": 64351
+        }
+      ]
+    },
+    {
+      "repo": "Azula19-b/mech-royale",
+      "tree_sha": "b4dc38dce41ada2753074ded1a2de0f6295f1ab9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c9da6e61e566f5ee689c385c3c362c6be1aab712",
+          "size": 5181
+        }
+      ]
+    },
+    {
+      "repo": "ianarce/mech-royale-bot",
+      "tree_sha": "fab08268806c7ec7c1122c71f5a1056944ffb890",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "NadulaG/mech-royale",
+      "tree_sha": "4dd124ae6937a27497fa5b5dec1abc371e83f854",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "25benjaminli/mechroyale",
+      "tree_sha": "1a4a797eb0b71d07e717eb1ff5b63414c1cf28ea",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f9e541182da4ae4ced1eafe1fdc39c791dd95350",
+          "size": 1476
+        }
+      ]
+    },
+    {
+      "repo": "Nathanatpurdue/mech-battle",
+      "tree_sha": "2e09675e646b7d8ecaf09cc3dfe864ce3a7fc212",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "50289773fcad3409947347ded30e8f5a8e803dc9",
+          "size": 1289
+        }
+      ]
+    },
+    {
+      "repo": "Tanish-Dhankhar/mech-royale-combined",
+      "tree_sha": "bd794054dc5bf9b3382d3882182b594d8af70357",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "92bae6a6493074296bcea14c224f52100d093ef8",
+          "size": 1988
+        }
+      ]
+    },
+    {
+      "repo": "GuilleHoardings/mechanized-royale",
+      "tree_sha": "d161b4afeb093345e21be6e1f82053c6669d7506",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "24a4b4996e5cfde9377282fa9eee3cf17775909d",
+          "size": 4607
+        },
+        {
+          "path": "tools/graphics-harness/README.md",
+          "sha": "761a9f9d4ee768f5e1bb4305947c7accd7a24abc",
+          "size": 10589
+        }
+      ]
+    },
+    {
+      "repo": "pcetner/mech-royale-bot",
+      "tree_sha": "5a2a89b0d5e201bb84e8029cb5e54e6fbcddfd16",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "AantharyaKrishna/ghost-protocol",
+      "tree_sha": "48f0855717149e582ef16718c8c9f59fef6a41e5",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7e0164beb3b29c0d5930b34404f1d1eb23126d9f",
+          "size": 4641
+        }
+      ]
+    },
+    {
+      "repo": "chriseco427-spec/CyprusBot",
+      "tree_sha": "cbe177a66f3a983c393e4072a69d53287be353fa",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "08cc9cab205040aeeb08fd37e4e37108f116225c",
+          "size": 1551
+        }
+      ]
+    },
+    {
+      "repo": "Fervg019/Buildathon-",
+      "tree_sha": "4b1a46003fee139b01f3201dfa3d532f77d4cf4b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "60a7e8f40247cc81d08a53c8e3eb244868588080",
+          "size": 1712
+        }
+      ]
+    },
+    {
+      "repo": "TheJ10/mech-royale-bot",
+      "tree_sha": "14a4d1ef8a8dd0d8d37170b74f4feb95bb554991",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "Sibongile613/lone92",
+      "tree_sha": "8687eccb7582d3c4a1e4cbd60d689d849f84e2d0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "807cb1af55dfb7072f4ec972246b14d55368ef69",
+          "size": 1649
+        }
+      ]
+    },
+    {
+      "repo": "Evans-Kwashie/mech-royale-bot",
+      "tree_sha": "8e3673e26e555a31fa479e751b69d9740f0025e1",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7acf7fc8331b86e0b0d33ba41fad2492672f8458",
+          "size": 2624
+        },
+        {
+          "path": "docs/EXPERIMENT-6-POINT-2026-11-21.md",
+          "sha": "bf8403d590733b72ac0114d1042b791cb494b269",
+          "size": 2131
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "sha": "35dd83df5dd7ea5546b7a68c84c7f9d59a6ecf84",
+          "size": 4450
+        }
+      ]
+    },
+    {
+      "repo": "JasonR-code/switchback-mech-royale",
+      "tree_sha": "d6dc1c62ba78e3cf3d40ec2e594b6ab83b81ce7b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f9db1516c9865d15552e6bffd9cc52fd9d9609d6",
+          "size": 3848
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        },
+        {
+          "path": "validation/RESULTS.md",
+          "sha": "173c001bf0acf065050d30fac5f7bfdf502d7d92",
+          "size": 5537
+        }
+      ]
+    },
+    {
+      "repo": "Tanish-Dhankhar/irontrace",
+      "tree_sha": "13f3f44001274d3e44d2c8031f3edc1e2016abad",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "03cff9ba7a309bec7135beaff1c8ae839bc081a9",
+          "size": 1932
+        }
+      ]
+    },
+    {
+      "repo": "ejensODU/oval-circuit-mech",
+      "tree_sha": "8a6e78a72df4a9040f8017c45d5ccaecd264babf",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "7075e5f6b7732257b2e0347b392e08e6d9485648",
+          "size": 5160
+        }
+      ]
+    },
+    {
+      "repo": "Avilekha/mech-royale-bot",
+      "tree_sha": "248f662087a83545f9f1e63ac264d194cf782bc4",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "froggiewins/ScrapMechRoyale",
+      "tree_sha": "448e00e54d94cbfa14ad5af741e803bda61b4b96",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "93b664dadca16ffce282bc92d896cec4fee1f33c",
+          "size": 5005
+        }
+      ]
+    },
+    {
+      "repo": "MeeksonJr/builders-mech-royale",
+      "tree_sha": "746bd9bb48541853f092ed4e2255056a9bacdf6a",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Arnav8452/mech-royale-rust",
+      "tree_sha": "8602f69338f0356f7f749f1cf5055535a482d6e3",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "LeeYongLiangGit/mech-royale-bot",
+      "tree_sha": "04f4f422498fcda2e2ccfe49587b5ee68119afe7",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "tree_sha": "70274b8bc6668ccd451ff52117a7f477396cede2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "dev/OVERNIGHT.md",
+          "sha": "39bc8e8c8559d61a60c9a28e8d0f9e47a54c6bee",
+          "size": 34250
+        }
+      ]
+    },
+    {
+      "repo": "joonk7809/mech-royale-bot",
+      "tree_sha": "8e9e43e47a0c508f7152228bfaff2f57810dfdbf",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "yahya3867/buildathon-mech-royale",
+      "tree_sha": "227cad7b782a3fd612cf8a1d16d4e36fb447b0ea",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "georgegcal1-arch/mech-royale-bot",
+      "tree_sha": "4fead84e37de2dbd32a5fe9c3de6f3c72cb3f6f6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "scores.txt",
+          "sha": "05477c6ca8770436509d7d7b6f3f871e5cdf1b54",
+          "size": 1982
+        }
+      ]
+    },
+    {
+      "repo": "arnabxero/xero-mech-royale",
+      "tree_sha": "0c39d72a481f549692fde866a82391c1f742d724",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "a6b8f3e19ca94ddd2a6c12a4c235a9ed1ed1f133",
+          "size": 6794
+        }
+      ]
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot",
+      "tree_sha": "8f4f369130f7f80f7b820d79d6b2ac42e4613c5c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "2f430330f350eec3b8ecab25f695fc8d904739ea",
+          "size": 1761
+        }
+      ]
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "tree_sha": "6e69ce9cdbb7bf90e439e7d08a798d89bb1540b9",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c155baf23245c9c4a956f0fad711c64a4e64c59d",
+          "size": 2530
+        },
+        {
+          "path": "eval/RESULTS.md",
+          "sha": "e1ae5b572ec6b8e95df0ce2d99240095924b154e",
+          "size": 22796
+        },
+        {
+          "path": "eval/diag/cast/README.md",
+          "sha": "dd23a1ed43e6ea3b5ca3636aee9dbbe5db92b2da",
+          "size": 969
+        },
+        {
+          "path": "sim/README.md",
+          "sha": "bd3ee74bd615917ad99f6745f62d4577453eca28",
+          "size": 8583
+        }
+      ]
+    },
+    {
+      "repo": "Hiresh2007/buildathon-mech-royale",
+      "tree_sha": "0aad6a6e86d3cf8f144e0e3f47e19a5caf87d5a2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b0e3d53f4d03808cb833222bd0572c2f4f9c32e2",
+          "size": 13113
+        }
+      ]
+    },
+    {
+      "repo": "lollito-ai/mecha-royale-client",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Hermes-25/builders-mech-royale",
+      "tree_sha": "5bee336c0d7c03f5ba809a30d088e038948ed440",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "b0a5d3ae90359fbcacaaa5123b2bac489b255eba",
+          "size": 994
+        }
+      ]
+    },
+    {
+      "repo": "ismachaudhary/mech-royale-bot",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "Neom10/highveld-mech-royale",
+      "tree_sha": "f5e041a6d9040ebef86ae45f883802f592c4684c",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "muhammadsoban-01/mech-royale-bot",
+      "tree_sha": "621b632b42e5a20075101167db33281ccce3e309",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Goku634/mech-royale-bot",
+      "tree_sha": "295f8a12abf7771a997ee156ea5874e9202d50c6",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "akshatlall/mech-royale-bot",
+      "tree_sha": "1a6ff6a9f9a5b95897d8351240334e567c9773f3",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Anurisha-Dunuwila/mech-royale-bot",
+      "tree_sha": "47a60fef6687f28c043c81e434082bae472a2a71",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "SaiyamNShah/mech-royale-builders",
+      "tree_sha": "6fc71e6c57cba0fe060437164ccb670a60b6db71",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "ilyash3/mech-royale-fixed",
+      "tree_sha": "e3adfd6758f1a7c90357033da6bbecfadd512a68",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "fariha0178/mech-royale-repo",
+      "tree_sha": "4451ec18b9d0acc778f37b6f1ead6b309d266e5b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "cc380e2278908a261f006c266f9fff28f472d284",
+          "size": 4140
+        }
+      ]
+    },
+    {
+      "repo": "SunnyChanPolyU/BuildersMechRoyale",
+      "tree_sha": "cfda800df9338d5033d63c3a52ccfa6e651b563e",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "KaushikNNN/mech-royale-bot",
+      "tree_sha": "1a609aba340bb96aa82de4119fcad14a19b89da7",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Rebecca922/mech-royale-bot",
+      "tree_sha": "0b316086a711580e678efa5a74a521994b7dd3a6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "dfcb81fec9398d69de9015dfeb0c0c191e1b82e2",
+          "size": 1890
+        }
+      ]
+    },
+    {
+      "repo": "prishalala/mech-royale-bot",
+      "tree_sha": "60769ba19a07f0ecacd0a76044b8be19086717b8",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        },
+        {
+          "path": "bot/README.md",
+          "sha": "5f10b604a663454a65a96a1fb2239345bd1b6e90",
+          "size": 3331
+        }
+      ]
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "tree_sha": "3e177f347264b584b1e4e4b4b9b70e38457bc6a0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6b7fc243fcea00f54dd47db80e8f9d3f7d4e2596",
+          "size": 3235
+        }
+      ]
+    },
+    {
+      "repo": "viren711/mech-royale-bot",
+      "tree_sha": "5f7fa236b2587328984e59b1727db988705aadaa",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "LAPR17/mech-royale-bot",
+      "tree_sha": "7dd8cfff25c8009d9189dc6093354a2498b2e4a2",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "648578f51790b517e166377b13cba443c49c390b",
+          "size": 6
+        }
+      ]
+    },
+    {
+      "repo": "Arnav3657/mech-royale-submit",
+      "tree_sha": "93695ce1e5f84e0803192a59e46c0b72da8805db",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "trijalbhagat/battleroyaleai-bot",
+      "tree_sha": "11642dcf5a1f5a9b6dc7d069ef4c824e59d6f62b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "855bc574e58586e1b496db303d31641f70aac12a",
+          "size": 1900
+        }
+      ]
+    },
+    {
+      "repo": "KhangNguyen2005/mech-royale",
+      "tree_sha": "3a5ec99de3a0e44c32a9ba416a3ae925e08d0ec6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5fe08bc07ff30a40810347a25dc1eb66def2f82b",
+          "size": 228
+        }
+      ]
+    },
+    {
+      "repo": "MoRayyan107/MechRoyal",
+      "tree_sha": "54c42973fbbde2d24f8fcbd7cc8e92cc76000228",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "fd54180f3adacb4b7a9ee35d4ca6572fcff7282d",
+          "size": 1861
+        }
+      ]
+    },
+    {
+      "repo": "johnsinned/mech",
+      "tree_sha": "c8ad0f033e9537d19ab8a175e80ff7485d66ee90",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e1bd218336d91ce5af92c6f77b27fc2265ad0cb8",
+          "size": 9222
+        },
+        {
+          "path": "experiments.json",
+          "sha": "45a95276c1aa41b8b6cc785d28b357bee569a6a2",
+          "size": 5800
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "shanmukha-here/eagle-eye-mech-royale",
+      "tree_sha": "e322ffe872a52ef83a89ab194b6500edc0da36df",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Koodsu/BuildersHackathonMechRoyale",
+      "tree_sha": "5afe06014183a215affd2b7d09c9f36529bef953",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d503ab5fd461eac052dedd501cdd369c58be9b66",
+          "size": 9977
+        },
+        {
+          "path": "kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot-b",
+      "tree_sha": "8f4f369130f7f80f7b820d79d6b2ac42e4613c5c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "2f430330f350eec3b8ecab25f695fc8d904739ea",
+          "size": 1761
+        }
+      ]
+    },
+    {
+      "repo": "Osca-K/builders-buildit-mech-royale",
+      "tree_sha": "166a5ab8a5a193a2e293dbac4e4f76bdf9bfc096",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "cb36e6220d8c4d977dfa24eef0bd9a46b09fe633",
+          "size": 2068
+        }
+      ]
+    },
+    {
+      "repo": "Infamustdev/BuildersBuildMechRoyale",
+      "tree_sha": "829978d63549385b45aa3e4fe6da85dfc2aba46c",
+      "truncated": false,
+      "paths": []
+    },
+    {
+      "repo": "Evans-Kwashie/Evans-Kwashie",
+      "tree_sha": "44ab9dc5ea53e8a1013601776d43bab3456e24ca",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "8f1769f0f97434ca7d932671b1a2405f1c936ac4",
+          "size": 4882
+        }
+      ]
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "tree_sha": "3c78c0026987b68b78ef59f01b5793ff2d5497dc",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "1f9fd0b51322d8ea55d146666871953734eb1e85",
+          "size": 27517
+        },
+        {
+          "path": "models/squad-experiment.json",
+          "sha": "44b7b7de798d24eb52dc448f603e8decad05a509",
+          "size": 12123
+        },
+        {
+          "path": "oval-survivor/README.md",
+          "sha": "93d47a2045ca9524743b43796444ede3277e874a",
+          "size": 1517
+        }
+      ]
+    },
+    {
+      "repo": "ahmad-ovh/Buildathon",
+      "tree_sha": "a484109a70db447abd390ffe871c32026cd15d7e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "ce1dc3a449e02a444201d8845100f5bed80f27fc",
+          "size": 10455
+        },
+        {
+          "path": "docs/EXPERIMENTS.md",
+          "sha": "f86e862df735ebd6475bddfb0471de592d5908f4",
+          "size": 38915
+        },
+        {
+          "path": "docs/README.md",
+          "sha": "38c0090ea36cb9d9be67d0d362ac1e33ce1299aa",
+          "size": 3244
+        }
+      ]
+    },
+    {
+      "repo": "kundansai-138/eb2fa572b66ac424838ab550566bdd16",
+      "tree_sha": "6c2ba8691ffc37f8122a742758380ba6e0eb6743",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "c57cbc6d14b35503b3c6590ed25ac93ce4e6bd4f",
+          "size": 2816
+        }
+      ]
+    },
+    {
+      "repo": "Himanshu253/mech-bot",
+      "tree_sha": "2f65e3c7dec6ec085058e9b74a4d7683608ff1e3",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "09377750ab4327222ed1a413d942705086b93700",
+          "size": 2642
+        }
+      ]
+    },
+    {
+      "repo": "1vkd1/OSU-hackathon-2026-builders-mechroyale",
+      "error": "GitHub API error 409: {\"message\":\"Git Repository is empty.\",\"documentation_url\":\"https://docs.github.com/rest/git/trees#get-a-tree\",\"status\":\"409\"}"
+    },
+    {
+      "repo": "VivekRnx/bob-the-builder-2026",
+      "tree_sha": "c64ccd89b9675b917de1834f89ffa531a0114ad8",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "80f43d41d382684f6343d4855a9c7fa604d90520",
+          "size": 12643
+        },
+        {
+          "path": "mechfight-kit/README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "arnav3013s/mech-bot",
+      "tree_sha": "65465c7c5a49ed05a3127b80f756b694a98ee077",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f61d4b776b7fa1508e6a806e8e83e187b960c899",
+          "size": 3297
+        },
+        {
+          "path": "alternatives/README.md",
+          "sha": "3b5a03caeac3cbc1d666a1a8d86268a3e4aa2636",
+          "size": 286
+        }
+      ]
+    },
+    {
+      "repo": "brycehcmcgrath/mechfight-bot",
+      "tree_sha": "46b9cb3ddd43369188682137522786c2bad5a95c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "58f5d9ae58c9d58f9545e3d14983785d8eba6c59",
+          "size": 4540
+        }
+      ]
+    },
+    {
+      "repo": "Muallim718/oval-sentinel",
+      "tree_sha": "b45194edf6f134aa5fc985add4f1d2616a7de1b6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "d4e9678aded4cfa3c0e016c75eac26ef995f4112",
+          "size": 9570
+        }
+      ]
+    },
+    {
+      "repo": "Kgc3105/MAGIC-Royale",
+      "tree_sha": "9bac796b20412547fba0466b0637a1e96d1f30d6",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "6655ce36758d4479ea4d69de8c8b2122a6f8046d",
+          "size": 3256
+        }
+      ]
+    },
+    {
+      "repo": "sonalrajapaksha/recursive-builders",
+      "tree_sha": "922c0d70c5d74348c435d932079a1d86d743640c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "4d387b677fa04cd49b4c68785a3badfd45288d4b",
+          "size": 15026
+        },
+        {
+          "path": "README.md",
+          "sha": "5bf9ee09fdb79e9980e83ec1c9d47a39876d72e5",
+          "size": 4010
+        }
+      ]
+    },
+    {
+      "repo": "f20240849-design/mechfight-bot",
+      "tree_sha": "b767bb6811a7e9f1fff2f6ca9d923f954d28a242",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "bookwormpi/oval-sentinel",
+      "tree_sha": "decd6fd942cd36b79143a50f981803cf41755f84",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "8f6db667a698db23055ab88d7b3bb8cc46111a4c",
+          "size": 4238
+        }
+      ]
+    },
+    {
+      "repo": "Medici357/AllQuietOnTheFrontalLobe",
+      "tree_sha": "aee6a25a0f5df24315e0d36fb2fb0ff089333d43",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "k2pereir/mechroyale",
+      "tree_sha": "af76fc82048af28b5bf506bed52aa9dc65d26b06",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "kuehlapis/stonks-mech",
+      "tree_sha": "e4c70b3f92bccb6d4a39504bd3ba833a50c89b77",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "TieneSabor/laughing-succotash",
+      "tree_sha": "07bfa00eb2f81305b68e77ef92abadec24b9a0d8",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "55378aa2f68337c816f160d182404ea3c585892a",
+          "size": 4079
+        },
+        {
+          "path": "docs/notes/README.md",
+          "sha": "68120c691f7b5ed1a4509e3ea3399a4affe2de7b",
+          "size": 2690
+        },
+        {
+          "path": "docs/notes/archive/README.md",
+          "sha": "7cb1074dda2f83aef3e88bc508f1f16af5239aaa",
+          "size": 199
+        },
+        {
+          "path": "docs/plans/archive/README.md",
+          "sha": "ed839fbbf7a5e02dc578fc9cebf68ba7451e0b6a",
+          "size": 117
+        },
+        {
+          "path": "tools/README.md",
+          "sha": "b04f4c93de9673cd1b496ca824337a8a51b889ef",
+          "size": 1882
+        }
+      ]
+    },
+    {
+      "repo": "ayyo-ayyo/mechfight-kit",
+      "tree_sha": "aaf79890fb8ad58fdba61f2f77bce075be848434",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+          "size": 3792
+        }
+      ]
+    },
+    {
+      "repo": "shaunkar1/harrier-sparring-bot",
+      "tree_sha": "05fdb6d6e0d1d109ba481e0c298f27920836519c",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "182cbf0b2a3e36a5db7d4477095793acd70b95aa",
+          "size": 9329
+        }
+      ]
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "tree_sha": "d25ba85d5a2c6aa801514f8cd6c07cf77f26eb8b",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "c22616cc8e9f90fdcfd1503805866bee064c2989",
+          "size": 9423
+        },
+        {
+          "path": "README.md",
+          "sha": "bff92fb444457428c0e00842b694c5393c2a44bf",
+          "size": 4677
+        },
+        {
+          "path": "codex/README.md",
+          "sha": "f8f08fc8d6f866eda85bff107d01996492b80895",
+          "size": 3723
+        },
+        {
+          "path": "codex/candidates/v9-memory-cover/README.md",
+          "sha": "d30c14ec611159e3f5fc9f4bbae1813b05196018",
+          "size": 1500
+        },
+        {
+          "path": "codex/results/official-results.json",
+          "sha": "09a92d884605f392466c4523001b097a1a8f3731",
+          "size": 790
+        },
+        {
+          "path": "experiments/official-results.json",
+          "sha": "542bc904ebd7ebc7200cd4ed955cb00336c5bf27",
+          "size": 633
+        }
+      ]
+    },
+    {
+      "repo": "Spandana00/aegis-royale",
+      "tree_sha": "be5f383d11735740a283aa730d0a66344b496e85",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "21b2892004433635551e0d8a8646b42fff6db119",
+          "size": 4872
+        }
+      ]
+    },
+    {
+      "repo": "der1py/globex-leader",
+      "tree_sha": "3dfaf3b8dd59ef54144aa4d8a47407c54dd8f04f",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "EXPERIMENTS.md",
+          "sha": "5672868051ca059f562b7c0bb3faea25b814d744",
+          "size": 629
+        },
+        {
+          "path": "README.md",
+          "sha": "243d5fe93a207c2cf49a0e22f72865cb78cf049f",
+          "size": 4417
+        }
+      ]
+    },
+    {
+      "repo": "SeanCowen/oval-runner",
+      "tree_sha": "0eb667725c1df44e29842771000852d48f88558e",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "f57b76cba6ac8715861dde1a49177185aa11275a",
+          "size": 10228
+        }
+      ]
+    },
+    {
+      "repo": "joekritenbrink0-wq/mech-bot",
+      "tree_sha": "5ccf7c9b188a5e574d24869e69f63497972c2720",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "37ca214466f87027162270affbe8d94d973ab641",
+          "size": 4716
+        }
+      ]
+    },
+    {
+      "repo": "PrajwalKoirala/miniature-barnacle",
+      "tree_sha": "bbc87626eccd7490c99d47bb8d27a83b26a623d0",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "5e7358f929eb7697c44185a73b4791d73bf538ee",
+          "size": 5774
+        }
+      ]
+    },
+    {
+      "repo": "Meows3s/mechfight-cpp",
+      "tree_sha": "1b3dcd6b4c74f2686b9409262691929ad39ef29a",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "95abb853fe89384e47138118339a9267051df886",
+          "size": 9898
+        }
+      ]
+    },
+    {
+      "repo": "skandra08/robo-fight",
+      "tree_sha": "258e6c11311de75962370f74b44c000de8074d79",
+      "truncated": false,
+      "paths": [
+        {
+          "path": "README.md",
+          "sha": "37115982f28ab8e41b92b51ae117be8e1c5b0e9b",
+          "size": 11053
+        }
+      ]
+    }
+  ]
+}

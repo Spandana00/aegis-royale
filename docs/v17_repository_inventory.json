@@ -1,0 +1,1441 @@
+{
+  "method": "GitHub repository search, three pages; not guaranteed exhaustive coverage.",
+  "query": "\"mech royale\" in:name,description,readme",
+  "repositories": [
+    {
+      "repo": "coolerputt01/Mecha-Royale",
+      "default_branch": "main",
+      "size": 9626
+    },
+    {
+      "repo": "radioheadfan123/mech-royale",
+      "default_branch": "main",
+      "size": 981
+    },
+    {
+      "repo": "Krisha052/mech-royale",
+      "default_branch": "main",
+      "size": 1102
+    },
+    {
+      "repo": "h-ardy/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 401
+    },
+    {
+      "repo": "EvanDamron/mech-royale-bot",
+      "default_branch": "main",
+      "size": 139
+    },
+    {
+      "repo": "JWHaan/wraith",
+      "default_branch": "main",
+      "size": 479
+    },
+    {
+      "repo": "wzardomri/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 134
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "default_branch": "main",
+      "size": 10411
+    },
+    {
+      "repo": "pedduvedcharan/mech-royale-bot",
+      "default_branch": "main",
+      "size": 125
+    },
+    {
+      "repo": "waiprotein/mech-royale-bot",
+      "default_branch": "main",
+      "size": 413
+    },
+    {
+      "repo": "SandeepMadhavarapu/BattleRoyale",
+      "default_branch": "main",
+      "size": 157
+    },
+    {
+      "repo": "BIGBIGBIGJoJo/labubu-mech-royale",
+      "default_branch": "main",
+      "size": 1986
+    },
+    {
+      "repo": "WasilahAbdulHameed/mech-royale-bot",
+      "default_branch": "main",
+      "size": 221
+    },
+    {
+      "repo": "bluedev-52/mech-royale-bot-test",
+      "default_branch": "main",
+      "size": 1013
+    },
+    {
+      "repo": "poyrazyongaci/q3j46btd",
+      "default_branch": "main",
+      "size": 1429
+    },
+    {
+      "repo": "whyMiso/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 163
+    },
+    {
+      "repo": "Russell-Day/builders-mech-royale",
+      "default_branch": "main",
+      "size": 557
+    },
+    {
+      "repo": "micah-andelman/mech-royale",
+      "default_branch": "main",
+      "size": 1416
+    },
+    {
+      "repo": "youngestbillionaire/billions",
+      "default_branch": "mech-royale",
+      "size": 1327
+    },
+    {
+      "repo": "jmonked/monked-mech-royale",
+      "default_branch": "main",
+      "size": 169
+    },
+    {
+      "repo": "viktor-lorentz/mech-royale-overcooked",
+      "default_branch": "main",
+      "size": 1155
+    },
+    {
+      "repo": "orbitautomation/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 18
+    },
+    {
+      "repo": "gonvaz-nocode/NoCodeHack",
+      "default_branch": "main",
+      "size": 1911
+    },
+    {
+      "repo": "TEMOtkesh/mech-royale-bot",
+      "default_branch": "main",
+      "size": 444
+    },
+    {
+      "repo": "cyanwingsbird/Mech-Royale",
+      "default_branch": "main",
+      "size": 475
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "default_branch": "main",
+      "size": 41584
+    },
+    {
+      "repo": "NurdauletZhalgas/Mech-Royale-Bot",
+      "default_branch": "main",
+      "size": 914
+    },
+    {
+      "repo": "Th3r0n/mech-royale-bot",
+      "default_branch": "main",
+      "size": 602
+    },
+    {
+      "repo": "ela57/Builders-Royale",
+      "default_branch": "main",
+      "size": 895
+    },
+    {
+      "repo": "jasonsoohoo/MechRoyaleHackathonChallenge",
+      "default_branch": "main",
+      "size": 881
+    },
+    {
+      "repo": "YangliDeng/fieldline",
+      "default_branch": "main",
+      "size": 30
+    },
+    {
+      "repo": "atharv109/mech-royale",
+      "default_branch": "main",
+      "size": 115
+    },
+    {
+      "repo": "sntin/mech-royale",
+      "default_branch": "main",
+      "size": 1009
+    },
+    {
+      "repo": "sarah29006/mech-royale-bot",
+      "default_branch": "main",
+      "size": 17
+    },
+    {
+      "repo": "hatimwen/builders-mech-royale-2026",
+      "default_branch": "main",
+      "size": 22
+    },
+    {
+      "repo": "nelsonwong506-lang/mech-royale",
+      "default_branch": "main",
+      "size": 657
+    },
+    {
+      "repo": "shreypatel1/quokka-lattice-7f3k",
+      "default_branch": "main",
+      "size": 862
+    },
+    {
+      "repo": "CtrlZGau/strat-game",
+      "default_branch": "main",
+      "size": 1384
+    },
+    {
+      "repo": "nwen-cu/buildathon2026",
+      "default_branch": "recon",
+      "size": 85
+    },
+    {
+      "repo": "Nadipalli-Sandeep/mech-royale-bot",
+      "default_branch": "main",
+      "size": 196
+    },
+    {
+      "repo": "kpfarn/osuhackathon",
+      "default_branch": "main",
+      "size": 1978
+    },
+    {
+      "repo": "Britogus7/Mech-Royale",
+      "default_branch": "main",
+      "size": 16
+    },
+    {
+      "repo": "bzells11/Mech-Bot-Repo-",
+      "default_branch": "main",
+      "size": 64
+    },
+    {
+      "repo": "Tanish-Dhankhar/Mech-royale",
+      "default_branch": "main",
+      "size": 66
+    },
+    {
+      "repo": "mepedrol/mech-royale-bot",
+      "default_branch": "main",
+      "size": 24
+    },
+    {
+      "repo": "praggybhat/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1095
+    },
+    {
+      "repo": "trompeterm/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 1001
+    },
+    {
+      "repo": "teetham-t/mech-royale-pocket-comet",
+      "default_branch": "main",
+      "size": 976
+    },
+    {
+      "repo": "Achintya-Lakshmanan/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1147
+    },
+    {
+      "repo": "Epicepicdemic/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 3224
+    },
+    {
+      "repo": "Yiyang-Jin/mech-royale",
+      "default_branch": "main",
+      "size": 1096
+    },
+    {
+      "repo": "creationofuniverse/mech-royale",
+      "default_branch": "main",
+      "size": 285
+    },
+    {
+      "repo": "lmaccart/mech-royale",
+      "default_branch": "main",
+      "size": 82
+    },
+    {
+      "repo": "hansen-cao/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1632
+    },
+    {
+      "repo": "jerrywang255-spec/Mech-royale-bot",
+      "default_branch": "main",
+      "size": 1715
+    },
+    {
+      "repo": "Rohanasudani/edgewise-mech-royale",
+      "default_branch": "main",
+      "size": 98
+    },
+    {
+      "repo": "beckimron1/ict-mech-royale",
+      "default_branch": "main",
+      "size": 15
+    },
+    {
+      "repo": "martin-danggg/hcmut-tmt-p1-mech-royale",
+      "default_branch": "main",
+      "size": 1441
+    },
+    {
+      "repo": "zuhayrkabir/unos-mech",
+      "default_branch": "main",
+      "size": 676
+    },
+    {
+      "repo": "Arnav8452/mech-royale",
+      "default_branch": "main",
+      "size": 99
+    },
+    {
+      "repo": "Seriamyth1/Vmecha",
+      "default_branch": "main",
+      "size": 1787
+    },
+    {
+      "repo": "Rizwanzaman70/Bizz01-MechRoyale",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "raunak-choudhary/henka",
+      "default_branch": "main",
+      "size": 141
+    },
+    {
+      "repo": "ricky-he2006/Builders---Mech-Royale",
+      "default_branch": "main",
+      "size": 39
+    },
+    {
+      "repo": "anthonyteti/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 662
+    },
+    {
+      "repo": "uykheangchhour/builders-Hackathon",
+      "default_branch": "main",
+      "size": 906
+    },
+    {
+      "repo": "sphugne/mech-royale-bot",
+      "default_branch": "main",
+      "size": 64
+    },
+    {
+      "repo": "OHc99/mechfight-bot",
+      "default_branch": "main",
+      "size": 31
+    },
+    {
+      "repo": "emptybook11/mech-royale-bot",
+      "default_branch": "main",
+      "size": 132
+    },
+    {
+      "repo": "f20230006-sketch/oval-vector-mech-royale",
+      "default_branch": "main",
+      "size": 80
+    },
+    {
+      "repo": "MahnoorKhan-1/phantom-survivor",
+      "default_branch": "main",
+      "size": 39
+    },
+    {
+      "repo": "NecritsSoup/mech-royale-buildathon-2026",
+      "default_branch": "main",
+      "size": 89
+    },
+    {
+      "repo": "luffy-taro-106/bt26-m",
+      "default_branch": "main",
+      "size": 69
+    },
+    {
+      "repo": "charliescull/mech-royale-bot",
+      "default_branch": "main",
+      "size": 330
+    },
+    {
+      "repo": "suzhuhui-hub/oval-warden",
+      "default_branch": "main",
+      "size": 464
+    },
+    {
+      "repo": "swan28pande/oval-tools",
+      "default_branch": "main",
+      "size": 931
+    },
+    {
+      "repo": "richardlin05/mech_royale",
+      "default_branch": "main",
+      "size": 64
+    },
+    {
+      "repo": "VenujaRH/mech-royale",
+      "default_branch": "main",
+      "size": 221
+    },
+    {
+      "repo": "nullat0m7/mech-royale",
+      "default_branch": "main",
+      "size": 1208
+    },
+    {
+      "repo": "bsrikumar855-dot/Mech-Royale",
+      "default_branch": "main",
+      "size": 740
+    },
+    {
+      "repo": "mjawadforogh2005-ship-it/frogh-ai-mech-royale",
+      "default_branch": "main",
+      "size": 867
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "default_branch": "main",
+      "size": 3921
+    },
+    {
+      "repo": "jackbalseca/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1191
+    },
+    {
+      "repo": "MarwanMoh11/mech-royale",
+      "default_branch": "main",
+      "size": 71
+    },
+    {
+      "repo": "jvenkumahanthi-coder/segfault-mech-royale",
+      "default_branch": "main",
+      "size": 20
+    },
+    {
+      "repo": "FlicXyz/Mech-Royale",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "ParishruthiGanesh/mech-royale",
+      "default_branch": "main",
+      "size": 117
+    },
+    {
+      "repo": "paing95/mech-royale-bot",
+      "default_branch": "main",
+      "size": 861
+    },
+    {
+      "repo": "rohaanafzal/mech-bot",
+      "default_branch": "main",
+      "size": 189
+    },
+    {
+      "repo": "dilkshhh/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1090
+    },
+    {
+      "repo": "JishnuMadav/mech-royale",
+      "default_branch": "main",
+      "size": 1080
+    },
+    {
+      "repo": "Visalth/mech-royale-bot",
+      "default_branch": "main",
+      "size": 32
+    },
+    {
+      "repo": "enkyuan/aquarius",
+      "default_branch": "main",
+      "size": 344
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Version7",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Builders",
+      "default_branch": "main",
+      "size": 62
+    },
+    {
+      "repo": "blanc-team/try_again",
+      "default_branch": "main",
+      "size": 37
+    },
+    {
+      "repo": "notBehzad/ApexMech-v1",
+      "default_branch": "main",
+      "size": 60
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-buildersv3",
+      "default_branch": "main",
+      "size": 17
+    },
+    {
+      "repo": "Rxd5816/Builders---Mech-Royale",
+      "default_branch": "main",
+      "size": 9
+    },
+    {
+      "repo": "anurag11satpathy/mech-royale2026",
+      "default_branch": "main",
+      "size": 1103
+    },
+    {
+      "repo": "caioplcerda/oval-pilot",
+      "default_branch": "master",
+      "size": 1425
+    },
+    {
+      "repo": "suvathikannan17/mech-royale",
+      "default_branch": "main",
+      "size": 21
+    },
+    {
+      "repo": "manikandan-pandiyan/projbuildathon",
+      "default_branch": "main",
+      "size": 280
+    },
+    {
+      "repo": "blanc-team/mech_royale",
+      "default_branch": "main",
+      "size": 373
+    },
+    {
+      "repo": "jklein07/mech-royale-bot",
+      "default_branch": "main",
+      "size": 74
+    },
+    {
+      "repo": "skibidies/yo-john-xie",
+      "default_branch": "main",
+      "size": 306
+    },
+    {
+      "repo": "gokulj-umich/gocool-mech",
+      "default_branch": "main",
+      "size": 1465
+    },
+    {
+      "repo": "SuperHuyGaming/mech-royale",
+      "default_branch": "main",
+      "size": 215
+    },
+    {
+      "repo": "nshuai808/mech-royale",
+      "default_branch": "main",
+      "size": 1359
+    },
+    {
+      "repo": "rehaan0108-code/Buildathon-OSU",
+      "default_branch": "main",
+      "size": 82
+    },
+    {
+      "repo": "rgosmano/oval-hopper",
+      "default_branch": "main",
+      "size": 107
+    },
+    {
+      "repo": "worldBlu/mech-royale",
+      "default_branch": "main",
+      "size": 1346
+    },
+    {
+      "repo": "lav24fr/builder",
+      "default_branch": "main",
+      "size": 714
+    },
+    {
+      "repo": "sarbzcode/mech-royale",
+      "default_branch": "main",
+      "size": 1736
+    },
+    {
+      "repo": "trijalbhagat/mechbot",
+      "default_branch": "main",
+      "size": 5
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot",
+      "default_branch": "main",
+      "size": 62
+    },
+    {
+      "repo": "NhatUndeath/mech-royale-bot-l150",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "Hoangchuyenanh/mech-royale-bot",
+      "default_branch": "main",
+      "size": 17
+    },
+    {
+      "repo": "onepizzateam/chinatown",
+      "default_branch": "main",
+      "size": 1060
+    },
+    {
+      "repo": "ErikUmble/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "Leahie/mechfight-bot",
+      "default_branch": "main",
+      "size": 76
+    },
+    {
+      "repo": "himagna16/mech-royale-bot",
+      "default_branch": "main",
+      "size": 259
+    },
+    {
+      "repo": "aymanm31/Builders-MechRoyale",
+      "default_branch": "main",
+      "size": 943
+    },
+    {
+      "repo": "mliao0128/fraun-ringkeeper",
+      "default_branch": "main",
+      "size": 28
+    },
+    {
+      "repo": "CyberCoder-bit/mech-royale-bot",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "mbaglo/MechRoyale-Agent",
+      "default_branch": "main",
+      "size": 2211
+    },
+    {
+      "repo": "abirthare-ab/mech-royale-bot",
+      "default_branch": "main",
+      "size": 461
+    },
+    {
+      "repo": "youraverageguy-123/mechfight-bot",
+      "default_branch": "main",
+      "size": 212
+    },
+    {
+      "repo": "0629owen-del/mechfight-early",
+      "default_branch": "cursor/early-loot-bot",
+      "size": 1395
+    },
+    {
+      "repo": "andrew-zhouu/builders-mech-royale-2026",
+      "default_branch": "main",
+      "size": 282
+    },
+    {
+      "repo": "ruiyifan0114-design/OSUhackathon",
+      "default_branch": "main",
+      "size": 122
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "default_branch": "master",
+      "size": 642
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "default_branch": "main",
+      "size": 976
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "default_branch": "main",
+      "size": 12511
+    },
+    {
+      "repo": "Nurzhic/SteadySurvivor-MechRoyale",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "jpw942/mech-royale-bot",
+      "default_branch": "main",
+      "size": 335
+    },
+    {
+      "repo": "pnp6113/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1196
+    },
+    {
+      "repo": "mvrkarthik07/mechbot",
+      "default_branch": "main",
+      "size": 166
+    },
+    {
+      "repo": "Borovail/builders-mech-royale",
+      "default_branch": "main",
+      "size": 772
+    },
+    {
+      "repo": "varadanvk/mech-royale-bot",
+      "default_branch": "main",
+      "size": 635
+    },
+    {
+      "repo": "FDS-Dark/buildathon-mech-royale",
+      "default_branch": "master",
+      "size": 36
+    },
+    {
+      "repo": "erlenchik01/mech-royale-bot",
+      "default_branch": "main",
+      "size": 30
+    },
+    {
+      "repo": "iamvhk1/mech-build",
+      "default_branch": "main",
+      "size": 1334
+    },
+    {
+      "repo": "Hassene26/mech-royale-bot",
+      "default_branch": "main",
+      "size": 111
+    },
+    {
+      "repo": "Sibongile613/lone-33new",
+      "default_branch": "main",
+      "size": 3
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "default_branch": "main",
+      "size": 1265
+    },
+    {
+      "repo": "AlexJawhari/lanternfish",
+      "default_branch": "main",
+      "size": 373
+    },
+    {
+      "repo": "alex-vizn/mech-royale-bot",
+      "default_branch": "main",
+      "size": 124
+    },
+    {
+      "repo": "himanshu-thalor/apexmech-buildathon",
+      "default_branch": "main",
+      "size": 103
+    },
+    {
+      "repo": "Arrya841/aether-zero-aspire",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "atharvatripathi2026/gtgoats_mech_royale",
+      "default_branch": "main",
+      "size": 1501
+    },
+    {
+      "repo": "JosiahAklog/nexus-mech-royale",
+      "default_branch": "main",
+      "size": 2358
+    },
+    {
+      "repo": "ryan01989/fitzymate-bot",
+      "default_branch": "main",
+      "size": 993
+    },
+    {
+      "repo": "suresh-vlsi/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1127
+    },
+    {
+      "repo": "tentechle/mechfight-survivor",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "fomole1975/mech-bot",
+      "default_branch": "main",
+      "size": 27
+    },
+    {
+      "repo": "pucaru/curly-succotash",
+      "default_branch": "main",
+      "size": 367
+    },
+    {
+      "repo": "MatthewCraddock/Submission-3",
+      "default_branch": "main",
+      "size": 170
+    },
+    {
+      "repo": "ralphhaddis/kestrel-7x",
+      "default_branch": "main",
+      "size": 306
+    },
+    {
+      "repo": "AbhirajTiwari12/mech-royale-bot",
+      "default_branch": "main",
+      "size": 187
+    },
+    {
+      "repo": "ZaryabAhsan15/mech-royale-bot",
+      "default_branch": "main",
+      "size": 83
+    },
+    {
+      "repo": "jacobcorbett/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 51
+    },
+    {
+      "repo": "loveconnor/mech-royale-bot",
+      "default_branch": "main",
+      "size": 52
+    },
+    {
+      "repo": "shaunkar1/proj1",
+      "default_branch": "main",
+      "size": 1530
+    },
+    {
+      "repo": "Hutamaa/mech-royale-agent",
+      "default_branch": "main",
+      "size": 42
+    },
+    {
+      "repo": "Vinay-Vimalkumar/cobalt-fern",
+      "default_branch": "main",
+      "size": 29
+    },
+    {
+      "repo": "Adi848-dotcom/adi-mech-royale",
+      "default_branch": "main",
+      "size": 64
+    },
+    {
+      "repo": "Kyt0V0/Mech-Royale",
+      "default_branch": "main",
+      "size": 334
+    },
+    {
+      "repo": "Not-Ethan/oval-ghost-mech",
+      "default_branch": "main",
+      "size": 2230
+    },
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "default_branch": "codex/aegis-rooftop",
+      "size": 97
+    },
+    {
+      "repo": "dstarnes05/BuildersMech",
+      "default_branch": "main",
+      "size": 81
+    },
+    {
+      "repo": "niranjankumarnk/mech-royale",
+      "default_branch": "main",
+      "size": 278
+    },
+    {
+      "repo": "NithinAI-10/mech-royale",
+      "default_branch": "main",
+      "size": 147
+    },
+    {
+      "repo": "Specz04/hus-hus",
+      "default_branch": "main",
+      "size": 1203
+    },
+    {
+      "repo": "solace4me/Mech_Royale",
+      "default_branch": "master",
+      "size": 863
+    },
+    {
+      "repo": "alexwilldev/mechroyale-bot",
+      "default_branch": "main",
+      "size": 1166
+    },
+    {
+      "repo": "13shreyansh/ohio-buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 81
+    },
+    {
+      "repo": "rustemayan/mech-sham",
+      "default_branch": "main",
+      "size": 158
+    },
+    {
+      "repo": "fernando-ace/Buildathon_Mech_Royal",
+      "default_branch": "main",
+      "size": 1208
+    },
+    {
+      "repo": "bluedev-52/mechtoyale-version-2",
+      "default_branch": "main",
+      "size": 919
+    },
+    {
+      "repo": "raunak2007/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1611
+    },
+    {
+      "repo": "afiapoks/mech-royale",
+      "default_branch": "main",
+      "size": 40
+    },
+    {
+      "repo": "lukejwaszyn/mech-royale",
+      "default_branch": "main",
+      "size": 1127
+    },
+    {
+      "repo": "acaptainb/Mech_Royale",
+      "default_branch": "main",
+      "size": 1453
+    },
+    {
+      "repo": "vngthin/Mech_Royale",
+      "default_branch": "main",
+      "size": 1024
+    },
+    {
+      "repo": "Tobiloba014/mech_royale",
+      "default_branch": "main",
+      "size": 888
+    },
+    {
+      "repo": "aqilc/mech-royale",
+      "default_branch": "main",
+      "size": 415
+    },
+    {
+      "repo": "MVai-Builders/mech-royale",
+      "default_branch": "main",
+      "size": 68
+    },
+    {
+      "repo": "akshayagg18/mech-royale",
+      "default_branch": "main",
+      "size": 124
+    },
+    {
+      "repo": "caitlinthaeler/mech-royale",
+      "default_branch": "main",
+      "size": 893
+    },
+    {
+      "repo": "LuBolin/mech-royale",
+      "default_branch": "main",
+      "size": 10793
+    },
+    {
+      "repo": "Sharmileer/mech-royale",
+      "default_branch": "main",
+      "size": 986
+    },
+    {
+      "repo": "OliverTTran123/mech-royale",
+      "default_branch": "main",
+      "size": 111
+    },
+    {
+      "repo": "fariha0178/Mech-Royale",
+      "default_branch": "main",
+      "size": 1881
+    },
+    {
+      "repo": "RagsNPaul/Mech_Royale",
+      "default_branch": "master",
+      "size": 940
+    },
+    {
+      "repo": "volcanoboy3/mech-royale",
+      "default_branch": "main",
+      "size": 51060
+    },
+    {
+      "repo": "strobor/mech-royale",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "Warrior-hound/mech-royale",
+      "default_branch": "main",
+      "size": 270
+    },
+    {
+      "repo": "LanceHuang245/mech-royale",
+      "default_branch": "main",
+      "size": 414
+    },
+    {
+      "repo": "KennethLei1492/Builder-Mech-Royale",
+      "default_branch": "main",
+      "size": 319
+    },
+    {
+      "repo": "ShenoyVaradaraya/mech-royale",
+      "default_branch": "main",
+      "size": 1013
+    },
+    {
+      "repo": "Azula19-b/mech-royale",
+      "default_branch": "Phytonbg",
+      "size": 945
+    },
+    {
+      "repo": "ianarce/mech-royale-bot",
+      "default_branch": "main",
+      "size": 967
+    },
+    {
+      "repo": "NadulaG/mech-royale",
+      "default_branch": "main",
+      "size": 53
+    },
+    {
+      "repo": "25benjaminli/mechroyale",
+      "default_branch": "main",
+      "size": 25
+    },
+    {
+      "repo": "Nathanatpurdue/mech-battle",
+      "default_branch": "main",
+      "size": 277
+    },
+    {
+      "repo": "Tanish-Dhankhar/mech-royale-combined",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "GuilleHoardings/mechanized-royale",
+      "default_branch": "main",
+      "size": 24478
+    },
+    {
+      "repo": "pcetner/mech-royale-bot",
+      "default_branch": "main",
+      "size": 1125
+    },
+    {
+      "repo": "AantharyaKrishna/ghost-protocol",
+      "default_branch": "main",
+      "size": 890
+    },
+    {
+      "repo": "chriseco427-spec/CyprusBot",
+      "default_branch": "main",
+      "size": 528
+    },
+    {
+      "repo": "Fervg019/Buildathon-",
+      "default_branch": "main",
+      "size": 924
+    },
+    {
+      "repo": "TheJ10/mech-royale-bot",
+      "default_branch": "main",
+      "size": 940
+    },
+    {
+      "repo": "Sibongile613/lone92",
+      "default_branch": "main",
+      "size": 14
+    },
+    {
+      "repo": "Evans-Kwashie/mech-royale-bot",
+      "default_branch": "main",
+      "size": 219
+    },
+    {
+      "repo": "JasonR-code/switchback-mech-royale",
+      "default_branch": "main",
+      "size": 996
+    },
+    {
+      "repo": "Tanish-Dhankhar/irontrace",
+      "default_branch": "main",
+      "size": 113
+    },
+    {
+      "repo": "ejensODU/oval-circuit-mech",
+      "default_branch": "main",
+      "size": 66
+    },
+    {
+      "repo": "Avilekha/mech-royale-bot",
+      "default_branch": "main",
+      "size": 52
+    },
+    {
+      "repo": "froggiewins/ScrapMechRoyale",
+      "default_branch": "main",
+      "size": 482
+    },
+    {
+      "repo": "MeeksonJr/builders-mech-royale",
+      "default_branch": "master",
+      "size": 27
+    },
+    {
+      "repo": "Arnav8452/mech-royale-rust",
+      "default_branch": "master",
+      "size": 302
+    },
+    {
+      "repo": "LeeYongLiangGit/mech-royale-bot",
+      "default_branch": "main",
+      "size": 38
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "default_branch": "main",
+      "size": 1425
+    },
+    {
+      "repo": "joonk7809/mech-royale-bot",
+      "default_branch": "main",
+      "size": 7997
+    },
+    {
+      "repo": "yahya3867/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 13
+    },
+    {
+      "repo": "georgegcal1-arch/mech-royale-bot",
+      "default_branch": "main",
+      "size": 341
+    },
+    {
+      "repo": "arnabxero/xero-mech-royale",
+      "default_branch": "master",
+      "size": 25985
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot",
+      "default_branch": "main",
+      "size": 156
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 2573
+    },
+    {
+      "repo": "Hiresh2007/buildathon-mech-royale",
+      "default_branch": "main",
+      "size": 127
+    },
+    {
+      "repo": "lollito-ai/mecha-royale-client",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "Hermes-25/builders-mech-royale",
+      "default_branch": "main",
+      "size": 170
+    },
+    {
+      "repo": "ismachaudhary/mech-royale-bot",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "Neom10/highveld-mech-royale",
+      "default_branch": "main",
+      "size": 23
+    },
+    {
+      "repo": "muhammadsoban-01/mech-royale-bot",
+      "default_branch": "main",
+      "size": 36
+    },
+    {
+      "repo": "Goku634/mech-royale-bot",
+      "default_branch": "main",
+      "size": 67
+    },
+    {
+      "repo": "akshatlall/mech-royale-bot",
+      "default_branch": "main",
+      "size": 32
+    },
+    {
+      "repo": "Anurisha-Dunuwila/mech-royale-bot",
+      "default_branch": "main",
+      "size": 37
+    },
+    {
+      "repo": "SaiyamNShah/mech-royale-builders",
+      "default_branch": "main",
+      "size": 70
+    },
+    {
+      "repo": "ilyash3/mech-royale-fixed",
+      "default_branch": "main",
+      "size": 46
+    },
+    {
+      "repo": "fariha0178/mech-royale-repo",
+      "default_branch": "main",
+      "size": 921
+    },
+    {
+      "repo": "SunnyChanPolyU/BuildersMechRoyale",
+      "default_branch": "main",
+      "size": 43
+    },
+    {
+      "repo": "KaushikNNN/mech-royale-bot",
+      "default_branch": "main",
+      "size": 13
+    },
+    {
+      "repo": "Rebecca922/mech-royale-bot",
+      "default_branch": "main",
+      "size": 946
+    },
+    {
+      "repo": "prishalala/mech-royale-bot",
+      "default_branch": "main",
+      "size": 945
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "default_branch": "main",
+      "size": 661
+    },
+    {
+      "repo": "viren711/mech-royale-bot",
+      "default_branch": "main",
+      "size": 41
+    },
+    {
+      "repo": "LAPR17/mech-royale-bot",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "Arnav3657/mech-royale-submit",
+      "default_branch": "main",
+      "size": 146
+    },
+    {
+      "repo": "trijalbhagat/battleroyaleai-bot",
+      "default_branch": "main",
+      "size": 78
+    },
+    {
+      "repo": "KhangNguyen2005/mech-royale",
+      "default_branch": "main",
+      "size": 215
+    },
+    {
+      "repo": "MoRayyan107/MechRoyal",
+      "default_branch": "main",
+      "size": 1193
+    },
+    {
+      "repo": "johnsinned/mech",
+      "default_branch": "master",
+      "size": 1335
+    },
+    {
+      "repo": "shanmukha-here/eagle-eye-mech-royale",
+      "default_branch": "main",
+      "size": 444
+    },
+    {
+      "repo": "Koodsu/BuildersHackathonMechRoyale",
+      "default_branch": "main",
+      "size": 990
+    },
+    {
+      "repo": "amoorgy/mech-royale-bot-b",
+      "default_branch": "main",
+      "size": 138
+    },
+    {
+      "repo": "Osca-K/builders-buildit-mech-royale",
+      "default_branch": "main",
+      "size": 936
+    },
+    {
+      "repo": "Infamustdev/BuildersBuildMechRoyale",
+      "default_branch": "main",
+      "size": 1118
+    },
+    {
+      "repo": "Evans-Kwashie/Evans-Kwashie",
+      "default_branch": "main",
+      "size": 88
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "default_branch": "main",
+      "size": 531
+    },
+    {
+      "repo": "ahmad-ovh/Buildathon",
+      "default_branch": "main",
+      "size": 1437
+    },
+    {
+      "repo": "kundansai-138/eb2fa572b66ac424838ab550566bdd16",
+      "default_branch": "main",
+      "size": 877
+    },
+    {
+      "repo": "Himanshu253/mech-bot",
+      "default_branch": "main",
+      "size": 150
+    },
+    {
+      "repo": "1vkd1/OSU-hackathon-2026-builders-mechroyale",
+      "default_branch": "main",
+      "size": 0
+    },
+    {
+      "repo": "VivekRnx/bob-the-builder-2026",
+      "default_branch": "main",
+      "size": 1064
+    },
+    {
+      "repo": "arnav3013s/mech-bot",
+      "default_branch": "main",
+      "size": 146
+    },
+    {
+      "repo": "brycehcmcgrath/mechfight-bot",
+      "default_branch": "main",
+      "size": 5222
+    },
+    {
+      "repo": "Muallim718/oval-sentinel",
+      "default_branch": "main",
+      "size": 1456
+    },
+    {
+      "repo": "Kgc3105/MAGIC-Royale",
+      "default_branch": "main",
+      "size": 140
+    },
+    {
+      "repo": "sonalrajapaksha/recursive-builders",
+      "default_branch": "main",
+      "size": 1179
+    },
+    {
+      "repo": "f20240849-design/mechfight-bot",
+      "default_branch": "main",
+      "size": 1773
+    },
+    {
+      "repo": "bookwormpi/oval-sentinel",
+      "default_branch": "main",
+      "size": 993
+    },
+    {
+      "repo": "Medici357/AllQuietOnTheFrontalLobe",
+      "default_branch": "main",
+      "size": 1019
+    },
+    {
+      "repo": "k2pereir/mechroyale",
+      "default_branch": "main",
+      "size": 946
+    },
+    {
+      "repo": "kuehlapis/stonks-mech",
+      "default_branch": "main",
+      "size": 2272
+    },
+    {
+      "repo": "TieneSabor/laughing-succotash",
+      "default_branch": "main",
+      "size": 995
+    },
+    {
+      "repo": "ayyo-ayyo/mechfight-kit",
+      "default_branch": "main",
+      "size": 862
+    },
+    {
+      "repo": "shaunkar1/harrier-sparring-bot",
+      "default_branch": "main",
+      "size": 100
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "default_branch": "main",
+      "size": 223
+    },
+    {
+      "repo": "Spandana00/aegis-royale",
+      "default_branch": "main",
+      "size": 3389
+    },
+    {
+      "repo": "der1py/globex-leader",
+      "default_branch": "main",
+      "size": 981
+    },
+    {
+      "repo": "SeanCowen/oval-runner",
+      "default_branch": "main",
+      "size": 123
+    },
+    {
+      "repo": "joekritenbrink0-wq/mech-bot",
+      "default_branch": "main",
+      "size": 141
+    },
+    {
+      "repo": "PrajwalKoirala/miniature-barnacle",
+      "default_branch": "main",
+      "size": 877
+    },
+    {
+      "repo": "Meows3s/mechfight-cpp",
+      "default_branch": "main",
+      "size": 1312
+    },
+    {
+      "repo": "skandra08/robo-fight",
+      "default_branch": "main",
+      "size": 1706
+    }
+  ]
+}

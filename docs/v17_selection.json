@@ -1,0 +1,20 @@
+{
+  "baseline_commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+  "baseline_official_score": 6.25,
+  "selected_arm": "charge",
+  "behavior_change": "Keep plating, armor and nanites first; move laser_charge ahead of gun_damage, gun_rate and laser_damage.",
+  "selection_evidence": {
+    "screen_delta": 0.0625,
+    "fresh_moderate_delta": 0.4583333333333333,
+    "fresh_fast_delta": -0.25,
+    "fresh_pooled_delta": 0.10416666666666667,
+    "paired_fresh_seeds": 48
+  },
+  "rejected_combination": "Both laser damage and charge priorities: tied moderate control and lost in faster pursuit.",
+  "reserved_holdout": {
+    "seeds": "10300-10331",
+    "join_per_loss": 0.8,
+    "result_seen_at_selection": false
+  },
+  "limits": "A small positive point estimate with uncertainty including zero; not an official improvement or forecast."
+}

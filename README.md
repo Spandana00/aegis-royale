@@ -1,57 +1,66 @@
 # AEGIS Royale
 
-**Best official entry: V14, 6.19 (BB-A804A35A). V15 scored 6.15
-(BB-05A9CC68). The active V16 candidate is unscored.**
+**Selected official champion: V16, 6.25 (BB-0E038934), commit
+`6e6dd1310d32e79c45117b86dea00601eccf1e5e`. V17 is an unscored candidate.**
 
-V16 restores V14's complete Rust runtime and changes one strategy setting:
-preferred laser range **140 → 200 m**. Its original equipment, harvesting,
-recovery, zone, weak-target approach and firing rules remain together. V15's
-shared aim and damage-based release changes are removed from the active source.
-The MIT-licensed foundation is Automata at
-`f114d641a0de0c565dc057e342b4305b8cfe6d53`.
+V17 preserves the champion's 200 m laser spacing and complete Rust algorithms.
+Its only strategy change is upgrade order: choose **Fast capacitors
+(`laser_charge`) after plating, armor and nanites**, ahead of the combat upgrades
+that previously preceded it. All other priority relationships remain intact.
+Weapon upgrades are offered only for weapons held when the offer is drawn, so
+the gun-only opening choices are preserved.
 
 The image runs `/usr/local/bin/automata` with `MECH_PARAMS=/bot.json`.
-The [manifest](docs/v16_manifest.json) proves that only the display name and
-configuration differ from the scored V14 runtime. Legacy Python policies are
-retained for history and are not copied into the image.
+The MIT-licensed foundation is Automata
+`f114d641a0de0c565dc057e342b4305b8cfe6d53`.
+The [manifest](docs/v17_manifest.json) pins every original source blob and proves
+that only the display name and configuration differ from V16. Existing aim,
+firing, equipment, harvesting, recovery, movement and seed rules are retained.
 
-## Evidence
+## Comparison
 
-The exact V15 was rerun at the user's request: 300/300 recorded checks and
-840 stress observations passed. Across 32 new matched simulator seeds it
-averaged 5.4375 versus V14's 5.71875. The direction reversed between opponent
-settings. This repeat does not justify replacing V14.
+**288 new diagnostic policy matches** compare individual and combined upgrade
+priorities, fresh opponent settings, a reserved holdout and a separate FFA
+sanity cohort. These use a reconstructed simulator, not the official house squad.
 
-For V16, **336 new diagnostic matches** cover that rerun, a spacing/late-threat
-factorial screen, fresh comparisons, a reserved holdout and a separate FFA
-sanity check. These use a reconstructed simulator, not the official house squad.
-
-| V14-based comparison | V14 | V16 spacing | Difference |
+| Charge-priority comparison | V16 | V17 configuration | Difference |
 | --- | ---: | ---: | ---: |
-| Fresh moderate pursuit, 16 seeds | 5.9375 | 6.4375 | +0.5000 |
-| Fresh faster pursuit, 16 seeds | 4.0000 | 4.5625 | +0.5625 |
-| Reserved intermediate pursuit, 32 seeds | 5.0625 | 5.1250 | +0.0625 |
-| Pooled validation, 64 seeds per policy | 5.015625 | 5.312500 | +0.296875 |
+| Fresh moderate pursuit, 24 seeds | 5.5417 | 6.0000 | +0.4583 |
+| Fresh faster pursuit, 24 seeds | 4.6250 | 4.3750 | −0.2500 |
+| Reserved intermediate pursuit, 32 seeds | 4.87500 | 5.15625 | +0.28125 |
+| Pooled validation, 80 seeds per policy | 5.000 | 5.175 | +0.175 |
 
-The reserved result is nearly flat. The pooled 95% sampling interval
-[−0.046875, +0.671875] includes zero and excludes model error. The separate
-eight-seed FFA check is small and cannot establish final-round superiority.
-Combining spacing with late threat recognition performed worse than spacing
-alone on the fresh seeds, so that additional setting is not selected.
+The effect is mixed across opponent settings. The pooled 95% sampling interval
+[−0.15, +0.5125] includes zero and does not account for simulator error or
+feature selection. This is a controlled next official experiment, not a proven
+improvement or a 6.44+ forecast. Prioritizing laser damage and charge together
+looked strongest on the initial screen but regressed on fresh comparisons, so
+that combination is rejected.
 
-The GitHub investigation requested 225 repository trees, retrieved 218 and
-reviewed 44 candidate result files. Five Aegis-labelled sources did not
-substantiate official 6.20+ scores. The stronger Automata/GMUNVIS family remains
-the relevant source evidence; the 6.44 leader's scored code mapping is unknown.
-The [full diagnosis](docs/V16_DIAGNOSIS.md) distinguishes these limits from
-verified receipts and source equality. No 6.44+ result is claimed.
+The refreshed GitHub search enumerated 287 repositories, retrieved 282 trees
+and reviewed 176 new or changed README/result files. Five genuine Aegis-labelled
+peer sources did not substantiate 6.20+ official averages. A new author-documented
+6.25 Go implementation attributes gains to safe supply drops; our bot already
+has that feature. The [full diagnosis](docs/V17_DIAGNOSIS.md) separates public
+claims, verified receipts, source equality and local diagnostic results.
+
+## Preserve the champion
+
+[champion.json](champion.json) keeps the exact 6.25 commit and receipt. Promotion
+requires a higher official result, an exact public commit and passing container
+checks. Local simulations cannot promote an unscored candidate. Keep the selected
+6.25 entry while testing V17, and use the same rule after exceeding 6.44.
+
+Beating 6.44 requires 310 placement points across 48 games, displayed 6.46:
+ten more than V16. The saved official cutoff is **11:00 AM Eastern on Sunday,
+November 22, 2026**.
 
 ## Validation and submission
 
-[Validation](docs/v16_validation.json) records native checks and their scope.
-The [workflow](.github/workflows/validate.yml) builds and tests the actual
-linux/amd64 image with one CPU, 512 MiB, no network, a read-only filesystem
-and an unprivileged user. Require green checks on the exact public commit.
+[Validation](docs/v17_validation.json) records the native checks and their scope.
+The [workflow](.github/workflows/validate.yml) builds and checks the actual
+linux/amd64 image under one CPU, 512 MiB, no network, a read-only filesystem and
+an unprivileged user. Require green checks on the exact public commit.
 
 ```sh
 python3 -B -m unittest discover -s tests -v
@@ -64,13 +73,11 @@ python3 check/check.py --map-dir /arena -- docker run --rm -i \
   -v "$PWD/arena:/arena:ro" aegis-royale
 ```
 
-Submit [Spandana00/aegis-royale](https://github.com/Spandana00/aegis-royale)
-with the exact public V16 commit whose checks passed. Keep **V14's 6.19
-selected** until a higher official result is returned. The saved leader score
-of 6.44 requires thirteen additional total placement points over V14 to beat;
-the first possible higher displayed score is 6.46.
+Submit [Spandana00/aegis-royale](https://github.com/Spandana00/aegis-royale) with
+the exact public V17 commit whose checks passed. Its official result remains
+unknown until the organizer evaluates it.
 
-[Analysis](docs/V16_DIAGNOSIS.md) · [All match rows](docs/v16_matches.jsonl.gz) ·
-[Summaries](docs/v16_experiments.json) · [Source hashes and settings](docs/v16_match_sources.json) ·
-[Research](docs/v16_research.json) · [History](docs/v16_official_history.json) ·
+[Analysis](docs/V17_DIAGNOSIS.md) · [All match rows](docs/v17_matches.jsonl.gz) ·
+[Summaries](docs/v17_experiments.json) · [Settings and hashes](docs/v17_match_sources.json) ·
+[Research](docs/v17_research.json) · [History](docs/v17_official_history.json) ·
 [Attribution](THIRD_PARTY.md)

@@ -1,5 +1,9 @@
 # V16: restore V14 firing and isolate laser spacing
 
+> Subsequent official result: V16 scored **6.25**, receipt **BB-0E038934**, and
+> is now the selected champion. The original pre-submission analysis below is
+> historical. See [V17](V17_DIAGNOSIS.md) for the new baseline and next comparison.
+
 The best verified entry remains **V14, 6.19**. V15 scored **6.15** and is
 rejected as a replacement. V16 is an unscored, controlled candidate for the
 next official practice run.

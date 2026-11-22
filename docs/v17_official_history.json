@@ -1,0 +1,95 @@
+{
+  "matches_per_practice": 48,
+  "minimum_integer_total": 310,
+  "minimum_displayed_score": 6.46,
+  "baseline": {
+    "version": "v16",
+    "commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+    "score": 6.25,
+    "receipt": "BB-0E038934",
+    "integer_total": 300,
+    "source": "User screenshot image(7).png, commit prefix 6e; corresponds to the handed-off V16 commit."
+  },
+  "extra_total_placement_points_needed": 10,
+  "past_user_reported": {
+    "v1": [
+      3.75
+    ],
+    "v2": [
+      4.5
+    ],
+    "v3": [
+      3.96
+    ],
+    "v4": [
+      4.4
+    ],
+    "v5": [
+      4.17,
+      4.15
+    ],
+    "v6": [
+      4.46
+    ],
+    "v7": [
+      4.6,
+      4.52
+    ],
+    "v8": [
+      4.6
+    ],
+    "v9": [
+      4.77
+    ],
+    "v10": [
+      5.33
+    ],
+    "v11": [
+      5.25
+    ],
+    "v12": [
+      5.02
+    ],
+    "v13": [
+      5.79
+    ],
+    "v14": [
+      6.19
+    ],
+    "v15": [
+      6.15
+    ],
+    "v16": [
+      6.25
+    ]
+  },
+  "limits": [
+    "Aggregate official scores do not identify individual-match causes.",
+    "Our V13 receipt is verified from the supplied screenshot; other teams exact scored commit mappings require published records."
+  ],
+  "target_mean_greater_than": 6.44,
+  "verified_public_leader": {
+    "score": 6.44,
+    "integer_total": 309,
+    "teams": [
+      "tigerbyte"
+    ],
+    "source": "https://www.joinbuilders.org/buildathon/tracks/builders",
+    "snapshot": "v16_public_standings.json"
+  },
+  "latest_regression": {
+    "version": "v15",
+    "commit": "be6c83e043e7f604aa95d7f9c4f2e2f52c556f85",
+    "score": 6.15,
+    "receipt": "BB-05A9CC68",
+    "integer_total": 295,
+    "difference_from_v14_total": -2,
+    "source": "user-supplied screenshot image(6).png",
+    "attribution_limit": "Aggregate only; the separate changes were not officially ablated."
+  },
+  "deadline": {
+    "cutoff_at": "2026-11-22T16:00:00+00:00",
+    "local": "2026-11-22 11:00 America/New_York",
+    "source": "https://www.joinbuilders.org/buildathon/standings/builders"
+  }
+}

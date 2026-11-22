@@ -1,0 +1,1457 @@
+{
+  "scope": "New or changed README and score/experiment files relative to the earlier documented corpus. Public author claims require separate verification.",
+  "files": [
+    {
+      "repo": "h-ardy/buildathon-mech-royale",
+      "path": "README.md",
+      "blob_sha": "869129e0f3aa63d6694c971186621136b1b703c9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JWHaan/wraith",
+      "path": "README.md",
+      "blob_sha": "3c23cd06d7597458d787b63c94a1a82c538a550b",
+      "numeric_hits": []
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "path": "README.md",
+      "blob_sha": "6827f739577cde887d9ae627ac056ad7699b9c8f",
+      "numeric_hits": []
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "path": "bot/README.md",
+      "blob_sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "path": "rivals/giddygiddyboy/README.md",
+      "blob_sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "onepizzateam/labtest",
+      "path": "sim/README.md",
+      "blob_sha": "bd3ee74bd615917ad99f6745f62d4577453eca28",
+      "numeric_hits": []
+    },
+    {
+      "repo": "waiprotein/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "be915cb62bd820b981e133eee980a1646662450a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "SandeepMadhavarapu/BattleRoyale",
+      "path": "README.md",
+      "blob_sha": "b813c0d62292b77dca7b75ceee1098507c2907c4",
+      "numeric_hits": []
+    },
+    {
+      "repo": "bluedev-52/mech-royale-bot-test",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "poyrazyongaci/q3j46btd",
+      "path": "README.md",
+      "blob_sha": "40da60c4934bdad5b50e0800a788713165e3a718",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Russell-Day/builders-mech-royale",
+      "path": "README.md",
+      "blob_sha": "146466f175a9fe4e0c1e037966f2091b4d685afc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "youngestbillionaire/billions",
+      "path": "README.md",
+      "blob_sha": "ca574e651adc2488e8ddb630abe31f9d9a0c702e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "viktor-lorentz/mech-royale-overcooked",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "gonvaz-nocode/NoCodeHack",
+      "path": "README.md",
+      "blob_sha": "423ef0d855733761ebfc5e0f71ece3ca5b8316a3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "path": "src/bot/brain/README.md",
+      "blob_sha": "566a7503e792d036fd7a7d7e78d1bf40351109a0",
+      "numeric_hits": [
+        {
+          "line": 80,
+          "values": [
+            "6.90",
+            "6.76"
+          ]
+        },
+        {
+          "line": 103,
+          "values": [
+            "6.22"
+          ]
+        },
+        {
+          "line": 108,
+          "values": [
+            "6.59",
+            "6.86"
+          ]
+        },
+        {
+          "line": 109,
+          "values": [
+            "6.65"
+          ]
+        },
+        {
+          "line": 125,
+          "values": [
+            "6.91",
+            "6.92"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "path": "src/bot/cover/README.md",
+      "blob_sha": "d13f0c838db7d3985cde6574c34ba7a96e357bb4",
+      "numeric_hits": [
+        {
+          "line": 41,
+          "values": [
+            "6.7",
+            "6.8"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "path": "src/bot/tactics/README.md",
+      "blob_sha": "42873366590f9864974fb7c9143dc0d819b8b6d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "path": "src/world/README.md",
+      "blob_sha": "6224c5d2c851c7f8b13cc192a98e72d9cadc28a1",
+      "numeric_hits": []
+    },
+    {
+      "repo": "egeiran/mech-royale-bot",
+      "path": "src/world/nav/README.md",
+      "blob_sha": "e5a289fd9a2d4361ed821f255ce3f48005881796",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ela57/Builders-Royale",
+      "path": "tools/sim/README.md",
+      "blob_sha": "d386c36ee07584b87067b662d5b11eb4d4973f6f",
+      "numeric_hits": []
+    },
+    {
+      "repo": "jasonsoohoo/MechRoyaleHackathonChallenge",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "YangliDeng/fieldline",
+      "path": "README.md",
+      "blob_sha": "b2b3bf7e65b387a88b8374a9686a046e1e45a6dc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CtrlZGau/strat-game",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CtrlZGau/strat-game",
+      "path": "sim/README.md",
+      "blob_sha": "05f9276b4ef38f3ab7681fbcf117747f14387f1a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "nwen-cu/buildathon2026",
+      "path": "README.md",
+      "blob_sha": "764c8b7137a6edf3eb8857804c3578158daf85fc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "bzells11/Mech-Bot-Repo-",
+      "path": "README.md",
+      "blob_sha": "18389b66029ca2a72db5c844c87a99316e1cb31c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "trompeterm/buildathon-mech-royale",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "teetham-t/mech-royale-pocket-comet",
+      "path": "README.md",
+      "blob_sha": "e1b6b9abfe9f97af83749ab7006734a577d478d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "zuhayrkabir/unos-mech",
+      "path": "README.md",
+      "blob_sha": "037cb97f775f067156da7cc69797aedd68f83951",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Seriamyth1/Vmecha",
+      "path": "README.md",
+      "blob_sha": "b03fc298a2d7dcae660d646f8f6cbad040a827d0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "raunak-choudhary/henka",
+      "path": "README.md",
+      "blob_sha": "b6c5551699d155ac13c3338222ddd0c31684b4da",
+      "numeric_hits": []
+    },
+    {
+      "repo": "luffy-taro-106/bt26-m",
+      "path": "README.md",
+      "blob_sha": "aa05b801616b08759fe11a11213ce96e59793b6c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "charliescull/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "9e2f419d1b73987774fc1c945778bd5bc32486fc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "suzhuhui-hub/oval-warden",
+      "path": "README.md",
+      "blob_sha": "38e3185e2b5f78ec4843fa1fcd6989b859dbd2f7",
+      "numeric_hits": []
+    },
+    {
+      "repo": "swan28pande/oval-tools",
+      "path": "README.md",
+      "blob_sha": "256e4f1bafa36a853cfa55812db0b14872225bdc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "nullat0m7/mech-royale",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/README.md",
+      "blob_sha": "1b4aae56fef8764907ce1d312f0c29c57c78d6b0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/benchmarks/P-D-011-local/README.md",
+      "blob_sha": "81506d4785fe4f33f06d9b587b92258d932dd985",
+      "numeric_hits": [
+        {
+          "line": 18,
+          "values": [
+            "6.80"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/ideas/README.md",
+      "blob_sha": "a1aa54222df22ae997ab5166c58872309dd94d8c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/site_results.csv",
+      "blob_sha": "c2de1c74e8c56d572c69c4ad6b84987e10bc28d6",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "coord/data/watcher/README.md",
+      "blob_sha": "34c55b6f50348981c4ce5410836fe80de1612315",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "pipeline/README.md",
+      "blob_sha": "4cdab2efca1c4f905b1e83461436a2e517093f9e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dmclaughlin-bit/mech-bot",
+      "path": "research/intake/README.md",
+      "blob_sha": "3fc9e05bfdfc18a9cad0cfc1a563b60a2870a81e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "FlicXyz/Mech-Royale",
+      "path": "README.md",
+      "blob_sha": "bd929474a9a97cea64de73f1cbc3a266bc8f97bf",
+      "numeric_hits": []
+    },
+    {
+      "repo": "paing95/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "c8e8b2aedb123a306a567ee989bad9545d3fa316",
+      "numeric_hits": []
+    },
+    {
+      "repo": "rohaanafzal/mech-bot",
+      "path": "README.md",
+      "blob_sha": "e1fc3b099cd6019b7e1d46fae87563d650cc6c62",
+      "numeric_hits": []
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Version7",
+      "path": "README.md",
+      "blob_sha": "fac3a7e710a4a0e7f758eacdb8fdcf44513dc421",
+      "numeric_hits": []
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-Builders",
+      "path": "README.md",
+      "blob_sha": "a03b0c43079b072b4d2f56e5c8c42ee8317cd57b",
+      "numeric_hits": []
+    },
+    {
+      "repo": "blanc-team/try_again",
+      "path": "README.md",
+      "blob_sha": "ae8c59fc40967f5cac5bf87553b9b4acb409d2c0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "notBehzad/ApexMech-v1",
+      "path": "README.md",
+      "blob_sha": "3e14867d22a0a2a3c77d31e02cc5f02ab903c135",
+      "numeric_hits": []
+    },
+    {
+      "repo": "AryanVerma27/Ethikal-buildersv3",
+      "path": "README.md",
+      "blob_sha": "a03b0c43079b072b4d2f56e5c8c42ee8317cd57b",
+      "numeric_hits": []
+    },
+    {
+      "repo": "anurag11satpathy/mech-royale2026",
+      "path": "experiments.csv",
+      "blob_sha": "5f7b4198f3effe2557873e8d4b5cfe2e0c47209a",
+      "numeric_hits": [
+        {
+          "line": 7,
+          "values": [
+            "6.49"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "manikandan-pandiyan/projbuildathon",
+      "path": "README.md",
+      "blob_sha": "b613b587bac4ac18a3404364df6c35b5ebce407a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "skibidies/yo-john-xie",
+      "path": "README.md",
+      "blob_sha": "7dce6091b30ccb73b60528da6192e78a6be5e151",
+      "numeric_hits": []
+    },
+    {
+      "repo": "gokulj-umich/gocool-mech",
+      "path": "README.md",
+      "blob_sha": "2f061913c17c33c7b9c3ab6cc0e4a6ad44d584af",
+      "numeric_hits": []
+    },
+    {
+      "repo": "rehaan0108-code/Buildathon-OSU",
+      "path": "README.md",
+      "blob_sha": "837fb1163257030820db8e061bbd8944f9d2907a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "rgosmano/oval-hopper",
+      "path": "README.md",
+      "blob_sha": "4dca79c9f17c79d1d131cee322ded3e3175ee303",
+      "numeric_hits": []
+    },
+    {
+      "repo": "worldBlu/mech-royale",
+      "path": "README.md",
+      "blob_sha": "d7c056708af67ff237d9442f3b46a38a294ec92d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "worldBlu/mech-royale",
+      "path": "docs/scoreboard.md",
+      "blob_sha": "fead183e65f58a4d41dedb91b394c2dfccfc7138",
+      "numeric_hits": []
+    },
+    {
+      "repo": "worldBlu/mech-royale",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lav24fr/builder",
+      "path": "README.md",
+      "blob_sha": "9675a17570e852f30911a80ac039f0b319af1e02",
+      "numeric_hits": []
+    },
+    {
+      "repo": "trijalbhagat/mechbot",
+      "path": "README.md",
+      "blob_sha": "797a46ce1f972fb2865d4ea63534837f1fca76c0",
+      "numeric_hits": []
+    },
+    {
+      "repo": "onepizzateam/chinatown",
+      "path": "README.md",
+      "blob_sha": "af2ad20566b9f936f0b7fbb697390f792e750528",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CyberCoder-bit/mech-royale-bot",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "mbaglo/MechRoyale-Agent",
+      "path": "official/mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "abirthare-ab/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "c5517979a5d320a99b818fb12e32e23f19ee03d7",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ruiyifan0114-design/OSUhackathon",
+      "path": "README.md",
+      "blob_sha": "12f8920a7200e1b2bc5cfcb195afc6afd0c3fc4d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/experiments/brain/README.md",
+      "blob_sha": "01d8b1f88ac8f7e96d063486e99d2c98068fb891",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/experiments/combat/README.md",
+      "blob_sha": "414b28e8304bcf9519815f3a6599c0f7aede3470",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/experiments/navigation/README.md",
+      "blob_sha": "71dc18d72a1abfcd28852b337dd714bd4ed479ae",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/regression-audit/README.md",
+      "blob_sha": "32689b433c7c1ba5ce4a9046dee9bdf7055a8615",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Jaelucard/joinbuilders-mech-royale",
+      "path": "research/v3-v4-terrain-audit/README.md",
+      "blob_sha": "3d63b745a373d3ff98b6aaf5b615e129b8b730bc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "path": "README.md",
+      "blob_sha": "a81daa884300463fa236f75deb7182b66a10f975",
+      "numeric_hits": []
+    },
+    {
+      "repo": "CeciG24/Mech-Royale",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "README.md",
+      "blob_sha": "0628b39c49b85b8231f6b06829f53cf5145b83a3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "app/blastradius/README.md",
+      "blob_sha": "a5375b964a70186969750a373aa4188c2458ce07",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/builders_mech_royale/README.md",
+      "blob_sha": "c327ee7bb7d340ba0f60b5b2a8e0dcbf48f80707",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/builders_mech_royale/RESULTS.md",
+      "blob_sha": "b22238030b294fed7a52ecf2ed9ee76e4a472e0a",
+      "numeric_hits": [
+        {
+          "line": 10,
+          "values": [
+            "6.42",
+            "6.96"
+          ]
+        },
+        {
+          "line": 12,
+          "values": [
+            "6.77",
+            "6.90"
+          ]
+        },
+        {
+          "line": 13,
+          "values": [
+            "6.63"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/databricks_shopping_sessions/README.md",
+      "blob_sha": "438cb53cbe2cf225c246cac33b85cf31d4455fbc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/databricks_shopping_sessions/RESULTS.md",
+      "blob_sha": "b08b7535a0fadfe7985b01989415640969f0804c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/machina_cad_deid/README.md",
+      "blob_sha": "f6afd762051f2824b22f7e49be525a234bf633bd",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/machina_cad_deid/RESULTS.md",
+      "blob_sha": "e280c4cff0d081edb3658472cc63d349b08dcfb8",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/rwx_blast_radius/README.md",
+      "blob_sha": "129b59e3ce8b216de269eda14dfc9aa23bd90611",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/goonies-buildathon",
+      "path": "practice/rwx_blast_radius/RESULTS.md",
+      "blob_sha": "b55896dcdf8f4818449c85a7531d3db5cde1b170",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Nurzhic/SteadySurvivor-MechRoyale",
+      "path": "README_RU.md",
+      "blob_sha": "c3abff7ee75bd1c53b40c2008c6034ffff23e1ab",
+      "numeric_hits": []
+    },
+    {
+      "repo": "mvrkarthik07/mechbot",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "1bef4f69aade9e99a4b3b4e078232d9e4e337e18",
+      "numeric_hits": [
+        {
+          "line": 72,
+          "values": [
+            "6.70"
+          ]
+        },
+        {
+          "line": 73,
+          "values": [
+            "6.84"
+          ]
+        },
+        {
+          "line": 74,
+          "values": [
+            "6.72"
+          ]
+        },
+        {
+          "line": 75,
+          "values": [
+            "6.66"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "mvrkarthik07/mechbot",
+      "path": "README.md",
+      "blob_sha": "92a6a43e20616108b8bceb298f0ee198197e294a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "iamvhk1/mech-build",
+      "path": "README.md",
+      "blob_sha": "11673b0ca9d02030aee4316dbd590b9467f29a8c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "iamvhk1/mech-build",
+      "path": "docs/experiments.md",
+      "blob_sha": "d7dfcbe5db81879811fe8024eec1101a9983752d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "koillea/mech-royale-goonies",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "2bde6fccd099bfd597f398b5a7c8b96f8af920f0",
+      "numeric_hits": [
+        {
+          "line": 221,
+          "values": [
+            "6.4"
+          ]
+        },
+        {
+          "line": 239,
+          "values": [
+            "6.5"
+          ]
+        },
+        {
+          "line": 299,
+          "values": [
+            "6.4"
+          ]
+        },
+        {
+          "line": 300,
+          "values": [
+            "6.2"
+          ]
+        },
+        {
+          "line": 301,
+          "values": [
+            "6.3",
+            "6.28",
+            "6.6"
+          ]
+        },
+        {
+          "line": 302,
+          "values": [
+            "6.8"
+          ]
+        },
+        {
+          "line": 303,
+          "values": [
+            "6.20"
+          ]
+        },
+        {
+          "line": 305,
+          "values": [
+            "6.4"
+          ]
+        },
+        {
+          "line": 319,
+          "values": [
+            "6.20"
+          ]
+        },
+        {
+          "line": 320,
+          "values": [
+            "6.20",
+            "6.72"
+          ]
+        },
+        {
+          "line": 321,
+          "values": [
+            "6.5"
+          ]
+        },
+        {
+          "line": 322,
+          "values": [
+            "6.2"
+          ]
+        },
+        {
+          "line": 323,
+          "values": [
+            "6.50"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "AlexJawhari/lanternfish",
+      "path": "README.md",
+      "blob_sha": "63338fb91fbc626061cc31ec0c3db7f366b12f84",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Arrya841/aether-zero-aspire",
+      "path": "README.md",
+      "blob_sha": "92de387f80c4aea16a85eed51889398f43729cde",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ryan01989/fitzymate-bot",
+      "path": "README.md",
+      "blob_sha": "85b30455f6ab97ae98681677a040679378d001b5",
+      "numeric_hits": []
+    },
+    {
+      "repo": "suresh-vlsi/mech-royale-bot",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "fomole1975/mech-bot",
+      "path": "README.md",
+      "blob_sha": "a476a0d0ff774f319b6ad08af68ae3fd37216180",
+      "numeric_hits": []
+    },
+    {
+      "repo": "pucaru/curly-succotash",
+      "path": "README.md",
+      "blob_sha": "d7eb0ae0ce020098f88f3149dc86e64ea5173811",
+      "numeric_hits": []
+    },
+    {
+      "repo": "MatthewCraddock/Submission-3",
+      "path": "README.md",
+      "blob_sha": "a440142342b5619742fbfc37d0808694dc35f568",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ralphhaddis/kestrel-7x",
+      "path": "README.md",
+      "blob_sha": "5625d616ef565eac72c840e7cd0542164164ce43",
+      "numeric_hits": []
+    },
+    {
+      "repo": "loveconnor/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "8fa90b73c64440208c54bf80731bfbc869534336",
+      "numeric_hits": []
+    },
+    {
+      "repo": "shaunkar1/proj1",
+      "path": "README.md",
+      "blob_sha": "31e390fee8f39f74a3740bd1d4d902d2a1899085",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Vinay-Vimalkumar/cobalt-fern",
+      "path": "README.md",
+      "blob_sha": "b644bf6aaeea8bf578e08c11ea0e10913f701972",
+      "numeric_hits": []
+    },
+    {
+      "repo": "AkChetti06/aegis-mech-royale",
+      "path": "README-AEGIS.md",
+      "blob_sha": "2dde79da56a9f5ff0070e2137283d2c096e189f3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "dstarnes05/BuildersMech",
+      "path": "README.md",
+      "blob_sha": "d5335ce3ceb5fe4315351c69ea45c149e920894e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "NithinAI-10/mech-royale",
+      "path": "README.md",
+      "blob_sha": "b5bd486609535c7fe131f919549d4cb5abc8238f",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Specz04/hus-hus",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "solace4me/Mech_Royale",
+      "path": "README.md",
+      "blob_sha": "6d1f99477efba6b4f71b7dbc3d2edad641cec7c3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "alexwilldev/mechroyale-bot",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "rustemayan/mech-sham",
+      "path": "README.md",
+      "blob_sha": "35669be3735df5c6757464110a9b4f8b12544bc1",
+      "numeric_hits": []
+    },
+    {
+      "repo": "fernando-ace/Buildathon_Mech_Royal",
+      "path": "README.md",
+      "blob_sha": "a6f6fb6a624632e99965ed838ba8cc8b1cef1d92",
+      "numeric_hits": []
+    },
+    {
+      "repo": "bluedev-52/mechtoyale-version-2",
+      "path": "README.md",
+      "blob_sha": "d53b4ff843ef59cdb692f4da93cac4f7cfe6855d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "raunak2007/mech-royale-bot",
+      "path": "README.md",
+      "blob_sha": "d2ab5b41d0281130d9633f72e3fa990db6a94934",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lukejwaszyn/mech-royale",
+      "path": "README.md",
+      "blob_sha": "714d0b1e1454f79217187386b69bbbfe396ec3f3",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lukejwaszyn/mech-royale",
+      "path": "crates/sim/README.md",
+      "blob_sha": "a5cf0b857c1f5136985dcb3a9ff8b060451158a6",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lukejwaszyn/mech-royale",
+      "path": "crates/world/README.md",
+      "blob_sha": "aef026a4dddc1bcb5a9cef9bd655b4de1d7cd69e",
+      "numeric_hits": []
+    },
+    {
+      "repo": "acaptainb/Mech_Royale",
+      "path": "README.md",
+      "blob_sha": "7069c715011945902b0f1fedcbe4a1f62ee471bc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "vngthin/Mech_Royale",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "caitlinthaeler/mech-royale",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ianarce/mech-royale-bot",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "25benjaminli/mechroyale",
+      "path": "README.md",
+      "blob_sha": "f9e541182da4ae4ced1eafe1fdc39c791dd95350",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Nathanatpurdue/mech-battle",
+      "path": "README.md",
+      "blob_sha": "50289773fcad3409947347ded30e8f5a8e803dc9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "GuilleHoardings/mechanized-royale",
+      "path": "tools/graphics-harness/README.md",
+      "blob_sha": "761a9f9d4ee768f5e1bb4305947c7accd7a24abc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "AantharyaKrishna/ghost-protocol",
+      "path": "README.md",
+      "blob_sha": "7e0164beb3b29c0d5930b34404f1d1eb23126d9f",
+      "numeric_hits": []
+    },
+    {
+      "repo": "chriseco427-spec/CyprusBot",
+      "path": "README.md",
+      "blob_sha": "08cc9cab205040aeeb08fd37e4e37108f116225c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Fervg019/Buildathon-",
+      "path": "README.md",
+      "blob_sha": "60a7e8f40247cc81d08a53c8e3eb244868588080",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Sibongile613/lone92",
+      "path": "README.md",
+      "blob_sha": "807cb1af55dfb7072f4ec972246b14d55368ef69",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JasonR-code/switchback-mech-royale",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Tanish-Dhankhar/irontrace",
+      "path": "README.md",
+      "blob_sha": "03cff9ba7a309bec7135beaff1c8ae839bc081a9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Arnav-M10/BuildersMechRoyale",
+      "path": "dev/OVERNIGHT.md",
+      "blob_sha": "39bc8e8c8559d61a60c9a28e8d0f9e47a54c6bee",
+      "numeric_hits": [
+        {
+          "line": 178,
+          "values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 249,
+          "values": [
+            "6.41"
+          ]
+        },
+        {
+          "line": 252,
+          "values": [
+            "6.31"
+          ]
+        },
+        {
+          "line": 253,
+          "values": [
+            "6.41",
+            "6.31",
+            "6.34"
+          ]
+        },
+        {
+          "line": 293,
+          "values": [
+            "6.92"
+          ]
+        },
+        {
+          "line": 294,
+          "values": [
+            "6.28"
+          ]
+        },
+        {
+          "line": 296,
+          "values": [
+            "6.42",
+            "6.2"
+          ]
+        },
+        {
+          "line": 297,
+          "values": [
+            "6.23"
+          ]
+        },
+        {
+          "line": 302,
+          "values": [
+            "6.82"
+          ]
+        },
+        {
+          "line": 306,
+          "values": [
+            "6.67",
+            "6.28"
+          ]
+        },
+        {
+          "line": 308,
+          "values": [
+            "6.44",
+            "6.3"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "georgegcal1-arch/mech-royale-bot",
+      "path": "scores.txt",
+      "blob_sha": "05477c6ca8770436509d7d7b6f3f871e5cdf1b54",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "path": "eval/diag/cast/README.md",
+      "blob_sha": "dd23a1ed43e6ea3b5ca3636aee9dbbe5db92b2da",
+      "numeric_hits": []
+    },
+    {
+      "repo": "JuanQuenga/buildathon-mech-royale",
+      "path": "sim/README.md",
+      "blob_sha": "bd3ee74bd615917ad99f6745f62d4577453eca28",
+      "numeric_hits": []
+    },
+    {
+      "repo": "fariha0178/mech-royale-repo",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "cc380e2278908a261f006c266f9fff28f472d284",
+      "numeric_hits": []
+    },
+    {
+      "repo": "prishalala/mech-royale-bot",
+      "path": "bot/README.md",
+      "blob_sha": "5f10b604a663454a65a96a1fb2239345bd1b6e90",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ppetit8/mech-royale_bot",
+      "path": "README.md",
+      "blob_sha": "6b7fc243fcea00f54dd47db80e8f9d3f7d4e2596",
+      "numeric_hits": []
+    },
+    {
+      "repo": "trijalbhagat/battleroyaleai-bot",
+      "path": "README.md",
+      "blob_sha": "855bc574e58586e1b496db303d31641f70aac12a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "KhangNguyen2005/mech-royale",
+      "path": "README.md",
+      "blob_sha": "5fe08bc07ff30a40810347a25dc1eb66def2f82b",
+      "numeric_hits": []
+    },
+    {
+      "repo": "MoRayyan107/MechRoyal",
+      "path": "README.md",
+      "blob_sha": "fd54180f3adacb4b7a9ee35d4ca6572fcff7282d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "johnsinned/mech",
+      "path": "README.md",
+      "blob_sha": "e1bd218336d91ce5af92c6f77b27fc2265ad0cb8",
+      "numeric_hits": []
+    },
+    {
+      "repo": "johnsinned/mech",
+      "path": "experiments.json",
+      "blob_sha": "45a95276c1aa41b8b6cc785d28b357bee569a6a2",
+      "numeric_hits": []
+    },
+    {
+      "repo": "johnsinned/mech",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Koodsu/BuildersHackathonMechRoyale",
+      "path": "README.md",
+      "blob_sha": "d503ab5fd461eac052dedd501cdd369c58be9b66",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Koodsu/BuildersHackathonMechRoyale",
+      "path": "kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Evans-Kwashie/Evans-Kwashie",
+      "path": "README.md",
+      "blob_sha": "8f1769f0f97434ca7d932671b1a2405f1c936ac4",
+      "numeric_hits": []
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "path": "README.md",
+      "blob_sha": "1f9fd0b51322d8ea55d146666871953734eb1e85",
+      "numeric_hits": [
+        {
+          "line": 73,
+          "values": [
+            "6.67"
+          ]
+        },
+        {
+          "line": 191,
+          "values": [
+            "6.33"
+          ]
+        },
+        {
+          "line": 207,
+          "values": [
+            "6.67"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "lolstershwjav/OSU-Hackathon---Builders---Mech-Royale",
+      "path": "oval-survivor/README.md",
+      "blob_sha": "93d47a2045ca9524743b43796444ede3277e874a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ahmad-ovh/Buildathon",
+      "path": "README.md",
+      "blob_sha": "ce1dc3a449e02a444201d8845100f5bed80f27fc",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ahmad-ovh/Buildathon",
+      "path": "docs/EXPERIMENTS.md",
+      "blob_sha": "f86e862df735ebd6475bddfb0471de592d5908f4",
+      "numeric_hits": [
+        {
+          "line": 443,
+          "values": [
+            "6.3"
+          ]
+        },
+        {
+          "line": 492,
+          "values": [
+            "6.8"
+          ]
+        },
+        {
+          "line": 504,
+          "values": [
+            "6.25",
+            "6.25"
+          ]
+        },
+        {
+          "line": 505,
+          "values": [
+            "6.25"
+          ]
+        },
+        {
+          "line": 521,
+          "values": [
+            "6.25",
+            "6.88"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "ahmad-ovh/Buildathon",
+      "path": "docs/README.md",
+      "blob_sha": "38c0090ea36cb9d9be67d0d362ac1e33ce1299aa",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Himanshu253/mech-bot",
+      "path": "README.md",
+      "blob_sha": "09377750ab4327222ed1a413d942705086b93700",
+      "numeric_hits": []
+    },
+    {
+      "repo": "VivekRnx/bob-the-builder-2026",
+      "path": "mechfight-kit/README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "arnav3013s/mech-bot",
+      "path": "README.md",
+      "blob_sha": "f61d4b776b7fa1508e6a806e8e83e187b960c899",
+      "numeric_hits": []
+    },
+    {
+      "repo": "arnav3013s/mech-bot",
+      "path": "alternatives/README.md",
+      "blob_sha": "3b5a03caeac3cbc1d666a1a8d86268a3e4aa2636",
+      "numeric_hits": []
+    },
+    {
+      "repo": "Kgc3105/MAGIC-Royale",
+      "path": "README.md",
+      "blob_sha": "6655ce36758d4479ea4d69de8c8b2122a6f8046d",
+      "numeric_hits": []
+    },
+    {
+      "repo": "sonalrajapaksha/recursive-builders",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "08ed09a38e327afda5135f97690b9e3106f8f0d7",
+      "numeric_hits": [
+        {
+          "line": 47,
+          "values": [
+            "6.33",
+            "6.33"
+          ]
+        },
+        {
+          "line": 53,
+          "values": [
+            "6.95",
+            "6.26"
+          ]
+        },
+        {
+          "line": 56,
+          "values": [
+            "6.2",
+            "6.4",
+            "6.38",
+            "6.4"
+          ]
+        },
+        {
+          "line": 59,
+          "values": [
+            "6.21"
+          ]
+        },
+        {
+          "line": 60,
+          "values": [
+            "6.21"
+          ]
+        },
+        {
+          "line": 61,
+          "values": [
+            "6.21"
+          ]
+        },
+        {
+          "line": 62,
+          "values": [
+            "6.21"
+          ]
+        },
+        {
+          "line": 63,
+          "values": [
+            "6.25"
+          ]
+        },
+        {
+          "line": 65,
+          "values": [
+            "6.23",
+            "6.25",
+            "6.25"
+          ]
+        },
+        {
+          "line": 66,
+          "values": [
+            "6.25"
+          ]
+        },
+        {
+          "line": 68,
+          "values": [
+            "6.25"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "sonalrajapaksha/recursive-builders",
+      "path": "README.md",
+      "blob_sha": "5bf9ee09fdb79e9980e83ec1c9d47a39876d72e5",
+      "numeric_hits": []
+    },
+    {
+      "repo": "f20240849-design/mechfight-bot",
+      "path": "README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "bookwormpi/oval-sentinel",
+      "path": "README.md",
+      "blob_sha": "8f6db667a698db23055ab88d7b3bb8cc46111a4c",
+      "numeric_hits": []
+    },
+    {
+      "repo": "k2pereir/mechroyale",
+      "path": "README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "kuehlapis/stonks-mech",
+      "path": "README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "TieneSabor/laughing-succotash",
+      "path": "README.md",
+      "blob_sha": "55378aa2f68337c816f160d182404ea3c585892a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "TieneSabor/laughing-succotash",
+      "path": "docs/notes/README.md",
+      "blob_sha": "68120c691f7b5ed1a4509e3ea3399a4affe2de7b",
+      "numeric_hits": []
+    },
+    {
+      "repo": "TieneSabor/laughing-succotash",
+      "path": "tools/README.md",
+      "blob_sha": "b04f4c93de9673cd1b496ca824337a8a51b889ef",
+      "numeric_hits": []
+    },
+    {
+      "repo": "ayyo-ayyo/mechfight-kit",
+      "path": "README.md",
+      "blob_sha": "e8aa3f0686a218014dba16b10df823ac3c1672d9",
+      "numeric_hits": []
+    },
+    {
+      "repo": "shaunkar1/harrier-sparring-bot",
+      "path": "README.md",
+      "blob_sha": "182cbf0b2a3e36a5db7d4477095793acd70b95aa",
+      "numeric_hits": []
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "c22616cc8e9f90fdcfd1503805866bee064c2989",
+      "numeric_hits": [
+        {
+          "line": 55,
+          "values": [
+            "6.22"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "README.md",
+      "blob_sha": "bff92fb444457428c0e00842b694c5393c2a44bf",
+      "numeric_hits": []
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "codex/README.md",
+      "blob_sha": "f8f08fc8d6f866eda85bff107d01996492b80895",
+      "numeric_hits": []
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "codex/candidates/v9-memory-cover/README.md",
+      "blob_sha": "d30c14ec611159e3f5fc9f4bbae1813b05196018",
+      "numeric_hits": []
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "codex/results/official-results.json",
+      "blob_sha": "09a92d884605f392466c4523001b097a1a8f3731",
+      "numeric_hits": []
+    },
+    {
+      "repo": "heeseo937/mech-royal",
+      "path": "experiments/official-results.json",
+      "blob_sha": "542bc904ebd7ebc7200cd4ed955cb00336c5bf27",
+      "numeric_hits": []
+    },
+    {
+      "repo": "der1py/globex-leader",
+      "path": "EXPERIMENTS.md",
+      "blob_sha": "5672868051ca059f562b7c0bb3faea25b814d744",
+      "numeric_hits": []
+    },
+    {
+      "repo": "der1py/globex-leader",
+      "path": "README.md",
+      "blob_sha": "243d5fe93a207c2cf49a0e22f72865cb78cf049f",
+      "numeric_hits": []
+    },
+    {
+      "repo": "SeanCowen/oval-runner",
+      "path": "README.md",
+      "blob_sha": "f57b76cba6ac8715861dde1a49177185aa11275a",
+      "numeric_hits": []
+    },
+    {
+      "repo": "joekritenbrink0-wq/mech-bot",
+      "path": "README.md",
+      "blob_sha": "37ca214466f87027162270affbe8d94d973ab641",
+      "numeric_hits": [
+        {
+          "line": 45,
+          "values": [
+            "6.5"
+          ]
+        }
+      ]
+    },
+    {
+      "repo": "PrajwalKoirala/miniature-barnacle",
+      "path": "README.md",
+      "blob_sha": "5e7358f929eb7697c44185a73b4791d73bf538ee",
+      "numeric_hits": []
+    },
+    {
+      "repo": "skandra08/robo-fight",
+      "path": "README.md",
+      "blob_sha": "37115982f28ab8e41b92b51ae117be8e1c5b0e9b",
+      "numeric_hits": []
+    }
+  ]
+}

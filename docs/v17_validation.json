@@ -1,0 +1,72 @@
+{
+  "kind": "Configured correctness, timing and source verification; not an official placement score.",
+  "policy": "AEGIS v17",
+  "champion": "champion.json",
+  "baseline_commit": "6e6dd1310d32e79c45117b86dea00601eccf1e5e",
+  "baseline_official_score": 6.25,
+  "executable_sha256": "1fb14469927114b5595df750b558707580d03f42e35cd0047b72ce903a2be429",
+  "source_manifest": "v17_manifest.json",
+  "source_scope_vs_champion": [
+    "Display name only in runtime.rs",
+    "Upgrade priority only in bot.json"
+  ],
+  "protected": [
+    "range_laser=200",
+    "plating/armor/nanites prefix",
+    "all non-laser_charge upgrade priority relationships",
+    "all Rust algorithms",
+    "image packaging and random seed rules"
+  ],
+  "python_tests": {
+    "passed": 112,
+    "failed": 0
+  },
+  "rust_tests": {
+    "passed": 19,
+    "ignored": 1,
+    "failed": 0,
+    "toolchain": "Rust 1.95.0",
+    "locked_offline": true,
+    "actual_map_and_stream": true
+  },
+  "native_conformance": {
+    "observations": 300,
+    "answered_in_time": 300,
+    "late": 0,
+    "invalid": 0,
+    "wrong_tick": 0,
+    "dropped": 0,
+    "max_ms": 15.3
+  },
+  "native_benchmark": {
+    "kind": "local correctness and timing; not a scored match",
+    "policy": "automata",
+    "startup_ms": 382.52,
+    "observations": 840,
+    "p50_ms": 0.269,
+    "p99_ms": 15.203,
+    "max_ms": 27.143,
+    "over_50_ms": 0,
+    "invalid_actions": [],
+    "native_stderr": "",
+    "harness_max_rss_mib": 34.41,
+    "launched_process_max_rss_mib": 89.88,
+    "memory_scope": "Direct launched process; a Docker client measurement excludes container RSS.",
+    "active_package": "automata"
+  },
+  "diagnostics": {
+    "policy_matches": 288,
+    "selected_validation_seeds_per_arm": 80,
+    "reserved_seeds_per_arm": 32,
+    "late_replies": 0,
+    "tracebacks": 0
+  },
+  "container_validation": {
+    "workflow": ".github/workflows/validate.yml",
+    "requires_exact_public_commit": true,
+    "must_pass_before_handoff": true,
+    "native_docker_engine_available": false,
+    "status_in_this_file": "See GitHub Actions on the exact public candidate commit."
+  },
+  "official_candidate_score": null
+}
